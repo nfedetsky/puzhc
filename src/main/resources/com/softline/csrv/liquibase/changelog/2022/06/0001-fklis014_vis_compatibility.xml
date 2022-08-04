@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0001-1533-fklis014_vis_compatibility" author="ZESONOV">
+        <createTable tableName="fklis014_vis_compatibility">
+            <column name="request_id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS014_VIS_COMPATIBILITY"/>
+            </column>
+            <column name="request_vis_id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS014_VIS_COMPATIBILITY"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="0001-1533-fklis014_vis_compatibility_2" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="request_id" baseTableName="fklis014_vis_compatibility"
+                                 constraintName="FK_FKLVISCOM_ON_REQUEST" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0001-1533-fklis014_vis_compatibility_3" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="request_vis_id" baseTableName="fklis014_vis_compatibility"
+                                 constraintName="FK_FKLVISCOM_ON_VIS_REQUEST" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+</databaseChangeLog>

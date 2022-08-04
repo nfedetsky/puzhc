@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://refBookBrowse.caption"
+        focusComponent="refBooksTable">
+    <data readOnly="true">
+        <collection id="refBooksDc"
+                    class="com.softline.csrv.entity.RefBook">
+            <fetchPlan>
+                <property name="tableName"/>
+                <property name="isVisible"/>
+                <property name="isEditable"/>
+                <property name="isHierarchical"/>
+                <property name="id"/>
+                <property name="idSrc"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+            </fetchPlan>
+            <loader id="refBooksDl">
+                <query>
+                    <![CDATA[select e from RefBook e where not e.isVisible = false order by e.name]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="refBooksTable" spacing="true">
+        <filter id="filter"
+                dataLoader="refBooksDl" columnsCount="1">
+            <properties include=".*" excludeProperties="version"/>
+        </filter>
+        <groupTable id="refBooksTable"
+                    width="100%"
+                    dataContainer="refBooksDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="excelExport" type="excelExport"/>
+                <action id="odsExport" type="odsExport"/>
+            </actions>
+            <columns>
+                <column id="tableName" visible="false"/>
+                <column id="name" required="true"/>
+                <column id="isVisible" visible="false"/>
+                <column id="isEditable" visible="false"/>
+                <column id="isHierarchical"/>
+                <column id="startDate" visible="false"/>
+                <column id="endDate" visible="false"/>
+                <column id="createdBy" visible="false"/>
+                <column id="createdDate" visible="false"/>
+                <column id="lastModifiedDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="idSrc" visible="false"/>
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="refBooksTable.create"/>
+                <button id="editBtn" action="refBooksTable.edit"/>
+                <popupButton id="popupDownloadButton"
+                             caption="msg:///actions.ToExport"
+                             icon="DOWNLOAD">
+                    <actions>
+                        <action id="refBooksTable.excelExport"
+                                caption="msg:///excelExporter.caption"/>
+                        <action id="refBooksTable.odsExport"
+                                caption="msg:///odsExporter.caption"/>
+                    </actions>
+                </popupButton>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true">
+            <loaderProvider loaderId="refBooksDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

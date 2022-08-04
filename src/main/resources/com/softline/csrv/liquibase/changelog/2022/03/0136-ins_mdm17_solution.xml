@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="csrv">
+        <addColumn tableName="mdm17_solution">
+            <column name="REQUEST_TYPE_ID" type="VARCHAR(36)"/>
+        </addColumn>
+    </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_1" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3a708-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120000"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="13402"/>
+                <column name="NAME" value="Даны разъяснения"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_2" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120001"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="11635"/>
+                <column name="NAME" value="На согласование ТП"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_3" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120002"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="12200"/>
+                <column name="NAME" value="Не установлена на ТС"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_4" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120003"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="13200"/>
+                <column name="NAME" value="Не пройдены АИ"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_5" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120004"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="12201"/>
+                <column name="NAME" value="Не пройдены ПДИ"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_6" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120005"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="12202"/>
+                <column name="NAME" value="Не пройдена ОЭ"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_7" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c390a6-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120006"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="12204"/>
+                <column name="NAME" value="Не установлена на ПС"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_15" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120007"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="12205"/>
+                <column name="NAME" value="Не пройдена апробация"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_8" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120008"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="12203"/>
+                <column name="NAME" value="Не пройдена ПМИ"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_9" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120009"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="11634"/>
+                <column name="NAME" value="Не пройдено тестирование"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_10" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c395d8-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120010"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="13303"/>
+                <column name="NAME" value="Ошибка сборки"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_11" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3a708-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120011"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="13400"/>
+                <column name="NAME" value="Принято"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_12" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3a708-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120012"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="13403"/>
+                <column name="NAME" value="Предложено отклонить"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_13" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c395d8-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120013"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="13302"/>
+                <column name="NAME" value="Сборка успешна"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+        <changeSet id="0136_ins_mdm17_solution_14" author="ASShepelev">
+            <insert tableName="mdm17_solution" dbms="postgresql, mssql, hsqldb">
+                <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+                <column name="ID" value="9dc93b82-b0f5-11ec-b909-0242ac120014"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+                <column name="VERSION" value="1"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="LAST_MODIFIED_BY" value = "suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="ID_SRC" value="11633"/>
+                <column name="NAME" value="Успешно"/>
+                <column name="SORT_ORDER" value="null"/>
+            </insert>
+        </changeSet>
+
+
+</databaseChangeLog>

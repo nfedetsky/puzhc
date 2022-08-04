@@ -1,0 +1,103 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0049-950_ins_mdm62_1" author="ELunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C00da199-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="AddObjectToPupe"/>
+            <column name="NAME" value="Создание аварийного инцидента в ПУПЭ СУЭ ФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="20" />
+        </insert>
+
+    </changeSet>
+
+    <changeSet id="0039-950_ins_mdm62_2" author="ELunin">
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da100-8f04-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="814cc2d6-92e5-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="160da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_TO_ID" value="1a90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="ACTION_ID" value="C00da199-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da100-8f08-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="814cc2d6-92e5-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="300da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_TO_ID" value="200da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="ACTION_ID" value="C00da199-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da100-8f09-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="814cc2d6-92e5-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="200da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_TO_ID" value="3c25f75a-9faf-11ec-b909-0242ac120002"/>
+            <column name="ACTION_ID" value="C00da199-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da100-8f10-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="814cc2d6-92e5-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="3c25f75a-9faf-11ec-b909-0242ac120002"/>
+            <column name="STATUS_TO_ID" value="76f8ad62-9fca-11ec-b909-0242ac120002"/>
+            <column name="ACTION_ID" value="C00da199-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+    </changeSet>
+
+    <changeSet id="0039-950_ins_mdm62_3" author="ELunin">
+        <update tableName="mdm62_request_action">
+            <column name="CODE" value="ADD_OBJECT_TO_PUPE"/>
+            <where>id= 'C00da199-8f05-11ec-b909-0242ac120002'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0039-950_ins_mdm62_4" author="ELunin">
+        <addColumn tableName="CFG001_PUPE_INTEGRATION">
+            <column name="CREATE_OBJECT_ERROR_TEXT"
+                    type="VARCHAR(512)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0039-950_ins_mdm62_5" author="ELunin">
+        <update tableName="CFG001_PUPE_INTEGRATION">
+            <column name="CREATE_OBJECT_ERROR_TEXT" value='Возникла ошибка при получении информации из ПУПЭ СУЭ ФК - данные ответа не корректны. Время выполнения операции %s'/>
+            <where>id = id</where>
+        </update>
+    </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://normativeDocumentEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="normativeDocumentDc"
+                  class="com.softline.csrv.entity.NormativeDocument">
+            <fetchPlan>
+                <property name="docNum"/>
+                <property name="docDate"/>
+                <property name="normdocKindId" fetchPlan="_base">
+                    <property name="id"/>
+                </property>
+                <property name="normdocSourceId" fetchPlan="_base">
+                    <property name="id"/>
+                </property>
+                <property name="filePath"/>
+                <property name="id"/>
+                <property name="idSrc"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="description"/>
+                <property name="sortOrder"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="windowCommitAndClose" caption="msg:///actions.Ok"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <vbox id="allElementVbox" spacing="true">
+            <hbox id="editActions" spacing="true">
+                <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+                <button id="closeBtn" action="windowClose"/>
+            </hbox>
+            <hbox id="hBox" spacing="true" height="600">
+                <groupBox id="oneGroupBox" spacing="true" caption=" "
+                          collapsable="true">
+                    <form id="form" dataContainer="normativeDocumentDc">
+                        <column width="750px">
+                            <textField id="idSrcField" property="idSrc"/>
+                            <textField id="nameField" property="name" required="true"/>
+                            <dateField id="startDateField" property="startDate"/>
+                            <dateField id="endDateField" property="endDate"/>
+                            <textArea id="descriptionField" property="description" rows="5"/>
+                            <textField id="sortOrderField" property="sortOrder"/>
+                            <textField id="docNumField" property="docNum"/>
+                            <dateField id="docDateField" property="docDate"/>
+                            <entityPicker id="normdocKindIdField" property="normdocKindId">
+                                <actions>
+                                    <action id="entityLookup" type="entity_lookup"/>
+                                    <action id="entityClear" type="entity_clear"/>
+                                </actions>
+                            </entityPicker>
+                            <entityPicker id="normdocSourceIdField" property="normdocSourceId">
+                                <actions>
+                                    <action id="entityLookup" type="entity_lookup"/>
+                                    <action id="entityClear" type="entity_clear"/>
+                                </actions>
+                            </entityPicker>
+                            <textField id="filePathField" property="filePath"/>
+                        </column>
+                    </form>
+                </groupBox>
+                <groupBox id="auditGroupBox" spacing="true"
+                          caption="msg://com.softline.csrv.screen.dockind/docKindEdit.serviceFieldsNotEditable"
+                          collapsable="true"
+                          width="AUTO" align="TOP_RIGHT">
+                    <gridLayout spacing="true">
+                        <columns count="4"/>
+                        <rows>
+                            <row>
+                                <label value="msg://com.softline.csrv.entity/BaseDictionary.createdBy"/>
+                                <label dataContainer="normativeDocumentDc"
+                                       property="createdBy"/>
+                            </row>
+                            <row>
+                                <label value="msg://com.softline.csrv.entity/BaseDictionary.createdDate"/>
+                                <label dataContainer="normativeDocumentDc"
+                                       property="createdDate"/>
+                            </row>
+                            <row>
+                                <label value="msg://com.softline.csrv.entity/BaseDictionary.lastModifiedBy"/>
+                                <label dataContainer="normativeDocumentDc"
+                                       property="lastModifiedBy"/>
+                            </row>
+                            <row>
+                                <label value="msg://com.softline.csrv.entity/BaseDictionary.lastModifiedDate"/>
+                                <label dataContainer="normativeDocumentDc"
+                                       property="lastModifiedDate"/>
+                            </row>
+                        </rows>
+                    </gridLayout>
+                </groupBox>
+            </hbox>
+        </vbox>
+    </layout>
+</window>

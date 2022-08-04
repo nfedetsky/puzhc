@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0098-drop_and_add_fklis004_request_watcher_1" author="IKretov">
+        <dropColumn columnName="user_id" tableName="fklis004_request_watcher"/>
+    </changeSet>
+    <changeSet id="0098-drop_and_add_fklis004_request_watcher_2" author="IKretov">
+        <addColumn tableName="fklis004_request_watcher">
+            <column name="user_id" type="UUID">
+                <constraints foreignKeyName="FK_FKLIS004REQUESTWATC_ON_USER" nullable="false" references="USER_(ID)"
+                             unique="true" uniqueConstraintName="fklis004_request_watcher_comp_uk1"
+                             validateNullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0100-del_mdm29_mdm19_link" author="ZESONOV">
+        <delete tableName="mdm29_mdm19_link">
+            <where>status_model_id in
+                ('ebc01a36-92e6-11ec-b909-0242ac120002',
+                'b53e6764-92e7-11ec-b909-0242ac120002',
+                '336215e6-92e8-11ec-b909-0242ac120002',
+                'b10beb5c-92e8-11ec-b909-0242ac120002',
+                '46250578-92eb-11ec-b909-0242ac120002')
+            </where>
+        </delete>
+    </changeSet>
+
+</databaseChangeLog>

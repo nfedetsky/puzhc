@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="uuid_request_validation" value="gen_random_uuid()" dbms="postgresql"/>
+
+    <changeSet id="0026-2476-mdm21-1" author="ELunin" >
+        <sql>
+            INSERT INTO mdm21_function
+            (id, id_src, version, code, name, start_date, end_date, created_by, created_date, last_modified_by, last_modified_date, description, parent_id, system_id, sort_order)
+            select gen_random_uuid(), null, 1, code, name, start_date, end_date, created_by, created_date, last_modified_by, last_modified_date, description, null, id, sort_order
+            from mdm05_inf_system m05 where not exists (select 1 from mdm21_function m21 where m21.system_id = m05.id)
+        </sql>
+    </changeSet>
+
+    <changeSet id="0026-2513-mdm21-2" author="ELunin">
+        <sql>
+            update mdm21_function m21
+                set system_id = (select m05.parent_id from mdm05_inf_system m05 where m05.name = m21.name )
+                  , sort_order = 7022
+              where id_src is null
+        </sql>
+    </changeSet>
+
+<!--
+        <validCheckSum>8:d53c358b96d668ccd1102a572c0df420</validCheckSum>
+                select gen_random_uuid(), '-22', 1, code, name, start_date, end_date, created_by, current_date , last_modified_by, current_date, description, null, parent_id, 7022
+    from mdm05_inf_system m05 where not exists (select 1 from mdm21_function m21 where m21.system_id = m05.id)
+
+    <delete tableName="mdm21_function">
+        <where>id_src is null</where>
+    </delete>
+    <sql>
+        INSERT INTO mdm21_function
+        (id, id_src, version, code, name, start_date, end_date, created_by, created_date, last_modified_by, last_modified_date, description, parent_id, system_id, sort_order)
+        select gen_random_uuid(), '-22', 1, code, name, start_date, end_date, created_by, current_date , last_modified_by, current_date, description, null, parent_id, 7022
+        from mdm05_inf_system m05 where not exists (select 1 from mdm21_function m21 where m21.system_id = m05.id)
+    </sql>
+-->
+
+
+
+</databaseChangeLog>

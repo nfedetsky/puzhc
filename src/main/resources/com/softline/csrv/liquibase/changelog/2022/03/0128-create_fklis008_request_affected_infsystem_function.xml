@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0128-create_fklis008_request_affected_infsystem_function_1" author="IKretov">
+        <createTable tableName="fklis008_request_affected_infsystem_function">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS008REQUESTAFFECTEDINFS"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="VERSION" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+            <column name="FUNCTION_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REQUEST_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="0128-create_fklis008_request_affected_infsystem_function_2" author="IKretov">
+        <addUniqueConstraint columnNames="FUNCTION_ID, REQUEST_ID" constraintName="IDX_REQUESTAFFECTEDINFSYSTEMFUNCTION"
+                             tableName="fklis008_request_affected_infsystem_function"/>
+    </changeSet>
+    <changeSet id="0128-create_fklis008_request_affected_infsystem_function_3" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="REQUEST_ID"
+                                 baseTableName="fklis008_request_affected_infsystem_function"
+                                 constraintName="FK_FKLIS008REQUESTA_ON_REQUEST" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0128-create_fklis008_request_affected_infsystem_function_4" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="FUNCTION_ID"
+                                 baseTableName="fklis008_request_affected_infsystem_function"
+                                 constraintName="FK_FKLIS008REQUEST_ON_FUNCTION" referencedColumnNames="ID"
+                                 referencedTableName="mdm21_function"/>
+    </changeSet>
+</databaseChangeLog>

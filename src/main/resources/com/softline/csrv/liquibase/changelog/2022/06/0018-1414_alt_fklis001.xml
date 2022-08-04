@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0017-1354_alt_fklis001_request_card-1" author="csrv">
+        <dropColumn columnName="PLANNED_TEST_DARATION" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0017-1354_alt_fklis001_request_card-2" author="csrv">
+        <addColumn tableName="fklis001_request_card">
+            <column name="PLANNED_TEST_DARATION" type="BIGINT"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0017-1354_alt_fklis001_request_card-3" author="csrv">
+        <dropColumn columnName="planned_test_daration" tableName="fklis001_request_card"/>
+    </changeSet>
+</databaseChangeLog>

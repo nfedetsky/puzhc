@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0116-upd_mdm29_status_model_1" author="ELunin">
+        <update tableName="mdm29_status_model">
+            <column name="code" value="WF_AGREEMENT"/>
+            <where>code = 'WF__AGREEMENT'</where>
+        </update>
+    </changeSet>
+    <changeSet id="0116-upd_mdm29_status_model_2" author="ELunin">
+        <update tableName="mdm29_status_model">
+            <column name="code" value="WF_VIS_AGREEMENT"/>
+            <where>code =  'WF__VIS_AGREEMENT'</where>
+        </update>
+    </changeSet>
+
+
+</databaseChangeLog>

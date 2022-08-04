@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://organizationEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="organizationDc"
+                  class="com.softline.csrv.entity.Organization">
+            <fetchPlan>
+                <property name="id"/>
+                <property name="name"/>
+                <property name="description"/>
+                <property name="website"/>
+                <property name="telephone"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="idSrc"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="windowCommitAndClose" caption="msg:///actions.Ok"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="editActions">
+        <scrollBox id="scrollBox" spacing="true">
+            <form id="form" dataContainer="organizationDc">
+                <column width="350px">
+                    <textField id="nameField" property="name" required="true"/>
+                    <textField id="descriptionField" property="description"/>
+                    <textField id="websiteField" property="website"/>
+                    <textField id="telephoneField" property="telephone"/>
+                    <dateField id="startDateField" property="startDate"/>
+                    <dateField id="endDateField" property="endDate"/>
+                    <textField id="createdByField" property="createdBy" editable="false"/>
+                    <dateField id="createdDateField" property="createdDate" editable="false"/>
+                    <textField id="lastModifiedByField" property="lastModifiedBy" editable="false"/>
+                    <dateField id="lastModifiedDateField" property="lastModifiedDate" editable="false"/>
+                    <textField id="id_src" property="idSrc"/>
+                </column>
+            </form>
+        </scrollBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

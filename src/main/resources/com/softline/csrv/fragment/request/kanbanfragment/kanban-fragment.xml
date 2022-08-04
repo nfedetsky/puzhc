@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="fragmentDc" class="com.softline.csrv.entity.Request" provided="true"/>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <form id="kanbanForm" width="100%" height="100%" stylename="fklis-fragment-style" align="MIDDLE_CENTER">
+            <groupBox id="groupBox"  orientation="vertical">
+                <linkButton id="keyNumField"/>
+                <label id="name" stylename="h4"/>
+                <label id="priority" stylename="light"/>
+                <label id="statusField" stylename="light"/>
+                <label id="assignerField" stylename="h4"/>
+            </groupBox>
+        </form>
+    </layout>
+</fragment>

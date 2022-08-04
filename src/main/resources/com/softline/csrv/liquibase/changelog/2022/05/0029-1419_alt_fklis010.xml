@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0029-1419_alt_fklis010-1" author="Elunin">
+        <createTable tableName="fklis010_additional_vis">
+            <column name="additional_request_id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS010_ADDITIONAL_VIS"/>
+            </column>
+            <column name="request_id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS010_ADDITIONAL_VIS"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="additional_request_id" baseTableName="fklis010_additional_vis" constraintName="FK_FKLADDVIS_ON_ADDITIONALREQU" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+        <addForeignKeyConstraint baseColumnNames="request_id" baseTableName="fklis010_additional_vis" constraintName="FK_FKLADDVIS_ON_REQUEST" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+</databaseChangeLog>

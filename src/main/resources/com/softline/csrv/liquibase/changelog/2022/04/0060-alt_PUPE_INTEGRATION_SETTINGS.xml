@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0060-alt_PUPE_INTEGRATION_SETTINGS" author="EAlbinets">
+        <addColumn tableName="CFG001_PUPE_INTEGRATION">
+            <column name="API_CREATE_COMMENT_URL" type="VARCHAR(255)"/>
+            <column name="API_CREATE_M2M_URL" type="VARCHAR(255)"/>
+            <column name="API_GET_SCD_URL" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

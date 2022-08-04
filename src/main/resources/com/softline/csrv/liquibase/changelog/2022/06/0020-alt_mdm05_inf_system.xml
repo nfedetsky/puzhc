@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0020-alt_mdm05_inf_system-1" author="ASShepelev">
+        <update tableName="mdm05_inf_system">
+            <column name="SLM_SERVICE" value="121300432"/>
+            <column name="SEVICE_COMP" value="121409998"/>
+            <column name="ROUTE_TYPE" value="121413429"/>
+            <where>id_src = '10100'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

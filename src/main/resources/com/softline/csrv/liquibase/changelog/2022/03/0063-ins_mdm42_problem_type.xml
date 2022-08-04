@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0063-ins_mdm42_problem_type_1" author="IKretov">
+        <insert tableName="mdm42_problem_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="bc454720-a305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Дефект ПО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

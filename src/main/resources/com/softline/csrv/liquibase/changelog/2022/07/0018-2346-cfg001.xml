@@ -1,0 +1,18 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0018-2346-cfg001-1" author="ASShepelev">
+        <update tableName="CFG001_PUPE_INTEGRATION">
+            <column name="DESCRIPTION_IN_RTF" value='Просрочен %s по ИС/ФО %s.%s\n Недоступность пользовательских сервисов:\n%s\n Затрагиваемые сервисы:\n %s'/>
+            <where>id = id</where>
+        </update>
+    </changeSet>
+
+
+</databaseChangeLog>

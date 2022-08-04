@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <property name="now" value="now()" dbms="postgresql"/>
+
+
+    <changeSet id="0060-ins_mdm05_inf_system" author="elunin">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340aec54-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="POI"/>
+            <column name="NAME" value="ПОИ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340aeed4-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="POIB"/>
+            <column name="NAME" value="ПОИБ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af230-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="POIUZD"/>
+            <column name="NAME" value="ПОЮЗД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af35c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="NSI"/>
+            <column name="NAME" value="НСИ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af49c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="NSI_SVR"/>
+            <column name="NAME" value="НСИ_СВР"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af5be-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="NSI_BPGU"/>
+            <column name="NAME" value="НСИ_БПГУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af6ea-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="NSI_VPGU"/>
+            <column name="NAME" value="НСИ_ВПГУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UDS"/>
+            <column name="NAME" value="УДС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340afa00-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UDS_KP"/>
+            <column name="NAME" value="УДС_КП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340afbc2-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UNFA"/>
+            <column name="NAME" value="УНФА"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR"/>
+            <column name="NAME" value="УР"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b052c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_RS"/>
+            <column name="NAME" value="УР_РС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b064e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_RGZ"/>
+            <column name="NAME" value="УР_РГЗ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0982-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_DBD"/>
+            <column name="NAME" value="УР_ДБД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0ad6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_BO"/>
+            <column name="NAME" value="УР_БО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0dec-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_DO"/>
+            <column name="NAME" value="УР_ДО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0f22-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_SANKTC"/>
+            <column name="NAME" value="УР_САНКЦ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b1044-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_IDIRNO"/>
+            <column name="NAME" value="УР_ИДиРНО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b138c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_KS"/>
+            <column name="NAME" value="УР_КС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b149a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UR_LS"/>
+            <column name="NAME" value="УР_ЛС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b15a8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UZ"/>
+            <column name="NAME" value="УЗ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b16b6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UK"/>
+            <column name="NAME" value="УК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b17c4-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UD"/>
+            <column name="NAME" value="УД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UIO"/>
+            <column name="NAME" value="УиО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b19d6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UIO_FO"/>
+            <column name="NAME" value="УиО_ФО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b1af8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UIO_UD"/>
+            <column name="NAME" value="УиО_УД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b1eea-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UIO_MOU"/>
+            <column name="NAME" value="УиО_МОУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b20a2-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UIO_UU"/>
+            <column name="NAME" value="УиО_УУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b22c8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="IAO"/>
+            <column name="NAME" value="ИАО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b24bc-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="EPBS"/>
+            <column name="NAME" value="ЕПБС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b267e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="FK_BM"/>
+            <column name="NAME" value="ФК_БМ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="01.EB"/>
+            <column name="NAME" value="01.ЭБ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="01.EB_1S"/>
+            <column name="NAME" value="01.ЭБ_1С"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2b06-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="02.GMU"/>
+            <column name="NAME" value="02.ГМУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2e26-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="03.GASU"/>
+            <column name="NAME" value="03.ГАСУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2f70-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="04.EIS"/>
+            <column name="NAME" value="04.ЕИС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b30d8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="04.EIS.RMIS"/>
+            <column name="NAME" value="04.ЕИС.РМИС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3290-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="05.GIS_GMP"/>
+            <column name="NAME" value="05.ГИС_ГМП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3506-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK"/>
+            <column name="NAME" value="06.АКСИОК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b36be-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK.BP"/>
+            <column name="NAME" value="06.АКСИОК.БП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3894-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK.ZIK"/>
+            <column name="NAME" value="06.АКСИОК.ЗиК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3e84-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK.UNFA"/>
+            <column name="NAME" value="06.АКСИОК.УНФА"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b40a0-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK.UIO"/>
+            <column name="NAME" value="06.АКСИОК.УиО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b4294-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK.RASCHET"/>
+            <column name="NAME" value="06.АКСИОК.РАСЧЕТ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b47c6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="06.AKSIOK.NET"/>
+            <column name="NAME" value="06.АКСИОК.Net"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b4b68-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="07.SUE"/>
+            <column name="NAME" value="07.СУЭ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b4e9c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="07.SUE.PUPE"/>
+            <column name="NAME" value="07.СУЭ.ПУПЭ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5158-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="07.SUE.IBP"/>
+            <column name="NAME" value="07.СУЭ.ИБП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b54be-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="08.UFOS"/>
+            <column name="NAME" value="08.УФОС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5928-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="09.SOBI"/>
+            <column name="NAME" value="09.СОБИ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5b3a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="09.SOBI.POIB"/>
+            <column name="NAME" value="09.СОБИ.ПОИБ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5d7e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="09.SOBI.POIUZD"/>
+            <column name="NAME" value="09.СОБИ.ПОЮЗД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="10.ASFK"/>
+            <column name="NAME" value="10.АСФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6300-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="11.KPE"/>
+            <column name="NAME" value="11.КПЭ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.SSDGGS"/>
+            <column name="NAME" value="12.СКИАО.ССДГГС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b65bc-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.SPD"/>
+            <column name="NAME" value="12.СКИАО.СПД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6706-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.SSDTOFK"/>
+            <column name="NAME" value="12.СКИАО.ССДТОФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6a1c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.SSDTCAFK"/>
+            <column name="NAME" value="12.СКИАО.ССДЦАФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6b48-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.SSDRUFK"/>
+            <column name="NAME" value="12.СКИАО.ССДРУФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6c56-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.PR"/>
+            <column name="NAME" value="12.СКИАО.ПР"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6d6e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.MOD"/>
+            <column name="NAME" value="12.СКИАО.МОД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6e7c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.RN"/>
+            <column name="NAME" value="12.СКИАО.РН"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6f8a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.RU"/>
+            <column name="NAME" value="12.СКИАО.РУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7246-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO.IAP"/>
+            <column name="NAME" value="12.СКИАО.ИАП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7368-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="12.SKIAO"/>
+            <column name="NAME" value="12.СКИАО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7714-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="13.SPTO"/>
+            <column name="NAME" value="13.СПТО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b785e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="14.STC FK"/>
+            <column name="NAME" value="14.СЦ ФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7976-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="15.AS_PLANIROVANIE"/>
+            <column name="NAME" value="15.АС_Планирование"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7ac0-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="16.TCKS"/>
+            <column name="NAME" value="16.ЦКС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7bec-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="16.TCKS.SED"/>
+            <column name="NAME" value="16.ЦКС.СЭД"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7d36-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="17.ITS"/>
+            <column name="NAME" value="17.ИТС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7eb2-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="18.LANDOCS"/>
+            <column name="NAME" value="18.LANDOCS"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7fca-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="19.OES"/>
+            <column name="NAME" value="19.ОЭС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8308-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="20.SAIT_FK"/>
+            <column name="NAME" value="20.САЙТ_ФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8420-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="21.LEKS"/>
+            <column name="NAME" value="21.ЛЕКС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="22.MONITORING"/>
+            <column name="NAME" value="22.МОНИТОРИНГ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b865a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="23.GIS_NR"/>
+            <column name="NAME" value="23.ГИС_НР"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8772-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="24.IANTAR"/>
+            <column name="NAME" value="24.ЯНТАРЬ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b888a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="25.SZU"/>
+            <column name="NAME" value="25.СЗУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b89ac-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="26.SANUPO"/>
+            <column name="NAME" value="26.САНУПО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8ad8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="27.AIS_UBR"/>
+            <column name="NAME" value="27.АИС_УБР"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="28.GIS_ES"/>
+            <column name="NAME" value="28.ГИС_ЭС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="77.SURFK"/>
+            <column name="NAME" value="77.СУРФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b90aa-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="00.VSE"/>
+            <column name="NAME" value="00.ВСЕ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

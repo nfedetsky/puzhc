@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0095-ins_mdm29_status_model" author="ZESONOV">
+        <insert tableName="mdm29_status_model" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d626b370-a9b5-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="WF_VIS_WITHOUT_RFC"/>
+            <column name="NAME" value="СУВВ ФК Версия ИС без RFC"/>
+            <column name="DESCRIPTION" value="automation"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0095-ins_mdm29_status_model_2" author="ZESONOV">
+        <insert tableName="mdm29_status_model" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="da8038e2-a9b5-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="WF_VIS_TEST"/>
+            <column name="NAME" value="СУВВ ФК Версия ИС Испытания"/>
+            <column name="DESCRIPTION" value="automation"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tabSheet align="MIDDLE_LEFT">
+            <tab id="common" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabBasicAttr" spacing="true">
+                <vbox/>
+                <hbox spacing="true" align="MIDDLE_LEFT">
+                    <form id="formCommon1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                        <textField id="attrSueCodeExternalField" property="requestModification.requestAnalisys.requestRequirement.attrSueCode"
+                                   caption="msg://com.softline.csrv.entity/Request.attrSueCodeExternal"
+                                   editable="false"/>
+                        <entityPicker id="functionField" property="function" caption="Функция ИС (RO)" editable="false">
+                            <actions>
+                                <action id="entityLookup" type="entity_lookup"/>
+                                <action id="entityClear" type="entity_clear"/>
+                            </actions>
+                        </entityPicker>
+                        <textField id="isInitiatorRoField" property="requestModification.requestAnalisys.requestRequirement.infSystem" caption="msg://com.softline.csrv.entity/Request.infSystemInitiatorRO" editable="false"/>
+                        <textField id="isRoField" caption="msg://com.softline.csrv.entity/Request.infSystemRO" property="requestModification.function.name" editable="false"/>
+                        <textField id="developerRoField" property="requestModification.developer.name" caption="msg://com.softline.csrv.entity/Request.developeROr" editable="false"/>
+                        <entityPicker id="modificationField" property="requestModification" required="false" editable="false">
+                            <actions>
+                                <action id="open" type="open_view_action"/>
+                            </actions>
+                        </entityPicker>
+
+                        <richTextArea id="descriptionOfModificationRoField" property="requestModification.description" caption="msg://com.softline.csrv.entity/Request.descriptionOfModificationRoField"
+                                   editable="false"/>
+                        <textField id="solutionRoField" property="requestModification.solutionDescr" caption="msg://com.softline.csrv.entity/Request.solutionRO" editable="false"/>
+                    </form>
+                    <form id="formCommon2" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                        <entityPicker id="requirementRoField" property="requestModification.requestAnalisys.requestRequirement" caption="msg://com.softline.csrv.entity/Request.requirementFieldRO" editable="false">
+                            <actions>
+                                <action id="open" type="open_view_action"/>
+                            </actions>
+                        </entityPicker>
+                        <textField id="workReasonROField" property="requestModification.workReason.name" caption="msg://com.softline.csrv.entity/Request.workReasonRO" editable="false"/>
+                        <textField id="rnDescriptionField" property="rnDescription" editable="false"/>
+                        <textArea id="openQuestionRoField" property="requestModification.openQuestionDescr" caption="msg://com.softline.csrv.entity/Request.openQuestionDescrRO" editable="false"/>
+                        <entityPicker id="approvingDeptField" property="approvingDept" editable="false">
+                            <actions>
+                                <action id="entityLookup" type="entity_lookup"/>
+                                <action id="entityClear" type="entity_clear"/>
+                            </actions>
+                        </entityPicker>
+                        <textArea id="noteDescrField" property="noteDescr" editable="false"/>
+                    </form>
+                </hbox>
+            </tab>
+            <tab id="eventPlan" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabEventPlan" spacing="true">
+                <vbox spacing="true"/>
+                <hbox spacing="true">
+                    <vbox spacing="true" align="MIDDLE_LEFT">
+                        <form id="formEventPlan1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                            <dateField id="rPeriodTimeField" property="rPeriodTime" editable="false"/>
+                            <dateField id="responseTimeField" property="responseTime" editable="false"/>
+                        </form>
+                    </vbox>
+                    <vbox spacing="true" align="MIDDLE_LEFT">
+                        <form id="formEventPlan2" dataContainer="requestDc">
+                            <dateField id="executionPeriodTimeField" property="executionPeriodTime" editable="false"/>
+                            <textField id="laboriousnessROField" property="requestModification.laboriousness" caption="msg://com.softline.csrv.entity/Request.laboriousnessRO" editable="false"/>
+                        </form>
+                    </vbox>
+                </hbox>
+            </tab>
+            <tab id="RequestAddAttrPeople" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabPeople"
+                 spacing="true">
+                <vbox spacing="true"/>
+                <form id="peopleForm1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                    <column width="300px">
+                        <entityPicker id="curatorField" property="curator" editable="false">
+                            <actions>
+                                <action id="entityLookup" type="entity_lookup">
+                                    <properties>
+                                        <property name="openMode" value="DIALOG"/>
+                                        <property name="screenClass"
+                                                  value="com.softline.csrv.screen.user.UserBrowse"/>
+                                    </properties>
+                                </action>
+                                <action id="entityClear" type="entity_clear"/>
+                            </actions>
+                        </entityPicker>
+                        <entityPicker id="curatorRField" property="curatorR" editable="false">
+                            <actions>
+                                <action id="entityLookup" type="entity_lookup">
+                                    <properties>
+                                        <property name="openMode" value="DIALOG"/>
+                                        <property name="screenClass"
+                                                  value="com.softline.csrv.screen.user.UserBrowse"/>
+                                    </properties>
+                                </action>
+                                <action id="entityClear" type="entity_clear"/>
+                            </actions>
+                        </entityPicker>
+                    </column>
+                </form>
+            </tab>
+        </tabSheet>
+    </layout>
+</fragment>

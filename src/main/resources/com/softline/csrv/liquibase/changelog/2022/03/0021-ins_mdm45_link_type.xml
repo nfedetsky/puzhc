@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0021-ins_mdm45_link_type" author="ELunin">
+        <insert tableName="mdm45_link_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4fbc4d20-9c65-11ec-b910-0242ac120002"/>
+            <column name="CODE" value="DUPLICATES"/>
+            <column name="NAME" value="Дублирует"/>
+            <column name="ID_SRC" value=""/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm45_link_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4fbc4d20-9c65-11ec-b911-0242ac120002"/>
+            <column name="CODE" value="BLOCKS"/>
+            <column name="NAME" value="Блокирует"/>
+            <column name="ID_SRC" value=""/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm45_link_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4fbc4d20-9c65-11ec-b912-0242ac120002"/>
+            <column name="CODE" value="CLONES"/>
+            <column name="NAME" value="Клонирует"/>
+            <column name="ID_SRC" value=""/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm45_link_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4fbc4d20-9c65-11ec-b913-0242ac120002"/>
+            <column name="CODE" value="ASSOCIATED"/>
+            <column name="NAME" value="Связан с"/>
+            <column name="ID_SRC" value=""/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

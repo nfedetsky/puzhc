@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0027-ins_mdm01_rfc_type" author="ZESONOV">
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="PPO"/>
+            <column name="NAME" value="ППО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d08f01bc-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="BPO"/>
+            <column name="NAME" value="БПО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f7a947e4-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="SPO"/>
+            <column name="NAME" value="СПО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="20c1dc0e-8b37-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="APO"/>
+            <column name="NAME" value="АПО"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="9392660e-8b37-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="SCRIPT"/>
+            <column name="NAME" value="Скрипт"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a3648292-8b37-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="CONTROL_CHANGE"/>
+            <column name="NAME" value="Изменение контролей"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="ab3e5a06-8b37-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="SUBSCRIPTION"/>
+            <column name="NAME" value="Подписки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm01_rfc_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="af4275e2-8b37-11ec-a8a3-0242ac120002"/>
+            <column name="CODE" value="OTHER"/>
+            <column name="NAME" value="Прочее"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

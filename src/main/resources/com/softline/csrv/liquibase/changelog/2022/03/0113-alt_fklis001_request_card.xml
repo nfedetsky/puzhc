@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0113-alt_fklis001_request_card" author="ZESONOV">
+        <addColumn tableName="fklis001_request_card">
+            <column name="CURATOR_ID" type="UUID"/>
+            <column name="CURATOR_R_ID" type="UUID"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="0113-alt_fklis001_request_card_2" author="ZESONOV">
+        <createIndex indexName="IDX_REQUEST_CURATOR_ID" tableName="fklis001_request_card">
+            <column name="CURATOR_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="CURATOR_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUESTC_ON_CURATOR" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+
+    <changeSet id="0113-alt_fklis001_request_card_3" author="ZESONOV">
+        <createIndex indexName="IDX_REQUEST_CURATOR_R_ID" tableName="fklis001_request_card">
+            <column name="CURATOR_R_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="CURATOR_R_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUEST_ON_CURATORR" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+
+</databaseChangeLog>

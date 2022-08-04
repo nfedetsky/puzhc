@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+                   objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0014-1344-cfg003-1" author="ASShepelev">
+        <createTable tableName="CFG003_BUSINESSCALENDAR_SETTING">
+            <column name="ID"
+                    type="INT">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="PK_CFG003BUSINESSCALENDARSETTI"/>
+            </column>
+            <column name="VERSION"
+                    type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BC_CODE"
+                    type="VARCHAR(512)"/>
+        </createTable>
+        <insert tableName="CFG003_BUSINESSCALENDAR_SETTING">
+            <column name="ID" value="1"/>
+            <column name="VERSION" value="1"/>
+            <column name="BC_CODE" value="PUZHC_BC"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

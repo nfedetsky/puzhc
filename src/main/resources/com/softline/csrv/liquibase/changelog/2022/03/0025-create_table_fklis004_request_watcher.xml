@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0025-create_table_fklis004_request_watcher_1" author="IKretov">
+        <createTable tableName="fklis004_request_watcher">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_REQUEST_WATCHER"/>
+            </column>
+            <column name="request_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="0025-create_table_fklis004_request_watcher_2" author="IKretov">
+        <addUniqueConstraint columnNames="request_id, user_id" constraintName="fklis004_request_watcher_comp_uk1"
+                             tableName="fklis004_request_watcher"/>
+    </changeSet>
+    <changeSet id="0025-create_table_fklis004_request_watcher_3" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="request_id" baseTableName="fklis004_request_watcher"
+                                 constraintName="FK_REQUEST_WATCHER_ON_REQUEST" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0025-create_table_fklis004_request_watcher_4" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="fklis004_request_watcher"
+                                 constraintName="FK_REQUEST_WATCHER_ON_USER" referencedColumnNames="ID"
+                                 referencedTableName="mdm10_user"/>
+    </changeSet>
+</databaseChangeLog>

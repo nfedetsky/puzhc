@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0046-alt_mdm06_source" author="ZESONOV">
+        <dropNotNullConstraint tableName="mdm06_source" columnName="version"/>
+        <dropColumn tableName="mdm06_source" columnName="VERSION"/>
+    </changeSet>
+    <changeSet id="0046-alt_mdm06_source_2" author="ZESONOV">
+        <addColumn tableName="mdm06_source">
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="description" type="CLOB"/>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false" validateNullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0046-alt_mdm06_source_3" author="ZESONOV">
+        <dropNotNullConstraint columnDataType="varchar(100)" columnName="CODE" tableName="mdm06_source"/>
+    </changeSet>
+    <changeSet id="0046-alt_mdm06_source_4" author="ZESONOV">
+        <addNotNullConstraint columnDataType="DATETIME" columnName="CREATED_DATE" tableName="mdm06_source"
+                              validate="true"/>
+    </changeSet>
+    <changeSet id="0046-alt_mdm06_source_5" author="ZESONOV">
+        <addNotNullConstraint columnDataType="DATETIME" columnName="LAST_MODIFIED_DATE" tableName="mdm06_source"
+                              validate="true"/>
+    </changeSet>
+
+</databaseChangeLog>

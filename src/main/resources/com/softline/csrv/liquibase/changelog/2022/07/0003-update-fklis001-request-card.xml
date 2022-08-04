@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0002-fklis001_request_card" author="IKretov" dbms="postgresql">
+        <update tableName="fklis001_request_card">
+            <column name="number_key_num" valueComputed="nullif(regexp_replace(key_num, '[^0-9]+', '', 'g'), '')::bigint"/>
+            <where>id = id</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

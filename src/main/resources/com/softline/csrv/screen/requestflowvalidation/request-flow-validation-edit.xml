@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://requestFlowValidationEdit.caption"
+        focusComponent="form">
+    <data>
+        <instance id="requestFlowValidationDc"
+                  class="com.softline.csrv.entity.RequestFlowValidation">
+            <fetchPlan extends="_base">
+                <property name="statusModel" fetchPlan="_base"/>
+                <property name="statusFrom" fetchPlan="_base"/>
+                <property name="statusTo" fetchPlan="_base"/>
+                <property name="validation" fetchPlan="_base"/>
+                <property name="startDate"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+        <collection id="RequestValidationDc" class="com.softline.csrv.entity.RequestValidation">
+            <fetchPlan extends="_base"/>
+            <loader id="RequestValidationDl">
+                <query>
+                    <![CDATA[select e from RequestValidation e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="requestStatusDc" class="com.softline.csrv.entity.RequestStatus">
+            <fetchPlan extends="_base"/>
+            <loader id="requestStatusDl">
+                <query>
+                    <![CDATA[select e from RequestStatus e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="statusModelDc" class="com.softline.csrv.entity.StatusModel">
+            <fetchPlan extends="_base"/>
+            <loader id="statusModelDl">
+                <query>
+                    <![CDATA[select e from StatusModel e]]>
+                </query>
+            </loader>
+        </collection>
+
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="windowCommitAndClose" caption="msg:///actions.Ok"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="scrollBox">
+        <scrollBox id="scrollBox" spacing="true">
+            <form id="form" dataContainer="requestFlowValidationDc">
+                <column width="350px">
+                    <entityComboBox id="statusModelField" property="statusModel" required="true"
+                                    dataContainer="requestFlowValidationDc" optionsContainer="statusModelDc"
+                                    nullOptionVisible="false" pageLength="0">
+                        <actions>
+                            <action id="entityLookup" type="entity_lookup"/>
+                            <action id="entityClear" type="entity_clear"/>
+                        </actions>
+                    </entityComboBox>
+
+                    <entityComboBox id="statusFromField" property="statusFrom" required="true"
+                                    dataContainer="requestFlowValidationDc" optionsContainer="requestStatusDc"
+                                    nullOptionVisible="false" pageLength="0">
+                        <actions>
+                            <action id="entityLookup" type="entity_lookup"/>
+                            <action id="entityClear" type="entity_clear"/>
+                        </actions>
+                    </entityComboBox>
+
+                    <entityComboBox id="statusToField" property="statusTo" required="true"
+                                    dataContainer="requestFlowValidationDc" optionsContainer="requestStatusDc"
+                                    nullOptionVisible="false" pageLength="0">
+                        <actions>
+                            <action id="entityLookup" type="entity_lookup"/>
+                            <action id="entityClear" type="entity_clear"/>
+                        </actions>
+                    </entityComboBox>
+
+
+                    <entityComboBox id="validationField" property="validation" required="true"
+                                    dataContainer="requestFlowValidationDc" optionsContainer="RequestValidationDc"
+                                    nullOptionVisible="false" pageLength="0">
+                        <actions>
+                            <action id="entityLookup" type="entity_lookup"/>
+                            <action id="entityClear" type="entity_clear"/>
+                        </actions>
+                    </entityComboBox>
+                    <textField id="sortOrderField" property="sortOrder"/>
+                    <dateField id="startDateField" property="startDate"/>
+                    <dateField id="endDateField" property="endDate"/>
+
+
+                </column>
+            </form>
+        </scrollBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

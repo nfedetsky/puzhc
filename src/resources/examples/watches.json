@@ -1,0 +1,37 @@
+{
+  "self": "https://jira.aplanadc.ru/rest/api/2/issue/FEDKLIS-2025/watchers",
+  "isWatching": true,
+  "watchCount": 2,
+  "watchers": [
+    {
+      "self": "https://jira.aplanadc.ru/rest/api/2/user?username=ASShepelev",
+      "name": "ASShepelev",
+      "key": "JIRAUSER24905",
+      "emailAddress": "Alexander.Shepelev@softline.com",
+      "avatarUrls": {
+        "48x48": "https://jira.aplanadc.ru/secure/useravatar?avatarId=10122",
+        "24x24": "https://jira.aplanadc.ru/secure/useravatar?size=small&avatarId=10122",
+        "16x16": "https://jira.aplanadc.ru/secure/useravatar?size=xsmall&avatarId=10122",
+        "32x32": "https://jira.aplanadc.ru/secure/useravatar?size=medium&avatarId=10122"
+      },
+      "displayName": "Шепелев Александр",
+      "active": true,
+      "timeZone": "Europe/Moscow"
+    },
+    {
+      "self": "https://jira.aplanadc.ru/rest/api/2/user?username=Elunin",
+      "name": "Elunin",
+      "key": "elunin",
+      "emailAddress": "Evgeniy.Lunin@softline.com",
+      "avatarUrls": {
+        "48x48": "https://jira.aplanadc.ru/secure/useravatar?avatarId=10122",
+        "24x24": "https://jira.aplanadc.ru/secure/useravatar?size=small&avatarId=10122",
+        "16x16": "https://jira.aplanadc.ru/secure/useravatar?size=xsmall&avatarId=10122",
+        "32x32": "https://jira.aplanadc.ru/secure/useravatar?size=medium&avatarId=10122"
+      },
+      "displayName": "Лунин Евгений",
+      "active": true,
+      "timeZone": "Asia/Krasnoyarsk"
+    }
+  ]
+}

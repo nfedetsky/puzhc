@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0018-ins_mdm29_status_model_1" author="IKretov">
+        <insert tableName="mdm29_status_model" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4fbc4d20-9c65-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="WF_CONTRACT"/>
+            <column name="NAME" value="СУВВ ФК Контракт"/>
+            <column name="DESCRIPTION" value="automation"/>
+            <column name="ID_SRC" value="11003"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

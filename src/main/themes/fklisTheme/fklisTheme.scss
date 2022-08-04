@@ -1,0 +1,53 @@
+@import "../helium/helium";
+
+@mixin fklisTheme {
+  @include helium;
+
+  .fklis-fragment-style {
+    --groupbox-border-color: #333333;
+    --primary-color: #0065ff;
+  }
+  .fklis-kanban-style {
+    background-color: #F2F2F2;
+    --groupbox-border-color: #333333;
+  }
+  .fklis-labelKanban-style {
+    --primary-color: #0004D8;
+    font-weight: bold;
+  }
+  .fklis-status-style0 {
+    text-transform: uppercase;
+  }
+  .fklis-status-style1 {
+    background-color: #4A6785;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .fklis-status-style2 {
+    background-color: #FFD351;
+    text-transform: uppercase;
+    color: #594300;
+  }
+  .fklis-status-style3 {
+    background-color: green;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .v-richtextarea.v-readonly { resize: both;}
+  .fklisTheme .v-tabsheet.jmix-main-tabsheet.framed.padded-tabbar>.v-tabsheet-tabcontainer .v-tabsheet-tabitem-selected .v-caption {
+    font-weight: bold;
+    background-color: antiquewhite;
+  }
+
+  /* Complete */
+  --sidemenu-title-background-color: #063C8D;
+  --sidemenu-title-color: #FFFFFF;
+  --drawer-sidemenu-submenu-background-color: #F2F2F2;
+  --drawer-background-color: #F2F2F2;
+  --button-success-color: #0065ff;
+  --button-success-hover-color: #101BFF;
+  --button-success-active-color: #0004D8;
+  --sidemenu-text-color: #333333;
+  --sidemenu-collapsible-controls-panel-background-color: #F2F2F2;
+  --link-color: #0c64d2;
+}

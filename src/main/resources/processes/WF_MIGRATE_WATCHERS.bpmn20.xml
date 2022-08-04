@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
+    <process id="WF_MIGRATE_WATCHERS" name="Миграция списка наблюдателей" isExecutable="true">
+        <startEvent id="startEvent1">
+            <extensionElements>
+                <jmix:formData type="no-form" />
+                <jmix:processVariables/>
+            </extensionElements>
+            <outgoing>Flow_1xlbfw6</outgoing>
+        </startEvent>
+        <endEvent id="Event_01g6tk9">
+            <incoming>Flow_0gjp0zh</incoming>
+        </endEvent>
+        <sequenceFlow id="Flow_1xlbfw6" sourceRef="startEvent1" targetRef="Activity_1fdk1zz" />
+        <serviceTask id="Activity_1fdk1zz" name="Миграция списка наблюдателей" flowable:delegateExpression="${bpm_WatchersMigration}" jmix:taskType="delegateExpression">
+            <extensionElements>
+                <flowable:field name="logintext">
+                    <flowable:string>logintext</flowable:string>
+                </flowable:field>
+                <flowable:field name="proxyAddress">
+                    <flowable:string>proxyAddress</flowable:string>
+                </flowable:field>
+                <flowable:field name="proxyPort">
+                    <flowable:string>proxyPort</flowable:string>
+                </flowable:field>
+                <flowable:field name="pwdtext">
+                    <flowable:string>pwdtext</flowable:string>
+                </flowable:field>
+                <flowable:field name="jiraUrl">
+                    <flowable:string>jiraUrl</flowable:string>
+                </flowable:field>
+            </extensionElements>
+            <incoming>Flow_1xlbfw6</incoming>
+            <outgoing>Flow_0gjp0zh</outgoing>
+        </serviceTask>
+        <sequenceFlow id="Flow_0gjp0zh" sourceRef="Activity_1fdk1zz" targetRef="Event_01g6tk9" />
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+        <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="WF_MIGRATE_WATCHERS">
+            <bpmndi:BPMNEdge id="Flow_0gjp0zh_di" bpmnElement="Flow_0gjp0zh">
+                <omgdi:waypoint x="320" y="150" />
+                <omgdi:waypoint x="402" y="150" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="Flow_1xlbfw6_di" bpmnElement="Flow_1xlbfw6">
+                <omgdi:waypoint x="180" y="150" />
+                <omgdi:waypoint x="220" y="150" />
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+                <omgdc:Bounds x="150" y="135" width="30" height="30" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="Event_01g6tk9_di" bpmnElement="Event_01g6tk9">
+                <omgdc:Bounds x="402" y="132" width="36" height="36" />
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="Activity_0b989db_di" bpmnElement="Activity_1fdk1zz">
+                <omgdc:Bounds x="220" y="110" width="100" height="80" />
+            </bpmndi:BPMNShape>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</definitions>

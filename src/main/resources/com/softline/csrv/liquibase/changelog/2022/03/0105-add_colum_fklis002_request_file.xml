@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0105-add_colum_fklis002_request_file_1" author="IKretov">
+        <addColumn tableName="fklis002_request_file">
+            <column name="FILE_REF" type="VARCHAR(255)"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="FILE_REF" tableName="fklis002_request_file"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://requestBrowse.caption"
+        focusComponent="requestsTable">
+    <data readOnly="true">
+        <collection id="requestsDc"
+                    class="com.softline.csrv.entity.Request">
+            <loader id="requestsDl">
+                <query>
+                    <![CDATA[select e from Request e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+        <presentations auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="requestsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="requestsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="requestsTable"
+                    width="100%"
+                    dataContainer="requestsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="view" type="view"/>
+                <action id="remove" type="remove"/>
+                <action id="excelExport" type="excelExport"/>
+                <action id="odsExport" type="odsExport"/>
+                <action id="jsonExport" type="jsonExport"/>
+            </actions>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="requestsTable.create"/>
+                <button id="editBtn" action="requestsTable.edit"/>
+                <button id="viewBtn" action="requestsTable.view"/>
+                <popupButton id="popupDownloadButton"
+                             caption="msg:///actions.ToExport"
+                             icon="DOWNLOAD">
+                    <actions>
+                        <action id="requestsTable.excelExport"
+                                caption="msg:///excelExporter.caption"/>
+                        <action id="requestsTable.odsExport"
+                                caption="msg:///odsExporter.caption"/>
+                        <action id="requestsTable.jsonExport"
+                                caption="msg:///jsonExporter.caption"/>
+                    </actions>
+                </popupButton>
+            </buttonsPanel>
+        </groupTable>
+        <pagination>
+            <loaderProvider loaderId="requestsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

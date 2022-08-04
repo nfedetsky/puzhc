@@ -1,0 +1,14 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0035-2021-upd-cfg001-1" author="Elunin">
+        <update tableName="CFG001_PUPE_INTEGRATION">
+            <column name="constant_url_pupe" value='/sd/operator/#uuid:'/>
+            <where>id = id</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

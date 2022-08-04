@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0006-update_issue-0" author="ASShepelev" dbms="postgresql">
+        <addDefaultValue schemaName="suvv_migration" tableName="issue"
+                         columnName="HISTORY" defaultValue="false"/>
+    </changeSet>
+
+    <changeSet id="0006-update_issue-1" author="ASShepelev" dbms="postgresql">
+        <addDefaultValue schemaName="suvv_migration" tableName="issue"
+                         columnName="need_migration" defaultValue="true"/>
+    </changeSet>
+
+    <changeSet id="0006-update_issue-2" author="ASShepelev" dbms="postgresql">
+        <update schemaName="suvv_migration" tableName="issue">
+            <column name="history"  valueBoolean="false"/>
+            <where>id = id</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0006-update_issue-3" author="ASShepelev" dbms="postgresql">
+        <update schemaName="suvv_migration" tableName="issue">
+            <column name="need_migration" valueBoolean="true"/>
+            <where>id = id</where>
+        </update>
+    </changeSet>
+
+
+
+</databaseChangeLog>

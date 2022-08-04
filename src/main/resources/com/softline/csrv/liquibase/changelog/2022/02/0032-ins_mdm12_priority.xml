@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0032-ins_mdm12_priority" author="csrv">
+        <insert tableName="mdm12_priority" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a6438852-8d79-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="BLOCKED"/>
+            <column name="NAME" value="Блокирующий"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm12_priority" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d03a215c-8d79-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="CRITICAL"/>
+            <column name="NAME" value="Критический"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm12_priority" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e5789562-8d79-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="HIGH"/>
+            <column name="NAME" value="Высокий"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm12_priority" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f893417e-8d79-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="MIDDLE"/>
+            <column name="NAME" value="Средний"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm12_priority" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1a8b7d46-8d7a-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="LOW"/>
+            <column name="NAME" value="Низкий"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

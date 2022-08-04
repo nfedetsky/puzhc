@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0119-update_MDM19_REQUEST_TYPE_1" author="IKretov">
+        <update tableName="MDM19_REQUEST_TYPE">
+            <column name="IS_MANUAL_CREATE" value="true"/>
+            <where>code in ('IS_VERSION',
+                'VIS_AGREEMENT',
+                'RFC',
+                'CORRECTION',
+                'MODIFICATION',
+                'REQUIREMENT',
+                'INTEGRATION_VERSION',
+                'DOCUMENT',
+                'REMARK',
+                'COMPONENT_BUILD',
+                'CONTRACT')
+            </where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

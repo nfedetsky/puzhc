@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0012_upadte_mdm17_solution_1" author="ASShepelev">
+        <update tableName="mdm17_solution">
+            <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+            <where>id_src = '12204'</where>
+        </update>
+    </changeSet>
+
+
+</databaseChangeLog>

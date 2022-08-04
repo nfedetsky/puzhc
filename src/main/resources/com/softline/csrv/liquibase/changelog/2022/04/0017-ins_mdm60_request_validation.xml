@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0017-ins_mdm61_request_flow_validation" author="EAlbinets">
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="10"/>
+            <column name="NAME" value="Значение поля 'Описание доработки (RO)' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C01da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="20"/>
+            <column name="NAME" value="Значение поля 'Исполнитель' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="20" />
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C02da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="30"/>
+            <column name="NAME" value="Значение поля 'Комментарий' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="30" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C03da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="40"/>
+            <column name="NAME" value="Имеется связанная заявка, тип 'Доработка', статус 'Согласование состава'"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="40" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C04da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="50"/>
+            <column name="NAME" value="Имеется связанная заявка, тип 'Требование', статус 'Анализ' или 'Реализация'"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="50" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C05da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="60"/>
+            <column name="NAME" value="Значение поля 'ИС инициатор (RO)' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="60" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C06da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="70"/>
+            <column name="NAME" value="Значение поля 'Инициатор (RO)' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="70" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C07da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="80"/>
+            <column name="NAME" value="Значение поля 'Исполнитель' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="80" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C08da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="90"/>
+            <column name="NAME" value="Значение поля 'Описание' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="90" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C09da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="100"/>
+            <column name="NAME" value="Значение поля 'Описание требования' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="100" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C0Ada87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="110"/>
+            <column name="NAME" value="Значение поля 'Приоритет' должно быть заполнено значением 'низкий'"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="110" />
+        </insert>
+
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C0Bda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="120"/>
+            <column name="NAME" value="Значение поля 'Разработчик' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="120" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C0Cda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="130"/>
+            <column name="NAME" value="Значение поля 'Ревизия требования' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="130" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C0Dda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="140"/>
+            <column name="NAME" value="Значение поля 'Срок исполнения' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="140" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C0Eda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="150"/>
+            <column name="NAME" value="Значение поля 'Тема' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="150" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C0Fda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="160"/>
+            <column name="NAME" value="Значение поля 'Требование' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="160" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C10da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="170"/>
+            <column name="NAME" value="Значение поля 'Функция ИС' должно быть заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="170" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C11da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="180"/>
+            <column name="NAME" value="Имеется смежная заявка, тип 'Доработка', статус не равно 'Открыто'"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="180" />
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C12da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="190"/>
+            <column name="NAME" value="Отсутствует смежная  заявка, тип 'Доработка'"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="190" />
+        </insert>
+
+
+    </changeSet>
+
+</databaseChangeLog>

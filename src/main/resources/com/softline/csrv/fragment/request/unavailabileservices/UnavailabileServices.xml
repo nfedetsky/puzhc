@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+        <data>
+            <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+            <collection id="unavailabileServicesDc" class="com.softline.csrv.entity.UnavailabileServices">
+                <fetchPlan extends="_base">
+                    <property name="function" fetchPlan="_base">
+                        <property name="system" fetchPlan="_instance_name"/>
+                        <property name="parent" fetchPlan="_instance_name"/>
+                    </property>
+                    <property name="request" fetchPlan="_base"/>
+                </fetchPlan>
+                <loader id="unavailabileServicesDl"/>
+            </collection>
+        </data>
+        <facets>
+            <dataLoadCoordinator auto="true"/>
+        </facets>
+        <layout>
+            <groupBox id="unavailabileServicesGroupBox" align="TOP_LEFT" spacing="true">
+                <table id="unavailabileServicesTable"
+                       dataContainer="unavailabileServicesDc"
+                       multiselect="true"
+                       width="AUTO" height="200px">
+                    <actions>
+                        <action id="addUnavailabileServices"/>
+                        <action id="removeUnavailabileServices"/>
+                    </actions>
+                    <columns>
+                        <column id="function.system.name"
+                                caption="msg://com.softline.csrv.entity/Request.unavlUserServices.InfSystem" width="150"/>
+                        <column id="function.name"
+                                caption="msg://com.softline.csrv.entity/Request.unavlUserServices.function" width="200"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button id="addUnavailabileServicesBtn"
+                                action="unavailabileServicesTable.addUnavailabileServices"
+                                icon="PLUS"
+                                caption=""/>
+                        <button id="removeunavailabileServicesBtn"
+                                action="unavailabileServicesTable.removeUnavailabileServices"
+                                icon="TRASH"
+                                caption=""/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+        </layout>
+</fragment>

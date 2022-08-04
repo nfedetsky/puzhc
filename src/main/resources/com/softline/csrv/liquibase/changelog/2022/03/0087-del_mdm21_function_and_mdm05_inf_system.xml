@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0087-del_mdm21_function_and_mdm05_inf_system" author="ZESONOV">
+        <delete tableName="mdm21_function">
+            <where>1=1</where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="0087-del_mdm21_function_and_mdm05_inf_system_2" author="ZESONOV">
+        <delete tableName="mdm05_inf_system">
+            <where>1=1</where>
+        </delete>
+    </changeSet>
+
+</databaseChangeLog>

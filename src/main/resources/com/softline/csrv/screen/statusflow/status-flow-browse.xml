@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://statusFlowBrowse.caption"
+        focusComponent="statusFlowsTable">
+    <data readOnly="true">
+        <collection id="statusFlowsDc"
+                    class="com.softline.csrv.entity.StatusFlow">
+            <fetchPlan>
+                <property name="startStatus">
+                    <property name="id"/>
+                    <property name="code"/>
+                    <property name="name"/>
+                    <property name="description"/>
+                    <property name="startDate"/>
+                    <property name="endDate"/>
+                    <property name="createdBy"/>
+                    <property name="createdDate"/>
+                    <property name="lastModifiedBy"/>
+                    <property name="lastModifiedDate"/>
+                    <property name="idSrc"/>
+                </property>
+                <property name="endStatus">
+                    <property name="id"/>
+                    <property name="code"/>
+                    <property name="name"/>
+                    <property name="description"/>
+                    <property name="startDate"/>
+                    <property name="endDate"/>
+                    <property name="createdBy"/>
+                    <property name="createdDate"/>
+                    <property name="lastModifiedBy"/>
+                    <property name="lastModifiedDate"/>
+                    <property name="idSrc"/>
+                </property>
+                <property name="statusModelId">
+                    <property name="id"/>
+                    <property name="code"/>
+                    <property name="name"/>
+                    <property name="description"/>
+                    <property name="startDate"/>
+                    <property name="endDate"/>
+                    <property name="createdBy"/>
+                    <property name="createdDate"/>
+                    <property name="lastModifiedBy"/>
+                    <property name="lastModifiedDate"/>
+                    <property name="idSrc"/>
+                </property>
+                <property name="description"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="lastModifiedDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="createdDate"/>
+                <property name="createdBy"/>
+                <property name="idSrc"/>
+            </fetchPlan>
+            <loader id="statusFlowsDl">
+                <query>
+                    <![CDATA[select e from StatusFlow e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="statusFlowsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="statusFlowsDl" columnsCount="1">
+            <properties include=".*" excludeProperties="version"/>
+        </filter>
+        <groupTable id="statusFlowsTable"
+                    width="100%"
+                    dataContainer="statusFlowsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="startStatus"/>
+                <column id="endStatus"/>
+                <column id="statusModelId"/>
+                <column id="description" maxTextLength="50"/>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="createdBy"/>
+                <column id="createdDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="lastModifiedDate"/>
+                <column id="idSrc"/>
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="statusFlowsTable.create"/>
+                <button id="editBtn" action="statusFlowsTable.edit"/>
+                <button id="removeBtn" action="statusFlowsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="statusFlowsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

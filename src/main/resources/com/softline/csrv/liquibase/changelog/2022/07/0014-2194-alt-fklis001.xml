@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0014-2194-alt-fklis001-1" author="ELunin">
+        <modifyDataType tableName="fklis001_request_card" columnName="IMPACT_CHANGES_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="DEGREE_OF_IMPACT_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="PROBLEM_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="SHORT_IMPLEMENT_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="DEVELOPMENT_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="OPEN_QUESTION_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="CAUSE_OF_OCCURRENCE_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="REPETITION_METHOD_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="ACTUAL_RESULT_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="ASSEMBLY_INSTALL_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="SOLUTION_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="EXPECTED_RESULT_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="RECOVERY_METHOD_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="WORK_REASONS_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="RELEASE_DESCR" newDataType="TEXT"/>
+        <modifyDataType tableName="fklis001_request_card" columnName="FIXED_IN_REVISION_DESCR" newDataType="TEXT"/>
+    </changeSet>
+
+</databaseChangeLog>

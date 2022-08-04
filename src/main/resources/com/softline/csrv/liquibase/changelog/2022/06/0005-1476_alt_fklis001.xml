@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0005-1476_alt_fklis001-1" author="Elunin">
+        <createTable tableName="fklis012_involved_function">
+            <column name="FUNCTION_ID"
+                    type="UUID">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="PK_FKLIS012_INVOLVED_FUNCTION"/>
+            </column>
+            <column name="REQUEST_ID"
+                    type="UUID">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="PK_FKLIS012_INVOLVED_FUNCTION"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="FUNCTION_ID"
+                                 baseTableName="fklis012_involved_function"
+                                 constraintName="FK_FKLINVFUN_ON_FUNCTION"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="mdm21_function"/>
+
+        <addForeignKeyConstraint baseColumnNames="REQUEST_ID"
+                                 baseTableName="fklis012_involved_function"
+                                 constraintName="FK_FKLINVFUN_ON_REQUEST"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+
+    </changeSet>
+
+</databaseChangeLog>

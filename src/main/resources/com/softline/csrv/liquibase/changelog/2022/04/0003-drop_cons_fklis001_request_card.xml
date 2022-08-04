@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0003-drop_cons_fklis001_request_card_1" author="IKretov">
+        <dropNotNullConstraint columnDataType="uuid" columnName="CURATOR_BP_ID" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0003-drop_cons_fklis001_request_card_2" author="IKretov">
+        <dropNotNullConstraint columnDataType="datetime" columnName="END_APROBE_TIME"
+                               tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0003-drop_cons_fklis001_request_card_3" author="IKretov">
+        <dropNotNullConstraint columnDataType="varchar(512)" columnName="INITIATOR_INFO"
+                               tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0003-drop_cons_fklis001_request_card_4" author="IKretov">
+        <dropNotNullConstraint columnDataType="bigint" columnName="PLANNED_APROBE_DURATION"
+                               tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0003-drop_cons_fklis001_request_card_5" author="IKretov">
+        <dropNotNullConstraint columnDataType="datetime" columnName="START_APROBE_TIME"
+                               tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0003-drop_cons_fklis001_request_card_6" author="IKretov">
+        <dropNotNullConstraint columnDataType="varchar(512)" columnName="WORK_REASONS_DESCR"
+                               tableName="fklis001_request_card"/>
+    </changeSet>
+</databaseChangeLog>

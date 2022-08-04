@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0004-1156-buscal_0" author="Elunin">
+        <delete tableName="buscal_business_day"/>
+        <delete tableName="buscal_holiday"/>
+        <delete tableName="buscal_calendar"/>
+    </changeSet>
+    <changeSet id="0004-1156-buscal_1" author="Elunin">
+        <insert tableName="buscal_calendar" dbms="postgresql">
+            <column name="id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="name" value="ПУЖЦ Бизнес календарь"/>
+            <column name="code" value="PUZHC_BC"/>
+            <column name="version" value="1"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0004-1156-buscal_2" author="Elunin">
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="fb9c23c7-96c8-684a-f215-e49b8c20356f"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="1"/>
+            <column name="day_of_month" value="7"/>
+            <column name="description" value="Рождество Христово"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="060abc67-046c-4b16-a5ad-7664a9661ede"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-05-10"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="63d6d362-a607-fa67-1293-831ec8e707fb"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="3"/>
+            <column name="day_of_month" value="8"/>
+            <column name="description" value="Международный женский день"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="60d968f1-aa89-bbcf-2f4f-bb281769bb0a"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-01-05"/>
+            <column name="description" value="Новогодние каникулы"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="ce108eb2-f2e6-2f29-5d5c-396da72cb594"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-01-04"/>
+            <column name="description" value="Новогодние каникулы"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="a1008a21-f88b-4fc1-524e-b54a50bb342d"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-03-07"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="84f9b7f6-b841-b007-5bda-14c800306575"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="1"/>
+            <column name="day_of_month" value="1"/>
+            <column name="description" value="Новый год"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="0a74eaf1-d41b-970c-3dd9-c5c34e89b21c"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="12"/>
+            <column name="day_of_month" value="31"/>
+            <column name="description" value="Новый год"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="3b9a9fcc-112b-b7e3-9f49-686fa771a6b2"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="5"/>
+            <column name="day_of_month" value="1"/>
+            <column name="description" value="Праздник Весны и Труда"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="5f05df4e-e7cd-9b5b-a36c-cc008401ead2"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="11"/>
+            <column name="day_of_month" value="4"/>
+            <column name="description" value="День народного единства"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="b9f582e1-34ba-9d55-6c21-698b930ff518"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="2"/>
+            <column name="day_of_month" value="23"/>
+            <column name="description" value="День защитника Отечества"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="d66b8e1d-1cf9-cb44-a68c-c07f5f803299"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-05-03"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="8fbe6838-c281-ed27-dedb-4580d7427a0a"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-01-02"/>
+            <column name="description" value="Новогодние каникулы"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="45e5a8e3-7f60-eff7-be54-601e3ed630b1"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="5"/>
+            <column name="day_of_month" value="9"/>
+            <column name="description" value="День Победы"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="87a37b41-84bb-abaa-1f1d-cbd15409a560"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-01-03"/>
+            <column name="description" value="Новогодние каникулы"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="7285e636-fb43-4385-b3e3-e643bf02901e"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-05-02"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="f753f71f-50c4-c969-c909-197c1a0bb38f"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-01-06"/>
+            <column name="description" value="Новогодние каникулы"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="5fbb00a3-b8d5-aac0-1ad2-3c24b1e8b7f3"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="fixed_date" value="2022-06-13"/>
+            <column name="version" value="1"/>
+        </insert>
+        <insert tableName="buscal_holiday" dbms="postgresql">
+            <column name="id" value="fe5a7fc4-5935-e06d-be06-321abc042819"/>
+            <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+            <column name="month_value" value="6"/>
+            <column name="day_of_month" value="12"/>
+            <column name="description" value="День России"/>
+            <column name="version" value="1"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="0004-1156-buscal_3" author="Elunin">
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="a1327c27-1d0e-a373-f7bc-0fee310a8212"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="18:00:00"/>
+        <column name="day_of_week" value="3"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="f29d28b6-f0ec-3fe5-2c08-ae04b3452294"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="18:00:00"/>
+        <column name="day_of_week" value="2"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="f28ea480-5ad1-376b-a097-6d7c8b0667d4"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="18:00:00"/>
+        <column name="day_of_week" value="5"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="bdc6dbfa-2c28-386d-2fcc-60f833247d4b"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="18:00:00"/>
+        <column name="day_of_week" value="4"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="b5e6b816-eae0-0d26-b3d6-a8d6a97c6ddd"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="18:00:00"/>
+        <column name="day_of_week" value="1"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="e41bf92a-7505-dca8-7cf5-c4bac266683a"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="17:00:00"/>
+        <column name="fixed_date" value="2022-02-22"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="40b7a2c7-85ad-84ac-7946-32d0b1808bb4"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="17:00:00"/>
+        <column name="fixed_date" value="2022-03-05"/>
+        <column name="version" value="1"/>
+    </insert>
+    <insert tableName="buscal_business_day" dbms="postgresql">
+        <column name="id" value="a98709e5-7a2f-ee42-20e3-bb188f9e66c7"/>
+        <column name="calendar_id" value="e1c62c3d-0cb9-d29c-76ed-daaaca85b85c"/>
+        <column name="start_time" value="09:00:00"/>
+        <column name="end_time" value="17:00:00"/>
+        <column name="fixed_date" value="2022-11-03"/>
+        <column name="version" value="1"/>
+    </insert>
+</changeSet>
+
+
+
+</databaseChangeLog>
+

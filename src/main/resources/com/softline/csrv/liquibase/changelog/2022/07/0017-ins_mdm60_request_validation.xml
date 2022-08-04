@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="gen_uuid" value="gen_random_uuid()" dbms="postgresql"/>
+
+
+    <changeSet id="0017-ins_mdm60_request_validation" author="IKretov">
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C00da87c-8f05-11ec-b909-0242ac120132"/>
+            <column name="CODE" value="7777"/>
+            <column name="NAME" value="Текущий пользователь не является исполнителем по заявке"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="0" />
+        </insert>
+    </changeSet>
+    <changeSet id="0017-ins_mdm60_request_validation-2" author="ELunin">
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="CODE" value="91"/>
+            <column name="NAME" value='Значение поля "ИС инициатор" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="91" />
+        </insert>
+    </changeSet>
+    <changeSet id="0017-ins_mdm60_request_validation-3" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_status_by_code(p_code character varying) RETURNS uuid LANGUAGE sql AS $function$ SELECT id from mdm18_status where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_statusmodel_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm29_status_model where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_validation_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm60_request_validation where code = p_code; $function$;</createProcedure>
+    </changeSet>
+
+    <changeSet id="0017-ins_mdm60_request_validation-4" author="ELunin">
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_REQUIREMENT') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('OPEN')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('91')"/>
+            <column name="sort_order" value="20"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0017-ins_mdm60_request_validation-5" author="ELunin">
+        <sql>DROP function get_status_by_code;</sql>
+        <sql>DROP function get_statusmodel_by_code;</sql>
+        <sql>DROP function get_validation_by_code;</sql>
+    </changeSet>
+
+    <changeSet id="0017-ins_mdm60_request_validation-6" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_status_by_code(p_code character varying) RETURNS uuid LANGUAGE sql AS $function$ SELECT id from mdm18_status where code = p_code and current_date between start_date and end_date; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_statusmodel_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm29_status_model where code = p_code and current_date between start_date and end_date; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_validation_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm60_request_validation where code = p_code and current_date between start_date and end_date; $function$;</createProcedure>
+    </changeSet>
+    <changeSet id="0017-ins_mdm60_request_validation-7" author="ELunin">
+        <delete tableName="mdm61_request_flow_validation">
+            <where>status_model_id = get_statusmodel_by_code('WF_REQUIREMENT')
+                and status_from_id=get_status_by_code('OPEN')
+                and status_to_id=get_status_by_code('CONSENSUS')
+                and validation_id=get_validation_by_code('380')</where>
+        </delete>
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id=get_statusmodel_by_code('WF_REQUIREMENT') and status_from_id=get_status_by_code('OPEN')
+        and status_to_id = get_status_by_code('CONSENSUS') and validation_id=get_validation_by_code('210')</where>
+        </delete>
+
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id = get_statusmodel_by_code('WF_REQUIREMENT')
+        and status_from_id=get_status_by_code('OPEN') and status_to_id = get_status_by_code('CONSENSUS') and
+        validation_id=get_validation_by_code('270')</where>
+        </delete>
+
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id = get_statusmodel_by_code('WF_REQUIREMENT') and status_from_id = get_status_by_code('CONSENSUS') and
+        status_to_id = get_status_by_code('REJECTED') and validation_id= get_validation_by_code('510')</where>
+        </delete>
+
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id = get_statusmodel_by_code('WF_AGREEMENT') and status_from_id = get_status_by_code('CONSENSUS') and
+            status_to_id = get_status_by_code('REJECTED') and validation_id = get_validation_by_code('510')</where>
+        </delete>
+
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id = get_statusmodel_by_code('WF_CORRECTION') and status_from_id = get_status_by_code('CONSENSUS') and
+            status_to_id = get_status_by_code('REJECTED') and validation_id = get_validation_by_code('510')</where>
+        </delete>
+
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id = get_statusmodel_by_code('WF_COMPONENT_BUILD') and status_from_id = get_status_by_code('OPEN') and
+            status_to_id = get_status_by_code('BUILD') and validation_id = get_validation_by_code('441')</where>
+        </delete>
+
+        <delete tableName="mdm61_request_flow_validation">
+        <where>status_model_id = get_statusmodel_by_code('WF_COMPONENT_BUILD') and status_from_id = get_status_by_code('OPEN') and
+            status_to_id = get_status_by_code('BUILD') and validation_id = get_validation_by_code('561')</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0017-ins_mdm60_request_validation-8" author="ELunin">
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_REQUIREMENT')"/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('OPEN')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('380')"/>
+            <column name="sort_order" value="380"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_REQUIREMENT') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('OPEN')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('210')"/>
+            <column name="sort_order" value="210"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_REQUIREMENT') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('OPEN')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('270')"/>
+            <column name="sort_order" value="270"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_REQUIREMENT') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('REJECTED')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('510')"/>
+            <column name="sort_order" value="510"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_AGREEMENT') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('REJECTED')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('510')"/>
+            <column name="sort_order" value="510"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_CORRECTION') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('CONSENSUS')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('REJECTED')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('510')"/>
+            <column name="sort_order" value="510"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_COMPONENT_BUILD') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('OPEN')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('BUILD')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('441')"/>
+            <column name="sort_order" value="441"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_COMPONENT_BUILD') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('OPEN')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('BUILD')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('561')"/>
+            <column name="sort_order" value="561"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+    </changeSet>
+
+
+
+</databaseChangeLog>

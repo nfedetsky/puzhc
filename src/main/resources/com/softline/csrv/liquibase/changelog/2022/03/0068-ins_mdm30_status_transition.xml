@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0068-ins_mdm30_status_transition_1" author="Elunin">
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0448f3a0-8aeb-12ec-b874-0147ac954002"/>
+            <column name="description" value="Анализ РП требования и вынесение им доработки, при необходимости" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0068-ins_mdm30_status_transition_2" author="Elunin">
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0338f5a0-9eba-10ab-b441-7427ac955412"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

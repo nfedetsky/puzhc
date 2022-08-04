@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://kanBanScreen.caption">
+    <data>
+        <collection id="requestDc"
+                    class="com.softline.csrv.entity.Request">
+            <loader id="requestDl">
+                <query>
+                    <![CDATA[select e from Request e where e.status in :statuses order by e.priority.sortOrder, e.numberKeyNum desc]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="kanbanColumDc" class="com.softline.csrv.entity.KanbanColumn">
+            <fetchPlan extends="_base">
+                <property name="name"/>
+            </fetchPlan>
+            <loader id="kanbanColumDl">
+                <query><![CDATA[select e from KanbanColumn e order by e.sortOrder]]></query>
+            </loader>
+        </collection>
+        <instance id="fragmentDc" class="com.softline.csrv.entity.Request">
+            <loader id="fragmentDl"/>
+        </instance>
+        <instance id="infoFragmentDc" class="com.softline.csrv.entity.Request">
+            <loader id="infoFragmentDl"/>
+        </instance>
+    </data>
+    <facets>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <layout>
+        <vbox>
+        <filter id="filter"
+                dataLoader="requestDl">
+            <properties include=".*"/>
+        </filter>
+        <vbox >
+            <form id="filterForm" width="100%"/>
+            <gridLayout id="info" width="100%">
+                <columns>
+                    <column flex="6"/>
+                    <column flex="3"/>
+                </columns>
+                <rows>
+                    <row>
+                        <form stylename="fklis-labelKanban-style" width="100%">
+                            <hbox id="tittle" width="100%" spacing="true" align="MIDDLE_CENTER"/>
+                        </form>
+                    </row>
+                    <row>
+                        <form width="100%" height="100%" align="TOP_CENTER">
+                            <hbox id="colum" width="100%" spacing="true" align="TOP_CENTER" height="100%"/>
+                        </form>
+                        <fragment screen="KanbanInfoFragment"/>
+                    </row>
+                </rows>
+            </gridLayout>
+        </vbox>
+        </vbox>
+    </layout>
+</window>

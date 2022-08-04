@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0094-ins_mdm54_normative_document_kind" author="ZESONOV">
+        <insert tableName="mdm54_normative_document_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="14a40894-a9a4-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Приказ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0094-ins_mdm54_normative_document_kind_2" author="ZESONOV">
+        <insert tableName="mdm54_normative_document_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="70e0ab80-a9a4-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Указ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0094-ins_mdm54_normative_document_kind_3" author="ZESONOV">
+        <insert tableName="mdm54_normative_document_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="77a22f48-a9a4-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Закон"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0094-ins_mdm54_normative_document_kind_4" author="ZESONOV">
+        <insert tableName="mdm54_normative_document_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="7fcec8de-a9a4-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Распоряжение"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0094-ins_mdm54_normative_document_kin_5" author="ZESONOV">
+        <insert tableName="mdm54_normative_document_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="855c9b5a-a9a4-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Регламент"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0094-ins_mdm54_normative_document_kind_6" author="ZESONOV">
+        <insert tableName="mdm54_normative_document_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="8b2ca502-a9a4-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Прочее"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="VERSION" value="1"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

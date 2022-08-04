@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0052-ins_mdm18_status" author="EAlbinets">
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="100da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ANALYSIS"/>
+            <column name="NAME" value="Анализ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10005"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="200da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="TESTING"/>
+            <column name="NAME" value="Апробация"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11806"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="300da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="IN_PROGRESSG"/>
+            <column name="NAME" value="В работе"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="3"/>
+        </insert>
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="400da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="INCLUDED_IN_PLAN"/>
+            <column name="NAME" value="Включено в план"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12700"/>
+        </insert>
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="500da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ORDER_TP"/>
+            <column name="NAME" value="Заказ ТП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11807"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="600da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CLOSED"/>
+            <column name="NAME" value="Закрыто"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="6"/>
+        </insert>
+
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="700da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="REQUEST_INFO"/>
+            <column name="NAME" value="Запрос информации"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10300"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="800da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="TRIALS"/>
+            <column name="NAME" value="Испытания"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11810"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="900da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="REJECTED"/>
+            <column name="NAME" value="Отклонено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10007"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="A00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="OPEN"/>
+            <column name="NAME" value="Открыто"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="1"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="B00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="BUILD_FAILED"/>
+            <column name="NAME" value="Ошибка сборки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11902"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="OE"/>
+            <column name="NAME" value="ОЭ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11802"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="PAUSE"/>
+            <column name="NAME" value="Пауза"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10009"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="E00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="PDI"/>
+            <column name="NAME" value="ПДИ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11801"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="F00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CONFIRM"/>
+            <column name="NAME" value="Подтверждение"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12703"/>
+        </insert>
+
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="110da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CHECK"/>
+            <column name="NAME" value="Проверка"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12001"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="120da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="IMPLEMENTATION"/>
+            <column name="NAME" value="Реализация"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11101"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="130da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="BUILD"/>
+            <column name="NAME" value="Сборка"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11900"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="140da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="BUILD_OK"/>
+            <column name="NAME" value="Сборка успешна"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11901"/>
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="150da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="COMPOSITION_AGREED"/>
+            <column name="NAME" value="Согласован состав"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10802" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="160da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CONSENSUS"/>
+            <column name="NAME" value="Согласование"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10103" />
+        </insert>
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="170da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CONSENSUS_PLAN"/>
+            <column name="NAME" value="Согласование плана"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10801" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="180da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="COMPOSITION_AGREEMENT"/>
+            <column name="NAME" value="Согласование состава"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10800" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1990a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="FK_AGREEMENT"/>
+            <column name="NAME" value="Согласование ФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11811" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1A90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="AGREED"/>
+            <column name="NAME" value="Согласовано"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="10107" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1B90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="FK_AGREED"/>
+            <column name="NAME" value="Согласовано ФК"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12203" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1C90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="PS_INSTALLATION"/>
+            <column name="NAME" value="Установка на ПС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11804" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1D90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="TS_INSTALLATION"/>
+            <column name="NAME" value="Установка на ТС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="11800" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1E90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="APPROVAL"/>
+            <column name="NAME" value="Утверждение"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12100" />
+        </insert>
+
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1F90a87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="APPROVED"/>
+            <column name="NAME" value="Утверждено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12101" />
+        </insert>
+
+
+    </changeSet>
+
+</databaseChangeLog>

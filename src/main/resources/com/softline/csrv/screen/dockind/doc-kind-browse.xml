@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://docKindBrowse.caption"
+        focusComponent="docKindsTable">
+    <data readOnly="true">
+        <collection id="docKindsDc"
+                    class="com.softline.csrv.entity.DocKind">
+            <fetchPlan>
+                <property name="docType" fetchPlan="_base"/>
+                <property name="process" fetchPlan="_base"/>
+                <property name="requestType" fetchPlan="_base"/>
+                <property name="id"/>
+                <property name="idSrc"/>
+                <property name="version"/>
+                <property name="code"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="description"/>
+            </fetchPlan>
+            <loader id="docKindsDl">
+                <query>
+                    <![CDATA[select e from DocKind e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="docKindsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="docKindsDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="docKindsTable"
+                    width="100%"
+                    dataContainer="docKindsDc">
+            <actions>
+                <action id="create" type="create" caption="msg:///actions.Create"/>
+                <action id="edit" type="edit" caption="msg:///actions.Edit"/>
+                <action id="view" type="view"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="code" required="true"/>
+                <column id="name" required="true"/>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="description"/>
+                <column id="docType"/>
+                <column id="process"/>
+                <column id="requestType"/>
+                <column id="createdBy"/>
+                <column id="createdDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="lastModifiedDate"/>
+            </columns>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="docKindsTable.create"/>
+                <button id="editBtn" action="docKindsTable.edit"/>
+                <button id="viewBtn" action="docKindsTable.view"/>
+                <button id="removeBtn" action="docKindsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="docKindsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

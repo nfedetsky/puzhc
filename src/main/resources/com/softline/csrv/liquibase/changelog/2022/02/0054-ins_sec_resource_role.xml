@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <property name="description_FK_ADMINISTRATOR_IS" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за распределение задач, поступающих на рассмотрение Технолога, между сотрудниками Технолога.
+    Под данной ролью могут выступать три категории пользователей:
+    Технолог - если у пользователя указана текущая роль и он принадлежит любому подразделению ФК кроме &quot;ВР&quot; и &quot;СА&quot;
+    Выпускающий редактор (ВР) -  если у пользователя указана текущая роль и он принадлежит подразделению ФК &quot;ВР&quot;
+    Системный архитектор (СА) - если у пользователя указана текущая роль и он принадлежит подразделению ФК &quot;СА&quot;"/>
+    <property name="description_FK_GLAVNYI_TEKHNOLOG_IS" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за рассмотрение предложений по автоматизации"/>
+    <property name="description_FK_KURATOR_VERSII_IS" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за согласование состава версий ИС, поступающих на рассмотрение Технолога. При отсутствии данной роли функции выполняются ролью ФК.Главный технолог ИС"/>
+    <property name="description_FK_RUKOVODITEL_RAZVITIIA_IS" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за взаимодействие в СУВВ сотрудников Технолога, как между собой, так и с Разработчиком"/>
+    <property name="description_FK_KURATOR_IS" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный, в частности, за согласование состава версий ИС, поступающих на рассмотрение Технолога"/>
+    <property name="description_FK_MENEDZHER_EKSPLUATATCII_IS" value="Уполномоченный сотрудник Ответственного за обеспечение эксплуатации в разрезе ИС, обеспечивающий, в том числе, согласование версий, содержащих Эксплуатационные исправления"/>
+    <property name="description_FK_KURATOR_EKSPLUATATCII_IS" value="Уполномоченный сотрудник Ответственного за эксплуатацию, архитектуру и инфраструктуру в разрезе ИС, обеспечивающий, в том числе, решение эскалаций при отрицательных результатах проверки сборок"/>
+    <property name="description_FK_SPETCIALIST" value="Уполномоченный сотрудник ФК, выполняющий действия в СУВВ"/>
+    <property name="description_R_ADMINISTRATOR" value="Может быть только у одного сотрудника в разрезе ИС. Используется для автоматического назначения задач по умолчанию. Переназначение, при необходимости, назначенных задач на конкретных исполнителей. Обработка деловой переписки"/>
+    <property name="description_R_MENEDZHER_ISPRAVLENII" value="Может быть только у одного сотрудника в разрезе ИС. При наличии используется для автоматического назначения по активностям, связанных с Исправлениями. При отсутствии данной роли функции выполняются ролью Р.Администратор"/>
+    <property name="description_R_RELIZ-MENEDZHER" value="Может быть только у одного сотрудника в разрезе ИС. При наличии используется для автоматического назначения по активностям, связанных с ВИС. При отсутствии данной роли функции выполняются ролью Р.Администратор"/>
+    <property name="description_R_RUKOVODITEL_PROEKTA" value="Может быть только у одного сотрудника в разрезе ИС. Обеспечение актуального состояния Ролевой матрицы в разрезе ИС и организации. Организационное обеспечение и мониторинг процессов. Решение эскалаций "/>
+    <property name="description_R_KURATOR_PROEKTA" value="Может быть только у одного сотрудника в разрезе ИС. Общий мониторинг процессов. Решение эскалаций, не решаемых сотрудником с ролью &quot;Р.Руководитель проекта&quot;"/>
+    <property name="description_R_MENEDZHER_PROEKTA" value="Обеспечение деятельности сотрудника с ролью &quot;Р.Руководитель проекта&quot;"/>
+    <property name="description_R_ANALITIK" value=""/>
+    <property name="description_R_INZHENER_PO_TESTIROVANIIU" value=""/>
+    <property name="description_R_MENEDZHER_PROIZVODSTVA" value=""/>
+    <property name="description_R_SPETCIALIST_PO_SOPROVOZHDENIIU" value=""/>
+
+
+    <changeSet id="0054-ins_sec_resource_role_1" author="IKretov">
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="67dec444-9311-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_ADMINISTRATOR_IS"/>
+            <column name="NAME" value="ФК.Администратор ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_ADMINISTRATOR_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="889b2960-9312-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_GLAVNYI_TEKHNOLOG_IS"/>
+            <column name="NAME" value="ФК.Главный технолог ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_GLAVNYI_TEKHNOLOG_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="52fc3b5e-9318-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_PERVYI_TEKHNOLOG_IS"/>
+            <column name="NAME" value="ФК.Первый технолог ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_GLAVNYI_TEKHNOLOG_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="87e24a16-9318-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_KURATOR_VERSII_IS"/>
+            <column name="NAME" value="ФК.Куратор Версий ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_KURATOR_VERSII_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c918884c-9318-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_RUKOVODITEL_RAZVITIIA_IS"/>
+            <column name="NAME" value="ФК.Руководитель развития ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_RUKOVODITEL_RAZVITIIA_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="15873458-9319-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_KURATOR_IS"/>
+            <column name="NAME" value="ФК.Куратор ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_KURATOR_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="42340ac6-9319-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_MENEDZHER_EKSPLUATATCII_IS"/>
+            <column name="NAME" value="ФК.Менеджер эксплуатации ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_MENEDZHER_EKSPLUATATCII_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="80e52a70-9319-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_KURATOR_EKSPLUATATCII_IS"/>
+            <column name="NAME" value="ФК.Куратор эксплуатации ИС"/>
+            <column name="DESCRIPTION" value="${description_FK_KURATOR_EKSPLUATATCII_IS}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="8aa1ef62-9319-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_SPETCIALIST"/>
+            <column name="NAME" value="ФК.Специалист"/>
+            <column name="DESCRIPTION" value="${description_FK_SPETCIALIST}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c7e41ecc-9319-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_ADMINISTRATOR"/>
+            <column name="NAME" value="Р.Администратор"/>
+            <column name="DESCRIPTION" value="${description_R_ADMINISTRATOR}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="ce812414-9319-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_MENEDZHER_ISPRAVLENII"/>
+            <column name="NAME" value="Р.Менеджер Исправлений"/>
+            <column name="DESCRIPTION" value="${description_R_MENEDZHER_ISPRAVLENII}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="9f3ecca0-931a-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_RELIZ-MENEDZHER"/>
+            <column name="NAME" value="Р.Менеджер Исправлений"/>
+            <column name="DESCRIPTION" value="${description_R_RELIZ-MENEDZHER}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a99b9bba-931a-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_RUKOVODITEL_PROEKTA"/>
+            <column name="NAME" value="Р.Руководитель проекта"/>
+            <column name="DESCRIPTION" value="${description_R_MENEDZHER_ISPRAVLENII}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d53c6600-931a-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_KURATOR_PROEKTA"/>
+            <column name="NAME" value="Р.Куратор проекта"/>
+            <column name="DESCRIPTION" value="${description_R_KURATOR_PROEKTA}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f5a4bad2-931a-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_MENEDZHER_PROEKTA"/>
+            <column name="NAME" value="Р.Менеджер проекта"/>
+            <column name="DESCRIPTION" value="${description_R_MENEDZHER_PROEKTA}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="45f0e744-931c-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_ANALITIK"/>
+            <column name="NAME" value="Р.Аналитик"/>
+            <column name="DESCRIPTION" value="${description_R_ANALITIK}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="32e172aa-931b-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_INZHENER_PO_TESTIROVANIIU"/>
+            <column name="NAME" value="Р.Инженер по тестированию"/>
+            <column name="DESCRIPTION" value="${description_R_INZHENER_PO_TESTIROVANIIU}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5b8267fa-931b-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_MENEDZHER_PROIZVODSTVA"/>
+            <column name="NAME" value="Р.Менеджер производства"/>
+            <column name="DESCRIPTION" value="${description_R_MENEDZHER_PROIZVODSTVA}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="7d55c8ae-931b-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_SPETCIALIST_PO_SOPROVOZHDENIIU"/>
+            <column name="NAME" value="Р.Специалист по сопровождению"/>
+            <column name="DESCRIPTION" value="${description_R_SPETCIALIST_PO_SOPROVOZHDENIIU}"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

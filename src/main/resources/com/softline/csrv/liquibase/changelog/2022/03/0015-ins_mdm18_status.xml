@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0015-ins_mdm18_status_1" author="IKretov">
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="3c25f75a-9faf-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="VERIFICATION"/>
+            <column name="NAME" value="Верификация"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12704"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0015-ins_mdm18_status_2" author="IKretov">
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="610acfee-9fca-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="RECOVERY"/>
+            <column name="NAME" value="Восстановление"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12705"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0015-ins_mdm18_status_3" author="IKretov">
+        <insert tableName="mdm18_status" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="76f8ad62-9fca-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="PROBLEMS"/>
+            <column name="NAME" value="Проблемы"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="ID_SRC" value="12706"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

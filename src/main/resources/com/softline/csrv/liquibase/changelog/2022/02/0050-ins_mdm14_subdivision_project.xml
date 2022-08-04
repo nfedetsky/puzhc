@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0050-ins_mdm14_subdivision_project_1" author="IKretov">
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="9bbf761e-9307-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="b302d4ae-9304-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Система казначейских платежей"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c8f52604-9304-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Закрытие года 2019"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d202ebb4-9304-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Миграция 03 счета"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e9db03e8-9304-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Миграция доходов"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f8354264-9304-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Агент валютного контроля"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="08007592-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] SVIP"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1d1723c2-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] ЗК МОУ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="36c90894-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Миграция 41 счета"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4222d724-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Казначейский учет"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="56ad5a34-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Бюдж. (бух) отчетность"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5e78ea80-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Прослеживаемость ФАИП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm14_subdivision_project" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6eaed838-9305-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="[УРИС] Прослеживаемость МИР"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0104-create_mdm51_build_component" author="ZESONOV">
+        <createTable tableName="mdm51_build_component">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDM51_BUILD_COMPONENT"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CODE" type="VARCHAR(100)"/>
+            <column name="NAME" type="VARCHAR(1000)"/>
+            <column name="START_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="END_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="CLOB"/>
+            <column name="sort_order" type="BIGINT"/>
+            <column name="SOURCE_CODE" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ARTIFACT_LOCATION" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BUILDPLAN" type="VARCHAR(1000)"/>
+            <column name="BUILD" type="VARCHAR(1000)"/>
+            <column name="TRACE" type="VARCHAR(1000)"/>
+            <column name="BUILDPLAN_OPTION" type="VARCHAR(1000)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="0104-create_mdm51_build_component_2" author="ZESONOV">
+        <addUniqueConstraint columnNames="NAME, START_DATE" constraintName="mdm51_build_component_comp_uk"
+                             tableName="mdm51_build_component"/>
+    </changeSet>
+
+</databaseChangeLog>

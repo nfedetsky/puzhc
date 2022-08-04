@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0110-drop_table_mdm29_mdm19_link_1" author="IKretov">
+        <dropForeignKeyConstraint baseTableName="mdm29_mdm19_link" constraintName="fk_mdm29_mdm19_link_on_request"/>
+    </changeSet>
+    <changeSet id="0110-drop_table_mdm29_mdm19_link_2" author="IKretov">
+        <dropForeignKeyConstraint baseTableName="mdm29_mdm19_link" constraintName="fk_mdm29mdm19li_on_statusmodel"/>
+    </changeSet>
+    <changeSet id="0110-drop_table_mdm29_mdm19_link_3" author="IKretov">
+        <dropTable cascadeConstraints="true" tableName="mdm29_mdm19_link"/>
+    </changeSet>
+</databaseChangeLog>

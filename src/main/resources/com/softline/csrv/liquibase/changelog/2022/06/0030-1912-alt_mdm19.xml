@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0030-1912-alt-mdm19-1" author="Elunin">
+        <update tableName="mdm19_request_type">
+            <column name="NAME" value="Запрос на изменение"/>
+            <where>code = 'RFC'</where>
+        </update>
+    </changeSet>
+    <changeSet id="0030-1912-alt-mdm19-2" author="Elunin">
+        <update tableName="MDM19_REQUEST_TYPE">
+            <column name="IS_MANUAL_CREATE" value="false"/>
+            <column name="IS_CAN_CLONED" value="false"/>
+        </update>
+    </changeSet>
+    <changeSet id="0030-1912-alt-mdm19-3" author="Elunin">
+        <update tableName="MDM19_REQUEST_TYPE">
+            <column name="IS_MANUAL_CREATE" value="true"/>
+            <column name="IS_CAN_CLONED" value="true"/>
+            <where>code in ('RFC',
+                'IS_VERSION',
+                'DOCUMENT',
+                'CORRECTION',
+                'CONTRACT',
+                'COMPONENT_BUILD',
+                'VIS_AGREEMENT',
+                'REQUIREMENT'
+                )
+            </where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

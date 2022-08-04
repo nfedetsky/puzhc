@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0030-1448_alt_fklis001-1" author="Elunin">
+        <dropColumn columnName="initiator_info"
+                    tableName="fklis001_request_card"/>
+    </changeSet>
+
+    <changeSet id="0030-1492_alt_fklis001_2" author="ELunin">
+            <preConditions onFail="MARK_RAN">
+                <indexExists indexName="IDX_REQUEST_ORGINITIATOR_ID" />
+            </preConditions>
+        <dropIndex tableName="fklis001_request_card" indexName="IDX_REQUEST_ORGINITIATOR_ID"/>
+    </changeSet>
+
+    <changeSet id="0030-1492_alt_fklis001_3" author="ELunin">
+        <dropColumn columnName="ended_date"
+                    tableName="fklis001_request_card"/>
+    </changeSet>
+
+    <changeSet id="0030-1492_alt_fklis001_4" author="ELunin">
+        <createIndex indexName="IDX_REQUEST_ORGINITIATOR_ID"
+                     tableName="fklis001_request_card">
+            <column name="ORG_INITIATOR_ID"/>
+        </createIndex>
+    </changeSet>
+
+
+
+</databaseChangeLog>

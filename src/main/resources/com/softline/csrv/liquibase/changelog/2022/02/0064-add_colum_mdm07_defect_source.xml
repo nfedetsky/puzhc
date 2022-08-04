@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0064-add_colum_mdm07_defect_source_1" author="IKretov">
+        <dropColumn columnName="VERSION" tableName="mdm07_defect_source"/>
+    </changeSet>
+
+    <changeSet id="0064-add_colum_mdm07_defect_source_2" author="IKretov">
+        <addColumn tableName="mdm07_defect_source">
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="description" type="CLOB"/>
+            <column name="VERSION" type="BIGINT" defaultValue="1">
+                <constraints nullable="false" validateNullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="0064-add_colum_mdm07_defect_source_3" author="IKretov">
+        <update tableName="mdm07_defect_source">
+            <column name="LAST_MODIFIED_DATE" value="${now}"/>
+            <column name="CREATED_DATE" value="${now}"/>
+        </update>
+    </changeSet>
+
+    <changeSet id="0064-add_colum_mdm07_defect_source_4" author="IKretov">
+        <dropNotNullConstraint columnDataType="varchar(100)" columnName="CODE" tableName="mdm07_defect_source"/>
+    </changeSet>
+
+    <changeSet id="0064-add_colum_mdm07_defect_source_5" author="IKretov">
+        <addNotNullConstraint columnDataType="DATETIME" columnName="LAST_MODIFIED_DATE" tableName="mdm07_defect_source"
+                              validate="true"/>
+    </changeSet>
+    <changeSet id="8" author="csrv">
+        <addNotNullConstraint columnDataType="DATETIME" columnName="CREATED_DATE" tableName="mdm07_defect_source"
+                              validate="true"/>
+    </changeSet>
+
+</databaseChangeLog>

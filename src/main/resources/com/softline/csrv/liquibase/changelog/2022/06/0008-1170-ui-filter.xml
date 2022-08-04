@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <property name="now" value="now()" dbms="postgresql"/>
+    <changeSet id="0008-1170-ui-filter-1" author="Elunin">
+        <insert tableName="ui_filter_configuration">
+            <column name="id" value="494b7764-f840-4d8e-7714-1cbd3fda46b0"/>
+            <column name="component_id" value="[Request.browse].filter"/>
+            <column name="configuration_id" value="ОбработкаЗадачСУВВ-ВерсияИСJObOcTdJ"/>
+            <column name="username" value="suvv-admin"/>
+            <column name="root_condition" value='{
+  "@class" : "io.jmix.ui.entity.GroupFilterCondition",
+            "componentId" : null,
+            "visible" : true,
+            "enabled" : true,
+            "caption" : null,
+            "localizedCaption" : "",
+            "styleName" : "jmix-filter-root-component",
+            "operation" : "AND",
+            "operationCaptionVisible" : false,
+            "ownFilterConditions" : [ {
+            "@class" : "io.jmix.ui.entity.PropertyFilterCondition",
+            "componentId" : "propertyFilter_requestType.name",
+            "visible" : true,
+            "enabled" : true,
+            "caption" : null,
+            "localizedCaption" : "Тип заявки.Наименование",
+            "styleName" : "",
+            "captionPosition" : "LEFT",
+            "valueComponent" : {
+            "componentName" : "textField",
+            "componentId" : "propertyFilter_requestType.name_valueComponent",
+            "styleName" : "",
+            "defaultValue" : "Версия ИС"
+            },
+            "required" : false,
+            "property" : "requestType.name",
+            "parameterName" : "requestType_nameqsdukKkk",
+            "operation" : "EQUAL",
+            "operationEditable" : true,
+            "operationCaptionVisible" : true
+            }, {
+            "@class" : "io.jmix.ui.entity.PropertyFilterCondition",
+            "componentId" : "propertyFilter_status.name",
+            "visible" : true,
+            "enabled" : true,
+            "caption" : null,
+            "localizedCaption" : "Статус.Наименование",
+            "styleName" : "",
+            "captionPosition" : "LEFT",
+            "valueComponent" : {
+            "componentName" : "valuesPicker",
+            "componentId" : "propertyFilter_status.name_valueComponent",
+            "styleName" : "",
+            "defaultValue" : "Закрыто,Заказ ТП,Испытания,Установка на ПС,Включено в план,Анализ"
+            },
+            "required" : false,
+            "property" : "status.name",
+            "parameterName" : "status_nameGxGnvIiA",
+            "operation" : "IN_LIST",
+            "operationEditable" : true,
+            "operationCaptionVisible" : true
+            } ]
+            }'/>
+            <column name="name" value="Обработка задач СУВВ - Версия ИС"/>
+            <column name="default_for_all" valueBoolean="false"/>
+        </insert>
+
+    </changeSet>
+
+
+
+
+
+
+
+</databaseChangeLog>
+
+

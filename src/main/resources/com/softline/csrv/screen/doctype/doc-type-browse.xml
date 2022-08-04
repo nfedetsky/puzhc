@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://docTypeBrowse.caption"
+        focusComponent="docTypesTable">
+    <data readOnly="true">
+        <collection id="docTypesDc"
+                    class="com.softline.csrv.entity.DocType">
+            <fetchPlan>
+                <property name="code"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="description"/>
+            </fetchPlan>
+            <loader id="docTypesDl">
+                <query>
+                    <![CDATA[select e from DocType e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="docTypesTable" spacing="true">
+        <filter id="filter"
+                dataLoader="docTypesDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="docTypesTable"
+                    width="100%"
+                    dataContainer="docTypesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="code" required="true"/>
+                <column id="name" required="true"/>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="createdBy"/>
+                <column id="createdDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="lastModifiedDate"/>
+                <column id="description" />
+
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="docTypesTable.create"/>
+                <button id="editBtn" action="docTypesTable.edit"/>
+                <button id="removeBtn" action="docTypesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="docTypesDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

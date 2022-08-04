@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0068-create_mdm29_mdm19_link" author="EAlbinets">
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3b1f8-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="814cc2d6-92e5-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ee88f6a8-92e5-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="84e9750a-92e6-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3ac9e-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="b782e1cc-92e6-11ec-b909-0242ac120002"/>
+        </insert>
+
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3a898-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ebc01a36-92e6-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3a708-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="3b6a874c-92e7-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3a56e-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3a3ca-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="b53e6764-92e7-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3a208-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c39f6a-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="336215e6-92e8-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c39be6-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="b10beb5c-92e8-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c395d8-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="015e4352-92e9-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c394a2-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="46250578-92eb-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c3934e-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="aafdf230-92ea-11ec-b909-0242ac120002"/>
+        </insert>
+
+
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c39204-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="d2c07742-92eb-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c39a42-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="b10beb5c-92e8-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c390a6-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="014ccc88-92eb-11ec-b909-0242ac120002"/>
+        </insert>
+
+        <insert tableName="mdm29_mdm19_link" dbms="postgresql, mssql, hsqldb">
+            <column name="REQUEST_TYPE_ID" value="a7c38e4e-939a-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ea5a99e6-92eb-11ec-b909-0242ac120002"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

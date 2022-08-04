@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0011-ins_mdm30_status_transition_1" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c4772c62-57ed-40f0-85de-8cf5b3b6c66e"/>
+            <column name="description" value="Система в автоматическом режиме при переходе Требования в статус &quot;Анализ&quot; создает ЗНА для каждой функции указанной в поле &quot;Функция&quot; Требования." />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="null" />
+            <column name="end_status" value="a00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_2" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e30d5ad8-9ae9-11ec-b909-0242ac120002"/>
+            <column name="description" value="Система автоматически перевод ЗНА в статус &quot;Анализ&quot;" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_3" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="bcf6174e-9aea-11ec-b909-0242ac120002"/>
+            <column name="description" value="Анализ РП требования и вынесение им доработки, при необходимости" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="600da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_4" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0349f3a0-9aeb-11ec-b909-0242ac120002"/>
+            <column name="description" value="Анализ РП требования и вынесение им доработки, при необходимости" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="700da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_5" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="267d182a-9aeb-11ec-b909-0242ac120002"/>
+            <column name="description" value="Анализ РП требования и вынесение им доработки, при необходимости" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="900da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_6" author="IKretov">
+
+    <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+        <column name="ID" value="494c69b4-9aeb-11ec-b909-0242ac120002"/>
+        <column name="description" value="Уточнение запрошенной информации" />
+        <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+        <column name="START_STATUS" value="700da87c-8f05-11ec-b909-0242ac120002" />
+        <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002"/>
+        <column name="START_DATE" value="2015-01-01"/>
+        <column name="END_DATE" value="9999-12-31"/>
+        <column name="version" value="1"/>
+        <column name="CREATED_DATE" valueDate="${now}"/>
+        <column name="CREATED_BY" value="suvv-admin"/>
+        <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+    </insert>
+</changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_7" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="8e6e517e-9aeb-11ec-b909-0242ac120002"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-ins_mdm30_status_transition_8" author="IKretov">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d1763a40-9aeb-11ec-b909-0242ac120002"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="6a45f038-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="017-upd_mdm30_status_transition_wf_vis_agreement." author="EAlbinets">
+        <update tableName="mdm30_status_transition">
+            <column name="status_model_id" value="014ccc88-92eb-11ec-b909-0242ac120002"/>
+            <where>id in ('5519bec6-9960-11ec-b909-0242ac120002',
+                '5529bec6-9960-11ec-b909-0242ac120002',
+                '5539bec6-9960-11ec-b909-0242ac120002',
+                '5549bec6-9960-11ec-b909-0242ac120002',
+                '5559bec6-9960-11ec-b909-0242ac120002',
+                '5569bec6-9960-11ec-b909-0242ac120002',
+                '5579bec6-9960-11ec-b909-0242ac120002',
+                '5589bec6-9960-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+
+</databaseChangeLog>

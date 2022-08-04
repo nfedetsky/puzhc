@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0014-create_mdm07_defect_source" author="ZESONOV">
+        <createTable tableName="mdm07_defect_source">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDM07_DEFECT_SOURCE"/>
+            </column>
+            <column name="CODE" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="START_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="END_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VERSION" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="0014-create_mdm07_defect_source_2" author="ZESONOV">
+        <addUniqueConstraint columnNames="CODE, END_DATE" constraintName="IDX_DEFECT_SOURCE_UNQ"
+                             tableName="mdm07_defect_source"/>
+    </changeSet>
+
+</databaseChangeLog>

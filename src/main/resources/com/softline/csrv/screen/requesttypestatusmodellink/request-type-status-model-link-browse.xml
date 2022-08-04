@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://requestTypeStatusModelLinkBrowse.caption"
+        focusComponent="requestTypeStatusModelLinksTable">
+    <data readOnly="true">
+        <collection id="requestTypeStatusModelLinksDc"
+                    class="com.softline.csrv.entity.RequestTypeStatusModelLink">
+            <fetchPlan>
+                <property name="requestType" fetchPlan="_base"/>
+                <property name="statusModels" fetchPlan="_base"/>
+                <property name="infoSystem" fetchPlan="_base"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+            </fetchPlan>
+            <loader id="requestTypeStatusModelLinksDl">
+                <query>
+                    <![CDATA[select e from RequestTypeStatusModelLink e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="requestTypeStatusModelLinksTable" spacing="true">
+        <filter id="filter"
+                dataLoader="requestTypeStatusModelLinksDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="requestTypeStatusModelLinksTable"
+                    width="100%"
+                    dataContainer="requestTypeStatusModelLinksDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="requestType"/>
+                <column id="statusModels"/>
+                <column id="infoSystem"/>
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="requestTypeStatusModelLinksTable.create"/>
+                <button id="editBtn" action="requestTypeStatusModelLinksTable.edit"/>
+                <button id="removeBtn" action="requestTypeStatusModelLinksTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="requestTypeStatusModelLinksDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

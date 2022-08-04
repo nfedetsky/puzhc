@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="updatedBuildComponentDc" class="com.softline.csrv.entity.BuildComponent">
+            <loader id="updatedBuildComponentDl"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <groupBox id="updatedBuildComponentsGroupBox" align="TOP_LEFT" spacing="true">
+            <table id="updatedBuildComponentTable" dataContainer="updatedBuildComponentDc" width="AUTO" height="200px">
+                <actions>
+                    <action id="add" type="add"/>
+                    <action id="exclude" type="exclude"/>
+                </actions>
+                <columns>
+                    <column id="name" width="200"/>
+                    <column id="description" width="150"/>
+                </columns>
+                <buttonsPanel>
+                    <button id="updatedBuildComponentAddBtn" action="updatedBuildComponentTable.add" icon="PLUS"
+                            caption=""/>
+                    <button id="updatedBuildComponentDelBtn" action="updatedBuildComponentTable.exclude" icon="TRASH"
+                            caption=""/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+    </layout>
+</fragment>

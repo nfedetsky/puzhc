@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0010-upd_mdm05_inf_system-1" author="ASShepelev">
+        <update tableName="mdm05_inf_system">
+            <column name="slm_service" value="147932902"/>
+            <column name="sevice_comp" value="147932974"/>
+            <column name ="route_type" value="148006768"/>
+            <where>id_src = '770000'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0010-upd_mdm05_inf_system-2" author="ASShepelev">
+        <update tableName="mdm05_inf_system">
+            <column name="slm_service" value="121300426"/>
+            <column name="sevice_comp" value="272996702"/>
+            <column name ="route_type" value="272996901"/>
+            <where>id_src = '10700'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0010-upd_mdm05_inf_system-3" author="ASShepelev">
+        <update tableName="mdm05_inf_system">
+            <column name="slm_service" value="121300407"/>
+            <column name="sevice_comp" value="272996704"/>
+            <column name ="route_type" value="272996902"/>
+            <where>id_src = '100000'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0010-upd_mdm05_inf_system-4" author="ASShepelev">
+        <update tableName="mdm05_inf_system">
+            <column name="slm_service" value="121300494"/>
+            <column name="sevice_comp" value="272996706"/>
+            <column name ="route_type" value="272996903"/>
+            <where>id_src = '10500'</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

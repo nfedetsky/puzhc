@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://RequestByTypeBrowse.caption"
+        focusComponent="requestsTable">
+    <data readOnly="true">
+        <collection id="requestsDc"
+                    class="com.softline.csrv.entity.Request">
+            <fetchPlan>
+                <property name="revisionNum"/>
+                <property name="requestType"/>
+                <property name="keyNum"/>
+                <property name="name"/>
+                <property name="status"/>
+                <property name="author"/>
+                <property name="startedDate"/>
+                <property name="completedTime"/>
+            </fetchPlan>
+            <loader id="requestsDl">
+                <query>
+                    <![CDATA[select e from Request e where e.requestType.code = :typecode]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="requestsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="requestsDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="requestsTable"
+                    width="100%"
+                    dataContainer="requestsDc">
+            <columns>
+                <column id="requestType"/>
+                <column id="keyNum"/>
+                <column id="name"/>
+                <column id="status"/>
+                <column id="author"/>
+                <column id="startedDate"/>
+                <column id="completedTime"/>
+            </columns>
+        </groupTable>
+        <pagination id="pagination"
+                    itemsPerPageVisible="true"
+                    itemsPerPageOptions="10, 20, 30, 40, 50"
+                    itemsPerPageDefaultValue="10">
+            <loaderProvider loaderId="requestsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

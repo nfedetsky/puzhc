@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        caption="msg://rfcTypeBrowse.caption"
+        focusComponent="rfcTypesTable">
+    <data readOnly="true">
+        <collection id="rfcTypesDc"
+                    class="com.softline.csrv.entity.RfcType">
+            <fetchPlan>
+                <property name="id"/>
+                <property name="code"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+            </fetchPlan>
+            <loader id="rfcTypesDl">
+                <query>
+                    <![CDATA[select e from RfcType e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="rfcTypesTable" spacing="true">
+        <filter id="filter"
+                dataLoader="rfcTypesDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="rfcTypesTable"
+                    width="100%"
+                    dataContainer="rfcTypesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="code" required="true"/>
+                <column id="name" required="true"/>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="createdBy"/>
+                <column id="createdDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="lastModifiedDate"/>
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="rfcTypesTable.create"/>
+                <button id="editBtn" action="rfcTypesTable.edit"/>
+                <button id="removeBtn" action="rfcTypesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="rfcTypesDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

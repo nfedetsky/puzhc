@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="infoFragmentDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="filesDc"
+                    class="com.softline.csrv.entity.RequestFile">
+            <fetchPlan extends="_base"/>
+            <loader id="filesDl"/>
+        </collection>
+        <collection id="commentsDc"
+                    class="com.softline.csrv.entity.RequestComm">
+            <fetchPlan extends="_base">
+                <property name="author" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="commentsDl"/>
+        </collection>
+        <collection id="relatedTaskDc"
+                    class="com.softline.csrv.entity.Request">
+            <fetchPlan extends="_base">
+                <property name="assignee" fetchPlan="_base"/>
+                <property name="status" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="relatedTaskDl"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <groupBox id="groupBox" orientation="vertical" stylename="fklis-kanban-style" spacing="true" align="TOP_LEFT">
+            <label dataContainer="infoFragmentDc" property="name"/>
+            <form dataContainer="infoFragmentDc">
+                <textField property="assignee" editable="false"/>
+            </form>
+            <groupBox caption="msg:///kanban.taskDetails" id="TaskDetails" orientation="vertical" collapsable="true">
+                <form dataContainer="infoFragmentDc">
+                    <textField property="status"  editable="false"/>
+                    <textField property="priority" editable="false"/>
+                    <textField property="labels" editable="false"/>
+                </form>
+            </groupBox>
+            <groupBox caption="msg:///kanban.date" id="date" orientation="vertical" collapsable="true">
+                <form dataContainer="infoFragmentDc">
+                    <dateField property="createdDate" editable="false"/>
+                    <dateField property="lastModifiedDate" editable="false"/>
+                </form>
+            </groupBox>
+            <groupBox caption="msg:///kanban.people" id="people" orientation="vertical" collapsable="true">
+                <form dataContainer="infoFragmentDc">
+                    <textField property="author" editable="false"/>
+                    <textField property="curator" editable="false"/>
+                    <textField property="curatorR" editable="false"/>
+                </form>
+            </groupBox>
+            <groupBox caption="msg:///kanban.description" id="description" orientation="vertical" collapsable="true">
+                <form dataContainer="infoFragmentDc">
+                    <textArea  property="description" editable="false"/>
+                </form>
+            </groupBox>
+            <groupBox caption="msg:///kanban.relatedTasks" id="relatedTasks" orientation="vertical" collapsable="true">
+                <table id="relatedTaskTable"
+                       width="100%"
+                       dataContainer="relatedTaskDc">
+                    <columns>
+                        <column id="assignee"/>
+                        <column id="keyNum"/>
+                        <column id="name"/>
+                        <column id="status"/>
+                    </columns>
+                </table>
+            </groupBox>
+            <groupBox caption="msg:///kanban.files" id="files" orientation="vertical" collapsable="true">
+                <table id="attachmentsTable"
+                       width="100%"
+                       dataContainer="filesDc">
+                    <columns>
+                        <column id="name"/>
+                        <column id="fileRef"/>
+                        <column id="createdDate"/>
+                    </columns>
+                </table>
+            </groupBox>
+            <groupBox caption="msg:///kanban.comments" id="comments" orientation="vertical" collapsable="true">
+                <table id="commentsTable"
+                       width="100%"
+                       dataContainer="commentsDc">
+                    <columns>
+                        <column id="author"/>
+                        <column id="createdDate" />
+                        <column id="name"/>
+                    </columns>
+                </table>
+            </groupBox>
+        </groupBox>
+    </layout>
+</fragment>

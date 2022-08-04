@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0073-ins_mdm02_doc_kind" author="EAlbinets">
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="11db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="ALBUM_TFF"/>
+            <column name="NAME" value="Альбом ТФФ"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="12db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="SHEET_TD"/>
+            <column name="NAME" value="Ведомость технического проекта"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="13db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="SHEET_OD"/>
+            <column name="NAME" value="Ведомость эксплуатационных документов"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="15db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="REVISION"/>
+            <column name="NAME" value="Доработка"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ac9e-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="ZNA"/>
+            <column name="NAME" value="ЗНА"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3a56e-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="17db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="USER_MANUAL"/>
+            <column name="NAME" value="Инструкция по эксплуатации"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ac9e-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="18db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="CORRECTION"/>
+            <column name="NAME" value="Исправление"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3a208-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="19db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="LOT_SAM"/>
+            <column name="NAME" value="ЛОТ SAM"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Adb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="MFT"/>
+            <column name="NAME" value="Методика ФТ"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Bdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="MCLI"/>
+            <column name="NAME" value="Методика расчета трудоемкости"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Cdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="OPZ"/>
+            <column name="NAME" value="	ОПЗ"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Ddb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="GDS"/>
+            <column name="NAME" value="Общее описание системы"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Edb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="DESC_AF"/>
+            <column name="NAME" value="Описание автоматизируемых функций"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Fdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="DESC_IS"/>
+            <column name="NAME" value="Описание информационного обеспечения"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="20db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="DESC_TC"/>
+            <column name="NAME" value="Описание комплекса технических средств"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="DESC_O"/>
+            <column name="NAME" value="Описание организации информационной базы"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="22db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="DESC_S"/>
+            <column name="NAME" value="Описание программного обеспечения"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="23db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="PASSPORT"/>
+            <column name="NAME" value="Паспорт"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="24db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="IT_SERVICE_PASSPORT"/>
+            <column name="NAME" value="Паспорт ИТ-сервиса"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="25db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="PIM"/>
+            <column name="NAME" value="ПиМ"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="26db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="OMP"/>
+            <column name="NAME" value="Порядок эксплуатации и технического обслуживания"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="27db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="ENTP"/>
+            <column name="NAME" value="Пояснительная записка к техническому проекту"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="28db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="DASR"/>
+            <column name="NAME" value="Проектная оценка надежности системы"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="29db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="GUID_SA"/>
+            <column name="NAME" value="Руководство по администрированию системы"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="2Adb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="GUIDE_SC"/>
+            <column name="NAME" value="Руководство по пуско-наладке системы"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="2Bdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="GUIDE_USER"/>
+            <column name="NAME" value="Руководство пользователя"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="2Cdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="GUIDE_SP"/>
+            <column name="NAME" value="Руководство системного программиста"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="2Ddb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="COORDINATION"/>
+            <column name="NAME" value="Согласование"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c39204-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="2Edb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="VIS_APPROVAL"/>
+            <column name="NAME" value="Согласование ВИС"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c390a6-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="2Fdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="SPECIFICATION"/>
+            <column name="NAME" value="Спецификация"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="30db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="KBA"/>
+            <column name="NAME" value="Статья базы знаний"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="SDCTM"/>
+            <column name="NAME" value="Схема структурная комплекса технических средств"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="32db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="TZ_CHTZ"/>
+            <column name="NAME" value="ТЗ/ЧТЗ"/>
+            <column name="doc_type_id" value="11db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="33db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="TABLE_CONNECTIONS"/>
+            <column name="NAME" value="Таблица соединений и подключений"/>
+            <column name="doc_type_id" value="31db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="34db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="TECHNICAL_REQUIREMENT"/>
+            <column name="NAME" value="Техническое требование"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="35db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="TECHNOLOGICAL_REGULATIONS"/>
+            <column name="NAME" value="Технологический регламент"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm02_doc_kind" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="36db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="CODE"  value="REQUIREMENT"/>
+            <column name="NAME" value="Требование"/>
+            <column name="doc_type_id" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="request_type_id" value="a7c38e4e-939a-11ec-b909-0242ac120002"/>
+            <column name="process_id" value="21db6c84-8d7e-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

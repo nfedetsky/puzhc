@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="additionalVISsDc" class="com.softline.csrv.entity.Request">
+            <fetchPlan>
+                <property name="createdDate"/>
+                <property name="name"/>
+                <property name="revisionNum"/>
+            </fetchPlan>
+            <loader id="additionalVISsDl"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <groupBox id="additionalVISsGroupBox" align="TOP_LEFT" spacing="true">
+            <table id="additionalVISsTable" dataContainer="additionalVISsDc" width="AUTO" height="200px">
+                <actions>
+                    <action id="addAdditionalVISs"/>
+                    <action id="removeAdditionalVISs"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                </columns>
+                <buttonsPanel>
+                    <button id="addAdditionalVISsBtn"
+                            action="additionalVISsTable.addAdditionalVISs"
+                            icon="PLUS"
+                            caption=""/>
+                    <button id="removeAdditionalVISsBtn"
+                            action="additionalVISsTable.removeAdditionalVISs"
+                            icon="TRASH"
+                            caption=""/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+    </layout>
+</fragment>

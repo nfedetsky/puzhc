@@ -1,0 +1,178 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="uuid_function" value="gen_random_uuid()" dbms="postgresql"/>
+    <property name="get_status_function" value="get_status_by_code()" dbms="postgresql"/>
+    <property name="get_statusmodel_function" value="get_statusmodel_by_code()" dbms="postgresql"/>
+    <property name="get_action_by_code" value="get_action_by_code()" dbms="postgresql"/>
+
+
+    <changeSet id="0001-2041-upd-mdm62-0" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_status_by_code(p_code character varying) RETURNS uuid LANGUAGE sql AS $function$ SELECT id from mdm18_status where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_statusmodel_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm29_status_model where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_action_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm62_request_action where code = p_code; $function$;</createProcedure>
+    </changeSet>
+
+    <changeSet id="0001-2041-upd-mdm62-1" author="Elunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'ADD_OBJECT_TO_PUPE')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'ADD_OBJECT_TO_PUPE'</where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="0001-2041-upd-mdm62-2" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'ADD_COMMENT_TO_PUPE')
+                and status_model_id = (select id from mdm29_status_model where code = 'WF_RFC')
+            </where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="0001-2041-upd-mdm62-3" author="ELunin">
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('AGREED')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('IN_PROGRESSG')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('CHECK')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CLOSED')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('IN_PROGRESSG')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('TESTING')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('PROBLEMS')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CHECK')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('RECOVERY')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CHECK')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('TESTING')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('VERIFICATION')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('VERIFICATION')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('CHECK')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('VERIFICATION')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('PROBLEMS')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_RFC') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('VERIFICATION')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('RECOVERY')"/>
+            <column name="action_id" computed="true" valueComputed="get_action_by_code('ADD_COMMENT_TO_PUPE')"/>
+            <column name="sort_order" value="0"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0001-2041-upd-mdm62-4" author="ELunin">
+        <sql>DROP function get_status_by_code;</sql>
+        <sql>DROP function get_statusmodel_by_code;</sql>
+        <sql>DROP function get_action_by_code;</sql>
+    </changeSet>
+
+</databaseChangeLog>

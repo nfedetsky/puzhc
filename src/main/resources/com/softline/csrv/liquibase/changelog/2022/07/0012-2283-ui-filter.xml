@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="gen_uuid" value="gen_random_uuid()" dbms="postgresql"/>
+
+    <changeSet id="0012-2283-ui-filter-1" author="ELunin">
+        <insert tableName="ui_filter_configuration">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="component_id" value="[KanBanScreen].filter"/>
+            <column name="configuration_id" value="Я-исполнительCpUhprQx"/>
+            <column name="username" value="suvv-admin"/>
+            <column name="root_condition" value='{
+  "@class" : "io.jmix.ui.entity.GroupFilterCondition",
+  "componentId" : null,
+  "visible" : false,
+  "enabled" : true,
+  "caption" : null,
+  "localizedCaption" : "",
+  "styleName" : "jmix-filter-root-component",
+  "operation" : "AND",
+  "operationCaptionVisible" : false,
+  "ownFilterConditions" : [ {
+    "@class" : "io.jmix.ui.entity.JpqlFilterCondition",
+    "componentId" : null,
+    "visible" : false,
+    "enabled" : true,
+    "caption" : "я-исполнитель",
+    "localizedCaption" : "я-исполнитель",
+    "styleName" : "",
+    "captionPosition" : "LEFT",
+    "valueComponent" : {
+      "componentName" : "textField",
+      "componentId" : "jpqlFilter_valueComponent",
+      "styleName" : "",
+      "defaultValue" : null
+    },
+    "required" : false,
+    "parameterName" : "StringtTFVVDZy",
+    "parameterClass" : "java.lang.String",
+    "where" : "{E}.assignee.username = :current_user_username",
+    "join" : null,
+    "hasInExpression" : false
+  } ]
+}'/>
+            <column name="name" value="я-исполнитель"/>
+            <column name="default_for_all" valueBoolean="true"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

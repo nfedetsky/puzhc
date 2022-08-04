@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0027-ins_mdm26_prob_req_change_1" author="IKretov">
+        <insert tableName="mdm26_prob_req_change" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c096d8e2-8fec-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="NO"/>
+            <column name="NAME" value="(пусто) Нет"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm26_prob_req_change" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d62b6e5c-8fec-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="PRESENT"/>
+            <column name="NAME" value="Имеется"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm26_prob_req_change" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e7c219f4-8fec-11ec-b909-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="ABSENT"/>
+            <column name="NAME" value="Отсутствует"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,1843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0090-ins-mdm21_function" author="ZESONOV">
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbc2f0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019933.ТК_МС"/>
+            <column name="description" value="Типовая конфигурация &quot;Менеджер сервиса&quot; 1С: {/Б/}"/>
+            <column name="id_src" value="567"/>
+            <column name="system_id" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbca84-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019934.ТК_АС"/>
+            <column name="description" value="Типовая конфигурация &quot;Агент сервиса&quot; 1С: {/Б/}"/>
+            <column name="id_src" value="568"/>
+            <column name="system_id" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ЭБ"/>
+            <column name="description" value="{/А-/}"/>
+            <column name="id_src" value="473"/>
+            <column name="system_id" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ЭБ1С (+)"/>
+            <column name="description" value="{//}"/>
+            <column name="id_src" value="464"/>
+            <column name="system_id" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbd420-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010600.УНФА"/>
+            <column name="description" value="Подсистема управления нефинансовыми активами {/Б:011331.ПУИО_УУ/}"/>
+            <column name="id_src" value="470"/>
+            <column name="system_id" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbd704-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011331.ПУИО_УУ"/>
+            <column name="description" value="Модуль ведения бюджетного (бухгалтерского) учета учреждений {/Б/}"/>
+            <column name="id_src" value="471"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbd592-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010900.УОТ"/>
+            <column name="description" value="Подсистема управления оплатой труда {/Б/}"/>
+            <column name="id_src" value="472"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd704-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbd858-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011450.МВУ_ЕКС"/>
+            <column name="description" value="Модуль ведения учета Единого казначейского счета 1С: {/Б/}"/>
+            <column name="id_src" value="591"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbd9c0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019921.МС"/>
+            <column name="description" value="1С: Менеджер сервиса {/Б/}"/>
+            <column name="id_src" value="549"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbde16-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019922.НСИ"/>
+            <column name="description" value="1С: НСИ {/Б/}"/>
+            <column name="id_src" value="550"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbdfba-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019923.АС"/>
+            <column name="description" value="1С: Агент сервиса {/Б/}"/>
+            <column name="id_src" value="551"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbe140-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019924.АРМ_ЦБ"/>
+            <column name="description" value="1С: АРМ ЦБ {/Б/}"/>
+            <column name="id_src" value="552"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbe2a8-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019930.ТК (+)"/>
+            <column name="description" value="Типовая конфигурация 1С: {/Б/}"/>
+            <column name="id_src" value="560"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbe424-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019931.ТК_ЗКГУ"/>
+            <column name="description"
+                    value="Типовая конфигурация &quot;Зарплата и Кадры Государственных Учреждений&quot;
+             1С: ЗКГУ {/Б:019930.ТК (+)/}"/>
+            <column name="id_src" value="561"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe2a8-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbe5b4-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019932.ТК_БГУ"/>
+            <column name="description" value="Типовая конфигурация &quot;Бухгалтерия Государственных Учреждений&quot;
+             1С: {/Б:019930.ТК (+)/}"/>
+            <column name="id_src" value="562"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe2a8-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbe708-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019940.КМНДР (+)"/>
+            <column name="description" value="Командирование 1С: {/Б/}"/>
+            <column name="id_src" value="573"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbd254-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbe852-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019941.КМНДР_НСИ"/>
+            <column name="description" value="Командирование &quot;НСИ&quot; 1С: {/Б:019940.КМНДР (+)/}"/>
+            <column name="id_src" value="576"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe708-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbec4e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019942.КМНДР_УК"/>
+            <column name="description"
+                    value="Командирование &quot;Управление конфигурациями&quot; 1С: {/Б:019940.КМНДР (+)/}"/>
+            <column name="id_src" value="577"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe708-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbedca-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019943.КМНДР_МС"/>
+            <column name="description" value="Командирование &quot;Менеджер сервиса&quot; 1С: {/Б:019940.КМНДР (+)/}"/>
+            <column name="id_src" value="574"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe708-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbef50-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019944.КМНДР_АС"/>
+            <column name="description" value="Командирование &quot;Агент сервиса&quot; 1С: {/Б:019940.КМНДР (+)/}"/>
+            <column name="id_src" value="575"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe708-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbf0b8-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="019945.КМНДР_ШД"/>
+            <column name="description" value="Командирование &quot;Шина данных&quot; 1С: {/Б:019940.КМНДР (+)/}"/>
+            <column name="id_src" value="578"/>
+            <column name="system_id" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbe708-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbf216-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="02.ГМУ"/>
+            <column name="description"
+                    value="Официальный сайт для размещения информации о государственных (муниципальных) учреждениях {/Б/ПИИ/ДА:[gmu/]/}"/>
+            <column name="id_src" value="532"/>
+            <column name="system_id" value="340b2b06-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbf374-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="03.ГАСУ"/>
+            <column name="description"
+                    value="Государственная автоматизированная система &quot;Управление&quot; {/Б/ПИИ/} &quot;/Б/C/ДА:[gasu/]/&quot;"/>
+            <column name="id_src" value="475"/>
+            <column name="system_id" value="340b2e26-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbf4f0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="05.ГИС_ГМП"/>
+            <column name="description"
+                    value="Государственная информационная система о государственных и муниципальных платежах {/Б/С/ДА:[gis_gmp/]/}"/>
+            <column name="id_src" value="533"/>
+            <column name="system_id" value="340b3290-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbf946-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="07.СУЭ.ИБП"/>
+            <column name="description"
+                    value="Компонент контроля исполнения бизнес-процессов/ компонент визуализации бизнес-показателей и бизнес-процессов ИС Подсистемы информирования и отчетности (ПИО) СУЭ {/Б/}"/>
+            <column name="id_src" value=""/>
+            <column name="system_id" value="340b5158-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bbfb26-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="08.УФОС (+)"/>
+            <column name="description" value="{//}"/>
+            <column name="id_src" value="559"/>
+            <column name="system_id" value="340b54be-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc06f2-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="080111.Ядро"/>
+            <column name="description"
+                    value="Ядро {/Б/С/ВС/ДА:ufos-core-ear[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/otr-nexus_ufos-core-releases/com/otr/sufd/sufd-server-portlet-ear/]/ДА:ufos-core-war[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/otr-nexus_ufos-core-releases/com/otr/sufd/sufdserver/sufd-server/]/ДА:ufos-core-portlet-libs[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/otr-nexus_ufos-core-releases/com/otr/sufd/sufd-server-portlet-libs/]/ДА:ufos-core-modules[http://s9500ebnex01.sk.roskazna.local/nexus/content/groups/public/com/otr/sufd/]/}"/>
+            <column name="id_src" value="62"/>
+            <column name="system_id" value="340b54be-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbfb26-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc0922-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="080151.Студия"/>
+            <column name="description"
+                    value="Студия {/Б/С/ВС/ПФТП:studio-core-server-x64-linux/ДА:studio-core-x64-win[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/otr-nexus_studio/ru/otr/studio/studio/]/ДА:studio-core-x64-linux[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/otr-nexus_studio/ru/otr/studio/studio/]/ДА:studio-core-server-x64-linux[http://s9500ebsvn01.sk.roskazna.local/repos/eb/POI/release-candidate/cdo/]/}"/>
+            <column name="id_src" value="465"/>
+            <column name="system_id" value="340b54be-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbfb26-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc0a94-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="09.СОБИ"/>
+            <column name="description" value=""/>
+            <column name="id_src" value="548"/>
+            <column name="system_id" value="340b5928-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="10.АСФК (+)"/>
+            <column name="description" value="{/Б/ППО_НП/}"/>
+            <column name="id_src" value="477"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc0d78-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100001.Не определено (-)"/>
+            <column name="description" value="{/Б:10.АСФК (+)/А-/}"/>
+            <column name="id_src" value="545"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc0ed6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100101.Бюджетная отчетность"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="476"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc1282-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100201.Ведение бюджетного учета"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="478"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc13e0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100301.Учет поступлений"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="479"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc1520-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100401.Обеспечение деятельности Таможенного союза"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="480"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc1674-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100501.Доп. нефтегазовые доходы и управление средствами ФНБ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="481"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc19c6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100601.Операции на ЕКС, взаимодействие с ЦБ РФ (кредитными организациями)"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="482"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc1c8c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100701.Наличные денежные средства"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="483"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc1e6c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100801.Кассовое обслуживание субъектов, МО и ТГВФ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="484"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc1fd4-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="100901.Проведение операций со средствами БУ и АУ субъектов РФ и МО"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="485"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc24fc-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101001.Осуществление отдельных функций финорганов субъектов РФ и МО"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="486"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc268c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101101.Кассовое обслуживание ГВФ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="487"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc27d6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101201.Доведение БА, ЛБО и ПОФР при исполнении федерального бюджета"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="488"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc2920-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101301.Обеспечение учета БО, ДО ПБС"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="489"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc2a60-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101401.Учет и мониторинг исполнения ИД и РНО"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="490"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc2bc8-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101501.Кассовое обслуживание ФБ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="491"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc2d58-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101601.ФБУ, ФАУ, ГВФ и ГК «Росавтодор»"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="492"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc2ed4-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101701.Иные неучастники бюджетного процесса (41)"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="493"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc3276-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101801.Средства во временном распоряжении"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="494"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc33e8-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="101901.Ведение НСИ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="495"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc353c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102001.Закрытый реестр банковских гарантий"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="496"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc36c2-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102101.Закрытый реестр контрактов"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="497"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc382a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102201.Контроль по ч.5 ст. 99 44-ФЗ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="498"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc3974-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102301.Осуществление выплат на НСПК"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="499"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc3abe-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102401.Обеспечение взаимодействия с ГИС ЖКХ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="500"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc3bfe-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102501.Обеспечение взаимодействия с ГИС ГМП"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="501"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc3f78-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102601.Осуществление операций по КОО"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="502"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc40e0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102701.Осуществление операций по МБТ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="503"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc4234-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102801.Информация о конечных получателях субсидий"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="504"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc43b0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102901.Интеграция с ПИАО"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="505"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc450e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="102902.Интеграция с ЕПБС"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="547"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc4658-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="103001.Интеграция с КПЭ"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="506"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc47b6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="103101.Паспорт ТОФК"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="507"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc48ec-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="103201.ПОВАК"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="508"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc4c16-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="103301.Интеграция с ПФХД"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="509"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc4d6a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="103401.Закрытый контур"/>
+            <column name="description" value="{/Б:10.АСФК (+)/}"/>
+            <column name="id_src" value="511"/>
+            <column name="system_id" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc0c06-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc4ea0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="11.КПЭ"/>
+            <column name="description" value="{/Б/И/}"/>
+            <column name="id_src" value=""/>
+            <column name="system_id" value="340b6300-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc4fe0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120101.СКИАО.ССДГГС"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема «Система сбора и обработки данных по оценке результативности деятельности федеральных ГГС, замещающих должности федеральной ГГС в ФК» {/Б/С/ДА:[var/skiao]/ДА:12-skiao-cades[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/FK_exchange/ru/parma/cades/]/}"/>
+            <column name="id_src" value="534"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5120-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120200.СКИАО.СПД"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема сбора произвольных данных {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="536"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5256-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120301.СКИАО.ССДТОФК"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема оценки результативности деятельности ТОФК {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="540"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5396-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120302.СКИАО.ССДЦАФК"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема оценки результативности деятельности отделов управлений ЦА ФК {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="539"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc54d6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120303.СКИАО.ССДРУФК"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема оценки результативности деятельности руководителей ТОФК {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="541"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc58be-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120400.СКИАО.ПР"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема учета правовой работы и судебных дел {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="537"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5bac-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120500.СКИАО.МОД"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема мониторинга операционного дня {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="538"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5cec-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120600.СКИАО.РН"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема расчета планируемой нагрузки на сотрудников ТОФК {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="543"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5e40-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120700.СКИАО.РУ"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Подсистема расчета удаленности ТОФК {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="542"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc5f9e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="120800.СКИАО.ИАП"/>
+            <column name="description"
+                    value="Система комплексного информационно-аналитического обеспечения деятельности органов Федерального казначейства (СКИАО): Информационно-аналитическая подсистема {/Б/С/ДА:[var/skiao]/}"/>
+            <column name="id_src" value="535"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6124-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="129000.СКИАО.ОБЩЕСИСТЕМНЫЕ"/>
+            <column name="description"
+                    value="Отдельные общесистемные сервисы СКИАО, выделяемые в рамках развития СКИАО {/Б/С/ДА:[var/skiao]/ДА:12-skiao-cades[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/FK_exchange/ru/parma/cades/]/ДА:12-skiao-resttemplate[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/FK_exchange/ru/parma/rest-template-service/]/ДА:12-skiao-parmacommon[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/FK_exchange/ru/parma/common/]/ДА:12-skiao-auth-client[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/FK_exchange/ru/parma/skiao/security/auth-client/]/ДА:12-skiao-aop-logging[http://s9500ebnex01.sk.roskazna.local/nexus/content/repositories/FK_exchange/ru/parma/skiao/aop-logging/]/}"/>
+            <column name="id_src" value="569"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc62be-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="15.АСП"/>
+            <column name="description"
+                    value="Автоматизированная система планирования контрольной и надзорной деятельности Федеральной службы финансово-бюджетного надзора в исполняемых модулях {/Б/ДА:[var/asp]/}"/>
+            <column name="id_src" value="544"/>
+            <column name="system_id" value="340b7976-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6426-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="15.АСП-М"/>
+            <column name="description"
+                    value="Автоматизированная модернизированная система планирования контрольной и надзорной деятельности Федеральной службы финансово-бюджетного надзора в исполняемых модулях {/Б/С/ДА:[var/aspm]/}"/>
+            <column name="id_src" value="566"/>
+            <column name="system_id" value="340b7976-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc67be-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="220100.ЗАББИКС"/>
+            <column name="description"
+                    value="Свободная система мониторинга и отслеживания статусов разнообразных сервисов компьютерной сети, серверов и сетевого оборудования {/Б/ППО_НП/}"/>
+            <column name="id_src" value="579"/>
+            <column name="system_id" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc691c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="220200.ГРАФАНА"/>
+            <column name="description"
+                    value="Средства визуализации, мониторинга и анализа данных мониторинга сетевых сервисов {/Б/ППО_НП/}"/>
+            <column name="id_src" value="580"/>
+            <column name="system_id" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6a7a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="220300.ELK"/>
+            <column name="description"
+                    value="Кластер для сбора, хранения и анализа логов ELK (Elasticsearch, Logstash, Kibana)"/>
+            <column name="id_src" value="582"/>
+            <column name="system_id" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6bba-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="220400.INFLUXDB"/>
+            <column name="description" value="База данных временных рядов Influxdb."/>
+            <column name="id_src" value="583"/>
+            <column name="system_id" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6d0e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="220500.ПРОМЕТЕУС"/>
+            <column name="description" value="Сервис мониторинга Prometheus"/>
+            <column name="id_src" value="584"/>
+            <column name="system_id" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6e4e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="241000.ЯНТАРЬ (+)"/>
+            <column name="description" value="Базовая функция для СКЗИ ЯНТАРЬ {/Б/}"/>
+            <column name="id_src" value="581"/>
+            <column name="system_id" value="340b8772-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc6fa2-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="241032.ЯНТАРЬ_НН"/>
+            <column name="description" value="Янтарь Нижегородская область"/>
+            <column name="id_src" value="588"/>
+            <column name="system_id" value="340b8772-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc6e4e-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc716e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="241048.ЯНТАРЬ_МО"/>
+            <column name="description" value="Янтарь Московская область"/>
+            <column name="id_src" value="589"/>
+            <column name="system_id" value="340b8772-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc6e4e-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc74a2-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="251000.СЗУ (+)"/>
+            <column name="description" value="Базовая функция для СЗУ {/Б/}"/>
+            <column name="id_src" value="585"/>
+            <column name="system_id" value="340b888a-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc765a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="261000.JENKINS (+)"/>
+            <column name="description"
+                    value="Автоматизация непрерывной установки, обновления и интеграции ПО Jenkins {/Б/}"/>
+            <column name="id_src" value="586"/>
+            <column name="system_id" value="340b89ac-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc77ae-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="262000.ANSIBLE (+)"/>
+            <column name="description" value="Управление конфигурациями Ansible {/Б/}"/>
+            <column name="id_src" value="587"/>
+            <column name="system_id" value="340b89ac-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc797a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="271000.АИС_УБР (+)"/>
+            <column name="description"
+                    value="Автоматизированная информационная система управления бюджетными ресурсами Роструда, обеспечивающая финансово-хозяйственную деятельность Роструда {/Б/}"/>
+            <column name="id_src" value="590"/>
+            <column name="system_id" value="340b8ad8-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc7aec-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="280100.ЭС (+)"/>
+            <column name="description" value="Электронные сертификаты {/Б/С/ДА:[gis_es/]/}"/>
+            <column name="id_src" value="592"/>
+            <column name="system_id" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc7c9a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="280200.ПТРУ"/>
+            <column name="description" value="Перечни товаров, работ, услуг {/Б:280100.ЭС (+)/}"/>
+            <column name="id_src" value="593"/>
+            <column name="system_id" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc7aec-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc7de4-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="280300.Продавцы (исполнители)"/>
+            <column name="description" value="Продавцы (исполнители) {/Б:280100.ЭС (+)/}"/>
+            <column name="id_src" value="594"/>
+            <column name="system_id" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc7aec-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc8280-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="280400.Нормативно-справочная информация"/>
+            <column name="description" value="Нормативно-справочная информация {/Б:280100.ЭС (+)/}"/>
+            <column name="id_src" value="595"/>
+            <column name="system_id" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc7aec-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc8438-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="280500.Сайт"/>
+            <column name="description" value="Сайт {/Б/С/ДА:[gis_es/]/}"/>
+            <column name="id_src" value="596"/>
+            <column name="system_id" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc85dc-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="771011.Студия"/>
+            <column name="description" value="CDO-Студия {/Б/УС/С/ПИИ/}"/>
+            <column name="id_src" value="462"/>
+            <column name="system_id" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc874e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="772011.СК"/>
+            <column name="description" value="Сборочный конвейер"/>
+            <column name="id_src" value="556"/>
+            <column name="system_id" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc88ac-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="777700.Jira ФК (+)"/>
+            <column name="description" value="{/Б/}"/>
+            <column name="id_src" value="553"/>
+            <column name="system_id" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc8a00-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="777777.СУВВ"/>
+            <column name="description" value="{/Б:777700.Jira ФК (+)/}"/>
+            <column name="id_src" value="463"/>
+            <column name="system_id" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc88ac-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc8b4a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="777778.ФКП"/>
+            <column name="description" value="{/Б:777700.Jira ФК (+)/}"/>
+            <column name="id_src" value="558"/>
+            <column name="system_id" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc88ac-93c1-11ec-b909-0242ac120002"/>
+
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc8cb2-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="777781.RFC"/>
+            <column name="description" value="{/Б:777700.Jira ФК (+)/}"/>
+            <column name="id_src" value="554"/>
+            <column name="system_id" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc88ac-93c1-11ec-b909-0242ac120002"/>
+
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc8fb4-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011600.ЕПБС"/>
+            <column name="description" value="Единый портал бюджетной системы {/Б/У/С/}"/>
+            <column name="id_src" value="531"/>
+            <column name="system_id" value="340b24bc-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc9126-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011500.ПИАО"/>
+            <column name="description" value="Подсистема информационно-аналитического обеспечения {/Б/У/С/}"/>
+            <column name="id_src" value="530"/>
+            <column name="system_id" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc9270-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010400.НСИ"/>
+            <column name="description" value="Подсистема ведения нормативной справочной информации {/Б/У/С/}"/>
+            <column name="id_src" value="526"/>
+            <column name="system_id" value="340af35c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc940a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010410.НСИ_СВР"/>
+            <column name="description"
+                    value="Подсистема ведения нормативной справочной информации: Модуль формирования и ведения реестра участников бюджетного процесса, а также юридических лиц, не являющихся участниками бюджетного процесса {/Б:010400.НСИ/}"/>
+            <column name="id_src" value="528"/>
+            <column name="system_id" value="340af35c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc9270-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc96f8-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010420.БПГУ"/>
+            <column name="description"
+                    value="Подсистема ведения нормативной справочной информации: Модуль формирования общероссийских базовых (отраслевых) перечней (классификаторов) государственных и муниципальных услуг, оказываемых физическим лицам, и федеральных перечней (классификаторов) государственных услуг и работ {/Б/У/С/}"/>
+            <column name="id_src" value="527"/>
+            <column name="system_id" value="340af5be-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc9860-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010100.ПОИ"/>
+            <column name="description"
+                    value="Подсистема обеспечения интеграции, ведения реестров и формуляров {/Б/И/У/С/}"/>
+            <column name="id_src" value="61"/>
+            <column name="system_id" value="340b5b3a-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0057-ins-mdm21_function_110" author="IKretov">
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc99be-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011000.ПУД"/>
+            <column name="description" value="Подсистема управления доходами {/Б/И/У/С/}"/>
+            <column name="id_src" value="474"/>
+            <column name="system_id" value="340b17c4-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0057-ins-mdm21_function_111" author="IKretov">
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bc9b1c-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010500.ПУДС"/>
+            <column name="description" value="Подсистема управления денежными средствами {/Б/У/С/}"/>
+            <column name="id_src" value="529"/>
+            <column name="system_id" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0057-ins-mdm21_function_112" author="IKretov">
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bca044-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010510.ПУДС_СКП"/>
+            <column name="description"
+                    value="Подсистема управления денежными средствами с функционалом системы казначейских платежей {/Б/У/С/}"/>
+            <column name="id_src" value="565"/>
+            <column name="system_id" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bca1a2-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010520.ПУДС_КП (+)"/>
+            <column name="description" value="Модуль кассового планирования {/Б/С/}"/>
+            <column name="id_src" value="570"/>
+            <column name="system_id" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bc9b1c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bca2f6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010521.ПУДС_КП_ПЛ"/>
+            <column name="description" value="компонент кассового планирования {/Б:010520.ПУДС_КП (+)/}"/>
+            <column name="id_src" value="571"/>
+            <column name="system_id" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca1a2-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bca44a-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010522.ПУДС_КП_ПР"/>
+            <column name="description"
+                    value="компонент прогнозирования остатка средств на счетах Федерального казначейства, необходимого для осуществления платежей {/Б:010520.ПУДС_КП (+)/}"/>
+            <column name="id_src" value="572"/>
+            <column name="system_id" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca1a2-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010700.ПУР (+)"/>
+            <column name="description" value="Подсистема управления расходами {/Б/У/С/}"/>
+            <column name="id_src" value="512"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bca77e-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010710.ПУР_РС"/>
+            <column name="description"
+                    value="Модуль формирования соглашений о предоставлении субсидий и ведения соответствующего реестра - компонент формирования и ведения реестра соглашений. {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="523"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcaabc-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010720.ПУР_РГЗ"/>
+            <column name="description"
+                    value="Модуль формирования государственных заданий на оказание государственных услуг (выполнение работ) и отчетов об их исполнении - компонент формирования и ведения реестра государственных заданий на оказание государственных услуг (выполнение работ). {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="524"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcaed6-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010731.ПУР_ДБД"/>
+            <column name="description"
+                    value="Компонент распределения и доведения бюджетных ассигнований, лимитов бюджетных обязательств и предельных объемов финансирования Модуля ведения операций по исполнению обязательств участников бюджетного процесса Подсистемы управления расходами (Доведение бюджетных данных) {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="514"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb098-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010732.ПУР_БО"/>
+            <column name="description"
+                    value="Модуль ведения операций по исполнению обязательств участников бюджетного процесса: компонент ведения бюджетных обязательств {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="515"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb1ec-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010733.ПУР_ДО"/>
+            <column name="description"
+                    value="Модуль ведения операций по исполнению обязательств участников бюджетного процесса: компонент ведения денежных обязательств {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="516"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb354-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010734.ПУР_САНКЦ"/>
+            <column name="description"
+                    value="Модуль ведения операций по исполнению обязательств участников бюджетного процесса: компонент санкционирования расходов {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="522"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb4d0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010735.ПУР_ИДиРНО"/>
+            <column name="description"
+                    value="Модуль формирования государственных заданий на оказание государственных услуг (выполнение работ) и отчетов об их исполнении - компонент формирования и ведения реестра государственных заданий на оказание государственных услуг (выполнение работ). {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="525"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb638-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010760.ПУР_ЛС"/>
+            <column name="description" value="Модуль ведения лицевых счетов {/Б:010700.ПУР (+)/}"/>
+            <column name="id_src" value="513"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb782-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010770.ПУР_АУ_БУ"/>
+            <column name="description"
+                    value="Модуль санкционирования расходов, учета операций и ведения лицевых счетов федеральных бюджетных учреждений и федеральных автономных учреждений, лицевые счета которым открыты в ТОФК {/Б/У/С/}"/>
+            <column name="id_src" value="564"/>
+            <column name="system_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bca5ee-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcb8fe-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="010740.ПУР_КС"/>
+            <column name="description"
+                    value="Модуль казначейского сопровождения и ведения операций со средствами неучастников бюджетного процесса {/Б/И/У/C/}"/>
+            <column name="id_src" value="521"/>
+            <column name="system_id" value="340b138c-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcbc96-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011300.ПУИО (+)"/>
+            <column name="description" value="Подсистема Учет и отчетность {/Б/У/С/}"/>
+            <column name="id_src" value="517"/>
+            <column name="system_id" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bbcc3c-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcbde0-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011311.ПУИО_Учёт_ФО"/>
+            <column name="description"
+                    value="Модуль ведения бюджетного (бухгалтерского) учета В части ведения бюджетного учета ФО {/Б:011300.ПУИО (+)/}"/>
+            <column name="id_src" value="518"/>
+            <column name="system_id" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bcbc96-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcbf34-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011319.ПУИО_Учётный_Движок"/>
+            <column name="description"
+                    value="Модуль ведения бюджетного (бухгалтерского) учета в части учётного движка ЭБ {/Б:011300.ПУИО (+)/}"/>
+            <column name="id_src" value="519"/>
+            <column name="system_id" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bcbc96-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+        <insert tableName="mdm21_function" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16bcc092-93c1-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="011351.ПУИО_Отчётность"/>
+            <column name="description" value="Подсистема Учет и отчетность - Отчётность {/Б:011300.ПУИО (+)/}"/>
+            <column name="id_src" value="520"/>
+            <column name="system_id" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="parent_id" value="16bcbc96-93c1-11ec-b909-0242ac120002"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

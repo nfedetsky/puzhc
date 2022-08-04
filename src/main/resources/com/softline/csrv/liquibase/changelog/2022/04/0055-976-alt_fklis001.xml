@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0055-976-alt_fklis001_1" author="ELunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="DEPT_ID" type="UUID"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0055-976-alt_fklis001_2" author="ELunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="EFFECT_TYPE_ID" type="UUID"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0055-976-alt_fklis001_3" author="ELunin">
+        <dropColumn columnName="IS_PATCH_REQUIRED" tableName="fklis001_request_card"/>
+        <addColumn tableName="fklis001_request_card">
+            <column name="IS_PATCH_REQUIRED" type="BOOLEAN"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0055-976-alt_fklis001_4" author="ELunin">
+        <createIndex indexName="IDX_REQUEST_DEPT_ID" tableName="fklis001_request_card">
+            <column name="DEPT_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0055-976-alt_fklis001_5" author="ELunin">
+        <addForeignKeyConstraint baseColumnNames="DEPT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001REQUESTCARD_ON_DEPT" referencedColumnNames="ID" referencedTableName="mdm09_subdivision"/>
+    </changeSet>
+    <changeSet id="0055-976-alt_fklis001_6" author="ELunin">
+        <createIndex indexName="IDX_REQUEST_EFFECT_TYPE_ID" tableName="fklis001_request_card">
+            <column name="EFFECT_TYPE_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0055-976-alt_fklis001_7" author="ELunin">
+        <addForeignKeyConstraint baseColumnNames="EFFECT_TYPE_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001REQUE_ON_EFFECTTYPE" referencedColumnNames="ID" referencedTableName="mdm33_effect_type"/>
+    </changeSet>
+</databaseChangeLog>
+
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tabSheet>
+            <tab id="common" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabBasicAttr" spacing="true">
+                <vbox spacing="true"/>
+                <hbox spacing="true">
+                    <vbox spacing="true">
+                        <form id="commonForm1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                            <textField id="codeField" property="code" width="50%" editable="false"/>
+                            <entitySuggestionField id="docKindField" property="docKind" editable="false"
+                                                   caption="msg://com.softline.csrv.entity/Request.docKindForDocument">
+                                <query entityClass="com.softline.csrv.entity.DocKind"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from DocKind c where lower(c.name) like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <textField id="docNumField" property="docNum" editable="false"/>
+                            <textField id="filePathField" property="filePath" editable="false"/>
+                            <textField id="revisionNumField" property="revisionNum" editable="false"/>
+                            <entitySuggestionField id="defectSourceField" property="defectSource" editable="false">
+                                <query entityClass="com.softline.csrv.entity.DefectSource"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from DefectSource c where lower(c.name) like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <entitySuggestionField id="contractField" property="requestContract" editable="false">
+                                <query entityClass="com.softline.csrv.entity.Request"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from Request c where c.requestType.code = 'CONTRACT' and lower(c.keyNum) like
+                                    lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="open" type="open_edit_action"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                        </form>
+                    </vbox>
+                    <vbox spacing="true">
+                        <form id="commonForm2" dataContainer="requestDc" childrenCaptionAlignment="RIGHT" width="100%">
+                            <fragment id="affectedFunctionFragment" screen="affectedFunction" caption="msg://com.softline.csrv.screen.request/RequestEditExt.affectedFunctionForDocument" enable="false"/>
+                            <textArea id="noteDescrField" property="noteDescr" editable="false"/>
+                        </form>
+                    </vbox>
+                    <vbox spacing="true">
+                        <form id="commonForm3" dataContainer="requestDc" childrenCaptionAlignment="RIGHT" width="100%">
+                            <fragment id="relatedModificationFragment" screen="relatedlistrequest" caption="msg://com.softline.csrv.entity/Request.requestModification" enable="false">
+                                <properties>
+                                    <property name="requestType" value="MODIFICATION"/>
+                                </properties>
+                            </fragment>
+                            <fragment  id="relatedCorrectionFragment" screen="relatedlistrequest" caption="msg://com.softline.csrv.entity/Request.requestCorrection" enable="false">
+                                <properties>
+                                    <property name="requestType" value="CORRECTION"/>
+                                </properties>
+                            </fragment>
+                        </form>
+                    </vbox>
+                </hbox>
+            </tab>
+            <tab id="eventPlan"  caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabEventPlan" spacing="true">
+                <vbox spacing="true"/>
+                <hbox spacing="true">
+                    <vbox spacing="true" align="MIDDLE_LEFT">
+                        <form id="formEventPlan" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                            <dateField id="revisionDateField" property="revisionDate" editable="false"/>
+                        </form>
+                    </vbox>
+                    <form id="formEventPlan2" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                        <dateField id="executionPeriodTimeField" property="executionPeriodTime" editable="false"/>
+                    </form>
+                </hbox>
+            </tab>
+            <tab id="RequestAddAttrPeople" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabPeople"
+                 spacing="true">
+                <vbox spacing="true"/>
+                <form id="peopleForm1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                    <column width="300px">
+                        <entitySuggestionField id="curatorField" property="curator" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from User c where lower(CONCAT(CONCAT(CONCAT(c.username, c.firstName),
+                                c.lastName), c.email)) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="curatorRField" property="curatorR" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from User c where lower(CONCAT(CONCAT(CONCAT(c.username, c.firstName),
+                                c.lastName), c.email)) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                    </column>
+                </form>
+            </tab>
+        </tabSheet>
+    </layout>
+</fragment>

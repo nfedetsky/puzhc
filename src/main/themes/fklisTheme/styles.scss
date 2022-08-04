@@ -1,0 +1,8 @@
+@import "fklisTheme-defaults";
+@import "addons";
+@import "fklisTheme";
+
+.fklisTheme {
+  @include addons;
+  @include fklisTheme;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0051-ins_mdm11_sign_compl_sam_1" author="IKretov">
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0b8c64d6-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1a717112-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Успешно"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="3226f2d2-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не пройдено тестирование"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="44362b64-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="На согласование ТП"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="587dd0ea-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не установлена на ТС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="60cbef98-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не пройдены автономные испытания"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6f076286-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не пройдены ПДИ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="84facaa6-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не пройдена ОЭ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="8c860b3c-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не пройдена ПМИ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="9f78ebb0-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не установлена на ПС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm11_sign_compl_sam" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a777415e-930b-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Не пройдена апробация"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

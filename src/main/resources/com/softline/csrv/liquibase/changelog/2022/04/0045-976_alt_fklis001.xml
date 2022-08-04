@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <changeSet id="0045-976_alt_fklis001_1" author="ELunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="PARTICIPANT_ID"
+                    type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_PARTICIPANT_ID"
+                     tableName="fklis001_request_card">
+            <column name="PARTICIPANT_ID"/>
+        </createIndex>
+
+        <addForeignKeyConstraint baseColumnNames="PARTICIPANT_ID"
+                                 baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_PARTICIPANT"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+
+    </changeSet>
+    <changeSet id="0045-976_alt_fklis001_2" author="ELunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="PREV_STATUS_ID"
+                    type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_PREV_STATUS_ID"
+                     tableName="fklis001_request_card">
+            <column name="PREV_STATUS_ID"/>
+        </createIndex>
+
+        <addForeignKeyConstraint baseColumnNames="PREV_STATUS_ID"
+                                 baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUE_ON_PREVSTATUS"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+
+    </changeSet>
+
+
+</databaseChangeLog>

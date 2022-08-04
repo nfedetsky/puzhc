@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="uuid_status" value="gen_random_uuid()" dbms="postgresql"/>
+
+    <changeSet id="0026-upd_mdm18_status" author="ZESONOV">
+        <update tableName="mdm18_status">
+            <column name="style_name" value="fklis-status-style1"/>
+            <where>code in ('REQUEST_INFO',
+                'OPEN',
+                'PAUSE',
+                'COMPOSITION_AGREED',
+                'COMPOSITION_AGREEMENT',
+                'AGREED',
+                'RESOLVED')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0026-upd_mdm18_status_2" author="ZESONOV">
+        <update tableName="mdm18_status">
+            <column name="style_name" value="fklis-status-style2"/>
+            <where>code in ('ANALYSIS',
+                'TESTING',
+                'IN_PROGRESSG',
+                'VERIFICATION',
+                'INCLUDED_IN_PLAN',
+                'RECOVERY',
+                'ORDER_TP',
+                'TRIALS',
+                'CONFIRM',
+                'PROBLEMS',
+                'IMPLEMENTATION',
+                'BUILD',
+                'FK_AGREEMENT',
+                'APPROVAL',
+                'TS_INSTALLATION',
+                'PS_INSTALLATION')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0026-upd_mdm18_status_3" author="ZESONOV">
+        <update tableName="mdm18_status">
+            <column name="style_name" value="fklis-status-style3"/>
+            <where>code in ('CLOSED',
+                'REJECTED',
+                'BUILD_FAILED',
+                'CHECK',
+                'BUILD_OK',
+                'APPROVED')
+            </where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

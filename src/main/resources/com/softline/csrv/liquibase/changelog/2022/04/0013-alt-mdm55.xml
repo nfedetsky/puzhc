@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0013-alt-mdm55_1" author="ELunin">
+        <update tableName="mdm55_request_type_status_model_link">
+            <column name="STATUS_MODEL_ID" value="d2c07742-92eb-11ec-b909-0242ac120002" />
+            <where>id = 'c0fa7bc6-ab77-11ec-b909-0242ac120002'</where>
+        </update>
+    </changeSet>
+    <changeSet id="0013-alt-mdm55_2" author="ELunin">
+        <update tableName="mdm55_request_type_status_model_link">
+            <column name="STATUS_MODEL_ID" value="014ccc88-92eb-11ec-b909-0242ac120002" />
+            <where>id = 'ea12f2e0-ab77-11ec-b909-0242ac120002'</where>
+        </update>
+    </changeSet>
+    <changeSet id="0013-alt-mdm55_3" author="ELunin">
+
+        <update tableName="mdm55_request_type_status_model_link">
+            <column name="REQUEST_TYPE_ID" value="a7c39204-939a-11ec-b909-0242ac120002" />
+            <where>id = 'a71c5760-ab77-11ec-b909-0242ac120002'</where>
+        </update>
+
+    </changeSet>
+
+</databaseChangeLog>

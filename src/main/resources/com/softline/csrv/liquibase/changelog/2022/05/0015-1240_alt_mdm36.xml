@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0015-1240_alt_mdm36_1" author="Elunin">
+         <update tableName="mdm36_environment">
+             <column name="code" value="ПРОД"/>
+             <column name="description" value="Промышленный стенд"/>
+             <where>name = 'Продуктовая'</where>
+         </update>
+         <update tableName="mdm36_environment">
+             <column name="code" value="УЧЕБ"/>
+             <column name="description" value="Учебный стенд"/>
+             <column name="name" value="Учебная"/>
+             <where>name = 'Продуктивная'</where>
+         </update>
+        <update tableName="mdm36_environment">
+            <column name="code" value="ТЕСТ"/>
+            <column name="description" value="Тестовый стенд"/>
+            <column name="name" value="Тестовая"/>
+            <where>name = 'Тестовая'</where>
+        </update>
+    </changeSet>
+
+
+
+</databaseChangeLog>

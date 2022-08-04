@@ -1,0 +1,1493 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "115831",
+  "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831",
+  "key": "SAM-276",
+  "fields": {
+    "resolution": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/resolution/1",
+      "id": "1",
+      "description": "Исправление для этой проблемы зарегистрировано в дереве и протестировано.",
+      "name": "Исправленный"
+    },
+    "customfield_12800": null,
+    "customfield_12802": null,
+    "customfield_12801": null,
+    "customfield_12804": "2015-09-23T00:00:00.000+0300",
+    "customfield_12803": null,
+    "customfield_12806": null,
+    "customfield_12805": "2015-09-28T00:00:00.000+0300",
+    "customfield_12808": null,
+    "customfield_12807": null,
+    "customfield_12809": null,
+    "customfield_18101": null,
+    "lastViewed": "2022-04-21T20:18:17.038+0300",
+    "issuelinks": [
+      {
+        "id": "99915",
+        "self": "https://lc.sk.roskazna.ru/rest/api/2/issueLink/99915",
+        "type": {
+          "id": "10003",
+          "name": "Связи",
+          "inward": "ссылается на",
+          "outward": "ссылается на",
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issueLinkType/10003"
+        },
+        "outwardIssue": {
+          "id": "140922",
+          "key": "SAM-1277",
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/140922",
+          "fields": {
+            "summary": "ПОИ: Заявка на анализ требования SAM-1247",
+            "status": {
+              "self": "https://lc.sk.roskazna.ru/rest/api/2/status/6",
+              "description": "Запрос считается решенным.",
+              "iconUrl": "https://lc.sk.roskazna.ru/images/icons/statuses/closed.png",
+              "name": "Закрыто",
+              "id": "6",
+              "statusCategory": {
+                "self": "https://lc.sk.roskazna.ru/rest/api/2/statuscategory/3",
+                "id": 3,
+                "key": "done",
+                "colorName": "green",
+                "name": "Выполнено"
+              }
+            },
+            "issuetype": {
+              "self": "https://lc.sk.roskazna.ru/rest/api/2/issuetype/10706",
+              "id": "10706",
+              "description": "Заявка на анализ",
+              "iconUrl": "https://lc.sk.roskazna.ru/secure/viewavatar?size=xsmall&avatarId=10320&avatarType=issuetype",
+              "name": "Заявка на анализ",
+              "subtask": false,
+              "avatarId": 10320
+            }
+          }
+        }
+      }
+    ],
+    "assignee": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=adamanov.rustem",
+      "name": "adamanov.rustem",
+      "key": "adamanov.rustem",
+      "emailAddress": "adamanov.rustem@otr.ru",
+      "avatarUrls": {
+        "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=adamanov.rustem&avatarId=12301",
+        "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=adamanov.rustem&avatarId=12301",
+        "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=adamanov.rustem&avatarId=12301",
+        "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=adamanov.rustem&avatarId=12301"
+      },
+      "displayName": "Адаманов Рустем Халилович (ОТР)",
+      "active": false,
+      "timeZone": "Europe/Moscow"
+    },
+    "customfield_17000": null,
+    "customfield_12900": null,
+    "customfield_18200": null,
+    "customfield_18201": null,
+    "customfield_10719": null,
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    },
+    "issuetype": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/issuetype/4",
+      "id": "4",
+      "description": "Доработка",
+      "iconUrl": "https://lc.sk.roskazna.ru/secure/viewavatar?size=xsmall&avatarId=10310&avatarType=issuetype",
+      "name": "Доработка",
+      "subtask": false,
+      "avatarId": 10310
+    },
+    "customfield_17100": null,
+    "customfield_10700": "ОТР",
+    "customfield_10701": "НСИ ФК (REF)",
+    "customfield_18300": "",
+    "customfield_16000": null,
+    "customfield_11900": null,
+    "customfield_11901": null,
+    "customfield_17200": null,
+    "timetracking": {},
+    "customfield_15011": null,
+    "customfield_16101": null,
+    "customfield_16222": null,
+    "customfield_15012": null,
+    "customfield_16221": null,
+    "customfield_16100": null,
+    "customfield_16220": null,
+    "customfield_15010": null,
+    "customfield_16226": null,
+    "customfield_16225": null,
+    "customfield_16104": null,
+    "customfield_15013": null,
+    "customfield_16224": null,
+    "customfield_16103": null,
+    "customfield_16102": null,
+    "customfield_16223": null,
+    "environment": null,
+    "duedate": null,
+    "customfield_13500": null,
+    "customfield_15800": null,
+    "customfield_12411": "Расширение, дополнение библиотеки типовых сервисов и объектов для компонента «Управление формулярами», «Инструментальные средства настройки бизнес-процессов и формуляров», включая:\nреализацию возможности цветового выделения элементов визуальной формы экземпляров формуляров согласно настроенным свойствам подсветки.",
+    "customfield_15801": null,
+    "customfield_12410": "Нет",
+    "customfield_13502": "[https://svn.sk.roskazna.ru/repos/fksuvvsvn/db01/Документация/ЭБ/ПОИ/К_2015-УИС-13/ПиМ/Проверка/ПиМ_Приложение_SAM-276(EB-33099)_ЭБ(ПОИ).doc]",
+    "customfield_12412": null,
+    "customfield_13501": "2015УИС13-14",
+    "customfield_10227": "EB-33099",
+    "customfield_12406": "2015-12-04T00:00:00.000+0300",
+    "customfield_12405": "2015-12-04T00:00:00.000+0300",
+    "customfield_12408": null,
+    "customfield_12409": null,
+    "customfield_13850": null,
+    "customfield_14700": null,
+    "customfield_10101": "0|i0001j:",
+    "customfield_13845": null,
+    "customfield_11303": "Ядро ЭБ",
+    "customfield_13724": null,
+    "customfield_15903": null,
+    "customfield_13844": null,
+    "customfield_13723": null,
+    "customfield_15904": null,
+    "customfield_13726": null,
+    "customfield_11668": null,
+    "customfield_13725": null,
+    "customfield_13846": null,
+    "customfield_13728": null,
+    "customfield_13849": null,
+    "timeestimate": null,
+    "customfield_13727": null,
+    "customfield_13848": null,
+    "customfield_13729": null,
+    "status": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/status/6",
+      "description": "Запрос считается решенным.",
+      "iconUrl": "https://lc.sk.roskazna.ru/images/icons/statuses/closed.png",
+      "name": "Закрыто",
+      "id": "6",
+      "statusCategory": {
+        "self": "https://lc.sk.roskazna.ru/rest/api/2/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Выполнено"
+      }
+    },
+    "customfield_11661": "2015-12-07T00:00:00.000+0300",
+    "customfield_11660": "2015-09-21T00:00:00.000+0300",
+    "customfield_11663": null,
+    "customfield_13840": null,
+    "customfield_11662": null,
+    "customfield_15900": null,
+    "customfield_11301": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/customFieldOption/11210",
+      "value": "Технические требования",
+      "id": "11210"
+    },
+    "customfield_13842": null,
+    "customfield_11302": "ОТР",
+    "customfield_13600": null,
+    "customfield_13721": null,
+    "customfield_11664": null,
+    "customfield_13834": null,
+    "customfield_13713": null,
+    "customfield_11656": "SAM-1247",
+    "customfield_13712": null,
+    "customfield_13833": null,
+    "customfield_13715": null,
+    "customfield_14801": null,
+    "customfield_13836": null,
+    "customfield_10206": null,
+    "customfield_13835": null,
+    "customfield_11657": "ПОИ",
+    "customfield_13717": null,
+    "customfield_13838": null,
+    "customfield_11659": "SAM-558",
+    "customfield_13718": null,
+    "customfield_13839": null,
+    "creator": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+      "name": "belyanin.oleg",
+      "key": "belyanin.oleg",
+      "emailAddress": "belyanin.oleg@otr.ru",
+      "avatarUrls": {
+        "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+        "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+        "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+        "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+      },
+      "displayName": "Белянин Олег Валерьевич (ОТР)",
+      "active": false,
+      "timeZone": "Europe/Moscow"
+    },
+    "customfield_11650": null,
+    "customfield_13830": null,
+    "customfield_10200": null,
+    "customfield_11651": null,
+    "customfield_14800": null,
+    "customfield_11654": null,
+    "customfield_13832": null,
+    "customfield_13702": null,
+    "customfield_11403": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/customFieldOption/11205",
+      "value": "Да",
+      "id": "11205"
+    },
+    "customfield_11645": "SAM-558",
+    "customfield_13701": null,
+    "customfield_13704": null,
+    "customfield_11404": null,
+    "customfield_13703": null,
+    "customfield_11646": "ОТР",
+    "customfield_13706": null,
+    "customfield_11649": null,
+    "customfield_13705": null,
+    "customfield_11648": "SAM-455",
+    "customfield_13826": null,
+    "customfield_13829": null,
+    "customfield_13707": null,
+    "customfield_13828": null,
+    "timespent": null,
+    "customfield_11641": "Плановая версия",
+    "customfield_11640": null,
+    "customfield_11401": [
+      {
+        "self": "https://lc.sk.roskazna.ru/rest/api/2/customFieldOption/11203",
+        "value": "Да",
+        "id": "11203"
+      }
+    ],
+    "customfield_13700": null,
+    "customfield_11643": "SAM-1247",
+    "customfield_13821": null,
+    "customfield_11642": "2015-09-21T00:00:00.000+0300",
+    "customfield_13820": null,
+    "customfield_11634": null,
+    "customfield_11633": null,
+    "customfield_11636": null,
+    "customfield_13814": null,
+    "customfield_14900": null,
+    "customfield_11635": null,
+    "customfield_13813": null,
+    "customfield_13816": null,
+    "customfield_11638": null,
+    "customfield_13815": null,
+    "customfield_11637": null,
+    "customfield_13818": null,
+    "customfield_11639": null,
+    "customfield_13819": null,
+    "workratio": -1,
+    "customfield_11630": "2015-11-13T00:00:00.000+0300",
+    "customfield_12600": null,
+    "customfield_11632": "2015-12-07T00:00:00.000+0300",
+    "customfield_13810": null,
+    "customfield_11631": "2015-11-16T00:00:00.000+0300",
+    "customfield_11623": null,
+    "customfield_13801": null,
+    "customfield_13800": null,
+    "customfield_11504": null,
+    "customfield_13802": null,
+    "customfield_11503": null,
+    "customfield_11624": null,
+    "customfield_11627": "ПОИ",
+    "customfield_11629": "2015-10-01T00:00:00.000+0300",
+    "customfield_11628": [
+      "НСИ",
+      "НСИ_БПГУ",
+      "НСИ_ВПГУ",
+      "УЗ",
+      "УР",
+      "УиО"
+    ],
+    "customfield_13809": null,
+    "customfield_13808": null,
+    "customfield_11621": null,
+    "customfield_11620": null,
+    "customfield_13911": null,
+    "customfield_11611": null,
+    "customfield_12700": null,
+    "customfield_13913": null,
+    "customfield_13912": null,
+    "customfield_13915": null,
+    "customfield_13914": null,
+    "customfield_11618": null,
+    "customfield_11617": null,
+    "customfield_18000": null,
+    "customfield_13900": null,
+    "customfield_11603": "SAM-455",
+    "customfield_13902": null,
+    "customfield_13901": null,
+    "customfield_11602": "SAM-558",
+    "customfield_13904": null,
+    "customfield_13903": null,
+    "customfield_13906": null,
+    "customfield_13908": null,
+    "customfield_13907": null,
+    "customfield_13909": null,
+    "customfield_14311": null,
+    "customfield_15400": null,
+    "customfield_17700": null,
+    "customfield_14312": null,
+    "customfield_12010": null,
+    "customfield_12013": null,
+    "customfield_12015": null,
+    "customfield_14315": null,
+    "customfield_15404": null,
+    "customfield_12014": null,
+    "customfield_14316": null,
+    "customfield_15405": null,
+    "customfield_14313": null,
+    "customfield_15402": null,
+    "customfield_12017": "SAM-1277",
+    "customfield_12016": null,
+    "customfield_14314": null,
+    "customfield_14308": null,
+    "customfield_14309": null,
+    "customfield_12009": null,
+    "customfield_14300": null,
+    "customfield_14301": null,
+    "customfield_12002": null,
+    "customfield_12001": null,
+    "customfield_14304": null,
+    "customfield_12004": "SAM-1440",
+    "customfield_14305": null,
+    "customfield_12003": null,
+    "customfield_12006": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/customFieldOption/11620",
+      "value": "Проектирование",
+      "id": "11620"
+    },
+    "customfield_14302": null,
+    "customfield_16602": null,
+    "labels": [
+      "ГАР_НФП",
+      "П_УиО",
+      "ПКЗН",
+      "УИИСГФ",
+      "УФТ",
+      "ФКОР_ТТ",
+      "ФКПР"
+    ],
+    "customfield_14303": null,
+    "customfield_12005": "2015-10-28",
+    "customfield_16601": null,
+    "components": [],
+    "customfield_15500": null,
+    "customfield_15501": null,
+    "customfield_15502": null,
+    "customfield_17800": null,
+    "customfield_14400": null,
+    "reporter": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+      "name": "belyanin.oleg",
+      "key": "belyanin.oleg",
+      "emailAddress": "belyanin.oleg@otr.ru",
+      "avatarUrls": {
+        "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+        "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+        "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+        "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+      },
+      "displayName": "Белянин Олег Валерьевич (ОТР)",
+      "active": false,
+      "timeZone": "Europe/Moscow"
+    },
+    "customfield_12103": null,
+    "customfield_16702": null,
+    "customfield_12102": null,
+    "customfield_16701": null,
+    "customfield_16700": null,
+    "customfield_11006": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_14510": null,
+    "project": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/project/10809",
+      "id": "10809",
+      "key": "SAM",
+      "name": "СУВВ ФК",
+      "avatarUrls": {
+        "48x48": "https://lc.sk.roskazna.ru/secure/projectavatar?pid=10809&avatarId=12609",
+        "24x24": "https://lc.sk.roskazna.ru/secure/projectavatar?size=small&pid=10809&avatarId=12609",
+        "16x16": "https://lc.sk.roskazna.ru/secure/projectavatar?size=xsmall&pid=10809&avatarId=12609",
+        "32x32": "https://lc.sk.roskazna.ru/secure/projectavatar?size=medium&pid=10809&avatarId=12609"
+      }
+    },
+    "customfield_13300": null,
+    "customfield_15602": null,
+    "customfield_15603": null,
+    "customfield_15600": null,
+    "customfield_17900": null,
+    "customfield_15601": null,
+    "customfield_14506": null,
+    "customfield_14504": null,
+    "customfield_14505": null,
+    "customfield_14508": null,
+    "resolutiondate": "2015-09-25T13:27:08.000+0300",
+    "customfield_14509": null,
+    "watches": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/SAM-276/watchers",
+      "watchCount": 0,
+      "isWatching": false
+    },
+    "customfield_14620": null,
+    "customfield_11231": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/customFieldOption/11207",
+      "value": "Запрос ФК",
+      "id": "11207"
+    },
+    "customfield_13410": null,
+    "customfield_12200": "2016-01-01T00:00:00.000+0300",
+    "customfield_14502": null,
+    "customfield_13411": null,
+    "customfield_14503": null,
+    "customfield_14621": null,
+    "customfield_14500": null,
+    "customfield_14501": null,
+    "customfield_14616": null,
+    "customfield_13405": null,
+    "customfield_14617": null,
+    "customfield_13404": null,
+    "customfield_15706": null,
+    "customfield_15703": null,
+    "customfield_13407": null,
+    "customfield_11229": 30.0,
+    "customfield_13406": null,
+    "customfield_14615": null,
+    "customfield_13409": null,
+    "customfield_15707": null,
+    "customfield_14618": null,
+    "customfield_15708": null,
+    "customfield_14619": null,
+    "updated": "2016-09-23T18:24:40.000+0300",
+    "timeoriginalestimate": null,
+    "description": "Расширение, дополнение библиотеки типовых сервисов и объектов для компонента «Управление формулярами», «Инструментальные средства настройки бизнес-процессов и формуляров», включая:\nреализацию возможности цветового выделения элементов визуальной формы экземпляров формуляров согласно настроенным свойствам подсветки.",
+    "customfield_10251": "Расширение, дополнение библиотеки типовых сервисов и объектов для компонента «Управление формулярами», «Инструментальные средства настройки бизнес-процессов и формуляров», включая:\nреализацию возможности цветового выделения элементов визуальной формы экземпляров формуляров согласно настроенным свойствам подсветки.",
+    "customfield_11220": "2015-10-01",
+    "customfield_11221": "2015-11-16",
+    "customfield_11222": "2015-12-07",
+    "customfield_15701": null,
+    "customfield_13401": null,
+    "customfield_14612": null,
+    "customfield_11223": null,
+    "customfield_15702": null,
+    "customfield_14613": null,
+    "customfield_13400": null,
+    "customfield_11224": null,
+    "customfield_13403": null,
+    "customfield_14610": null,
+    "customfield_11225": "Используется в УиО",
+    "customfield_15700": null,
+    "customfield_14611": null,
+    "customfield_10005": null,
+    "customfield_14605": null,
+    "customfield_10006": null,
+    "customfield_14606": null,
+    "customfield_14603": null,
+    "customfield_14604": null,
+    "customfield_14609": null,
+    "customfield_14607": null,
+    "customfield_14608": null,
+    "summary": "Необходим метод для подсветки ячеек таблицы",
+    "customfield_10001": null,
+    "customfield_10243": null,
+    "customfield_16901": null,
+    "customfield_12301": "ПОИ",
+    "customfield_12300": "ФК",
+    "customfield_10004": "9223372036854775807",
+    "customfield_12414": null,
+    "customfield_10237": null,
+    "comment": {
+      "comments": [
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/232099",
+          "id": "232099",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Изменено: задача согласования SAM-434\n* assignee: eb.fk.uft -> ЭБ.ФК.УФТ\n* РФП инициатор: None -> -1\n* Подсистема инициатор: None -> -1\n* РФП исполнитель: None -> -1\n* Подсистема: None -> -1\n* Трудоемкость в днях: 30.25 -> 30",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-13T15:32:40.000+0300",
+          "updated": "2015-06-13T15:32:40.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/237097",
+          "id": "237097",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Изменена задача согласования SAM-434\n* Трудоемкость в днях: 30.25 -> 30",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-25T19:49:52.000+0300",
+          "updated": "2015-06-25T19:49:52.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/237098",
+          "id": "237098",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Изменена задача согласования SAM-435\n* priority: Minor -> Critical\n* assignee: eb.fk.uiisgf -> Белянин Олег Валерьевич",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-25T19:52:32.000+0300",
+          "updated": "2015-06-25T19:52:32.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/237099",
+          "id": "237099",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Изменена задача согласования SAM-435\n* status: Open -> Approving\n* assignee: Белянин Олег Валерьевич -> ЭБ.ФК.УИИСГФ",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-25T19:55:08.000+0300",
+          "updated": "2015-06-25T19:55:08.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/237563",
+          "id": "237563",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-447\n* Дата начала ППИ: None -> 20/07/2015\n* Дата начала ОЭ: None -> 10/08/2015\n* Сводная версия: None -> SAM-448",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-26T16:43:54.000+0300",
+          "updated": "2015-06-26T16:43:54.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/237568",
+          "id": "237568",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-447\n* Дата начала ПЭ: None -> 31/08/2015",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-26T16:48:52.000+0300",
+          "updated": "2015-06-26T16:48:52.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/239076",
+          "id": "239076",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+            "name": "belyanin.oleg",
+            "key": "belyanin.oleg",
+            "emailAddress": "belyanin.oleg@otr.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+            },
+            "displayName": "Белянин Олег Валерьевич (ОТР)",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: доработка EB-33099\n||Поле||Новое значение||\n|Влияние на подсистемы|Да|\n|description|Расширение, дополнение библиотеки типовых сервисов и объектов для компонента «Управление формулярами», «Инструментальные средства настройки бизнес-процессов и формуляров», включая:\nреализацию возможности цветового выделения элементов визуальной формы экземпляров формуляров согласно настроенным свойствам подсветки.|\n",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+            "name": "belyanin.oleg",
+            "key": "belyanin.oleg",
+            "emailAddress": "belyanin.oleg@otr.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+            },
+            "displayName": "Белянин Олег Валерьевич (ОТР)",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-30T20:26:48.000+0300",
+          "updated": "2015-06-30T20:26:48.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/239078",
+          "id": "239078",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+            "name": "belyanin.oleg",
+            "key": "belyanin.oleg",
+            "emailAddress": "belyanin.oleg@otr.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+            },
+            "displayName": "Белянин Олег Валерьевич (ОТР)",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: доработка EB-33099\n||Поле||Новое значение||\n|Мероприятия по внедрению|Требуется оценка последствий перевода со стороны РФП!|\n|Возможность автомиграции метаданных|Да|\n",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+            "name": "belyanin.oleg",
+            "key": "belyanin.oleg",
+            "emailAddress": "belyanin.oleg@otr.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+            },
+            "displayName": "Белянин Олег Валерьевич (ОТР)",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-06-30T20:30:04.000+0300",
+          "updated": "2015-06-30T20:30:04.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/240306",
+          "id": "240306",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+            "name": "belyanin.oleg",
+            "key": "belyanin.oleg",
+            "emailAddress": "belyanin.oleg@otr.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+            },
+            "displayName": "Белянин Олег Валерьевич (ОТР)",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: доработка EB-33099\n||Поле||Новое значение||\n|description|Расширение, дополнение библиотеки типовых сервисов и объектов для компонента «Управление формулярами», «Инструментальные средства настройки бизнес-процессов и формуляров», включая:\nреализацию возможности цветового выделения элементов визуальной формы экземпляров формуляров согласно настроенным свойствам подсветки.|\n",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=belyanin.oleg",
+            "name": "belyanin.oleg",
+            "key": "belyanin.oleg",
+            "emailAddress": "belyanin.oleg@otr.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=belyanin.oleg&avatarId=11926",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=belyanin.oleg&avatarId=11926",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=belyanin.oleg&avatarId=11926",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=belyanin.oleg&avatarId=11926"
+            },
+            "displayName": "Белянин Олег Валерьевич (ОТР)",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-07-03T16:25:26.000+0300",
+          "updated": "2015-07-03T16:25:26.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/261859",
+          "id": "261859",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* status: Open -> Analysis",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-07T18:02:21.000+0300",
+          "updated": "2015-09-07T18:02:21.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/264299",
+          "id": "264299",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-455\n* Дата начала ППИ: 20/07/2015 -> 01/10/2015\n* Дата начала ОЭ: 10/08/2015 -> 26/10/2015\n* Дата начала ПЭ: 31/08/2015 -> 20/11/2015\n* Интеграционная версия: Empty -> SAM-558",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-11T20:20:51.000+0300",
+          "updated": "2015-09-11T20:20:51.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/266130",
+          "id": "266130",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* resolution: None -> Fixed\n* status: Analysis -> Closed",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-17T14:15:26.000+0300",
+          "updated": "2015-09-17T14:15:26.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/267666",
+          "id": "267666",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* labels: None -> Реализация",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-21T12:12:15.000+0300",
+          "updated": "2015-09-21T12:12:15.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/267937",
+          "id": "267937",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* resolution: Fixed -> None\n* status: Closed -> Analysis",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-21T14:30:40.000+0300",
+          "updated": "2015-09-21T14:30:40.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/268132",
+          "id": "268132",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* status: Analysis -> Realization",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-21T14:32:02.000+0300",
+          "updated": "2015-09-21T14:32:02.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/268299",
+          "id": "268299",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* labels: Реализация -> None",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-09-21T14:42:21.000+0300",
+          "updated": "2015-09-21T14:42:21.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/283336",
+          "id": "283336",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=agaltsov.sergey",
+            "name": "agaltsov.sergey",
+            "key": "agaltsov.sergey",
+            "emailAddress": "sagalcov@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=agaltsov.sergey&avatarId=12900",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=agaltsov.sergey&avatarId=12900",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=agaltsov.sergey&avatarId=12900",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=agaltsov.sergey&avatarId=12900"
+            },
+            "displayName": "Агальцов Сергей Викторович [ФК УИИ]",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Замечание по ППИ: необходим более жизненный пример.",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=agaltsov.sergey",
+            "name": "agaltsov.sergey",
+            "key": "agaltsov.sergey",
+            "emailAddress": "sagalcov@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=agaltsov.sergey&avatarId=12900",
+              "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=agaltsov.sergey&avatarId=12900",
+              "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=agaltsov.sergey&avatarId=12900",
+              "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=agaltsov.sergey&avatarId=12900"
+            },
+            "displayName": "Агальцов Сергей Викторович [ФК УИИ]",
+            "active": false,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-10-23T18:54:32.000+0300",
+          "updated": "2015-10-23T18:54:32.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/296404",
+          "id": "296404",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* resolution: None -> Fixed\n* status: Realization -> Closed",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-11-22T15:19:37.000+0300",
+          "updated": "2015-11-22T15:19:37.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/310699",
+          "id": "310699",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* Подсистема инициатор: None -> ПОИ\n* Инициатор: None -> Федеральное казначейство",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-12-17T12:52:24.000+0300",
+          "updated": "2015-12-17T12:52:24.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/316953",
+          "id": "316953",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-455\n* Дата начала ОЭ: 26/10/2015 -> 16/11/2015\n* Дата начала ПЭ: 20/11/2015 -> 07/12/2015",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2015-12-24T14:25:50.000+0300",
+          "updated": "2015-12-24T14:25:50.000+0300"
+        },
+        {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/issue/115831/comment/410868",
+          "id": "410868",
+          "author": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "body": "Источник изменения: SAM-1247\n* Код ФТ: None -> 2015УИС13-14",
+          "updateAuthor": {
+            "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=jira_service",
+            "name": "jira_service",
+            "key": "jira_service",
+            "emailAddress": "pe01@roskazna.ru",
+            "avatarUrls": {
+              "48x48": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=48",
+              "24x24": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=24",
+              "16x16": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=16",
+              "32x32": "https://www.gravatar.com/avatar/7ef8fa535772adf6f99b2fd104d87899?d=mm&s=32"
+            },
+            "displayName": "jira_service",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2016-09-15T19:52:20.000+0300",
+          "updated": "2016-09-15T19:52:20.000+0300"
+        }
+      ],
+      "maxResults": 21,
+      "total": 21,
+      "startAt": 0
+    },
+    "customfield_16211": null,
+    "customfield_17300": null,
+    "customfield_15000": null,
+    "customfield_15001": null,
+    "customfield_16210": null,
+    "customfield_15004": null,
+    "customfield_16215": null,
+    "customfield_15005": null,
+    "customfield_16214": null,
+    "customfield_16213": null,
+    "customfield_15002": null,
+    "fixVersions": [],
+    "customfield_15003": null,
+    "customfield_16212": null,
+    "customfield_15008": null,
+    "customfield_16219": null,
+    "customfield_15009": null,
+    "customfield_16218": null,
+    "customfield_15006": null,
+    "customfield_16217": null,
+    "customfield_15007": null,
+    "customfield_16216": null,
+    "customfield_16209": null,
+    "customfield_15110": null,
+    "customfield_16200": null,
+    "customfield_15111": null,
+    "customfield_16204": null,
+    "customfield_16203": null,
+    "customfield_16202": null,
+    "customfield_15113": null,
+    "customfield_16201": null,
+    "priority": {
+      "self": "https://lc.sk.roskazna.ru/rest/api/2/priority/4",
+      "iconUrl": "https://lc.sk.roskazna.ru/images/icons/priorities/minor.svg",
+      "name": "Средний",
+      "id": "4"
+    },
+    "customfield_16208": null,
+    "customfield_16207": null,
+    "customfield_16206": null,
+    "customfield_16205": null,
+    "customfield_15109": null,
+    "versions": [],
+    "customfield_15220": null,
+    "customfield_15100": null,
+    "customfield_15221": null,
+    "customfield_15103": null,
+    "customfield_15224": null,
+    "customfield_15104": null,
+    "customfield_15101": null,
+    "customfield_15222": null,
+    "customfield_15102": null,
+    "customfield_15223": null,
+    "customfield_17400": null,
+    "customfield_15107": null,
+    "customfield_15108": null,
+    "customfield_15105": null,
+    "customfield_15106": null,
+    "customfield_15219": null,
+    "customfield_14121": null,
+    "customfield_14000": null,
+    "customfield_15210": null,
+    "customfield_14124": null,
+    "customfield_14003": null,
+    "customfield_15213": null,
+    "customfield_14004": null,
+    "customfield_14125": null,
+    "customfield_15214": null,
+    "customfield_14122": null,
+    "customfield_15211": null,
+    "customfield_14001": null,
+    "customfield_14123": null,
+    "customfield_14002": null,
+    "customfield_15212": null,
+    "customfield_15217": null,
+    "customfield_15218": null,
+    "customfield_14005": null,
+    "customfield_14126": null,
+    "customfield_15215": null,
+    "customfield_14127": null,
+    "customfield_15216": null,
+    "customfield_14006": "SAM-1440",
+    "customfield_15208": null,
+    "customfield_14119": null,
+    "customfield_15209": null,
+    "customfield_14110": null,
+    "customfield_15202": null,
+    "customfield_14113": null,
+    "customfield_15203": null,
+    "customfield_14114": null,
+    "customfield_14111": null,
+    "customfield_15200": null,
+    "customfield_17500": null,
+    "customfield_15201": null,
+    "customfield_14112": null,
+    "customfield_15206": null,
+    "customfield_14117": null,
+    "customfield_15207": null,
+    "customfield_14118": null,
+    "customfield_15204": null,
+    "customfield_14115": null,
+    "customfield_15205": null,
+    "customfield_14116": null,
+    "customfield_14108": null,
+    "customfield_14109": null,
+    "customfield_15430": null,
+    "created": "2015-04-15T17:41:49.000+0300",
+    "customfield_14102": null,
+    "customfield_15433": null,
+    "customfield_14103": null,
+    "customfield_16400": "{}",
+    "customfield_14100": null,
+    "customfield_15431": null,
+    "customfield_14101": null,
+    "customfield_15432": null,
+    "customfield_14106": null,
+    "customfield_14107": null,
+    "customfield_14104": null,
+    "customfield_14105": null,
+    "customfield_15428": null,
+    "customfield_15429": null,
+    "customfield_15301": null,
+    "customfield_15422": null,
+    "customfield_13000": null,
+    "customfield_15302": null,
+    "customfield_17600": null,
+    "customfield_15420": null,
+    "customfield_15421": null,
+    "customfield_15426": null,
+    "customfield_15427": null,
+    "customfield_15424": null,
+    "customfield_15425": null,
+    "customfield_15419": null,
+    "customfield_15417": null,
+    "customfield_15418": null,
+    "attachment": [
+      {
+        "self": "https://lc.sk.roskazna.ru/rest/api/2/attachment/77508",
+        "id": "77508",
+        "filename": "ПиМ_Приложение_SAM-276(EB-33099)_ЭБ(ПОИ).doc",
+        "author": {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=antonovskaya.olga",
+          "name": "antonovskaya.olga",
+          "key": "antonovskaya.olga",
+          "emailAddress": "antonovskaya.olga@otr.ru",
+          "avatarUrls": {
+            "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=antonovskaya.olga&avatarId=12331",
+            "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=antonovskaya.olga&avatarId=12331",
+            "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=antonovskaya.olga&avatarId=12331",
+            "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=antonovskaya.olga&avatarId=12331"
+          },
+          "displayName": "Антоновская Ольга Ивановна (ОТР)",
+          "active": false,
+          "timeZone": "Europe/Moscow"
+        },
+        "created": "2015-10-21T16:34:30.000+0300",
+        "size": 78848,
+        "mimeType": "application/msword",
+        "content": "https://lc.sk.roskazna.ru/secure/attachment/77508/%D0%9F%D0%B8%D0%9C_%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_SAM-276%28EB-33099%29_%D0%AD%D0%91%28%D0%9F%D0%9E%D0%98%29.doc"
+      },
+      {
+        "self": "https://lc.sk.roskazna.ru/rest/api/2/attachment/77504",
+        "id": "77504",
+        "filename": "ТЗ_SAM-276_(EB-33099)_Кудряшова_Реализация возможности цветового выделения элементов визуальной формы экземпляров формуляров согласно настроенным свойствам подсветки.doc",
+        "author": {
+          "self": "https://lc.sk.roskazna.ru/rest/api/2/user?username=antonovskaya.olga",
+          "name": "antonovskaya.olga",
+          "key": "antonovskaya.olga",
+          "emailAddress": "antonovskaya.olga@otr.ru",
+          "avatarUrls": {
+            "48x48": "https://lc.sk.roskazna.ru/secure/useravatar?ownerId=antonovskaya.olga&avatarId=12331",
+            "24x24": "https://lc.sk.roskazna.ru/secure/useravatar?size=small&ownerId=antonovskaya.olga&avatarId=12331",
+            "16x16": "https://lc.sk.roskazna.ru/secure/useravatar?size=xsmall&ownerId=antonovskaya.olga&avatarId=12331",
+            "32x32": "https://lc.sk.roskazna.ru/secure/useravatar?size=medium&ownerId=antonovskaya.olga&avatarId=12331"
+          },
+          "displayName": "Антоновская Ольга Ивановна (ОТР)",
+          "active": false,
+          "timeZone": "Europe/Moscow"
+        },
+        "created": "2015-10-21T16:32:34.000+0300",
+        "size": 502272,
+        "mimeType": "application/msword",
+        "content": "https://lc.sk.roskazna.ru/secure/attachment/77504/%D0%A2%D0%97_SAM-276_%28EB-33099%29_%D0%9A%D1%83%D0%B4%D1%80%D1%8F%D1%88%D0%BE%D0%B2%D0%B0_%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F+%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8+%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE+%D0%B2%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2+%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9+%D1%84%D0%BE%D1%80%D0%BC%D1%8B+%D1%8D%D0%BA%D0%B7%D0%B5%D0%BC%D0%BF%D0%BB%D1%8F%D1%80%D0%BE%D0%B2+%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D1%8F%D1%80%D0%BE%D0%B2+%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%BD%D0%BE+%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC+%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0%D0%BC+%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B8.doc"
+      }
+    ],
+    "customfield_16501": null,
+    "customfield_14322": null,
+    "customfield_15411": null,
+    "customfield_14202": null,
+    "customfield_16500": null,
+    "customfield_14323": null,
+    "customfield_15412": null,
+    "customfield_14321": null,
+    "customfield_15410": null,
+    "customfield_15415": null,
+    "customfield_15416": null,
+    "customfield_12028": null,
+    "customfield_15413": null,
+    "customfield_15414": null,
+    "customfield_16502": null,
+    "customfield_12019": null,
+    "customfield_14319": null,
+    "customfield_15406": null,
+    "customfield_14317": null
+  }
+}

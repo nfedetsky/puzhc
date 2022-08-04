@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="uuid_function" value="gen_random_uuid()" dbms="postgresql"/>
+
+
+    <changeSet id="0051-1049_ins_mdm62_1" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_MODIFICATION_BY_ANALYSIS"/>
+            <column name="NAME" value="UC Создать заявку Доработка автоматически из ЗНА"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0051-1049_ins_mdm62_2" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_ANALYSIS_BY_REQUIREMENT"/>
+            <column name="NAME" value="UC Создать заявку ЗНА автоматически из Требования"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0051-1049_ins_mdm62_3" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_IMPACTASSESSMENT_BY_MODIFICATION"/>
+            <column name="NAME" value="UC Создать заявку ЗОВ автоматически из Доработки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0051-1049_ins_mdm62_4" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_CONTENTAGREEMENT_BY_MODIFICATION"/>
+            <column name="NAME" value="UC Создать заявку ЗСС автоматически из Доработки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0051-1049_ins_mdm62_5" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_REMARK_BY_DOCUMENT"/>
+            <column name="NAME" value="UC Создать заявку Замечание автоматически из Документ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0051-1049_ins_mdm62_6" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_AGREEMENT_BY_ISVERSION"/>
+            <column name="NAME" value="UC Создать заявку Согласование автоматически из ЗС ВИС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0051-1049_ins_mdm62_7" author="Elunin">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="CREATE_AGREEMENT_BY_REQUIREMENT"/>
+            <column name="NAME" value="UC Создать заявку Согласование автоматически из Требования"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+    </changeSet>
+    <changeSet id="0057-ins_mdm00_ref_book" author="Elunin">
+    <insert tableName="mdm00_ref_book" dbms="postgresql, mssql, hsqldb">
+        <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+        <column name="TABLE_NAME" value="mdm62_request_action"/>
+        <column name="NAME" value="Реестр автоматических действий"/>
+        <column name="IS_VISIBLE" value="true"/>
+        <column name="IS_EDITABLE" value="true"/>
+        <column name="IS_HIERARCHICAL" value="false"/>
+        <column name="START_DATE" value="2015-01-01"/>
+        <column name="END_DATE" value="9999-12-31"/>
+        <column name="version" value="1"/>
+        <column name="CREATED_BY" value="suvv-admin"/>
+        <column name="CREATED_DATE" valueDate="${now}"/>
+        <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+    </insert>
+    </changeSet>
+
+
+
+    <!--
+
+        <changeSet id="0051-1049_ins_mdm63_8" author="Elunin">
+            <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+                <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+                <column name="STATUS_MODEL_ID" value="6a45f038-92e7-11ec-b909-0242ac120002" />
+                <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+                <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+                <column name="ACTION_ID" value="846a1fba-2e75-4540-ae82-f61218e6c904" />
+                <column name="version" value="1"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+            </insert>
+        </changeSet>
+        <changeSet id="0051-1049_ins_mdm63_9" author="Elunin">
+            <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+                <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+                <column name="STATUS_MODEL_ID" value="ea5a99e6-92eb-11ec-b909-0242ac120002" />
+                <column name="STATUS_FROM_ID" value="1990a87c-8f05-11ec-b909-0242ac120002" />
+                <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+                <column name="ACTION_ID" value="5ef1f927-bb0c-49ab-ae96-9e5308fbce36" />
+                <column name="version" value="1"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+            </insert>
+        </changeSet>
+        <changeSet id="0051-1049_ins_mdm63_10" author="Elunin">
+            <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+                <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+                <column name="STATUS_MODEL_ID" value="b782e1cc-92e6-11ec-b909-0242ac120002" />
+                <column name="STATUS_FROM_ID" value="1990a87c-8f05-11ec-b909-0242ac120002" />
+                <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+                <column name="ACTION_ID" value="5ef1f927-bb0c-49ab-ae96-9e5308fbce36" />
+                <column name="version" value="1"/>
+                <column name="CREATED_DATE" valueDate="${now}"/>
+                <column name="CREATED_BY" value="suvv-admin"/>
+                <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+                <column name="START_DATE" value="2015-01-01"/>
+                <column name="END_DATE" value="9999-12-31"/>
+            </insert>
+        </changeSet>
+    -->
+
+</databaseChangeLog>

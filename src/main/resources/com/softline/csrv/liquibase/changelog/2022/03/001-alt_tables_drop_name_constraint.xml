@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="001-alt_tables_drop_name_constraint" author="EAlbinets">
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM04_AUTOMIGRATION"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM11_SIGN_COMPL_SAM"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM13_PROJECT"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM19_REQUEST_TYPE"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM22_DEPLOY_PHASE"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM22_IMPL_PHASE"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM24_LABEL"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM27_SOURCE_TYPE"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="MDM28_CODE_CLOSE"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm00_ref_book"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm01_rfc_type"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm02_doc_kind"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm03_automation"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm05_inf_system"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm06_source"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm07_defect_source"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm08_work_reason"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm09_subdivision"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm12_priority"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm13_process"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm14_subdivision_project"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm15_organization"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm16_release"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm17_solution"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm18_status"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm20_release_form"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm21_function"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm26_prob_req_change"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm29_status_model"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm30_status_transition"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm31_doc_type"/>
+        <dropNotNullConstraint columnDataType="varchar(1000)" columnName="NAME" tableName="mdm32_subdivision_kind"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0040-ins_mdm19_request_type" author="elunin">
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3b1f8-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="22db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="RFC"/>
+            <column name="NAME" value="Request for Change"/>
+            <column name="DESCRIPTION" value="Request for Change"/>
+            <column name="ID_SRC" value="12202"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3b040-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="IS_VERSION"/>
+            <column name="NAME" value="Версия ИС"/>
+            <column name="DESCRIPTION" value="Версия ИС"/>
+            <column name="ID_SRC" value="10600"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3ae74-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="DOCUMENT"/>
+            <column name="NAME" value="Документ"/>
+            <column name="DESCRIPTION" value="Документ"/>
+            <column name="ID_SRC" value="11900"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3ac9e-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="MODIFICATION"/>
+            <column name="NAME" value="Доработка"/>
+            <column name="DESCRIPTION" value="Доработка"/>
+            <column name="ID_SRC" value="4"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3a898-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="TASK"/>
+            <column name="NAME" value="Задача"/>
+            <column name="DESCRIPTION" value="Задача"/>
+            <column name="ID_SRC" value="12601"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3a708-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="REMARK"/>
+            <column name="NAME" value="Замечание"/>
+            <column name="DESCRIPTION" value="Замечание"/>
+            <column name="ID_SRC" value="11901"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3a56e-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="REQUEST_FOR_ANALYSIS"/>
+            <column name="NAME" value="Заявка на анализ"/>
+            <column name="DESCRIPTION" value="Заявка на анализ"/>
+            <column name="ID_SRC" value="10706"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3a3ca-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="INTEGRATION_VERSION"/>
+            <column name="NAME" value="Интеграционная версия"/>
+            <column name="DESCRIPTION" value="Интеграционная версия"/>
+            <column name="ID_SRC" value="10700"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3a208-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="CORRECTION"/>
+            <column name="NAME" value="Исправление"/>
+            <column name="DESCRIPTION" value="Исправление"/>
+            <column name="ID_SRC" value="10803"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c39f6a-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="CONTRACT"/>
+            <column name="NAME" value="Контракт"/>
+            <column name="DESCRIPTION" value="Контракт"/>
+            <column name="ID_SRC" value="11003"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c39be6-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="REGULATORY_DOCUMENT"/>
+            <column name="NAME" value="Нормативный документ"/>
+            <column name="DESCRIPTION" value="Нормативный документ"/>
+            <column name="ID_SRC" value="10705"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c39a42-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="INTEGRATION_VERSION_PLANNING"/>
+            <column name="NAME" value="Планирование интеграционной версии"/>
+            <column name="DESCRIPTION" value="Планирование интеграционной версии"/>
+            <column name="ID_SRC" value="10712"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c395d8-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="COMPONENT_BUILD"/>
+            <column name="NAME" value="Сборка компонента"/>
+            <column name="DESCRIPTION" value="Сборка компонента"/>
+            <column name="ID_SRC" value="11700"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c394a2-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="PLAN_AGREEMENT"/>
+            <column name="NAME" value="Согласование плана"/>
+            <column name="DESCRIPTION" value="Согласование плана"/>
+            <column name="ID_SRC" value="10711"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c3934e-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="CONTENT_AGREEMENT"/>
+            <column name="NAME" value="Согласование состава"/>
+            <column name="DESCRIPTION" value="Согласование состава"/>
+            <column name="ID_SRC" value="10710"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c39204-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="AGREEMENT"/>
+            <column name="NAME" value="Согласование"/>
+            <column name="DESCRIPTION" value="Согласование"/>
+            <column name="ID_SRC" value="12003"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c390a6-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="VIS_AGREEMENT"/>
+            <column name="NAME" value="Согласование ВИС"/>
+            <column name="DESCRIPTION" value="Согласование ВИС"/>
+            <column name="ID_SRC" value="12700"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm19_request_type">
+            <column name="ID" value="a7c38e4e-939a-11ec-b909-0242ac120002"/>
+            <column name="PROCESS_ID" value="21db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="ICON_PATH" value="" />
+            <column name="CODE" value="REQUIREMENT"/>
+            <column name="NAME" value="Требование"/>
+            <column name="DESCRIPTION" value="Требование"/>
+            <column name="ID_SRC" value="10100"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

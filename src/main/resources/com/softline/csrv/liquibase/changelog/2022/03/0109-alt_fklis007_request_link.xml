@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0109-alt_fklis007_request_link" author="EAlbinets">
+        <addColumn tableName="fklis007_request_link">
+            <column name="request_id_from" type="UUID"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="request_id_from" tableName="fklis007_request_link"/>
+    </changeSet>
+    <changeSet id="0109-alt_fklis007_request_link_2" author="EAlbinets">
+        <addColumn tableName="fklis007_request_link">
+            <column name="request_type_id" type="UUID"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="request_type_id" tableName="fklis007_request_link"/>
+    </changeSet>
+    <changeSet id="0109-alt_fklis007_request_link_3" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="request_type_id" baseTableName="fklis007_request_link"
+                                 constraintName="FK_FKLIS007REQU_ON_REQUESTTYPE" referencedColumnNames="ID"
+                                 referencedTableName="MDM19_REQUEST_TYPE"/>
+    </changeSet>
+    <changeSet id="0109-alt_fklis007_request_link_4" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="request_id_from" baseTableName="fklis007_request_link"
+                                 constraintName="FK_FKLIS007REQ_ON_REQUESTIDFR" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0109-alt_fklis007_request_link_5" author="EAlbinets">
+        <dropColumn columnName="link_type_id" tableName="fklis007_request_link"/>
+
+        <dropColumn columnName="request_id" tableName="fklis007_request_link"/>
+    </changeSet>
+</databaseChangeLog>

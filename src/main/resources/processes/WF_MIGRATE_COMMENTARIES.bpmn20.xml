@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:flowable="http://flowable.org/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
+  <process id="WF_MIGRATE_COMMENTARIES" name="Миграция комментариев" isExecutable="true">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <jmix:formData type="no-form" />
+      </extensionElements>
+      <outgoing>Flow_1yzw6x0</outgoing>
+    </startEvent>
+    <endEvent id="Event_1x6045s">
+      <incoming>Flow_0sk1hr9</incoming>
+    </endEvent>
+    <sequenceFlow id="Flow_1yzw6x0" sourceRef="startEvent1" targetRef="Activity_18yemox" />
+    <sequenceFlow id="Flow_0sk1hr9" sourceRef="Activity_18yemox" targetRef="Event_1x6045s" />
+    <serviceTask id="Activity_18yemox" name="MigrateCommentaries" flowable:delegateExpression="${bpm_CommentsMigration}" jmix:taskType="delegateExpression">
+      <incoming>Flow_1yzw6x0</incoming>
+      <outgoing>Flow_0sk1hr9</outgoing>
+    </serviceTask>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="process">
+      <bpmndi:BPMNEdge id="Flow_0sk1hr9_di" bpmnElement="Flow_0sk1hr9">
+        <omgdi:waypoint x="350" y="165" />
+        <omgdi:waypoint x="392" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yzw6x0_di" bpmnElement="Flow_1yzw6x0">
+        <omgdi:waypoint x="180" y="165" />
+        <omgdi:waypoint x="250" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+        <omgdc:Bounds x="150" y="150" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1x6045s_di" bpmnElement="Event_1x6045s">
+        <omgdc:Bounds x="392" y="147" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ai2dsa_di" bpmnElement="Activity_18yemox">
+        <omgdc:Bounds x="250" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

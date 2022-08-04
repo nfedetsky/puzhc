@@ -1,0 +1,109 @@
+<fetchPlans xmlns="http://jmix.io/schema/core/fetch-plans">
+    <fetchPlan class="com.softline.csrv.entity.Request" name="full" extends="_base">
+        <property name="status">
+            <property name="name"/>
+        </property>
+        <property name="prevStatus"/>
+        <property name="requestType">
+            <property name="name"/>
+        </property>
+        <property name="author"/>
+        <property name="attrSueCode"/>
+        <property name="attrSue"/>
+        <property name="assignee"/>
+        <property name="affectedFunctions">
+            <property name="function">
+                <property name="endDate"/>
+                <property name="parent">
+                    <property name="name"/>
+                </property>
+            </property>
+            <property name="request"/>
+            <property name="createdDate"/>
+        </property>
+        <property name="plannedAprobeDuration"/>
+        <property name="watchers"/>
+        <property name="environment"/>
+        <property name="initiator"/>
+        <property name="contactPerson"/>
+        <property name="additionalVISs"/>
+        <property name="requirementProbability"/>
+        <property name="problemType"/>
+        <property name="buildComponent"/>
+        <property name="docKind"/>
+        <property name="infSystem"/>
+        <property name="defectSource"/>
+        <property name="priority"/>
+        <property name="id"/>
+        <property name="idSrc"/>
+        <property name="createdBy"/>
+        <property name="version"/>
+        <property name="lastModifiedBy"/>
+        <property name="lastModifiedDate"/>
+        <property name="parentRfc"/>
+        <property name="createdDate"/>
+        <property name="process"/>
+        <property name="solution"/>
+        <property name="visCompatibility"/>
+        <property name="curator"/>
+        <property name="curatorR"/>
+        <property name="normativeDocument"/>
+        <property name="orgInitiator"/>
+        <property name="project"/>
+        <property name="function">
+            <property name="endDate"/>
+        </property>
+        <property name="contour"/>
+        <property name="workPlace"/>
+        <property name="workType"/>
+        <property name="workWay"/>
+        <property name="curatorTx"/>
+        <property name="testManager"/>
+        <property name="customer"/>
+        <property name="developer"/>
+        <property name="unavlUserServices">
+            <property name="function">
+                <property name="parent">
+                    <property name="name"/>
+                </property>
+            </property>
+            <property name="request"/>
+        </property>
+        <property name="requestVis"/>
+        <property name="requestRequirement"/>
+        <property name="requestAnalisys"/>
+        <property name="requestZov"/>
+        <property name="requestAgreement"/>
+        <property name="requestContract"/>
+        <property name="requestCorrection"/>
+        <property name="requestDocument"/>
+        <property name="requestContentAgreement"/>
+        <property name="requestModification"/>
+        <property name="involvedFunction"/>
+        <property name="updatedBuildComponent"/>
+    </fetchPlan>
+    <fetchPlan entity="Function" name="function-full" extends="_base">
+        <property name="createdDate"/>
+        <property name="endDate"/>
+        <property name="system" fetchPlan="_instance_name">
+            <property name="executor" fetchPlan="_base"/>
+            <property name="id"/>
+        </property>
+    </fetchPlan>
+    <fetchPlan entity="InfoSystem" name="infoSystem-full" extends="_base">
+        <property name="executor" fetchPlan="_base"/>
+        <property name="name"/>
+        <property name="parent"/>
+        <property name="fgisCode"/>
+    </fetchPlan>
+    <fetchPlan entity="RequestAffectedFunction" name="requestAffectedFunction-full" extends="_base">
+        <property name="createdDate"/>
+        <property name="function"/>
+        <property name="request"/>
+    </fetchPlan>
+    <fetchPlan entity="UnavailabileServices" name="unavailabileServices-full" extends="_base">
+        <property name="createdDate"/>
+        <property name="function"/>
+        <property name="request"/>
+    </fetchPlan>
+</fetchPlans>

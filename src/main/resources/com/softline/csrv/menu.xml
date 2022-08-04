@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://jmix.io/schema/ui/menu">
+
+    <item id="request" screen="Request.browse" caption="msg://com.softline.csrv.screen.request/requestBrowse.menu" icon="TASKS"/>
+    <item id="kanban" screen="KanBanScreen" caption="msg://com.softline.csrv.screen.kanbanscreen/kanBanScreen.caption" icon="TH_LARGE"/>
+    <item id="nsi" screen="RefBook.browse" caption="msg://com.softline.csrv.screen.refbook/refBookBrowse.menu" icon="LIST"/>
+    <item id="wiki" icon="WIKIPEDIA_W" caption="msg://menu-config.wiki"/>
+    <menu id="administration" caption="msg:///menu-config.administration" icon="COGS">
+        <item screen="User.browse" caption="msg:///menu-config.adm_users" icon="USER"/>
+        <item screen="Migration.browse" caption="msg:///menu-config.migration" icon="MAP_SIGNS"/>
+        <item screen="Issues.browse" caption="msg:///menu-config.mgr_issues"/>
+        <item screen="XWikiDoc.browse" caption="msg://com.softline.csrv.screen.xwikidoc/XWikiDocBrowse.menu"/>
+    </menu>
+</menu-config>
+
+<!--
+Портал База знаний = "SHARE_SQUARE"
+Общее =              "RSS"
+Заявки =             "TASKS"
+Канбан-доска =       "TH_LARGE"
+НСИ =                "LIST"
+Отчеты (фильтры) =   "FILTER"
+Администрирование =  "COGS"
+Профиль =            "USER_CIRCLE"
+Отчеты =             "ILE_TEXT_O"
+BPM =                "SITEMAP"
+-->

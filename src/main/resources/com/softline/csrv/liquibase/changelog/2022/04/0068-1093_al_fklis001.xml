@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+            <changeSet id="0068-1093_al_fklis001_1" author="ELunin">
+                <addColumn tableName="fklis001_request_card">
+                    <column name="ORG_INITIATOR_ID" type="UUID"/>
+                </addColumn>
+            </changeSet>
+            <changeSet id="0068-1093_al_fklis001_3" author="ELunin">
+                <dropForeignKeyConstraint baseTableName="fklis001_request_card" constraintName="FK_FKLIS001REQUES_ON_INITIATOR"/>
+            </changeSet>
+            <changeSet id="0068-1093_al_fklis001_2" author="ELunin">
+                <addForeignKeyConstraint baseColumnNames="ORG_INITIATOR_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001REQ_ON_ORGINITIATO" referencedColumnNames="ID" referencedTableName="mdm15_organization"/>
+            </changeSet>
+            <changeSet id="0068-1093_al_fklis001_4" author="ELunin">
+                <addForeignKeyConstraint baseColumnNames="INITIATOR_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001REQUES_ON_INITIATOR" referencedColumnNames="ID" referencedTableName="USER_"/>
+            </changeSet>
+            <changeSet id="0068-1093_al_fklis001_5" author="ELunin">
+               <sql>
+                   DROP INDEX IF EXISTS IDX_REQUEST_ORGINITIATOR_ID;
+               </sql>
+            </changeSet>
+
+            <changeSet id="0068-1093_al_fklis001_7" author="ELunin">
+                <dropIndex tableName="fklis001_request_card" indexName="IDX_REQUEST_INITIATOR_ID"/>
+                <createIndex indexName="IDX_REQUEST_INITIATOR_ID" tableName="fklis001_request_card" unique="false">
+                    <column name="INITIATOR_ID"/>
+                </createIndex>
+                <createIndex indexName="IDX_REQUEST_ORGINITIATOR_ID"
+                             tableName="fklis001_request_card"
+                             unique="false">
+                    <column name="ORG_INITIATOR_ID"/>
+                </createIndex>
+            </changeSet>
+            <changeSet id="0068-1093_al_fklis001_8" author="ELunin">
+                    <dropIndex indexName="IDX_REQUEST"
+                               tableName="fklis001_request_card"/>
+
+                    <createIndex indexName="IDX_REQUEST"
+                                 tableName="fklis001_request_card"
+                                 unique="false">
+                        <column name="BUILD_COMPONENT_ID"/>
+                    </createIndex>
+            </changeSet>
+
+    <changeSet id="0068-1093_al_fklis001_9" author="ELunin">
+        <createIndex indexName="IDX_REQUEST_REQ_PROB_ID"
+                 tableName="fklis001_request_card">
+            <column name="REQUIREMENT_PROBABILITY_ID"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

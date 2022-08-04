@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0026-mdm19_request_type-1" author="ASShepelev">
+        <update tableName="MDM19_REQUEST_TYPE">
+            <column name="NAME" value="Запрос на анализ"/>
+            <where>code = 'REQUEST_FOR_ANALYSIS'</where>
+        </update>
+    </changeSet>
+    <changeSet id="0026-mdm19_request_type-2" author="ASShepelev">
+        <update tableName="MDM29_STATUS_MODEL">
+            <column name="NAME" value="СУВВ ФК Запрос на анализ"/>
+            <where>code = 'WF_REQUEST_FOR_ANALYSIS'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

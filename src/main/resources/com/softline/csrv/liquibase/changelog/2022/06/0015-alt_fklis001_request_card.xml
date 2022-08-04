@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0015-alt_fklis001_request_card.xml" author="ZESONOV">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_ACCEPT_VERSION_ID" type="UUID"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="0015-alt_fklis001_request_card.xml_2" author="ZESONOV">
+        <createIndex indexName="IDX_REQUEST_ACCEPT_VERSION_ID" tableName="fklis001_request_card">
+            <column name="REQUEST_ACCEPT_VERSION_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_ACCEPT_VERSION_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_REQUESTACCE" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+
+</databaseChangeLog>

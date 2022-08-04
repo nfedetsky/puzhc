@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0002-alt_fklis001_request_card" author="ZESONOV">
+        <addColumn tableName="fklis001_request_card">
+            <column name="IS_PATCH_REQUIRED" type="BIGINT"/>
+            <column name="IS_SENT_IMPACT_ASSESSMENT" type="BOOLEAN"/>
+            <column name="OPEN_QUESTION_DESCR" type="VARCHAR(512)"/>
+            <column name="REWORK_SOURCE_ID" type="UUID"/>
+            <column name="SOLUTION_DESCR" type="VARCHAR(256)"/>
+            <column name="WORK_REASON_ID" type="UUID"/>
+            <column name="LABORIOUSNESS" type="BIGINT"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="0002-alt_fklis001_request_card_2" author="ZESONOV">
+        <createIndex indexName="IDX_REQUEST_REWORK_SOURCE_ID" tableName="fklis001_request_card">
+            <column name="REWORK_SOURCE_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REWORK_SOURCE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_REWORKSOURC" referencedColumnNames="ID"
+                                 referencedTableName="mdm06_source"/>
+    </changeSet>
+
+    <changeSet id="0002-alt_fklis001_request_card_3" author="ZESONOV">
+        <createIndex indexName="IDX_REQUEST_WORK_REASON_ID" tableName="fklis001_request_card">
+            <column name="WORK_REASON_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="WORK_REASON_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUE_ON_WORKREASON" referencedColumnNames="ID"
+                                 referencedTableName="mdm08_work_reason"/>
+    </changeSet>
+
+</databaseChangeLog>

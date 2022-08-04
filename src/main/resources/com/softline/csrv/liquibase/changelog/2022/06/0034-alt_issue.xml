@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0034_alt_issue-1" author="csrv">
+        <addColumn schemaName="suvv_migration" tableName="issue">
+            <column name="HISTORY" type="BOOLEAN"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="HISTORY" schemaName="suvv_migration" defaultNullValue="false" tableName="issue"/>
+    </changeSet>
+</databaseChangeLog>

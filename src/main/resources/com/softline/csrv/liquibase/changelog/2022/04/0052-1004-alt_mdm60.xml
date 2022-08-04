@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="uuid_function" value="gen_random_uuid()" dbms="postgresql"/>
+
+    <changeSet id="00052-ins_mdm60_0" author="ELunin">
+        <delete tableName="mdm60_request_validation">
+            <where>code = '330'</where>
+        </delete>
+        <modifyDataType  columnName="name" newDataType="text" tableName="mdm60_request_validation"/>
+        <createIndex indexName="IDX_REF_REQUEST_VALIDATION_UNQ"
+                     tableName="mdm60_request_validation"
+                     unique="true">
+            <column name="CODE"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="00052-ins_mdm60_1" author="ELunin">
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="330"/>
+            <column name="NAME" value='Значение поля "Ревизия источника" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="30" />
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="22"/>
+            <column name="NAME" value='Значение поля "Виды тестирования" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="9"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="35"/>
+            <column name="NAME" value='Значение поля "Время окончания апробации" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="36"/>
+            <column name="NAME" value='Значение поля "Влияние вносимых изменений на другие подсистемы и необходимость привлечения соисполнителя" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="37"/>
+            <column name="NAME" value='Значение поля "Время начала работ (ПРОД)" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="38"/>
+            <column name="NAME" value='Значение поля "Время окончания работ (ПРОД)" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="39"/>
+            <column name="NAME" value='Значение поля "Время начала работ (ТЕСТ)" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="41"/>
+            <column name="NAME" value='Значение поля "Время окончания работ (ТЕСТ)" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="73"/>
+            <column name="NAME" value='Значение поля "Затрагиваемые сервисы" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="81"/>
+            <column name="NAME" value='Значение поля "Изменение политик мониторинга" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="82"/>
+            <column name="NAME" value='Значение поля "Инструкция по обновлению" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="154"/>
+            <column name="NAME" value='Значение поля "Место проведения работ" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="272"/>
+            <column name="NAME" value='Значение поля "Ориентировочная длительность работ по установке" должно быть заолнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="301"/>
+            <column name="NAME" value='Значение поля "ПиМ апробации" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="341"/>
+            <column name="NAME" value='Значение поля "Причины проведения работ и краткое описание" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="342"/>
+            <column name="NAME" value='Значение поля "Предыдущий статус" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="454"/>
+            <column name="NAME" value='Значение поля "Завершено (факт)" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="481"/>
+            <column name="NAME" value='Значение поля "Инициатор" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="553"/>
+            <column name="NAME" value='Значение поля "Планируемый результат" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="581"/>
+            <column name="NAME" value='Значение поля "Результат сборки" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="671"/>
+            <column name="NAME" value='Значение поля "Требуемые доп.ВИС" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="693"/>
+            <column name="NAME" value='Значение поля "Этап развертывания" должно быть заполнено'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1171"/>
+            <column name="NAME" value='Значение поля "Вложение" должно быть заполнено (Для сборок в SVN)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1341"/>
+            <column name="NAME" value='пользователь имеет роль "Р.Релиз-менеджер"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1390"/>
+            <column name="NAME" value='(пользователь = Заявка.Автор) ИЛИ (пользователь, у которого МатрицаДоступа.Роль = "ФК.Администратор ИС И МатрицаДоступа.Подразделение = ВР)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1400"/>
+            <column name="NAME" value='(пользователь = Заявка.Исполнитель) ИЛИ (пользователь, у которого МатрицаДоступа.Роль = "ФК.Администратор ИС И МатрицаДоступа.Подразделение = ВР)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1410"/>
+            <column name="NAME" value='пользователь, у которого МатрицаДоступа.Роль = "ФК.Администратор ИС И МатрицаДоступа.Подразделение = ВР'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1420"/>
+            <column name="NAME" value='имеются связанные заявки типа Согласование в статусе "Согласование"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1430"/>
+            <column name="NAME" value='имеются связанные заявки типа ЗНА в статусе "Анализ"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1440"/>
+            <column name="NAME" value='если Заявка.RFC.среда ≠ "тестовая", до должны быть заполнены поля Заявка.RFC."время начала работ" и Заявка.RFC."время окончания работ"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1450"/>
+            <column name="NAME" value='"должна соблюдаться последовательность интервалов дат в полях:Заявка.RFC.""Время начала работ"" > Заявка.RFC.""Время окончания работ"" > Заявка.RFC.""Время начала апробации"" > Заявка.RFC.""Время окончания апробации"" > Заявка.RFC.""Плановое время доступности"""'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1460"/>
+            <column name="NAME" value='"если среда = ""продуктивная"" И Заявка.RFC.""Версия ИС"" ≠ пусто, то:
+i. Заявка.RFC.""Плановое время доступности"" ≥ Заявка.ВИС.""Плановое время установки""
+ii. если Заявка.RFC.""Функция ИС"".ИС = СУРФК, то Заявка.RFC.""Родительский RFC"" ≠ пусто И Заявка.RFC.""Родительский RFC"" = Заявка.ВИС.RFC
+iii. если Заявка.RFC.""Функция ИС"".ИС = СУРФК, то один из RFC в цепочке Родительских RFC имеет Заявка.RFC.Среда = «Тестовая» и Заявка.RFC.""Результат работ"" = «Решено».
+v. Не существует других незакрытых RFC с атрибутом Заявка.RFC.Среда= «Тестовая» или «Продуктивная», привязанных к той же ВИС."
+'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1470"/>
+            <column name="NAME" value='"если среда = ""тестовая"" И Заявка.RFC.""Версия ИС"" ≠ пусто, то:
+i. Заявка.RFC.""Плановое время доступности"" > Заявка.ВИС.""Плановое время установки"" И Заявка.RFC.""Плановое время доступности"" - Заявка.ВИС.""Плановое время установки"" ≥ Заявка.RFC.""Ориентировочная длительность работ"" + Заявка.RFC.""Плановая длительность испытаний "" + Заявка.RFC.""Плановая длительность апробации""
+ii. Не существует других незакрытых RFC с атрибутом Заявка.RFC.Среда= «Тестовая», привязанных к той же ВИС"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1480"/>
+            <column name="NAME" value='"если среда = ""Учебная"" И Заявка.RFC.""Версия ИС"" ≠ пусто, то:
+i. Заявка.RFC.""Плановое время доступности"" ≥ Заявка.ВИС.""Плановое время установки""
+ii. Не существует других незакрытых RFC с атрибутом "Среда"= «Учебная», привязанных к той же ВИС."'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1490"/>
+            <column name="NAME" value='(Заявка.Исполнитель=текущий исполнитель) ИЛИ (роль пользователя = МатрицаДоступа.Роль."ФК.Администратор ИС" И организация пользователя = МатрицаДоступа.Организация.ФК И подразделение пользователя = МатрицаДоступа.Подразделение.ВР)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1500"/>
+            <column name="NAME" value='"если Заявка.RFC.Среда = ""продуктивная"" и Заявка.RFC.""Версия ИС"" ≠ пусто, то:
+i. Заявка.RFC.""Время начала работ"" = Заявка.ВИС.""Время начала работ ПРОД""
+ii. Заявка.RFC.""Время окончания работ"" = Заявка.ВИС.""Время окончания работ ПРОД""
+iii. Заявка.RFC.""Время начала апробации"" = Заявка.ВИС.""Время начала апробации"".
+iv. Заявка.RFC.""Время окончания апробации"" = Заявка.ВИС.""Время окончания апробации"".
+v. Заявка.RFC.""Плановое время доступности"" > Заявка.ВИС.""Плановое время установки"".
+vi. должна соблюдаться последовательность интервалов дат в полях:
+Заявка.RFC.""Время начала работ"" > Заявка.RFC.""Время окончания работ"" > Заявка.RFC.""Время начала апробации"" > Заявка.RFC.""Время окончания апробации"" > Заявка.RFC.""Плановое время доступности""
+vii. если Заявка.RFC.""Вид RFC"" = ""ППО"", то хотя бы одна ВИС указанная в поле Заявка.RFC.""Версия ИС"" имеет статус = ""Заказ ТП""
+viii. Не существует других незакрытых RFC с атрибутом Заявка.RFC.Среда= «Тестовая» или «Продуктивная», привязанных к той же ВИС."'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1510"/>
+            <column name="NAME" value='"если Заявка.RFC.""Версия ИС"" = пусто, то:
+i. должна соблюдаться последовательность интервалов дат в полях:
+Заявка.RFC.""Время начала работ"" > Заявка.RFC.""Время окончания работ"" > Заявка.RFC.""Время начала апробации"" > Заявка.RFC.""Время окончания апробации"" > Заявка.RFC.""Плановое время доступности"""'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1520"/>
+            <column name="NAME" value='"если Заявка.RFC.Среда = ""тестовая"" или ""учебная"" и Заявка.RFC.""Версия ИС"" ≠ пусто, то:
+i. Заявка.RFC.""Время начала работ"" = Заявка.ВИС.""Время начала работ ТЕСТ""
+ii. Заявка.RFC.""Время окончания работ"" = Заявка.ВИС.""Время окончания работ ТЕСТ""
+iii. Заявка.RFC.""Время начала апробации"" = Заявка.ВИС.""Время начала апробации"".
+iv. Заявка.RFC.""Время окончания апробации"" = Заявка.ВИС.""Время окончания апробации"".
+v. Заявка.RFC.""Плановое время доступности"" > Заявка.ВИС.""Плановое время установки"".
+vi. должна соблюдаться последовательность интервалов дат в полях:
+Заявка.RFC.""Время начала работ"" > Заявка.RFC.""Время окончания работ"" > Заявка.RFC.""Время начала апробации"" > Заявка.RFC.""Время окончания апробации"" >Заявка.RFC.""Плановое время доступности""
+vii. если Заявка.RFC.""Вид RFC"" = ""ППО"", то хотя бы одна ВИС указанная в поле Заявка.RFC.""Версия ИС"" имеет статус = ""Заказ ТП""
+viii. Не существует других незакрытых RFC, с совпадающим значением атрибута "Среда", привязанных к той же ВИС"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1530"/>
+            <column name="NAME" value='связанная заявка типа "Сборка компонента" находится в статусе "Закрыто"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1540"/>
+            <column name="NAME" value='связанная заявка типа ВИС находится в статусе "Установка на ПС"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1550"/>
+            <column name="NAME" value=' (организация пользователя ≠ МатрицаДоступа.Организация.ФК) ИЛИ (роль пользователя = МатрицаДоступа.Роль."ФК.Администратор ИС" И организация пользователя = МатрицаДоступа.Организация.ФК И подразделение пользователя = МатрицаДоступа.Подразделение.ВР)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1560"/>
+            <column name="NAME" value='Заявка.RFC."Функция ИС".ИС.Наименование ≠ УФОС'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1570"/>
+            <column name="NAME" value='Заявка.ВИС."функция ИС".ИС = УФОС'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1571"/>
+            <column name="NAME" value='Требуемые доп. ВИС'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1580"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала работ ПРОД" больше Заявка.ВИС."Время окончания работ ПРОД" больше Заявка.ВИС."Время начала апробации" больше Заявка.ВИС."Время окончания апробации"  Заявка.ВИС."Плановое время установки" больше Заявка.ВИС."Срок исполнения"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1590"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала работ ПРОД" - Заявка.ВИС."Время окончания работ ПРОД" ≥ Заявка.ВИС."Ориентировочная длительность работ"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1591"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала апробации" - Заявка.ВИС."Время окончания апробации" ≥ Заявка.ВИС."Плановая длительность апробации"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1600"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала работ ПРОД" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1610"/>
+            <column name="NAME" value='Заявка.ВИС."Время окончания работ ПРОД" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1620"/>
+            <column name="NAME" value='Заявка.ВИС."Плановое время установки" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1630"/>
+            <column name="NAME" value='Заявка.ВИС."Срок исполнения" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1640"/>
+            <column name="NAME" value='Наличие хотя бы одной связанной заявки типа Доработка или Исправление'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1650"/>
+            <column name="NAME" value='все связанные Доработки (при наличии) перешли в статус "Включено в план"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1660"/>
+            <column name="NAME" value='все связанные Исправления (при наличии) перешли в статус "Включено в план"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1670"/>
+            <column name="NAME" value='имеется связанная заявка типа "Сборка компонента" в статусе "Закрыто"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1680"/>
+            <column name="NAME" value='"Передача ЗО и/или Ролей ВР ФК производится посредством направления На сборку задачи с типом Сборка компонента. В этой задаче:
+компонент: zo-roles;
+название: zo-roles + "" "" + текущая дата в формате ГГГГ.ММ.ЧЧ;
+прикреплен архив с ЗО и/или Ролями в формате zip и с названием zo-roles:
+остальные поля заполняются как обычно; "'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1690"/>
+            <column name="NAME" value='"Передача схем подписей ВР ФК производится посредством направления На сборку задачи с типом Сборка компонента. В этой задаче:
+компонент: signs;
+название: signs + "" "" + текущая дата в формате ГГГГ.ММ.ЧЧ;
+прикреплен архив со схемами подписи в формате zip и с названием apps;
+остальные поля заполняются как обычно; "'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1700"/>
+            <column name="NAME" value='"Передача скриптов ВР ФК производится посредством направления На сборку задачи с типом Сборка компонента. В этой задаче:
+компонент: scripts;
+название: scripts + "" "" + текущая дата в формате ГГГГ.ММ.ЧЧ;
+прикреплен архив со скриптами в формате zip и с названием scripts;
+остальные поля заполняются как обычно;"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1710"/>
+            <column name="NAME" value='"Для сборок ТимСити: Кол-во загруженных файлов в поле ""Адрес сборки""  =  кол-ву Исправлений и Доработок, указанных в ВИС."'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1720"/>
+            <column name="NAME" value='Для сборок SVN: Кол-во Исправлений и Доработок, указанных в поле «Примечание» =  кол-ву Исправлений и Доработок, указанных в ВИС.'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1730"/>
+            <column name="NAME" value='Для сборок SVN: значение поля "Билдплан" = "-" (прочерк)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1740"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала работ ТЕСТ" > Заявка.ВИС."Время окончания работ ТЕСТ" > Заявка.ВИС."Время начала испытаний" > Заявка.ВИС."Время окончания испытаний" > Заявка.ВИС."Время начала работ ПРОД" > Заявка.ВИС."Время окончания работ ПРОД" > Заявка.ВИС."Время начала апробации" > Заявка.ВИС."Время окончания апробации" > Заявка.ВИС."Плановое время установки" > Заявка.ВИС."Срок исполнения"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1750"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала работ ТЕСТ" - Заявка.ВИС."Время окончания работ ТЕСТ" ≥ Заявка.ВИС."Ориентировочная длительность работ"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1760"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала работ ТЕСТ" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1770"/>
+            <column name="NAME" value='Заявка.ВИС."Время окончания работ ТЕСТ" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1780"/>
+            <column name="NAME" value='"Заявка.ВИС.""Время начала испытаний"" - Заявка.ВИС.""Время окончания испытаний"" ≥ Заявка.ВИС.""Плановая длительность испытаний""
+Заявка.ВИС.""Время начала испытаний"" - Заявка.ВИС.""Время окончания испытаний"" ≥ Заявка.ВИС.""Плановая длительность испытаний"""'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1790"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала испытаний" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1800"/>
+            <column name="NAME" value='Заявка.ВИС."Время окончания испытаний" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1810"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала апробации" - Заявка.ВИС."Время окончания апробации" ≥ Заявка.ВИС."Плановая длительность апробации"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1820"/>
+            <column name="NAME" value='Заявка.ВИС."Время начала апробации" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1830"/>
+            <column name="NAME" value='Заявка.ВИС."Время окончания апробации" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1840"/>
+            <column name="NAME" value='Заявка.ВИС."Ориентировочная длительность работ" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1850"/>
+            <column name="NAME" value='Заявка.ВИС."Плановая длительность испытаний" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1860"/>
+            <column name="NAME" value='Заявка.ВИС."Плановая длительность апробации" ≠ 0'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1870"/>
+            <column name="NAME" value='Заявка.RFC ≠ пусто'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1871"/>
+            <column name="NAME" value='имеется связанная RFC в статусе "Согласовано"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1872"/>
+            <column name="NAME" value='Заявка.ВИС.Время начала апробации = Заявка.RFC.Время начала апробации'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1873"/>
+            <column name="NAME" value='Заявка.ВИС.Время окончания апробации = Заявка.RFC.Время окончания апробации'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1874"/>
+            <column name="NAME" value='Заявка.ВИС.Изменения политик мониторинга = Заявка.RFC.Изменения политик мониторинга'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value=" 1875"/>
+            <column name="NAME" value='Заявка.ВИС.Инструкция по обновлению = Заявка.RFC.Инструкция по обновлению'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1876"/>
+            <column name="NAME" value='Заявка.ВИС.Необходима остановка сервиса = Заявка.RFC.Необходима остановка сервиса'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1877"/>
+            <column name="NAME" value='Заявка.ВИС.Ориентировочная длительность = Заявка.RFC.Ориентировочная длительность'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1878"/>
+            <column name="NAME" value='Заявка.ВИС.Плановая длительность апробации = Заявка.RFC.Плановая длительность апробации'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1879"/>
+            <column name="NAME" value='Заявка.ВИС.Плановое время установки = Заявка.RFC.Плановое время установки'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1880"/>
+            <column name="NAME" value='Заявка.ВИС.Плановое время доступности = Заявка.RFC.Плановое время доступности'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1881"/>
+            <column name="NAME" value='Заявка.ВИС.Протокол тестирования = Заявка.RFC.Протокол тестирования'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1882"/>
+            <column name="NAME" value='Заявка.ВИС.Сведения об инициаторе = Заявка.RFC.Сведения об инициаторе'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1883"/>
+            <column name="NAME" value='Заявка.ВИС.Ссылка на описание выпуска (Release Notes) = Заявка.RFC.Ссылка на описание выпуска (Release Notes)'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1884"/>
+            <column name="NAME" value='Заявка.ВИС.Технология восстановления системы в исходное состояние = Заявка.RFC.Технология восстановления системы в исходное состояние'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1885"/>
+            <column name="NAME" value='Заявка.ВИС.Влияние на функции ИС = Заявка.RFC.Влияние на функции ИС'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1886"/>
+            <column name="NAME" value='Заявка.ВИС.Затрагиваемые сервисы = Заявка.RFC.Затрагиваемые сервисы'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1887"/>
+            <column name="NAME" value='Заявка.ВИС.ИТ-сервис = Заявка.RFC.ИТ-сервис'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1888"/>
+            <column name="NAME" value='Заявка.ВИС.Контур = Заявка.RFC.Контур'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1889"/>
+            <column name="NAME" value='Заявка.ВИС.Менеджер тестирования = Заявка.RFC.Менеджер тестирования'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1890"/>
+            <column name="NAME" value='Заявка.ВИС.Место проведения работ = Заявка.RFC.Место проведения работ'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1891"/>
+            <column name="NAME" value='Заявка.ВИС.Недоступность пользовательских сервисов = Заявка.RFC.Недоступность пользовательских сервисов'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1892"/>
+            <column name="NAME" value='Заявка.ВИС.Способ выполнения работ = Заявка.RFC.Способ выполнения работ'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1893"/>
+            <column name="NAME" value='Заявка.ВИС.Среда = Заявка.RFC.Среда'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1894"/>
+            <column name="NAME" value='Заявка.ВИС. = Заявка.RFC.'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1895"/>
+            <column name="NAME" value='"если Заявка.ВИС.Среда = Продуктовая, то
+        Заявка.ВИС.Время окончания работ ПРОД = Заявка.RFC.Время окончания работ
+        Заявка.ВИС.Время начала работ ПРОД= Заявка.RFC.Время начала работ
+        Заявка.RFC.""Плановое время доступности"" ≥ Заявка.ВИС.""Плановое время установки"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1896"/>
+            <column name="NAME" value='"если Заявка.ВИС.Среда = Тестовая, то
+        Заявка.ВИС.Время окончания работ ТЕСТ = Заявка.RFC.Время окончания работ
+        Заявка.ВИС.Время начала работ ТЕСТ = Заявка.RFC.Время начала работ
+        Заявка.RFC.""Плановое время доступности"" > Заявка.ВИС.""Плановое время установки"" И Заявка.RFC.""Плановое время доступности"" - Заявка.ВИС.""Плановое время установки"" ≥ Заявка.RFC.""Ориентировочная длительность работ"" + Заявка.RFC.""Плановая длительность испытаний "" + Заявка.RFC.""Плановая длительность апробации"""'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1897"/>
+            <column name="NAME" value='"если Заявка.ВИС.Среда = Учебная, то Заявка.RFC.""Плановое время доступности"" ≥ Заявка.ВИС.""Плановое время установки"""'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1991"/>
+            <column name="NAME" value='Заявка.ВИС."функция ИС".ИС = СУРФК'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1900"/>
+            <column name="NAME" value='Имеется связанная заявка типа "RFC"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="1910"/>
+            <column name="NAME" value='Имеется связанная заявка типа "Сборка компонента"'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

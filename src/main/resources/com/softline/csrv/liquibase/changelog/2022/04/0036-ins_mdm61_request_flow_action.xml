@@ -1,0 +1,379 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0036-ins_mdm63_request_flow_action" author="EAlbinets">
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D01da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D02da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D03da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D04da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D05da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D06da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D07da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D08da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D09da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Ada87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Bda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Cda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Dda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Eda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Fda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D10da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D11da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D12da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D13da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D14da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D15da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D16da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D17da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D18da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+        <insert tableName="mdm63_request_flow_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D19da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="STATUS_MODEL_ID" value="ba816752-9a31-11ec-b909-0242ac120002" />
+            <column name="STATUS_FROM_ID" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="ACTION_ID" value="c00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:flowable="http://flowable.org/bpmn" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" camunda:diagramRelationId="2e2549da-125c-48a0-a6d4-35f47a86d9e7">
+  <bpmn:collaboration id="Collaboration_1xdp2cl">
+    <bpmn:participant id="Participant_1aly5n2" processRef="WF_AGREEMENT" />
+  </bpmn:collaboration>
+  <bpmn:process id="WF_AGREEMENT" name="СУВВ ФК Согласование">
+    <bpmn:sequenceFlow id="Flow_1h1ccul" sourceRef="Event_Start" targetRef="Activity_04xl7vc" />
+    <bpmn:sequenceFlow id="Flow_1v5ehof" sourceRef="Activity_04xl7vc" targetRef="Event_19l7vzt" />
+    <bpmn:startEvent id="Event_Start">
+      <bpmn:extensionElements>
+        <jmix:formData type="no-form" />
+        <jmix:processVariables>
+          <jmix:processVariable name="request" type="entity">
+            <jmix:processVariableProperty name="entityName" value="Request" />
+          </jmix:processVariable>
+          <jmix:processVariable name="releatedrequest" type="entity-list">
+            <jmix:processVariableProperty name="entityName" value="Request" />
+          </jmix:processVariable>
+        </jmix:processVariables>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_1h1ccul</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:subProcess id="Activity_04xl7vc">
+      <bpmn:incoming>Flow_1h1ccul</bpmn:incoming>
+      <bpmn:outgoing>Flow_1v5ehof</bpmn:outgoing>
+      <bpmn:startEvent id="Event_1wiq14b">
+        <bpmn:extensionElements>
+          <jmix:formData type="no-form" />
+        </bpmn:extensionElements>
+        <bpmn:outgoing>Flow_1t42b2m</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:exclusiveGateway id="Gateway_yesORno" name="Gateway_yesORno">
+        <bpmn:incoming>Flow_yesORno</bpmn:incoming>
+        <bpmn:outgoing>Flow_18ovtkg</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0ab43ra</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:endEvent id="Event_End">
+        <bpmn:incoming>Flow_0ab43ra</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:endEvent id="Event_End2">
+        <bpmn:incoming>Flow_1gl08jg</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:userTask id="Activity_Agree" name="Согласование">
+        <bpmn:extensionElements>
+          <jmix:formData type="input-dialog" openMode="DIALOG">
+            <jmix:formOutcomes>
+              <jmix:formOutcome id="CLOSED" caption="Согласовать" />
+              <jmix:formOutcome id="REJECTED" caption="Отклонить" />
+            </jmix:formOutcomes>
+          </jmix:formData>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0yt9rwl</bpmn:incoming>
+        <bpmn:outgoing>Flow_yesORno</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="Activity_1dth79t" name="set Status CONSENSUS" flowable:delegateExpression="${bpm_UpdateRequestStatus}" jmix:taskType="delegateExpression">
+        <bpmn:extensionElements>
+          <flowable:field name="request">
+            <flowable:string>request</flowable:string>
+          </flowable:field>
+          <flowable:field name="status">
+            <flowable:string>CONSENSUS</flowable:string>
+          </flowable:field>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1t42b2m</bpmn:incoming>
+        <bpmn:outgoing>Flow_0yt9rwl</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:serviceTask id="Activity_1jrt459" name="Отклоняем смежные заявки Согласование" flowable:delegateExpression="${bpm_RejectRelatedRequest}" jmix:taskType="delegateExpression">
+        <bpmn:extensionElements>
+          <flowable:field name="request">
+            <flowable:string>request</flowable:string>
+          </flowable:field>
+          <flowable:field name="releatedrequest">
+            <flowable:string>releatedrequest</flowable:string>
+          </flowable:field>
+          <flowable:field name="status">
+            <flowable:string>REJECTED</flowable:string>
+          </flowable:field>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_18ovtkg</bpmn:incoming>
+        <bpmn:outgoing>Flow_1gl08jg</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:sequenceFlow id="Flow_yesORno" sourceRef="Activity_Agree" targetRef="Gateway_yesORno">
+        <bpmn:extensionElements>
+          <jmix:conditionDetails conditionSource="expression" />
+        </bpmn:extensionElements>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_18ovtkg" sourceRef="Gateway_yesORno" targetRef="Activity_1jrt459">
+        <bpmn:extensionElements>
+          <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_Agree" userTaskOutcome="REJECTED" />
+        </bpmn:extensionElements>
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_Agree_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_Agree_result'), 'REJECTED')}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0ab43ra" sourceRef="Gateway_yesORno" targetRef="Event_End">
+        <bpmn:extensionElements>
+          <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_Agree" userTaskOutcome="CLOSED" />
+        </bpmn:extensionElements>
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_Agree_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_Agree_result'), 'CLOSED')}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1gl08jg" sourceRef="Activity_1jrt459" targetRef="Event_End2" />
+      <bpmn:sequenceFlow id="Flow_0yt9rwl" sourceRef="Activity_1dth79t" targetRef="Activity_Agree" />
+      <bpmn:sequenceFlow id="Flow_1t42b2m" sourceRef="Event_1wiq14b" targetRef="Activity_1dth79t" />
+    </bpmn:subProcess>
+    <bpmn:endEvent id="Event_19l7vzt">
+      <bpmn:incoming>Flow_1v5ehof</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="Event_0zh7aps" cancelActivity="false" attachedToRef="Activity_04xl7vc">
+      <bpmn:outgoing>Flow_1oypns8</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_1l7ykux">
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">${request.getExecutionPeriodTimeAsDate()}</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_1oypns8" sourceRef="Event_0zh7aps" targetRef="Activity_0tddbsb" />
+    <bpmn:serviceTask id="Activity_0tddbsb" name="sendEmail" flowable:delegateExpression="${bpm_EmailSender}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+        <flowable:field name="subjecttext">
+          <flowable:string>Нарушен срок исполнения заявки %s</flowable:string>
+        </flowable:field>
+        <flowable:field name="bodytext">
+          <flowable:string>Нарушен срок исполнения заявки %s.
+Исполнитель: %s.</flowable:string>
+        </flowable:field>
+        <flowable:field name="sendToRole">
+          <flowable:string>FK_SUVV_DISPATCHER</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1oypns8</bpmn:incoming>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmn:signal id="AGREEMENT_REJECTED_140" name="Согласование отклонено" flowable:scope="global" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1xdp2cl">
+      <bpmndi:BPMNShape id="Participant_1aly5n2_di" bpmnElement="Participant_1aly5n2" isHorizontal="true">
+        <dc:Bounds x="1510" y="180" width="1168" height="570" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1oypns8_di" bpmnElement="Flow_1oypns8">
+        <di:waypoint x="1708" y="528" />
+        <di:waypoint x="1708" y="590" />
+        <di:waypoint x="1780" y="590" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1v5ehof_di" bpmnElement="Flow_1v5ehof">
+        <di:waypoint x="2570" y="420" />
+        <di:waypoint x="2612" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h1ccul_di" bpmnElement="Flow_1h1ccul">
+        <di:waypoint x="1606" y="220" />
+        <di:waypoint x="1628" y="220" />
+        <di:waypoint x="1628" y="370" />
+        <di:waypoint x="1650" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0u4h7zw_di" bpmnElement="Event_Start">
+        <dc:Bounds x="1570" y="202" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_04xl7vc_di" bpmnElement="Activity_04xl7vc" isExpanded="true">
+        <dc:Bounds x="1650" y="230" width="920" height="280" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1t42b2m_di" bpmnElement="Flow_1t42b2m">
+        <di:waypoint x="1726" y="330" />
+        <di:waypoint x="1758" y="330" />
+        <di:waypoint x="1758" y="370" />
+        <di:waypoint x="1790" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yt9rwl_di" bpmnElement="Flow_0yt9rwl">
+        <di:waypoint x="1890" y="370" />
+        <di:waypoint x="1950" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gl08jg_di" bpmnElement="Flow_1gl08jg">
+        <di:waypoint x="2280" y="450" />
+        <di:waypoint x="2312" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ab43ra_di" bpmnElement="Flow_0ab43ra">
+        <di:waypoint x="2130" y="345" />
+        <di:waypoint x="2130" y="280" />
+        <di:waypoint x="2312" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18ovtkg_di" bpmnElement="Flow_18ovtkg">
+        <di:waypoint x="2130" y="395" />
+        <di:waypoint x="2130" y="450" />
+        <di:waypoint x="2180" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01jg7a7_di" bpmnElement="Flow_yesORno">
+        <di:waypoint x="2050" y="370" />
+        <di:waypoint x="2105" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_1wiq14b_di" bpmnElement="Event_1wiq14b">
+        <dc:Bounds x="1690" y="312" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0sw5fwe_di" bpmnElement="Gateway_yesORno" isMarkerVisible="true">
+        <dc:Bounds x="2105" y="345" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2168" y="360" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_10mzd0b_di" bpmnElement="Event_End">
+        <dc:Bounds x="2312" y="262" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0p20vgn_di" bpmnElement="Event_End2">
+        <dc:Bounds x="2312" y="432" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bqdv3r_di" bpmnElement="Activity_Agree">
+        <dc:Bounds x="1950" y="330" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0a36wvl_di" bpmnElement="Activity_1dth79t">
+        <dc:Bounds x="1790" y="330" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1y1ovax_di" bpmnElement="Activity_1jrt459">
+        <dc:Bounds x="2180" y="410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_19l7vzt_di" bpmnElement="Event_19l7vzt">
+        <dc:Bounds x="2612" y="402" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mruej5_di" bpmnElement="Activity_0tddbsb">
+        <dc:Bounds x="1780" y="550" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1utyo0c_di" bpmnElement="Event_0zh7aps">
+        <dc:Bounds x="1690" y="492" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

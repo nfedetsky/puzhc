@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0024-1400_cfg002-1" author="ELunin">
+        <createTable tableName="CFG002_WIKI_SETTING">
+            <column name="ID"
+                    type="INT">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="PK_CFG002_WIKI_SETTING"/>
+            </column>
+            <column name="VERSION"
+                    type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WIKI_URL"
+                    type="VARCHAR(512)"/>
+            <column name="WORK_WITH_SYSTEM_URL"
+                    type="VARCHAR(512)"/>
+            <column name="ACCESS_ORDER_URL"
+                    type="VARCHAR(512)"/>
+            <column name="VRFK_URL"
+                    type="VARCHAR(512)"/>
+            <column name="VRFK_NEWS_URL"
+                    type="VARCHAR(512)"/>
+        </createTable>
+
+    </changeSet>
+    <changeSet id="0024-1400_cfg002-2" author="ELunin">
+        <insert tableName="CFG002_WIKI_SETTING">
+            <column name="id" value="1"/>
+            <column name="VERSION" value="1"/>
+            <column name="WIKI_URL" value="www.ya.ru"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0024-1400_cfg002-3" author="ELunin">
+        <update tableName="CFG002_WIKI_SETTING">
+            <column name="VRFK_URL" value="https://tt.me//fk_vr"/>
+            <column name="VRFK_NEWS_URL" value="https://tt.me//fk_vr"/>
+            <where>id=id</where>
+        </update>
+    </changeSet>
+    <changeSet id="0024-1400_cfg002-4" author="ELunin">
+        <update tableName="CFG002_WIKI_SETTING">
+            <column name="WIKI_URL" value="http://www.ya.ru"/>
+            <where>id=id</where>
+        </update>
+    </changeSet>
+
+
+
+
+
+</databaseChangeLog>

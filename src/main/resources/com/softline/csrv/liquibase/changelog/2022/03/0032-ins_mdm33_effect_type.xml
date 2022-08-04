@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0032-ins_mdm33_effect_type_1" author="IKretov">
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="77c2116e-a09e-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="NF"/>
+            <column name="NAME" value="Не заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a47e6fae-a09e-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ECHAN"/>
+            <column name="NAME" value="Редакционные правки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c16e2712-a09e-11ec-b909-0242ac120002"/>
+            <column name="id_src" value="13407"/>
+            <column name="CODE" value="CONS"/>
+            <column name="NAME" value="Консультация"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="df63ee0a-a09e-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="DESCR"/>
+            <column name="NAME" value="Описание реализации"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f955e944-a09e-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="C_REV"/>
+            <column name="NAME" value="Состав доработки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1467a0ce-a09f-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="MOD_REV"/>
+            <column name="NAME" value="Срок доработки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm33_effect_type" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="572f6270-a09f-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CONT_MOD"/>
+            <column name="NAME" value="Состав и срок доработки"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

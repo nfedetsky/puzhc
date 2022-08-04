@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="affectedFunctionDc" class="com.softline.csrv.entity.RequestAffectedFunction">
+            <fetchPlan extends="_base">
+                <property name="function" fetchPlan="_base">
+                    <property name="system" fetchPlan="_instance_name"/>
+                    <property name="parent" fetchPlan="_instance_name"/>
+                </property>
+                <property name="request" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="affectedFunctionDl"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <groupBox id="affectedFunctionGroupBox" align="TOP_LEFT" spacing="true" requiredIndicatorVisible="true">
+            <table id="affectedFunctionTable"
+                   dataContainer="affectedFunctionDc"
+                   width="AUTO" height="200px"
+                   multiselect="true">
+                <actions>
+                    <action id="addAffectedFunction"/>
+                    <action id="removeAffectedFunction"/>
+                </actions>
+                <columns>
+                    <column id="function.system.name"
+                            caption="msg://com.softline.csrv.entity/Request.affectedFunctions.infSystem" width="150"/>
+                    <column id="function.name"
+                            caption="msg://com.softline.csrv.entity/Request.affectedFunctions.function" width="200"/>
+                </columns>
+                <buttonsPanel>
+                    <button id="addAffectedFunctionBtn"
+                            action="affectedFunctionTable.addAffectedFunction"
+                            icon="PLUS"
+                            caption=""/>
+                    <button id="removeAffectedFunctionBtn"
+                            action="affectedFunctionTable.removeAffectedFunction"
+                            icon="TRASH"
+                            caption=""/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+    </layout>
+</fragment>

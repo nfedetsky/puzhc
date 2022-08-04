@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="uuid_function" value="gen_random_uuid()" dbms="postgresql"/>
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="get_role_function" value="get_role_by_code()" dbms="postgresql"/>
+
+
+    <changeSet id="0012-1216_roles-0" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_role_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from sec_resource_role where code = p_code; $function$;</createProcedure>
+    </changeSet>
+
+    <changeSet id="0012-1216_roles_1" author="ELunin" dbms="postgresql">
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="WF_REQUEST_FOR_IMPACT_AS"/>
+            <column name="NAME" value="WF ПУЖЦ Запрос на оценку"/>
+            <column name="DESCRIPTION" value='Возможность работать с Заявкой типа "Запрос на оценку"'/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34) || chr(44) || chr(34) || chr(65) || chr(80) ||chr(73) || chr(34)"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0012-1216_roles_3" author="ELunin" dbms="postgresql">
+       <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__ANALYSIS__MODIFICATION_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_IMPACT_AS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__ANALYSIS__REJECTED_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_IMPACT_AS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__ANALYSIS__CLOSED_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_IMPACT_AS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__ANALYSIS__REQUEST_INFO_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_IMPACT_AS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__REQUEST_INFO__ANALYSIS_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_IMPACT_AS')"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="0012-1216_roles_4" author="ELunin" dbms="postgresql">
+        <delete tableName="SEC_RESOURCE_ROLE">
+            <where>code in ('R_TEST_MENEGER', 'FK_SA_ADMINISTRATOR', 'FK_CHANGE_MANAGER', 'FK_INCEDENT_MANAGER')</where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="0012-1216_roles_5" author="ELunin" dbms="postgresql">
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_ARCHITECT"/>
+            <column name="NAME" value="ФК.Архитектор ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, ответственный за эксплуатацию, архитектуру и инфраструктуру в части выполнения функций по разработке технологических решений по использованию элементов системной архитектуры ИС для реализации функциональных, нефункциональных требований и интеграционных решений при их создании, развитии и эксплуатации"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_SUVV_DISPATCHER"/>
+            <column name="NAME" value="ФК.Диспетчер СУВВ"/>
+            <column name="DESCRIPTION" value="Ответственный сотрудник ФК, обладающий полномочиями переназначения заявок между участниками в рамках процессов СУВВ"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_RFC_DISPATCHER"/>
+            <column name="NAME" value="ФК.Диспетчер RFC"/>
+            <column name="DESCRIPTION" value="Ответственный сотрудник ФК, обладающий полномочиями переназначения заявок между участниками в рамках процессов RFC"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_SYSTEM_ADMINISTRATOR"/>
+            <column name="NAME" value="ФК.Системный администратор"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, отвечающий за настройку параметров ПУЖЦ и её работоспособность"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_SOFTWARE_DEVELOPER"/>
+            <column name="NAME" value="Р.Разработчик ПО"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник разработчика, ответственный за разработку ПО"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0012-1216_roles_6" author="ELunin" dbms="postgresql">
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник Технолога (ФК) по соответствующей ИС, ответственный за распределение и согласование заявок"/>
+            <where>code = 'FK_IS_TEKHNOLOGIST'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник ФК, отвечающий за ведение НСИ: выполнение операций по созданию, удалению и обновлению записей в справочниках ПУЖЦ"/>
+            <where>code = 'FK_ADMINISTRATOR_RRI'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник ФК, отвечающий за ведение Базы знаний в xWiki: выполнение операций по созданию, изменению и удалению страниц (пространства) – во всех страницах и пространствах; добавление и удаление вложений – во всех страницах и пространствах"/>
+            <where>code = 'FK_ADMINISTRATOR_KB'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, ответственный за распределение заявок, поступающих на рассмотрение организации-разработчику. Может быть только у одного сотрудника в разрезе ИС. Используется для автоматического назначения задач по умолчанию. Обработка деловой переписки"/>
+            <where>code = 'R_ADMINISTRATOR'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, отвечающий за ведение Базы знаний в xWiki: выполнение операций по созданию, изменению страниц (пространства) – во всех страницах и пространствах; добавление вложений – во всех страницах и пространствах"/>
+            <where>code = 'R_ADMINISTRATOR_KB'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, обеспечивающий деятельность сотрудника с ролью «Р.Руководитель проекта»"/>
+            <where>code = 'R_PROJECT_ADMIN'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, занимающийся вопросами, связанных с ВИС (используется для автоматического назначения). При отсутствии данной роли функции выполняются ролью «Р.Администратор». Может быть только у одного сотрудника в разрезе ИС"/>
+            <where>code = 'R_RELEASE_MANAGER'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, занимающийся вопросами организационного обеспечения и мониторинга процессов; решением эскалаций; обеспечением актуального состояния Ролевой матрицы в разрезе ИС и организации. Может быть только у одного сотрудника в разрезе ИС."/>
+            <where>code = 'R_PROJECT_MANAGER'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="name" value="ФК.Админитратор ВР"/>
+            <where>code = 'FK_CE_ADMINISTRATOR'</where>
+        </update>
+    </changeSet>
+    <changeSet id="0012-1216_roles_6v2" author="ymakogon" dbms="postgresql">
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, отвечающий за ведение Базы знаний в xWiki: выполнение операций по созданию, изменению страниц (пространства) – во всех страницах и пространствах, добавление вложений – во всех страницах и пространствах."/>
+            <where>code = 'R_ADMINISTRATOR_KB'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика по процессу тестирования."/>
+            <where>code = 'R_TEST_ENGINEER'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика выполняющий общий мониторинг процессов, решение эскалаций, не решаемых сотрудником с ролью Р.Руководитель проекта. Может быть только у одного сотрудника в разрезе ИС."/>
+            <where>code = 'R_PROJECT_CURATOR'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, занимающийся вопросами, связанных с Исправлениями (используется для автоматического назначения). При отсутствии данной роли функции выполняются ролью Р.Администратор. Может быть только у одного сотрудника в разрезе ИС."/>
+            <column name="name" value="Р.Менеджер исправлений"/>
+            <where>code = 'R_PATCH_MANAGER'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, обеспечивающий деятельность сотрудника с ролью Р.Руководитель проекта."/>
+            <where>code = 'R_PROJECT_ADMIN'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, занимающийся вопросами, связанных с ВИС (используется для автоматического назначения). При отсутствии данной роли функции выполняются ролью Р.Администратор. Может быть только у одного сотрудника в разрезе ИС."/>
+            <where>code = 'R_RELEASE_MANAGER'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, занимающийся вопросами организационного обеспечения и мониторинга процессов, решением эскалаций, обеспечением актуального состояния Ролевой матрицы в разрезе ИС и организации. Может быть только у одного сотрудника в разрезе ИС."/>
+            <where>code = 'R_PROJECT_MANAGER'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник разработчика, выполняющий функции по сопровождению."/>
+            <where>code = 'R_SPECIALIST'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник ФК, отвечающий за ведение Базы знаний в xWiki: выполнение операций по созданию, изменению и удалению страниц (пространства) – во всех страницах и пространствах, добавление и удаление вложений – во всех страницах и пространствах."/>
+            <where>code = 'FK_ADMINISTRATOR_KB'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник ФК подразделения ФКУ ЦОКР, ответственный за обеспечение процесса согласования и выпуска версий."/>
+            <column name="name" value="ФК.Администратор ВР"/>
+            <where>code = 'FK_CE_ADMINISTRATOR'</where>
+        </update>
+        <update tableName="SEC_RESOURCE_ROLE">
+            <column name="description" value="Уполномоченный сотрудник ФК, выполняющий функции по сопровождению."/>
+            <where>code = 'FK_SPECIALIST'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0012-1216_roles_7" author="ELunin" dbms="postgresql">
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__ASSIGN_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_IMPACT_AS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_IMPACT_AS__ASSIGN_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_ANALYSIS')"/>
+        </insert>
+    </changeSet>
+
+
+
+
+
+    <changeSet id="0012-1216_roles_99" author="ELunin" dbms="postgresql">
+        <sql>DROP function get_role_by_code;</sql>
+    </changeSet>
+
+
+
+</databaseChangeLog>
+
+

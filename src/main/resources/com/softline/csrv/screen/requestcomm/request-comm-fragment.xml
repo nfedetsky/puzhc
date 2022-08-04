@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <instance id="commentDc" class="com.softline.csrv.entity.RequestComm" provided="true"/>
+    </data>
+    <layout>
+        <groupBox id="comment" spacing="true" collapsable="true">
+                <vbox id="commentVbox">
+                    <label id="commentAuthor"/>
+                    <richTextArea id="commentDescription" editable="false"/>
+                    <hbox>
+                        <linkButton id="editComment" caption="Редактировать"/>
+                        <linkButton id="removeComment" caption="Удалить"/>
+                    </hbox>
+                </vbox>
+        </groupBox>
+    </layout>
+</fragment>
+

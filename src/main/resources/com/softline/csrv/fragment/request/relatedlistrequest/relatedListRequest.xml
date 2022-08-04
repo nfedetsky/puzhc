@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="requestListDc" class="com.softline.csrv.entity.Request">
+            <fetchPlan>
+                <property name="createdDate"/>
+                <property name="name"/>
+                <property name="revisionNum"/>
+            </fetchPlan>
+            <loader id="requestListDl"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <groupBox id="relatedListGroupBox" align="TOP_LEFT" spacing="true">
+            <table id="relatedListTable" dataContainer="requestListDc" width="AUTO" height="200px">
+                <actions>
+                    <action id="addBtn"/>
+                    <action id="removeBtn"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                </columns>
+                <buttonsPanel>
+                    <button id="addBtn"
+                            action="relatedListTable.addBtn"
+                            icon="PLUS"
+                            caption=""/>
+                    <button id="removeBtn"
+                            action="relatedListTable.removeBtn"
+                            icon="TRASH"
+                            caption=""/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+    </layout>
+</fragment>

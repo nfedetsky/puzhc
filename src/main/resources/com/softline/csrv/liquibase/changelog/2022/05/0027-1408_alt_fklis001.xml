@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0027-1408_alt_fklis001-1" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_VIS_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_VIS" tableName="fklis001_request_card">
+            <column name="REQUEST_VIS_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_VIS_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001REQUE_ON_REQUESTVIS" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-2" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_PARENT_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_PARENT" tableName="fklis001_request_card">
+            <column name="REQUEST_PARENT_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_PARENT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_PARENT" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-3" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_REQUIREMENT_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_REQUIREMENT" tableName="fklis001_request_card">
+            <column name="REQUEST_REQUIREMENT_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_REQUIREMENT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_REQUIREMENT" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-4" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_ANALYSIS_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_ANALYSIS" tableName="fklis001_request_card">
+            <column name="REQUEST_ANALYSIS_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_ANALYSIS_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_ANALYSIS" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-5" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_MODIFICATION_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_MODIFICATION" tableName="fklis001_request_card">
+            <column name="REQUEST_MODIFICATION_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_MODIFICATION_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_MODIFICATION" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-6" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_ZOV_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_ZOV" tableName="fklis001_request_card">
+            <column name="REQUEST_ZOV_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_ZOV_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_ZOV" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-7" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_AGREEMENT_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_AGREEMENT" tableName="fklis001_request_card">
+            <column name="REQUEST_AGREEMENT_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_AGREEMENT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_AGREEMENT" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-8" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_CONTRACT_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_CONTRACT" tableName="fklis001_request_card">
+            <column name="REQUEST_CONTRACT_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_CONTRACT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_CONTRACT" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-9" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_CORRECTION_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_CORRECTION" tableName="fklis001_request_card">
+            <column name="REQUEST_CORRECTION_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_CORRECTION_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_CORRECTION" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-10" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_DOCUMENT_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_DOCUMENT" tableName="fklis001_request_card">
+            <column name="REQUEST_DOCUMENT_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_DOCUMENT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_DOCUMENT" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-11" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_CONTENT_AGREEMENT_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_CONTENT_AGREEMENT" tableName="fklis001_request_card">
+            <column name="REQUEST_CONTENT_AGREEMENT_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_CONTENT_AGREEMENT_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_CONTENT_AGREEMENT" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0027-1408_alt_fklis001-13" author="Elunin">
+        <createIndex indexName="IDX_REQUEST_NORMATIVE_DOCUMENT_ID"
+                     tableName="fklis001_request_card">
+            <column name="NORMATIVE_DOCUMENT_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0027-1427_alt_fklis001-14" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_RFC_ID" type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_RFC" tableName="fklis001_request_card">
+            <column name="REQUEST_RFC_ID"/>
+        </createIndex>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_RFC_ID" baseTableName="fklis001_request_card" constraintName="FK_FKLIS001_RFC" referencedColumnNames="ID" referencedTableName="fklis001_request_card"/>
+    </changeSet>
+
+    <!--    <changeSet id="0027-1408_alt_fklis001-14" author="Elunin">
+            <dropIndex indexName="idx_request_parent_rfc_id" tableName="fklis001_request_card"/>
+        </changeSet>-->
+
+<!--    <changeSet id="0027-1408_alt_fklis001-14" author="Elunin">
+        <dropIndex indexName="idx_request_agreement" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_analysis" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_content_agreement" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_contract" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_correction" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_document" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_modification" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_requirement" tableName="fklis001_request_card"/>
+        <dropIndex indexName="idx_request_zov" tableName="fklis001_request_card"/>
+        <dropColumn columnName="request_parent_id" tableName="fklis001_request_card"/>
+    </changeSet>-->
+
+
+</databaseChangeLog>

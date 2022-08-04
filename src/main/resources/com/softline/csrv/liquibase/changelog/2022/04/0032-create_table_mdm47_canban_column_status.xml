@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0032-create_table_mdm47_canban_column_status_1" author="IKretov">
+        <createTable tableName="mdm47_canban_column_status">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDM47_CANBAN_COLUMN_STATUS"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CODE" type="VARCHAR(100)"/>
+            <column name="NAME" type="VARCHAR(1000)"/>
+            <column name="START_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="END_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="CLOB"/>
+            <column name="sort_order" type="BIGINT"/>
+            <column name="KANBAN_COLUMN_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="0032-create_table_mdm47_canban_column_status_2" author="IKretov">
+        <addUniqueConstraint columnNames="KANBAN_COLUMN_ID, STATUS_ID" constraintName="IDX_KANBAN_COLUMN_STATUS_UNQ"
+                             tableName="mdm47_canban_column_status"/>
+    </changeSet>
+    <changeSet id="0032-create_table_mdm47_canban_column_status_3" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="STATUS_ID" baseTableName="mdm47_canban_column_status"
+                                 constraintName="FK_MDM47CANBANCOLUMN_ON_STATUS" referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+    </changeSet>
+    <changeSet id="0032-create_table_mdm47_canban_column_status_4" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="KANBAN_COLUMN_ID" baseTableName="mdm47_canban_column_status"
+                                 constraintName="FK_MDM47CANBAN_ON_KANBANCOLUM" referencedColumnNames="ID"
+                                 referencedTableName="mdm46_canban_column"/>
+    </changeSet>
+</databaseChangeLog>

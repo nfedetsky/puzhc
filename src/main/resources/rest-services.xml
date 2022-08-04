@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://jmix.io/schema/rest/services">
+    <service name="support_RequestRestService">
+        <method name="completeTask" httpMethod="POST">
+            <param name="requestId" required="false"/>
+            <param name="keyNum" required="false"/>
+            <param name="outcomeId"/>
+        </method>
+        <method name="runProcess" httpMethod="POST">
+            <param name="requestId" required="false"/>
+            <param name="keyNum" required="false"/>
+        </method>
+        <method name="createRequest" httpMethod="POST">
+            <param name="request"/>
+        </method>
+    </service>
+</services>

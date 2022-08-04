@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:flowable="http://flowable.org/bpmn" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" camunda:diagramRelationId="fda79f58-ad0a-4700-b10b-50bc112c4b56">
+  <bpmn:collaboration id="Collaboration_18mit42">
+    <bpmn:participant id="Participant_0g75tlh" name="Требование" processRef="WF_REQUIREMENT" />
+  </bpmn:collaboration>
+  <bpmn:process id="WF_REQUIREMENT" name="СУВВ ФК Требование" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_15yornb">
+      <bpmn:lane id="Lane_186lktn">
+        <bpmn:flowNodeRef>Gateway_1j4tzjh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_CreateAgreementRequest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_CallAgreement</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_AnalyzeAgreementMain</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1x0rif1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_AnalysysZNA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_AgreementZNA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1n0z1c8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_10fjv41</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0fklk2r</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_075hvqt</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_02nbmld</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1hrk4sb</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0ddqmni</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_waitModifications</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0ziihhr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_agreement</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_06ozry6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1dteezt</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0f1phl9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0xjxqyy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_10uqy4t</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_10yg6u9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_01ddun3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_12dm4th</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_051qw4u</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:sequenceFlow id="Flow_1hkc7wo" sourceRef="Gateway_1dteezt" targetRef="Gateway_1n0z1c8">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_agreement" userTaskOutcome="REJECTED" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_agreement_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_agreement_result'), 'REJECTED')}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1tm5tnl" sourceRef="Activity_agreement" targetRef="Gateway_1dteezt">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1q8fhyk" sourceRef="Gateway_0xjxqyy" targetRef="Gateway_1hrk4sb">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_10yg6u9" userTaskOutcome="REJECTED" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_10yg6u9_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_10yg6u9_result'), 'REJECTED')}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1bexy61" sourceRef="Gateway_10uqy4t" targetRef="Activity_agreement">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" conditionType="anyoneCompleted" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1oauy7a" sourceRef="StartEvent_1" targetRef="Activity_10yg6u9">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1lwzt2e" sourceRef="Activity_10yg6u9" targetRef="Gateway_0xjxqyy">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_09xd8ys" sourceRef="Gateway_1dteezt" targetRef="Activity_12dm4th">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_agreement" userTaskOutcome="REQUEST_INFO" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_agreement_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_agreement_result'), 'REQUEST_INFO')}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1ouomx0" sourceRef="Gateway_1dteezt" targetRef="Activity_CreateAgreementRequest">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_agreement" userTaskOutcome="FK_AGREEMENT" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_agreement_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_agreement_result'), 'FK_AGREEMENT')}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0ntte0a" sourceRef="Activity_12dm4th" targetRef="Gateway_10uqy4t">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_12dm4th" userTaskOutcome="CONSENSUS" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1yttja5" sourceRef="Gateway_0xjxqyy" targetRef="Gateway_10uqy4t">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="userTaskOutcome" conditionType="anyoneCompleted" userTaskId="Activity_10yg6u9" userTaskOutcome="CONSENSUS" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.getVariable('Activity_10yg6u9_result') != null &amp;&amp; bpm_UserTaskResults.containsOutcome(execution.getVariable('Activity_10yg6u9_result'), 'CONSENSUS')}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_07vrqvq" sourceRef="Gateway_1j4tzjh" targetRef="Gateway_1n0z1c8">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" conditionType="anyoneCompleted" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'REJECTED'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:exclusiveGateway id="Gateway_1j4tzjh">
+      <bpmn:incoming>Flow_0qv2e8e</bpmn:incoming>
+      <bpmn:outgoing>Flow_07vrqvq</bpmn:outgoing>
+      <bpmn:outgoing>Flow_03zsm4e</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1nqbumo" sourceRef="Gateway_10fjv41" targetRef="Gateway_0ziihhr">
+      <bpmn:documentation />
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" conditionType="anyoneCompleted" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'CLOSED'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0cqd7n3" name="Закрыть" sourceRef="Gateway_02nbmld" targetRef="Event_0fklk2r">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" conditionType="anyoneCompleted" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'CLOSED'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_14spr9f" sourceRef="Activity_CallAgreement" targetRef="Activity_AnalyzeAgreementMain" />
+    <bpmn:sequenceFlow id="Flow_0qv2e8e" sourceRef="Activity_AnalyzeAgreementMain" targetRef="Gateway_1j4tzjh">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_CreateAgreementRequest" name="Автоматическое создание &#34;Согласование&#34; на  Главных технологов" flowable:delegateExpression="${bpm_CreateAgreementsByRequirement}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+        <flowable:field name="agreementlist">
+          <flowable:string>agreementlist</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ouomx0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0q46ats</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Activity_CallAgreement" name="Запуск Согласования" calledElement="WF_AGREEMENT" flowable:businessKey="${request.keyNum}" flowable:inheritVariables="true">
+      <bpmn:extensionElements>
+        <flowable:in source="agreementlist" target="releatedrequest" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0q46ats</bpmn:incoming>
+      <bpmn:outgoing>Flow_14spr9f</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics flowable:collection="agreementlist" flowable:elementVariable="request" jmix:collectionSource="processVariable" jmix:collectionValue="agreementlist" />
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="Activity_AnalyzeAgreementMain" name="Анализ результата Согласования" flowable:delegateExpression="${bpm_AnalyzeRequestResult}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="analyze_requestlist">
+          <flowable:string>agreementlist</flowable:string>
+        </flowable:field>
+        <flowable:field name="status_ok">
+          <flowable:string>ANALYSIS</flowable:string>
+        </flowable:field>
+        <flowable:field name="status_rejected">
+          <flowable:string>REJECTED</flowable:string>
+        </flowable:field>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_14spr9f</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qv2e8e</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0q46ats" sourceRef="Activity_CreateAgreementRequest" targetRef="Activity_CallAgreement" />
+    <bpmn:sequenceFlow id="Flow_03zsm4e" sourceRef="Gateway_1j4tzjh" targetRef="Activity_1x0rif1">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'CLOSED'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_03qty6u" sourceRef="Activity_AnalysysZNA" targetRef="Gateway_10fjv41">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0fviqxu" sourceRef="Activity_1x0rif1" targetRef="Activity_AgreementZNA">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1btrwc0" sourceRef="Activity_AgreementZNA" targetRef="Activity_AnalysysZNA">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_1x0rif1" name="Автоматическое создание &#34;ЗНА&#34;" flowable:delegateExpression="${bpm_CreateAnalysisByRequirement}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+        <flowable:field name="znalist">
+          <flowable:string>znalist</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_03zsm4e</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fviqxu</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_AnalysysZNA" name="Анализ результата ZNA" flowable:delegateExpression="${bpm_AnalyzeZnaByRequirement}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="analyze_znalist">
+          <flowable:string>znalist</flowable:string>
+        </flowable:field>
+        <flowable:field name="status_ok">
+          <flowable:string>IMPLEMENTATION</flowable:string>
+        </flowable:field>
+        <flowable:field name="status_rejected">
+          <flowable:string>REJECTED</flowable:string>
+        </flowable:field>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1btrwc0</bpmn:incoming>
+      <bpmn:outgoing>Flow_03qty6u</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Activity_AgreementZNA" name="Согласование &#34;ЗНА&#34;" calledElement="WF_REQUEST_FOR_ANALYSIS" flowable:businessKey="${request.keyNum}" flowable:inheritVariables="true">
+      <bpmn:incoming>Flow_0fviqxu</bpmn:incoming>
+      <bpmn:outgoing>Flow_1btrwc0</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics flowable:collection="znalist" flowable:elementVariable="request" jmix:collectionSource="processVariable" jmix:collectionValue="znalist" />
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="Flow_1g3taej" sourceRef="Gateway_1n0z1c8" targetRef="Gateway_1hrk4sb">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:exclusiveGateway id="Gateway_1n0z1c8">
+      <bpmn:incoming>Flow_07vrqvq</bpmn:incoming>
+      <bpmn:incoming>Flow_1hkc7wo</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g3taej</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_10fjv41">
+      <bpmn:incoming>Flow_03qty6u</bpmn:incoming>
+      <bpmn:outgoing>Flow_1nqbumo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_023j64u</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0f3ey90" sourceRef="Gateway_02nbmld" targetRef="Gateway_1hrk4sb">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" conditionType="anyoneCompleted" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'REJECTED'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0yuf5d3" name="Отклонить" sourceRef="Gateway_1hrk4sb" targetRef="Event_075hvqt">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0c4p9lf" sourceRef="Event_waitModifications" targetRef="Activity_0ddqmni" />
+    <bpmn:sequenceFlow id="Flow_0i2ac6h" sourceRef="Activity_0ddqmni" targetRef="Gateway_02nbmld" />
+    <bpmn:endEvent id="Event_0fklk2r">
+      <bpmn:incoming>Flow_0cqd7n3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_075hvqt">
+      <bpmn:incoming>Flow_0yuf5d3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:exclusiveGateway id="Gateway_02nbmld">
+      <bpmn:incoming>Flow_0i2ac6h</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cqd7n3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0f3ey90</bpmn:outgoing>
+      <bpmn:outgoing>Flow_11kbxqr</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1hrk4sb">
+      <bpmn:incoming>Flow_0f3ey90</bpmn:incoming>
+      <bpmn:incoming>Flow_1g3taej</bpmn:incoming>
+      <bpmn:incoming>Flow_1q8fhyk</bpmn:incoming>
+      <bpmn:incoming>Flow_023j64u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yuf5d3</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Activity_0ddqmni" name="Анализ Заявок Доработка" flowable:delegateExpression="${bpm_AnalyzeModificationByRequirement}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="analyze_znalist">
+          <flowable:string>znalist</flowable:string>
+        </flowable:field>
+        <flowable:field name="status_ok">
+          <flowable:string>CLOSED</flowable:string>
+        </flowable:field>
+        <flowable:field name="status_rejected">
+          <flowable:string>REJECTED</flowable:string>
+        </flowable:field>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0c4p9lf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0i2ac6h</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:intermediateCatchEvent id="Event_waitModifications" name="Хотя бы одна доработка в статусе &#34;Закрыто&#34;">
+      <bpmn:incoming>Flow_0wbj427</bpmn:incoming>
+      <bpmn:outgoing>Flow_0c4p9lf</bpmn:outgoing>
+      <bpmn:signalEventDefinition id="SignalEventDefinition_0m742db" signalRef="MODIFICATION_CLOSED_110" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:exclusiveGateway id="Gateway_0ziihhr">
+      <bpmn:incoming>Flow_1nqbumo</bpmn:incoming>
+      <bpmn:incoming>Flow_11kbxqr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wbj427</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0wbj427" sourceRef="Gateway_0ziihhr" targetRef="Event_waitModifications" />
+    <bpmn:sequenceFlow id="Flow_11kbxqr" name="Ожидаем Доработки" sourceRef="Gateway_02nbmld" targetRef="Gateway_0ziihhr">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'NEEDMORE'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_agreement" name="Согласование">
+      <bpmn:extensionElements>
+        <jmix:formData type="input-dialog" openMode="DIALOG">
+          <jmix:formOutcomes>
+            <jmix:formOutcome id="REQUEST_INFO" caption="Запросить информацию" />
+            <jmix:formOutcome id="REJECTED" caption="Отклонить" />
+            <jmix:formOutcome id="FK_AGREEMENT" caption="На согласование ФК" />
+          </jmix:formOutcomes>
+        </jmix:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1bexy61</bpmn:incoming>
+      <bpmn:outgoing>Flow_1tm5tnl</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent id="Event_06ozry6" name="timer60" cancelActivity="false" attachedToRef="Activity_agreement">
+      <bpmn:outgoing>Flow_1ssqlii</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_0545o2s">
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">${request.getRPeriodTimeAsDate()}</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:exclusiveGateway id="Gateway_1dteezt">
+      <bpmn:incoming>Flow_1tm5tnl</bpmn:incoming>
+      <bpmn:outgoing>Flow_1hkc7wo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_09xd8ys</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1ouomx0</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1ssqlii" sourceRef="Event_06ozry6" targetRef="Activity_0f1phl9" />
+    <bpmn:serviceTask id="Activity_0f1phl9" name="SendEMail60" flowable:delegateExpression="${bpm_EmailSender}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+        <flowable:field name="subjecttext">
+          <flowable:string>Нарушены сроки согласования заявки %s</flowable:string>
+        </flowable:field>
+        <flowable:field name="bodytext">
+          <flowable:string>Нарушены сроки согласования заявки %s.
+Исполнитель: %s.</flowable:string>
+        </flowable:field>
+        <flowable:field name="sendToRole">
+          <flowable:string>FK_SUVV_DISPATCHER</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ssqlii</bpmn:incoming>
+    </bpmn:serviceTask>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:extensionElements>
+        <jmix:formData type="no-form" />
+        <jmix:processVariables>
+          <jmix:processVariable name="request" type="entity">
+            <jmix:processVariableProperty name="entityName" value="Request" />
+          </jmix:processVariable>
+        </jmix:processVariables>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_1oauy7a</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="Gateway_0xjxqyy">
+      <bpmn:incoming>Flow_1lwzt2e</bpmn:incoming>
+      <bpmn:outgoing>Flow_1q8fhyk</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1yttja5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_10uqy4t">
+      <bpmn:incoming>Flow_1yttja5</bpmn:incoming>
+      <bpmn:incoming>Flow_0ntte0a</bpmn:incoming>
+      <bpmn:outgoing>Flow_1bexy61</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Activity_10yg6u9" name="Открыто">
+      <bpmn:extensionElements>
+        <jmix:formData type="input-dialog" openMode="DIALOG">
+          <jmix:formOutcomes>
+            <jmix:formOutcome id="CONSENSUS" caption="На согласование" />
+            <jmix:formOutcome id="REJECTED" caption="Отклонить" />
+          </jmix:formOutcomes>
+        </jmix:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1oauy7a</bpmn:incoming>
+      <bpmn:outgoing>Flow_1lwzt2e</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent id="Event_01ddun3" name="timer35" cancelActivity="false" attachedToRef="Activity_agreement">
+      <bpmn:outgoing>Flow_1hwxf4m</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_1vyk9q8">
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">${request.getResponseTimeAsDate()}</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:userTask id="Activity_12dm4th" name="Запрос информации">
+      <bpmn:extensionElements>
+        <jmix:formData type="input-dialog" openMode="DIALOG">
+          <jmix:formOutcomes>
+            <jmix:formOutcome id="CONSENSUS" caption="Предоставить информацию" />
+          </jmix:formOutcomes>
+        </jmix:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_09xd8ys</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ntte0a</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1hwxf4m" sourceRef="Event_01ddun3" targetRef="Activity_051qw4u" />
+    <bpmn:serviceTask id="Activity_051qw4u" name="SendEMail35" flowable:delegateExpression="${bpm_EmailSender}" jmix:taskType="delegateExpression">
+      <bpmn:extensionElements>
+        <flowable:field name="request">
+          <flowable:string>request</flowable:string>
+        </flowable:field>
+        <flowable:field name="subjecttext">
+          <flowable:string>Наступил срок реакции для заявки %s</flowable:string>
+        </flowable:field>
+        <flowable:field name="bodytext">
+          <flowable:string>Наступил срок реакции для заявки %s, находящейся в статусе "Согласование".
+Исполнитель: %s.</flowable:string>
+        </flowable:field>
+        <flowable:field name="sendToRole">
+          <flowable:string>FK_SUVV_DISPATCHER</flowable:string>
+        </flowable:field>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1hwxf4m</bpmn:incoming>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_023j64u" sourceRef="Gateway_10fjv41" targetRef="Gateway_1hrk4sb">
+      <bpmn:extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </bpmn:extensionElements>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ANALYZE_RESULT == 'REJECTED'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+  </bpmn:process>
+  <bpmn:signal id="MODIFICATION_CLOSED_110" name="ЖЦ Доработка завершено" flowable:scope="global" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_18mit42">
+      <bpmndi:BPMNShape id="Participant_0g75tlh_di" bpmnElement="Participant_0g75tlh" isHorizontal="true">
+        <dc:Bounds x="-788" y="-850" width="2568" height="1152" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_186lktn_di" bpmnElement="Lane_186lktn" isHorizontal="true">
+        <dc:Bounds x="-758" y="-850" width="2538" height="1152" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_023j64u_di" bpmnElement="Flow_023j64u">
+        <di:waypoint x="850" y="-353" />
+        <di:waypoint x="850" y="-310" />
+        <di:waypoint x="1255" y="-30" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hwxf4m_di" bpmnElement="Flow_1hwxf4m">
+        <di:waypoint x="-60" y="-320" />
+        <di:waypoint x="-60" y="-240" />
+        <di:waypoint x="-140" y="-240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ssqlii_di" bpmnElement="Flow_1ssqlii">
+        <di:waypoint x="-90" y="-436" />
+        <di:waypoint x="-90" y="-580" />
+        <di:waypoint x="-130" y="-580" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11kbxqr_di" bpmnElement="Flow_11kbxqr">
+        <di:waypoint x="1270" y="-403" />
+        <di:waypoint x="1270" y="-500" />
+        <di:waypoint x="930" y="-500" />
+        <di:waypoint x="930" y="-403" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1073" y="-518" width="54" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wbj427_di" bpmnElement="Flow_0wbj427">
+        <di:waypoint x="955" y="-378" />
+        <di:waypoint x="1002" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0i2ac6h_di" bpmnElement="Flow_0i2ac6h">
+        <di:waypoint x="1210" y="-378" />
+        <di:waypoint x="1245" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0c4p9lf_di" bpmnElement="Flow_0c4p9lf">
+        <di:waypoint x="1038" y="-378" />
+        <di:waypoint x="1110" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yuf5d3_di" bpmnElement="Flow_0yuf5d3">
+        <di:waypoint x="1295" y="-20" />
+        <di:waypoint x="1372" y="-20" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1306" y="-38" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f3ey90_di" bpmnElement="Flow_0f3ey90">
+        <di:waypoint x="1270" y="-353" />
+        <di:waypoint x="1270" y="-45" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1122" y="-177" width="55" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g3taej_di" bpmnElement="Flow_1g3taej">
+        <di:waypoint x="316" y="-20" />
+        <di:waypoint x="1245" y="-20" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1btrwc0_di" bpmnElement="Flow_1btrwc0">
+        <di:waypoint x="610" y="-378" />
+        <di:waypoint x="670" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fviqxu_di" bpmnElement="Flow_0fviqxu">
+        <di:waypoint x="450" y="-378" />
+        <di:waypoint x="510" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03qty6u_di" bpmnElement="Flow_03qty6u">
+        <di:waypoint x="770" y="-378" />
+        <di:waypoint x="825" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03zsm4e_di" bpmnElement="Flow_03zsm4e">
+        <di:waypoint x="315" y="-378" />
+        <di:waypoint x="350" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q46ats_di" bpmnElement="Flow_0q46ats">
+        <di:waypoint x="170" y="-740" />
+        <di:waypoint x="220" y="-740" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qv2e8e_di" bpmnElement="Flow_0qv2e8e">
+        <di:waypoint x="470" y="-740" />
+        <di:waypoint x="540" y="-740" />
+        <di:waypoint x="290" y="-530" />
+        <di:waypoint x="290" y="-403" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14spr9f_di" bpmnElement="Flow_14spr9f">
+        <di:waypoint x="320" y="-740" />
+        <di:waypoint x="370" y="-740" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cqd7n3_di" bpmnElement="Flow_0cqd7n3">
+        <di:waypoint x="1295" y="-378" />
+        <di:waypoint x="1372" y="-378" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1312" y="-396" width="43" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nqbumo_di" bpmnElement="Flow_1nqbumo">
+        <di:waypoint x="875" y="-378" />
+        <di:waypoint x="905" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_07vrqvq_di" bpmnElement="Flow_07vrqvq">
+        <di:waypoint x="291" y="-354" />
+        <di:waypoint x="291" y="-45" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yttja5_di" bpmnElement="Flow_1yttja5">
+        <di:waypoint x="-645" y="-378" />
+        <di:waypoint x="-595" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ntte0a_di" bpmnElement="Flow_0ntte0a">
+        <di:waypoint x="-140" y="-80" />
+        <di:waypoint x="-570" y="-80" />
+        <di:waypoint x="-570" y="-353" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ouomx0_di" bpmnElement="Flow_1ouomx0">
+        <di:waypoint x="70" y="-403" />
+        <di:waypoint x="70" y="-551" />
+        <di:waypoint x="0" y="-551" />
+        <di:waypoint x="0" y="-740" />
+        <di:waypoint x="70" y="-740" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09xd8ys_di" bpmnElement="Flow_09xd8ys">
+        <di:waypoint x="70" y="-353" />
+        <di:waypoint x="70" y="-80" />
+        <di:waypoint x="-40" y="-80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1lwzt2e_di" bpmnElement="Flow_1lwzt2e">
+        <di:waypoint x="-670" y="-460" />
+        <di:waypoint x="-670" y="-403" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1oauy7a_di" bpmnElement="Flow_1oauy7a">
+        <di:waypoint x="-670" y="-582" />
+        <di:waypoint x="-670" y="-540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bexy61_di" bpmnElement="Flow_1bexy61">
+        <di:waypoint x="-545" y="-378" />
+        <di:waypoint x="-130" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1q8fhyk_di" bpmnElement="Flow_1q8fhyk">
+        <di:waypoint x="-670" y="-353" />
+        <di:waypoint x="-670" y="120" />
+        <di:waypoint x="1270" y="120" />
+        <di:waypoint x="1270" y="5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tm5tnl_di" bpmnElement="Flow_1tm5tnl">
+        <di:waypoint x="-30" y="-378" />
+        <di:waypoint x="45" y="-378" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hkc7wo_di" bpmnElement="Flow_1hkc7wo">
+        <di:waypoint x="95" y="-378" />
+        <di:waypoint x="140" y="-378" />
+        <di:waypoint x="140" y="-20" />
+        <di:waypoint x="266" y="-20" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Gateway_1j4tzjh_di" bpmnElement="Gateway_1j4tzjh" isMarkerVisible="true">
+        <dc:Bounds x="265" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03fcy3g_di" bpmnElement="Activity_CreateAgreementRequest">
+        <dc:Bounds x="70" y="-780" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10ijn24_di" bpmnElement="Activity_CallAgreement">
+        <dc:Bounds x="220" y="-780" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fym8on_di" bpmnElement="Activity_AnalyzeAgreementMain">
+        <dc:Bounds x="370" y="-780" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0l1wfi1_di" bpmnElement="Activity_1x0rif1">
+        <dc:Bounds x="350" y="-418" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_00g979m_di" bpmnElement="Activity_AnalysysZNA">
+        <dc:Bounds x="670" y="-418" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1my03fv_di" bpmnElement="Activity_AgreementZNA">
+        <dc:Bounds x="510" y="-418" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1n0z1c8_di" bpmnElement="Gateway_1n0z1c8" isMarkerVisible="true">
+        <dc:Bounds x="266" y="-45" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_10fjv41_di" bpmnElement="Gateway_10fjv41" isMarkerVisible="true">
+        <dc:Bounds x="825" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0fklk2r_di" bpmnElement="Event_0fklk2r">
+        <dc:Bounds x="1372" y="-396" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_075hvqt_di" bpmnElement="Event_075hvqt">
+        <dc:Bounds x="1372" y="-38" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_02nbmld_di" bpmnElement="Gateway_02nbmld" isMarkerVisible="true">
+        <dc:Bounds x="1245" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1hrk4sb_di" bpmnElement="Gateway_1hrk4sb" isMarkerVisible="true">
+        <dc:Bounds x="1245" y="-45" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_16u5wbt_di" bpmnElement="Activity_0ddqmni">
+        <dc:Bounds x="1110" y="-418" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1w32jx6_di" bpmnElement="Event_waitModifications">
+        <dc:Bounds x="1002" y="-396" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="986" y="-353" width="69" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0ziihhr_di" bpmnElement="Gateway_0ziihhr" isMarkerVisible="true">
+        <dc:Bounds x="905" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fy363w_di" bpmnElement="Activity_agreement">
+        <dc:Bounds x="-130" y="-418" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1dteezt_di" bpmnElement="Gateway_1dteezt" isMarkerVisible="true">
+        <dc:Bounds x="45" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0es33v4_di" bpmnElement="Activity_0f1phl9">
+        <dc:Bounds x="-230" y="-620" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="-688" y="-618" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0xjxqyy_di" bpmnElement="Gateway_0xjxqyy" isMarkerVisible="true">
+        <dc:Bounds x="-695" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_10uqy4t_di" bpmnElement="Gateway_10uqy4t" isMarkerVisible="true">
+        <dc:Bounds x="-595" y="-403" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1nci42w_di" bpmnElement="Activity_10yg6u9">
+        <dc:Bounds x="-720" y="-540" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rg320f_di" bpmnElement="Activity_12dm4th">
+        <dc:Bounds x="-140" y="-120" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_16ygqa8_di" bpmnElement="Activity_051qw4u">
+        <dc:Bounds x="-240" y="-280" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1tgdirv_di" bpmnElement="Event_01ddun3">
+        <dc:Bounds x="-78" y="-356" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="-78" y="-313" width="37" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_17s2zis_di" bpmnElement="Event_06ozry6">
+        <dc:Bounds x="-108" y="-436" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="-139" y="-457" width="37" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

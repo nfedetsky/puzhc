@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="gen_uuid" value="gen_random_uuid()" dbms="postgresql"/>
+
+    <changeSet id="0011-2294-ins-mdm07-1" author="ELunin">
+        <insert tableName="mdm07_defect_source" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="MODIFICATION"/>
+            <column name="NAME" value="Доработка"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm07_defect_source" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${gen_uuid}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="CHANGE_NPA"/>
+            <column name="NAME" value="Изменение НПА"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

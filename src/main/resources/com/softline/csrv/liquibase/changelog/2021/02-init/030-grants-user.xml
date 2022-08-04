@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="030-init-grants-user-0001" author="elunin">
+        <!-- entity - User - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="c9c1a506-e6d9-92a4-0332-873289c79a5f"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="entity"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User"/>
+            <column name="action_" value="read"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-request-type-0001" author="elunin">
+        <!-- entityAttribute - User - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="9d46528e-cecf-2b1f-6979-f0fce8153f1e"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="entityAttribute"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User.*"/>
+            <column name="action_" value="view"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+
+        <!-- role-curator-vis -->
+    <changeSet id="030-init-grants-user-0002" author="elunin">
+        <!-- entity - User - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f7858afa-5ff1-01ce-9c71-5a01b1e9309a"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="entity"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User"/>
+            <column name="action_" value="read"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-request-type-0002" author="elunin">
+        <!-- entityAttribute - User - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="023ba0e9-4e99-8840-dbfe-a92475a2fdd6"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="entityAttribute"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User.*"/>
+            <column name="action_" value="view"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+
+        <!-- role-curator-is -->
+    <changeSet id="030-init-grants-user-0003" author="elunin">
+        <!-- entity - User - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="d74b425e-d782-8b49-1112-5c31367c4932"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="entity"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User"/>
+            <column name="action_" value="read"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-request-type-0003" author="elunin">
+        <!-- entityAttribute - User - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="1fc2b8f1-fc8b-41e9-71e9-2318a45cdfcd"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="entityAttribute"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User.*"/>
+            <column name="action_" value="view"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

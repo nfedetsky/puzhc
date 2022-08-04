@@ -1,0 +1,35 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0040-upd_pupe_integ" author="ELunin">
+        <addColumn tableName="PUPE_INTEGRATION_SETTINGS">
+            <column name="ADD_COMMENT_ERROR_TEXT"
+                    type="VARCHAR(512)"/>
+        </addColumn>
+
+        <addColumn tableName="PUPE_INTEGRATION_SETTINGS">
+            <column name="ADD_COMMENT_TEXT"
+                    type="VARCHAR(512)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0040-upd_pupe_integ_2" author="ELunin">
+            <update tableName="PUPE_INTEGRATION_SETTINGS">
+                <column name="ADD_COMMENT_TEXT" value='Заявка %s изменилась. Статус заявки "%s"'/>
+                <column name="ADD_COMMENT_ERROR_TEXT" value="Возникла ошибка при добавлении комментария"/>
+                <where>id = id</where>
+            </update>
+    </changeSet>
+    <changeSet id="0040-upd_pupe_integ_3" author="ELunin">
+            <renameTable oldTableName="pupe_integration_settings" newTableName="cfg001_pupe_integration"/>
+    </changeSet>
+
+
+
+
+</databaseChangeLog>

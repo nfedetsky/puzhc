@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://statusModelToReopenBrowse.caption"
+        focusComponent="statusModelToReopensTable">
+    <data readOnly="true">
+        <collection id="statusModelToReopensDc"
+                    class="com.softline.csrv.entity.StatusModelToReopen">
+            <fetchPlan extends="_base">
+                <property name="statusModel" fetchPlan="_base"/>
+                <property name="status" fetchPlan="_base"/>
+                <property name="id"/>
+            </fetchPlan>
+            <loader id="statusModelToReopensDl">
+                <query>
+                    <![CDATA[select e from StatusModelToReopen e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="statusModelToReopensTable" spacing="true">
+        <filter id="filter"
+                dataLoader="statusModelToReopensDl">
+            <properties include=".*"/>
+        </filter>
+        <dataGrid id="statusModelToReopensTable"
+                  width="100%"
+                  dataContainer="statusModelToReopensDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="refresh" type="refresh"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column property="statusModel" id="statusModel"/>
+                <column property="status" id="status"/>
+                <column property="startDate" id="startDate"/>
+                <column property="endDate" id="endDate"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="statusModelToReopensTable.create"/>
+                <button id="editBtn" action="statusModelToReopensTable.edit"/>
+                <button id="refreshBtn" action="statusModelToReopensTable.refresh"/>
+                <button id="removeBtn" action="statusModelToReopensTable.remove"/>
+            </buttonsPanel>
+        </dataGrid>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

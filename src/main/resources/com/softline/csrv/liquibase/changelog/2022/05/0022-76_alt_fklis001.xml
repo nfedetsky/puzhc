@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0022-1276_alt_fklis001-1" author="csrv">
+        <dropForeignKeyConstraint baseTableName="fklis001_request_card"
+                                  constraintName="FK_FKLIS001REQUESTC_ON_PROJECT"/>
+
+        <dropUniqueConstraint constraintName="mdm13_project_comp_uk2"
+                              tableName="mdm13_project"/>
+
+        <dropTable cascadeConstraints="true"
+                   tableName="mdm13_project"/>
+
+
+        <addForeignKeyConstraint baseColumnNames="PROJECT_ID"
+                                 baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUESTC_ON_PROJECT"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="mdm14_subdivision_project"/>
+
+    </changeSet>
+    <changeSet id="0022-1276_alt_fklis001-2" author="ELunin">
+
+
+    <dropUniqueConstraint constraintName="mdm14_subdivision_project_comp_uk"
+                          tableName="mdm14_subdivision_project"/>
+
+    <addUniqueConstraint columnNames="CODE, START_DATE"
+                         constraintName="IDX_PROJECT_UNQ"
+                         tableName="mdm14_subdivision_project"/>
+    </changeSet>
+
+
+</databaseChangeLog>

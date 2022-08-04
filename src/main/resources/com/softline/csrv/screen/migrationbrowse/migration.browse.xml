@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://MigrationBrowse.caption">
+    <layout height="100%" width="100%">
+        <vbox height="AUTO" width="100%">
+            <vbox>
+                    <hbox width="100%" visible="false">
+                        <button id="mgrFirst" caption="msg:///menu-config.mgr_commands.first" enable="false"/>
+                        <button id="mgrSecond" caption="msg:///menu-config.mgr_commands.second" enable="false"/>
+                        <button id="attachment" caption="msg:///menu-config.mgr_commands.saveAttachment" enable="false"/>
+                        <button id="comment" caption="msg:///menu-config.mgr_commands.saveComment" enable="false"/>
+                        <button id="links" caption="msg:///menu-config.mgr_commands.saveLinks" enable="false"/>
+                        <button id="history" caption="msg:///menu-config.mgr_commands.saveHistory" enable="false"/>
+                        <button id="watchers" caption="msg:///menu-config.mgr_commands.saveWatchers" enable="false"/>
+                        <button id="alignSequence" caption="msg:///menu-config.mgr_commands.alignSequence" enable="false"/>
+                    </hbox>
+                    <hbox/>
+                    <hbox spacing="true">
+                        <button id="startWfJson" caption="msg:///menu-config.mgr_commands.first"/>
+                        <button id="startWfRequest" caption="msg:///menu-config.mgr_commands.second"/>
+                        <button id="attachmentWF" caption="msg:///menu-config.mgr_commands.saveAttachment"/>
+                        <button id="commentWF" caption="msg:///menu-config.mgr_commands.saveComment"/>
+                        <button id="linksWf" caption="msg:///menu-config.mgr_commands.saveLinks"/>
+                        <button id="historyWf" caption="msg:///menu-config.mgr_commands.saveHistory"/>
+                        <button id="watchersWf" caption="msg:///menu-config.mgr_commands.saveWatchers"/>
+                        <button id="alignSequenceWf" caption="msg:///menu-config.mgr_commands.alignSequence"/>
+                    </hbox>
+                    <hbox/>
+                    <vbox>
+                        <textField id="loginField" caption="msg:///menu-config.mgr_commands.login" required="true"/>
+                        <textField id="passwdField" caption="msg:///menu-config.mgr_commands.password" required="true"/>
+                        <textField id="jiraUrlField" caption="msg:///menu-config.mgr_commands.jiraUrl" required="true"/>
+                        <textField id="jiraProjectsField" caption="msg:///menu-config.mgr_commands.jiraProjects" required="true"/>
+                        <textField id="proxyAddressField" caption="msg:///menu-config.mgr_commands.proxyAddress" required="false"/>
+                        <textField id="proxyPortField" caption="msg:///menu-config.mgr_commands.proxyPort" required="false"/>
+                    </vbox>
+            </vbox>
+            <hbox width="100%" height="AUTO">
+                <textArea id="protocolArea" editable="false"
+                          width="100%" height="AUTO" rows="25"/>
+            </hbox>
+        </vbox>
+    </layout>
+</window>

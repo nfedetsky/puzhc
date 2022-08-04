@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0028-ins_mdm03_automation" author="EAlbinets">
+        <insert tableName="mdm03_automation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="NAME" value="Информация о потребностях"/>
+            <column name="DESCRIPTION" value="Информация о потребностях, сформированных в ходе эксплуатации действующих ИС в целях оптимизации технологических процессов в ИС"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm03_automation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="NAME" value="Мероприятия Планов ФК"/>
+            <column name="DESCRIPTION" value="Мероприятия утвержденных Планов деятельности Федерального казначейства"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm03_automation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="7468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="NAME" value="НПА"/>
+            <column name="DESCRIPTION" value="НПА (проекты НПА ), наделяющие Федеральное казначейство и/или ФКУ «ЦОКР» новыми полномочиями, устанавливающие (изменяющие) порядок исполнения функций Федерального казначейства и/или ФКУ «ЦОКР», устанавливающие (изменяющие) полномочия (функции) пользователей ГИС, оператором которых является Федеральное казначейство"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm03_automation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="8468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="NAME" value="Отчеты о результатах мониторинга"/>
+            <column name="DESCRIPTION" value="Отчеты о результатах мониторинга процесса исполнения функции Федерального казначейства в целях совершенствования функциональной деятельности Федерального казначейства"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm03_automation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="9468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="NAME" value="Разъяснительные письма"/>
+            <column name="DESCRIPTION" value="Разъяснительные письма Министерства финансов Российской Федерации, Федерального казначейства, иных органов государственной власти, конкретизирующие и детализирующие общие положения НПА и/или порядок исполнения функций Федерального казначейства и/или порядок исполнения функций пользователей ГИС, оператором которых является Федеральное казначейство"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm03_automation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="A468450e-8b36-11ec-a8a3-0242ac120002"/>
+            <column name="NAME" value="Решения об автоматизации"/>
+            <column name="DESCRIPTION" value="Решения об автоматизации исполнения существующих полномочий Федерального казначейства"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

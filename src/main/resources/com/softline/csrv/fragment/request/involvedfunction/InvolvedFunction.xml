@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+        <data>
+            <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+            <collection id="involvedFunctionDc" class="com.softline.csrv.entity.Function">
+                <loader id="involvedFunctionDl"/>
+            </collection>
+        </data>
+        <facets>
+            <dataLoadCoordinator auto="true"/>
+        </facets>
+        <layout>
+            <groupBox id="involvedFunctionsGroupBox" align="TOP_LEFT" spacing="true">
+                <table id="involvedFunctionTable" dataContainer="involvedFunctionDc" width="AUTO" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="system.name"
+                                caption="msg://com.softline.csrv.entity/Request.involvedFunction.infSystem" width="150"/>
+                        <column id="name"
+                                caption="msg://com.softline.csrv.entity/Request.involvedFunction.function" width="200"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button id="involvedFunctionAddBtn" action="involvedFunctionTable.add" icon="PLUS"
+                                caption=""/>
+                        <button id="involvedFunctionDelBtn" action="involvedFunctionTable.exclude" icon="TRASH"
+                                caption=""/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+        </layout>
+</fragment>

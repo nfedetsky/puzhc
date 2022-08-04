@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="csrv">
+        <addNotNullConstraint columnDataType="BOOLEAN" columnName="COMMENTS" schemaName="suvv_migration"
+                              tableName="issue" validate="true"/>
+    </changeSet>
+    <changeSet id="2" author="csrv">
+        <addNotNullConstraint columnDataType="BOOLEAN" columnName="FILES" schemaName="suvv_migration" tableName="issue"
+                              validate="true"/>
+    </changeSet>
+    <changeSet id="3" author="csrv">
+        <addNotNullConstraint columnDataType="BOOLEAN" columnName="LINKS" schemaName="suvv_migration" tableName="issue"
+                              validate="true"/>
+    </changeSet>
+    <changeSet id="4" author="csrv">
+        <addNotNullConstraint columnDataType="BOOLEAN" columnName="NEED_MIGRATION" schemaName="suvv_migration"
+                              tableName="issue" validate="true"/>
+    </changeSet>
+    <changeSet id="5" author="csrv">
+        <addNotNullConstraint columnDataType="BOOLEAN" columnName="PRIMARY_" schemaName="suvv_migration"
+                              tableName="issue" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

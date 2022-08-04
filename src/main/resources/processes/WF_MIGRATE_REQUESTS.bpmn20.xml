@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
+  <collaboration id="Collaboration_0hr0a0h">
+    <participant id="Participant_13iomnl" processRef="WF_MIGRATE_REQUESTS" />
+  </collaboration>
+  <process id="WF_MIGRATE_REQUESTS" name="Миграция Заявок" isExecutable="true">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <jmix:formData type="no-form" />
+      </extensionElements>
+      <outgoing>Flow_1aeqh0g</outgoing>
+    </startEvent>
+    <endEvent id="Event_1vibf94">
+      <incoming>Flow_073bia7</incoming>
+    </endEvent>
+    <serviceTask id="Activity_MigrateRequests" name="MigrateRequests" flowable:delegateExpression="${bpm_RequestMigration}" jmix:taskType="delegateExpression">
+      <incoming>Flow_1aeqh0g</incoming>
+      <outgoing>Flow_073bia7</outgoing>
+    </serviceTask>
+    <sequenceFlow id="Flow_1aeqh0g" sourceRef="startEvent1" targetRef="Activity_MigrateRequests" />
+    <sequenceFlow id="Flow_073bia7" sourceRef="Activity_MigrateRequests" targetRef="Event_1vibf94" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="Collaboration_0hr0a0h">
+      <bpmndi:BPMNShape id="Participant_13iomnl_di" bpmnElement="Participant_13iomnl" isHorizontal="true">
+        <omgdc:Bounds x="70" y="105" width="600" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1aeqh0g_di" bpmnElement="Flow_1aeqh0g">
+        <omgdi:waypoint x="180" y="165" />
+        <omgdi:waypoint x="230" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_073bia7_di" bpmnElement="Flow_073bia7">
+        <omgdi:waypoint x="330" y="165" />
+        <omgdi:waypoint x="382" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+        <omgdc:Bounds x="150" y="150" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1vibf94_di" bpmnElement="Event_1vibf94">
+        <omgdc:Bounds x="382" y="147" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_081s2gg_di" bpmnElement="Activity_MigrateRequests">
+        <omgdc:Bounds x="230" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

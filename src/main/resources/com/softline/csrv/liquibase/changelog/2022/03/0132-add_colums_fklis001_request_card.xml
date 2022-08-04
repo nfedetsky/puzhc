@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0132-add_colums_fklis001_request_card_1" author="IKretov">
+        <addColumn tableName="fklis001_request_card">
+            <column name="CUSTOMER_ID" type="UUID"/>
+            <column name="DOC_DATE" type="DATETIME"/>
+            <column name="DOC_END_DATE" type="DATETIME"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0132-add_colums_fklis001_request_card_2" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="CUSTOMER_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUEST_ON_CUSTOMER" referencedColumnNames="ID"
+                                 referencedTableName="mdm15_organization"/>
+
+        <createIndex indexName="IDX_REQUEST_CUSTOMER_ID" tableName="fklis001_request_card">
+            <column name="CUSTOMER_ID"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="usersDc" provided="true" class="com.softline.csrv.entity.User"/>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tabSheet>
+            <tab id="common" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabBasicAttr" spacing="true">
+                <vbox spacing="true"/>
+                <hbox>
+                    <vbox>
+                        <form id="formCommon1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT" width="100%">
+                            <fragment id="attrSueFragment" screen="attrSueFragment" align="MIDDLE_LEFT" enable="false"
+                                      caption="msg://com.softline.csrv.entity/Request.attrSue"/>
+                            <textField id="attrSueCodeExternalField" property="attrSueCode"
+                                       caption="msg://com.softline.csrv.entity/Request.attrSueCodeExternal" editable="false"/>
+                            <entitySuggestionField id="orgInitiatorField" property="orgInitiator" editable="false">
+                                <query entityClass="com.softline.csrv.entity.Organization"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from Organization c where lower(c.name) like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <entitySuggestionField id="infSystemField" property="infSystem"
+                                                   caption="msg://com.softline.csrv.entity/Request.infSystemInitiator" editable="false">
+                                <query entityClass="com.softline.csrv.entity.InfoSystem"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from InfoSystem c where lower(c.name) like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <entitySuggestionField id="normativeDocumentIdField" property="normativeDocument" editable="false">
+                                <query entityClass="com.softline.csrv.entity.NormativeDocument"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from NormativeDocument c where lower(c.name) like lower(:searchString)
+                                    escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <checkBox id="isNeedDesignSolutionField" property="isNeedDesignSolution" editable="false"/>
+                            <entitySuggestionField id="requirementField" property="requestRequirement" editable="false">
+                                <query entityClass="com.softline.csrv.entity.Request"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from Request c where c.requestType.code = 'REQUIREMENT' and lower(c.keyNum)
+                                    like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="open" type="open_view_action"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <entitySuggestionField id="contractField" property="requestContract" editable="false">
+                                <actions>
+                                    <action id="open" type="open_view_action"/>
+                                </actions>
+                                <query entityClass="com.softline.csrv.entity.Request"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from Request c where c.requestType.code = 'CONTRACT' and lower(c.keyNum) like
+                                    lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <entitySuggestionField id="projectIdField" property="project" editable="false">
+                                <query entityClass="com.softline.csrv.entity.Project"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from Project c where lower(c.name) like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <entitySuggestionField id="defectSourceField" property="defectSource" editable="false">
+                                <query entityClass="com.softline.csrv.entity.DefectSource"
+                                       escapeValueForLike="true"
+                                       searchStringFormat="%${searchString}%">
+                                    select c from DefectSource c where lower(c.name) like lower(:searchString) escape '\'
+                                </query>
+                                <actions>
+                                    <action id="lookup" type="entity_lookup"/>
+                                    <action id="clear" type="entity_clear"/>
+                                </actions>
+                            </entitySuggestionField>
+                            <valuePicker id="revisionNumField" property="revisionNum" editable="false">
+                                <actions>
+                                    <action id="valueup" icon="ANGLE_UP" enable="false"/>
+                                    <action id="valuedown" icon="ANGLE_DOWN" enable="false"/>
+                                </actions>
+                            </valuePicker>
+                        </form>
+                    </vbox>
+                    <vbox>
+                        <form id="formCommon2" dataContainer="requestDc" childrenCaptionAlignment="RIGHT" width="100%">
+                                <fragment id="affectedFunctionFragment" screen="affectedFunction" align="MIDDLE_LEFT" caption="msg://com.softline.csrv.entity/Request.affectedFunctions" enable="false"/>
+                                <textArea id="developmentDescrField" property="developmentDescr" rows="3" rowspan="2" editable="false"/>
+                                <textArea id="noteDescrField" property="noteDescr" rowspan="3" editable="false"/>
+                        </form>
+                    </vbox>
+                </hbox>
+            </tab>
+            <tab id="eventPlan" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabEventPlan" spacing="true">
+                <vbox spacing="true"/>
+                <form id="formEventPlan" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                    <column>
+                        <dateField id="rPeriodTimeField" property="rPeriodTime" editable="false"/>
+                        <dateField id="revisionDateField" property="revisionDate" editable="false"/>
+                    </column>
+                    <column>
+                        <dateField id="responseTimeField" property="responseTime" editable="false"/>
+                        <dateField id="implementPeriodTimeField" property="implementPeriodTime" editable="false"/>
+                    </column>
+                </form>
+            </tab>
+            <tab id="RequestAddAttrPeople" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabPeople"
+                 spacing="true">
+                <vbox spacing="true"/>
+                <form id="peopleForm1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                    <column>
+                        <entitySuggestionField id="curatorField" property="curator" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from User c where lower(CONCAT(CONCAT(CONCAT(c.username
+                                , c.firstName),
+                                c.lastName), c.email)) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="curatorRField" property="curatorR" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from User c where lower(CONCAT(CONCAT(CONCAT(c.username, c.firstName),
+                                c.lastName), c.email)) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                    </column>
+                </form>
+            </tab>
+        </tabSheet>
+    </layout>
+</fragment>

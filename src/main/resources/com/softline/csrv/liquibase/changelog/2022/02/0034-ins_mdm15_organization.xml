@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0034-ins_mdm15_organization" author="ZESONOV">
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="61db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="1С"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="73ec06a4-8d7e-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="АйТи"/>
+            <column name="WEBSITE" value="http://www.it.ru"/>
+            <column name="TELEPHONE" value="+7 (495) 974-79-79"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="84c65e0c-8d7e-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="БАРС"/>
+            <column name="WEBSITE" value="http://www.bars-open.ru/"/>
+            <column name="TELEPHONE" value="+7-800-500-01-91"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="988943dc-8d7e-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="БПЦ"/>
+            <column name="WEBSITE" value="https://www.bpcbt.com/ru"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="abc7680c-8d7e-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ГК Информзащита"/>
+            <column name="WEBSITE" value="http://www.infosec.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 980 23 45"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0c617a36-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ГосДума"/>
+            <column name="WEBSITE" value="http://duma.gov.ru/"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="23b5d54c-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ИБС"/>
+            <column name="WEBSITE" value="http://www.ibs.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 967-8080"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="dd0540e6-9090-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ИТАРГО"/>
+            <column name="WEBSITE" value="http://itargo.ru"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="37166fa2-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Кейсистемс"/>
+            <column name="WEBSITE" value="https://www.keysystems.ru/"/>
+            <column name="TELEPHONE" value="+7-8352-323-323"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6105fa80-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Криста"/>
+            <column name="WEBSITE" value="http://www.krista.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 651 81 09"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="695e8ec2-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ЛАНИТ"/>
+            <column name="WEBSITE" value="http://www.lanit.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 967 66 50"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="80328cb6-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ЛВС"/>
+            <column name="WEBSITE" value="http://labvs.com"/>
+            <column name="TELEPHONE" value="+7 (499) 940-04-86"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="95b6140e-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="МЕГАР"/>
+            <column name="WEBSITE" value="http://www.megar.ru/"/>
+            <column name="TELEPHONE" value="+7-495-780-52-68"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="af6c6448-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="МиФ"/>
+            <column name="WEBSITE" value="https://www.menfin.ru/"/>
+            <column name="TELEPHONE" value="8 (495) 175-67-85"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="c76079e0-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Минкомсвязь"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e59eedba-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Минфин"/>
+            <column name="WEBSITE" value="http://www.minfin.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 987 91 01"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="fa86d7ec-8d7f-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Минюст"/>
+            <column name="WEBSITE" value="http://minjust.ru/"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ОТР"/>
+            <column name="WEBSITE" value="http://www.otr.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 223 07 99"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="29d090a6-8d80-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="Правительство РФ"/>
+            <column name="WEBSITE" value="http://government.ru/"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="755530ae-8d80-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="РТЛабс"/>
+            <column name="WEBSITE" value="https://www.rtlabs.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 122-23-33"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="7de8ee86-8d80-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="СОФТЛАЙН"/>
+            <column name="WEBSITE" value="https://softline.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 232 00 23"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a5f9c02a-8d81-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ТЕХНОСЕРВ"/>
+            <column name="WEBSITE" value="http://www.technoserv.com"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ФК"/>
+            <column name="WEBSITE" value="http://www.roskazna.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 214 72 97"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm15_organization" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d1d615c2-8d81-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ФОРС"/>
+            <column name="WEBSITE" value="http://www.fors.ru/"/>
+            <column name="TELEPHONE" value="+7 (495) 787 70 40"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

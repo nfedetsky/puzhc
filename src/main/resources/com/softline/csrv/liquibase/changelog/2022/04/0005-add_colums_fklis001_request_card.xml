@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0005-add_colums_fklis001_request_card_1" author="IKretov">
+        <addColumn tableName="fklis001_request_card">
+            <column name="ACTUAL_RESULT_DESCR" type="VARCHAR(512)"/>
+            <column name="CAUSE_OF_OCCURRENCE_DESCR" type="VARCHAR(512)"/>
+            <column name="DEGREE_OF_IMPACT_DESCR" type="VARCHAR(512)"/>
+            <column name="PROBLEM_TYPE_ID" type="UUID"/>
+            <column name="REPETITION_METHOD_DESCR" type="VARCHAR(512)"/>
+            <column name="REQUIREMENT_PROBABILITY_ID" type="UUID"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0005-add_colums_fklis001_request_card_2" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="PROBLEM_TYPE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_PROBLEMTYPE" referencedColumnNames="ID"
+                                 referencedTableName="mdm42_problem_type"/>
+
+        <createIndex indexName="IDX_REQUEST_PROBLEM_TYPE_ID" tableName="fklis001_request_card">
+            <column name="PROBLEM_TYPE_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0005-add_colums_fklis001_request_card_3" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="REQUIREMENT_PROBABILITY_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_REQUIREMENT" referencedColumnNames="ID"
+                                 referencedTableName="mdm26_prob_req_change"/>
+    </changeSet>
+    <changeSet id="0005-add_colums_fklis001_request_card_4" author="IKretov">
+        <dropIndex indexName="IDX_REQUEST" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0005-add_colums_fklis001_request_card_5" author="IKretov">
+        <createIndex indexName="IDX_REQUEST" tableName="fklis001_request_card" unique="false">
+            <column name="REQUIREMENT_PROBABILITY_ID"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

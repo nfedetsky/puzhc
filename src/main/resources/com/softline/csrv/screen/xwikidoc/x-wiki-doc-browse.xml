@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://XWikiDocBrowse.caption"
+        focusComponent="xWikiDocsTable">
+    <data readOnly="true">
+        <collection id="xWikiDocsDc"
+                    class="com.softline.csrv.xwiki.XWikiDoc">
+            <fetchPlan extends="_base"/>
+            <loader id="xWikiDocsDl">
+                <query>
+                    <![CDATA[select e from XWikiDoc e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="xWikiDocsTable" spacing="true">
+
+        <groupTable id="xWikiDocsTable"
+                    width="100%"
+                    dataContainer="xWikiDocsDc">
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="changeLinks" caption="msg:///menu-config.wiki.changeLinks"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

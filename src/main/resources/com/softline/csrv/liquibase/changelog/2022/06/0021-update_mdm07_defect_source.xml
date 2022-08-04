@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0021-update_mdm07_defect_source_1" author="ASShepelev">
+        <update tableName="mdm07_defect_source">
+            <column name="ID_SRC" value="15203"/>
+            <where>code = 'EXPLOITATION'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0021-update_mdm07_defect_source_2" author="ASShepelev">
+        <update tableName="mdm07_defect_source">
+            <column name="ID_SRC" value="15204"/>
+            <where>code = 'TRIAL'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0021-update_mdm07_defect_source_3" author="ASShepelev">
+        <update tableName="mdm07_defect_source">
+            <column name="ID_SRC" value="15205"/>
+            <where>code = 'TEST'</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0054-976_alt_fklis001_1" author="ELunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="SOURCE_SECTION"
+                    type="VARCHAR(512)"/>
+        </addColumn>
+        <addColumn tableName="fklis001_request_card">
+            <column name="SOURCE_TEXT"
+                    type="VARCHAR(512)"/>
+        </addColumn>
+
+    </changeSet>
+
+    <changeSet id="0054-976_alt_fklis001_2" author="ELunin">
+        <addColumn tableName="fklis001_request_card">
+        <column name="fixed_in_revision_descr"
+                type="VARCHAR(512)"/>
+    </addColumn>
+</changeSet>
+
+
+</databaseChangeLog>
+

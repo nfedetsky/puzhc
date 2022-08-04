@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0001-ins_mdm62_request_action" author="ZESONOV">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="48069d9d-c684-4d33-8601-efae13afc7ac"/>
+            <column name="CODE" value="CHANGE_ASSIGNEE"/>
+            <column name="NAME" value="Алгоритм определения исполнителя (частный случай)"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="30"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

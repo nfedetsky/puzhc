@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <changeSet id="0008-1161_alt_mdm19_0" author="ELunin">
+        <delete tableName="mdm17_solution">
+            <where>request_type_id = (select id from mdm19_request_type where code = 'REGULATORY_DOCUMENT')</where>
+        </delete>
+        <delete tableName="mdm19_request_type">
+            <where>code = 'REGULATORY_DOCUMENT'</where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="0008-1161_alt_mdm19_2" author="ELunin">
+        <delete tableName="mdm17_solution">
+            <where>request_type_id in (select id from mdm19_request_type where code in ( 'TASK', 'INTEGRATION_VERSION_PLANNING', 'PLAN_AGREEMENT'))</where>
+        </delete>
+        <delete tableName="MDM19_REQUEST_TYPE">
+            <where>code in ( 'TASK', 'INTEGRATION_VERSION_PLANNING', 'PLAN_AGREEMENT')</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0008-1161_alt_mdm19_3" author="ELunin">
+        <update tableName="MDM19_REQUEST_TYPE">
+            <column name="is_manual_create" valueBoolean="false"/>
+            <where>code = 'REMARK'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0008-1161_alt_mdm19_4" author="ELunin">
+        <dropNotNullConstraint columnDataType="varchar(255)"
+                           columnName="ICON_PATH"
+                           tableName="MDM19_REQUEST_TYPE"/>
+    </changeSet>
+</databaseChangeLog>
+

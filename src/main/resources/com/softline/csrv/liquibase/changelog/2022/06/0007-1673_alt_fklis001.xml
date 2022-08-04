@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0007-1673_alt_fklis001-1" author="Elunin">
+        <addColumn tableName="fklis001_request_card">
+            <column name="REQUEST_PREV_ID"
+                    type="UUID"/>
+        </addColumn>
+        <createIndex indexName="IDX_REQUEST_REQUEST_PREV_ID"
+                     tableName="fklis001_request_card">
+            <column name="REQUEST_PREV_ID"/>
+        </createIndex>
+
+        <addForeignKeyConstraint baseColumnNames="REQUEST_PREV_ID"
+                                 baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_REQUESTPREV"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+
+</databaseChangeLog>

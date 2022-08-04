@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0025-and-mdm61_1" author="Elunin">
+        <addColumn tableName="mdm61_request_flow_validation">
+            <column name="STATUS_MODEL_ID"
+                    type="UUID"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0025-and-mdm61_2" author="Elunin">
+        <createIndex indexName="IDX_REQUESTFLOWVALIDATION"
+                     tableName="mdm61_request_flow_validation">
+            <column name="STATUS_MODEL_ID"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="0025-and-mdm61_3" author="Elunin">
+        <addForeignKeyConstraint baseColumnNames="STATUS_MODEL_ID"
+                                 baseTableName="mdm61_request_flow_validation"
+                                 constraintName="FK_MDM61REQUEST_ON_STATUSMODEL"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="mdm29_status_model"/>
+    </changeSet>
+
+    <changeSet id="0025-and-mdm61_4" author="Elunin">
+        <sql>
+            update mdm61_request_flow_validation t
+               set status_model_id = ( select a.status_model_id from mdm55_request_type_status_model_link a where a.request_type_id = t.request_type_id);
+        </sql>
+    </changeSet>
+    <changeSet id="0025-and-mdm61_5" author="Elunin">
+        <renameColumn tableName="mdm61_request_flow_validation" oldColumnName="status_form_id" newColumnName="status_from_id"/>
+    </changeSet>
+
+    <changeSet id="0025-and-mdm61_6" author="Elunin">
+        <addNotNullConstraint columnDataType="UUID"
+                              columnName="STATUS_MODEL_ID"
+                              tableName="mdm61_request_flow_validation"
+                              validate="true"/>
+    </changeSet>
+
+    <changeSet id="0025-and-mdm61_7" author="Elunin">
+        <dropNotNullConstraint columnDataType="uuid"
+                               columnName="REQUEST_TYPE_ID"
+                               tableName="mdm61_request_flow_validation"/>
+    </changeSet>
+
+    <changeSet id="0025-and-mdm61_8" author="Elunin">
+        <dropColumn columnName="request_type_id"
+                    tableName="mdm61_request_flow_validation"/>
+    </changeSet>
+
+</databaseChangeLog>

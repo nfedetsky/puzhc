@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://infoSystemKindBrowse.caption"
+        focusComponent="infoSystemKindsTable">
+    <data readOnly="true">
+        <collection id="infoSystemKindsDc"
+                    class="com.softline.csrv.entity.InfoSystemKind">
+            <fetchPlan>
+                <property name="id"/>
+                <property name="idSrc"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="description"/>
+                <property name="sortOrder"/>
+            </fetchPlan>
+            <loader id="infoSystemKindsDl">
+                <query>
+                    <![CDATA[select e from InfoSystemKind e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="infoSystemKindsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="infoSystemKindsDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="infoSystemKindsTable"
+                    width="100%"
+                    dataContainer="infoSystemKindsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="description"/>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="createdBy"/>
+                <column id="createdDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="lastModifiedDate"/>
+                <column id="idSrc"/>
+                <column id="sortOrder"/>
+            </columns>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="infoSystemKindsTable.create"/>
+                <button id="editBtn" action="infoSystemKindsTable.edit"/>
+                <button id="removeBtn" action="infoSystemKindsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="infoSystemKindsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

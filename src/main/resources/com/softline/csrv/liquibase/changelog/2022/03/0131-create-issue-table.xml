@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0131-1002_1" author="ASShepelev">
+        <sql dbms="postgresql">
+            CREATE SCHEMA IF NOT EXISTS suvv_migration;
+        </sql>
+    </changeSet>
+
+
+    <changeSet id="0131-1002_2" author="csrv">
+        <createTable schemaName="suvv_migration" tableName="issue">
+            <column name="ID" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ISSUE"/>
+            </column>
+            <column name="KEY" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DATA" type="CLOB">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DATA_E" type="CLOB">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

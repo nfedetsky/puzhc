@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+        <data>
+            <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+            <collection id="visCompatibilityDc" class="com.softline.csrv.entity.Request">
+                <loader id="visCompatibilityDl"/>
+            </collection>
+        </data>
+        <facets>
+            <dataLoadCoordinator auto="true"/>
+        </facets>
+        <layout>
+            <groupBox id="visCompatibilityGroupBox" align="TOP_LEFT" spacing="true">
+                <table id="visCompatibilityTable" dataContainer="visCompatibilityDc" width="AUTO" height="200px">
+                    <actions>
+                        <action id="add" type="add"/>
+                        <action id="exclude" type="exclude"/>
+                    </actions>
+                    <columns>
+                        <column id="keyNum"
+                                caption="msg://com.softline.csrv.entity/Request.keyNum"/>
+                        <column id="name"
+                                caption="msg://com.softline.csrv.entity/Request.name"/>
+                    </columns>
+                    <buttonsPanel>
+                        <button id="visCompatibilityAddBtn" action="visCompatibilityTable.add" icon="PLUS"
+                                caption=""/>
+                        <button id="visCompatibilityDelBtn" action="visCompatibilityTable.exclude" icon="TRASH"
+                                caption=""/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+        </layout>
+</fragment>

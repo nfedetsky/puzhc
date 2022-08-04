@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://normativeDocumentBrowse.caption"
+        focusComponent="normativeDocumentsTable">
+    <data readOnly="true">
+        <collection id="normativeDocumentsDc"
+                    class="com.softline.csrv.entity.NormativeDocument">
+            <fetchPlan>
+                <property name="docNum"/>
+                <property name="docDate"/>
+                <property name="normdocKindId" fetchPlan="_base">
+                    <property name="id"/>
+                </property>
+                <property name="normdocSourceId" fetchPlan="_base">
+                    <property name="id"/>
+                </property>
+                <property name="filePath"/>
+                <property name="id"/>
+                <property name="idSrc"/>
+                <property name="name"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="description"/>
+                <property name="sortOrder"/>
+            </fetchPlan>
+            <loader id="normativeDocumentsDl">
+                <query>
+                    <![CDATA[select e from NormativeDocument e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="normativeDocumentsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="normativeDocumentsDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="normativeDocumentsTable"
+                    width="100%"
+                    dataContainer="normativeDocumentsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="view" type="view"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="docNum"/>
+                <column id="docDate"/>
+                <column id="normdocKindId"/>
+                <column id="normdocSourceId"/>
+                <column id="description"/>
+                <column id="filePath"/>
+                <column id="startDate"/>
+                <column id="endDate"/>
+                <column id="createdBy"/>
+                <column id="createdDate"/>
+                <column id="lastModifiedBy"/>
+                <column id="lastModifiedDate"/>
+                <column id="idSrc"/>
+                <column id="sortOrder"/>
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="normativeDocumentsTable.create"/>
+                <button id="editBtn" action="normativeDocumentsTable.edit"/>
+                <button id="viewBtn" action="normativeDocumentsTable.view"/>
+                <button id="removeBtn" action="normativeDocumentsTable.remove"/>
+
+            </buttonsPanel>
+        </groupTable>
+
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="normativeDocumentsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

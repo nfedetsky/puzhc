@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://RequestEditExt.caption"
+        focusComponent="form">
+    <data>
+        <instance id="requestDc"
+                  class="com.softline.csrv.entity.Request">
+            <fetchPlan extends="_base">
+                <property name="status">
+                    <property name="name"/>
+                </property>
+                <property name="prevStatus">
+                    <property name="name"/>
+                </property>
+                <property name="requestType">
+                    <property name="name"/>
+                    <property name="isManualCreate"/>
+                </property>
+                <property name="author">
+                    <property name="username"/>
+                    <property name="firstName"/>
+                    <property name="lastName"/>
+                </property>
+                <property name="assignee">
+                    <property name="username"/>
+                    <property name="firstName"/>
+                    <property name="lastName"/>
+                </property>
+                <property name="affectedFunctions" fetchPlan="_base">
+                    <property name="function" fetchPlan="_base">
+                        <property name="parent" fetchPlan="_base">
+                            <property name="name"/>
+                        </property>
+                    </property>
+                    <property name="request" fetchPlan="_base"/>
+                </property>
+                <property name="plannedAprobeDuration"/>
+                <property name="watchers" fetchPlan="_base"/>
+                <property name="additionalVISs" fetchPlan="_base"/>
+                <property name="requirementProbability" fetchPlan="_base"/>
+                <property name="problemType" fetchPlan="_base"/>
+                <property name="buildComponent" fetchPlan="_base"/>
+                <property name="docKind" fetchPlan="_base"/>
+                <property name="infSystem" fetchPlan="_base"/>
+                <property name="defectSource" fetchPlan="_base"/>
+                <property name="priority" fetchPlan="_base"/>
+                <property name="id"/>
+                <property name="idSrc"/>
+                <property name="createdBy"/>
+                <property name="version"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+                <property name="parentRfc"/>
+                <property name="createdDate"/>
+                <property name="process" fetchPlan="_base"/>
+                <property name="solution" fetchPlan="_base"/>
+                <property name="visCompatibility" fetchPlan="_base"/>
+                <property name="curator" fetchPlan="_base"/>
+                <property name="curatorR" fetchPlan="_base"/>
+                <property name="normativeDocument" fetchPlan="_base"/>
+                <property name="orgInitiator" fetchPlan="_base"/>
+                <property name="project" fetchPlan="_base"/>
+                <property name="function" fetchPlan="_base">
+                    <property name="parent"/>
+                    <property name="name"/>
+                    <property name="system">
+                        <property name="executor"/>
+                        <property name="name"/>
+                    </property>
+                </property>
+                <property name="contour" fetchPlan="_base"/>
+                <property name="workPlace" fetchPlan="_base"/>
+                <property name="workWay" fetchPlan="_base"/>
+                <property name="curatorTx" fetchPlan="_base"/>
+                <property name="testManager" fetchPlan="_base"/>
+                <property name="customer"/>
+                <property name="developer"/>
+                <property name="unavlUserServices" fetchPlan="_base"/>
+                <property name="requestVis" fetchPlan="_base"/>
+                <property name="requestRequirement" fetchPlan="_base">
+                    <property name="revisionNum"/>
+                    <property name="keyNum"/>
+                    <property name="description"/>
+                </property>
+                <property name="requestAnalisys" fetchPlan="_base">
+                    <property name="requestRequirement" fetchPlan="_base"/>
+                </property>
+                <property name="requestZov" fetchPlan="_base"/>
+                <property name="requestAgreement" fetchPlan="_base"/>
+                <property name="requestContract" fetchPlan="_base"/>
+                <property name="requestCorrection" fetchPlan="_base"/>
+                <property name="requestDocument" fetchPlan="_base"/>
+                <property name="requestContentAgreement" fetchPlan="_base"/>
+                <property name="requestModification" fetchPlan="_base"/>
+                <property name="involvedFunction" fetchPlan="_base"/>
+                <property name="updatedBuildComponent" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="requestDl"/>
+        </instance>
+        <collection id="linkedRequestDc" class="com.softline.csrv.entity.Request">
+            <fetchPlan>
+                <property name="name"/>
+            </fetchPlan>
+            <loader id="linkedRequestDl"/>
+        </collection>
+        <collection id="requestTypeDc" class="com.softline.csrv.entity.RequestType">
+            <fetchPlan extends="_base"/>
+            <loader id="requestTypeDl"/>
+        </collection>
+        <collection id="filesDc"
+                    class="com.softline.csrv.entity.RequestFile">
+            <fetchPlan extends="_base"/>
+            <loader id="filesDl"/>
+        </collection>
+        <collection id="usersDc"
+                    class="com.softline.csrv.entity.User">
+            <loader id="usersDl">
+<!--                <query>
+                    <![CDATA[select e from User e]]>
+                </query>-->
+            </loader>
+        </collection>
+        <instance id="commentDc" class="com.softline.csrv.entity.RequestComm">
+            <fetchPlan extends="_base"/>
+            <loader id="commentDl"/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+        <clipboardTrigger id="clipboardTrigger"
+                          button="linkCopyBtn"
+                          input="inputClipboardField"/>
+    </facets>
+    <actions>
+        <action id="windowCommit"
+                caption="msg:///actions.Save"
+                icon="SAVE"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+        <action id="editMode"
+                caption="msg:///actions.Edit"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <vbox id="editBox" spacing="true">
+            <hbox id="allActions" spacing="true">
+                <hbox id="editActions" spacing="true">
+                    <button id="commitBtn" action="windowCommit"/>
+                    <button id="closeBtn" action="windowClose"/>
+                    <button id="editModeBtn" action="editMode"/>
+                    <popupButton id="popupDifferentActions"
+                                 caption="msg://com.softline.csrv.screen.request/RequestEditExt.differentActions"/>
+                    <popupButton id="popupExport"
+                                 caption="msg://com.softline.csrv.screen.request/RequestEditExt.popupExport"/>
+                </hbox>
+                <label value="|" align="MIDDLE_CENTER"/>
+                <hbox id="bpmActions" spacing="true">
+                </hbox>
+            </hbox>
+            <vbox id="validationErrorBox" visible="false" width="100%" spacing="true" height="AUTO" stylename="well">
+                <linkButton id="validationBoxCloseButton" icon="CLOSE" align="TOP_RIGHT"/>
+                <textArea id="validationErrorTextArea" stylename="large" editable="false" visible="true" width="100%"
+                          height="100%"/>
+            </vbox>
+            <groupBox id="generalGroupBox" spacing="true"
+                      caption="msg://RequestEditExt.generalGroupBox"
+                      collapsable="true">
+                <form id="form" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                    <column>
+                        <textField id="nameField" property="name" colspan="3" width="100%" editable="false"/>
+                        <entityComboBox id="requestTypeField" property="requestType" required="true"
+                                        dataContainer="requestDc" optionsContainer="requestTypeDc"
+                                        nullOptionVisible="false" pageLength="0">
+                        </entityComboBox>
+                        <textField id="processField" property="process" editable="false"/>
+                        <textField id="keyNumField" property="keyNum" editable="false"/>
+                        <textField id="statusField" property="status"/>
+                    </column>
+                    <column>
+                        <textField id="assigneeField" property="assignee" width="AUTO" editable="false"/>
+                        <textField id="authorField" property="author" width="AUTO" editable="false"/>
+                        <entitySuggestionField id="priorityField" property="priority" editable="true">
+                            <query entityClass="com.softline.csrv.entity.RequestPriority"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from RequestPriority c where c.name like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <tagField id="tagField" property="labels" clearAllVisible="true">
+                            <query entityClass="com.softline.csrv.entity.LabelTag"
+                                   searchStringFormat="%${searchString}%"
+                                   escapeValueForLike="true">
+                                select e from LabelTag e where lower(e.name) like lower(:searchString) escape '\'
+                            </query>
+                        </tagField>
+                    </column>
+                    <column>
+                        <dateField id="createdDateField" property="createdDate" editable="false"/>
+                        <dateField id="lastModifiedDateField" property="lastModifiedDate" editable="false"/>
+                        <dateField id="decisionDateField" property="decisionDate" editable="false"/>
+                        <tagField id="watchersField" property="watchers" clearAllVisible="true" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   searchStringFormat="%${searchString}%"
+                                   escapeValueForLike="true">
+                                select u from User u WHERE lower(CONCAT(CONCAT(CONCAT(u.username, u.firstName),
+                                u.lastName), u.email)) like lower(:searchString) escape '\'
+                            </query>
+                        </tagField>
+                    </column>
+                </form>
+            </groupBox>
+            <groupBox id="requestDetailsBox" spacing="true" width="100%" height="AUTO" align="MIDDLE_LEFT"
+                      visible="false" collapsable="true" caption="msg://RequestEditExt.ParamsGroupBox"/>
+            <groupBox id="requestDescriptionBox" spacing="true"
+                      caption="msg://com.softline.csrv.entity/Request.description" width="100%" height="AUTO"
+                      align="MIDDLE_LEFT" collapsable="true">
+                <vbox id="descriptionVbox" width="100%">
+                    <richTextArea id="descriptionField" property="description" dataContainer="requestDc" width="100%" editable="false"/>
+                </vbox>
+            </groupBox>
+            <groupBox id="AttachmentsBox" spacing="true" caption="msg://RequestEditExt.attachments"
+                      align="MIDDLE_LEFT" collapsable="true" width="100%">
+                <vbox id="AttachmentsBoxVbox" width="100%">
+                    <table id="attachmentsTable"
+                           width="100%"
+                           dataContainer="filesDc"
+                           multiselect="false">
+<!--                        <actions>
+                            <action id="remove" type="remove"/>
+                        </actions>-->
+                        <columns>
+                            <column id="name"/>
+                            <column id="createdDate"/>
+                            <column id="fileRef" caption="msg://RequestEditExt.action"/>
+                            <column id="action"
+                                    caption="msg://com.softline.csrv.screen.request/RequestEditExt.actionButton"/>
+                        </columns>
+                        <simplePagination/>
+                        <buttonsPanel id="attachmentsTableButtonsPanel">
+                            <fileMultiUpload id="attachmentsFileMultiUpload" description="msg://RequestEditExt.upload" icon="UPLOAD"/>
+                            <button id="deleteFileBtn" description="msg:///actions.Remove" icon="TRASH" />
+                            <button id="linkCopyBtn"
+                                    description="msg://com.softline.csrv.screen.request/RequestEditExt.copyLink" icon="COPY"/>
+                            <textField id="inputClipboardField"
+                                       caption="msg://com.softline.csrv.screen.request/RequestEditExt.linkToFile"/>
+                        </buttonsPanel>
+                    </table>
+                </vbox>
+            </groupBox>
+            <groupBox id="linkedRequestBox" spacing="true" width="100%" height="AUTO" align="MIDDLE_LEFT"
+                      collapsable="true" caption="msg://com.softline.csrv.screen.request/RequestEditExt.linkedRequest" collapsed="true">
+<!--                <fragment screen="LinkedRequest" align="MIDDLE_CENTER"/>-->
+                <tabSheet id="linkedRequestTabSheet" width="100%" height="100%">
+                </tabSheet>
+            </groupBox>
+            <groupBox id="requestCommentsBox" width="100%" height="AUTO" align="MIDDLE_LEFT" spacing="true"
+                      collapsable="true"
+                      collapsed="false" caption="msg:///comments.caption">
+                <vbox id="commentVbox" width="100%">
+                    <richTextArea id="comment" width="100%"/>
+                    <button id="addComment" caption="Добавить комментарий"/>
+                </vbox>
+            </groupBox>
+        </vbox>
+    </layout>
+</window>

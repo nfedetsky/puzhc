@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0020-ins_PUPE_INTEGRATION_SETTINGS_1" author="IKretov">
+        <insert tableName="PUPE_INTEGRATION_SETTINGS" dbms="postgresql, mssql, hsqldb">
+            <column name="access_key" value="00f2ef60-fb6f-4b1d-b566-0fc96b647589"/>
+            <column name="CONSTANT_URL_PUPE" value="http://sm-sue.fsfk.local/sd/operator/#uuid:serviceCall$"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

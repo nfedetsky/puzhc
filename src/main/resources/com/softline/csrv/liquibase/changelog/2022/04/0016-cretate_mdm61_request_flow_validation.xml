@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0016-cretate_mdm61_request_flow_validation_1" author="EAlbinets">
+        <createTable tableName="mdm61_request_flow_validation">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDMD61REQUESTFLOWVALIDATI"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+            <column name="REQUEST_TYPE_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS_FORM_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS_TO_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VALIDATION_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CODE" type="VARCHAR(100)"/>
+            <column name="NAME" type="VARCHAR(1000)"/>
+            <column name="description" type="CLOB"/>
+            <column name="sort_order" type="BIGINT"/>
+
+            <column name="START_DATE" type="DATE"/>
+            <column name="END_DATE" type="DATE"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="0016-create_mdm61_request_flow_validation_2" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="STATUS_TO_ID" baseTableName="mdm61_request_flow_validation"
+                                 constraintName="FK_MDM61REQUEST_ON_STATUSTO" referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="STATUS_FORM_ID" baseTableName="mdm61_request_flow_validation"
+                                 constraintName="FK_MDM61REQUE_ON_STATUSFORM" referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="VALIDATION_ID" baseTableName="mdm61_request_flow_validation"
+                                 constraintName="FK_MDM61REQUE_ON_VALIDATION" referencedColumnNames="ID"
+                                 referencedTableName="mdm60_request_validation"/>
+        <addForeignKeyConstraint baseColumnNames="REQUEST_TYPE_ID" baseTableName="mdm61_request_flow_validation"
+                                 constraintName="FK_MDM61REQU_ON_REQUESTTYPE" referencedColumnNames="ID"
+                                 referencedTableName="MDM19_REQUEST_TYPE"/>
+
+        <addNotNullConstraint columnName="START_DATE" defaultNullValue="now()"
+                              tableName="mdm61_request_flow_validation"/>
+
+        <addNotNullConstraint columnDataType="DATE" columnName="END_DATE" tableName="mdm61_request_flow_validation"
+                              validate="true"/>
+
+        <addNotNullConstraint columnDataType="DATETIME" columnName="CREATED_DATE"
+                              tableName="mdm61_request_flow_validation" validate="true"/>
+
+        <addNotNullConstraint columnDataType="DATETIME" columnName="LAST_MODIFIED_DATE"
+                              tableName="mdm61_request_flow_validation" validate="true"/>
+
+        <addNotNullConstraint columnDataType="BIGINT" columnName="VERSION" tableName="mdm61_request_flow_validation"
+                              validate="true"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <instance id="requestDc" class="com.softline.csrv.entity.Request" provided="true"/>
+        <collection id="requestSolutionDc" class="com.softline.csrv.entity.RequestSolution">
+            <fetchPlan extends="_base"/>
+            <loader id="requestSolutionDl">
+                <query>
+                    <![CDATA[select e from RequestSolution e where e.requestType.code = 'COMPONENT_BUILD']]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tabSheet>
+            <tab id="common" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabBasicAttr" spacing="true">
+                <vbox/>
+                <hbox spacing="true" align="MIDDLE_LEFT">
+                    <form id="formCommon" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                        <entityComboBox id="solutionField" property="solution" editable="false"
+                                        caption="msg://com.softline.csrv.entity/Request.solution"
+                                        dataContainer="requestDc" optionsContainer="requestSolutionDc">
+                            <actions>
+                                   <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entityComboBox>
+                        <dateField id="startedDateField" property="startedDate" editable="false"/>
+                        <dateField id="startedFactDateField" property="startedFactDate" editable="false"/>
+                        <dateField id="completedTimeField" property="completedTime" editable="false"/>
+                        <dateField id="completedFactTimeField" property="completedFactTime" editable="false"/>
+                        <entitySuggestionField id="functionField" property="function" editable="false">
+                            <query entityClass="com.softline.csrv.entity.Function"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from Function c where lower(c.name) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="visField" property="requestVis" editable="false">
+                            <query entityClass="com.softline.csrv.entity.Request"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from Request c where c.requestType.code = 'IS_VERSION' and lower(c.keyNum)
+                                like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="open" type="open_edit_action"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="prevComponentAssemblyField" property="requestPrev" editable="false"
+                                               caption="msg://com.softline.csrv.entity/Request.lastComponentAssembly">
+                            <query entityClass="com.softline.csrv.entity.Request"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from Request c where c.requestType.code = 'COMPONENT_BUILD' and
+                                lower(c.keyNum) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="open" type="open_view_action"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="buildComponentField" property="buildComponent" editable="false">
+                            <query entityClass="com.softline.csrv.entity.BuildComponent"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from BuildComponent c where lower(c.name) like lower(:searchString) escape
+                                '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="developerField" property="developer" editable="false">
+                            <query entityClass="com.softline.csrv.entity.Organization"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from Organization c where lower(c.name) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                    </form>
+                    <form id="formCommon2" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                        <textField id="artifactLocField" property="artifactLoc" editable="false"/>
+                        <textField id="sourceLocField" property="sourceLoc" editable="false"/>
+                        <textField id="buildLocField" property="buildLoc" editable="false"/>
+                        <textField id="buildPlanField" property="buildPlan" editable="false"/>
+                        <textField id="branchNameField" property="branchName" editable="false"/>
+                        <textField id="buildPlanOptionField" property="buildPlanOption" editable="false"/>
+                        <textField id="traceLocField" property="traceLoc" editable="false"/>
+                        <textArea id="noteDescrField" property="noteDescr" editable="false"/>
+                    </form>
+                </hbox>
+            </tab>
+            <tab id="eventPlan" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabEventPlan" spacing="true">
+                <vbox spacing="true"/>
+                <hbox spacing="true">
+                    <vbox spacing="true" align="MIDDLE_LEFT">
+                        <form id="formEventPlan1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                            <dateField id="rPeriodTimeField" property="rPeriodTime" editable="false"/>
+                            <dateField id="responseTimeField" property="responseTime" editable="false"/>
+                        </form>
+                    </vbox>
+                    <form id="formEventPlan2" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                        <dateField id="executionPeriodTimeField" property="executionPeriodTime" editable="false"/>
+                    </form>
+                </hbox>
+            </tab>
+            <tab id="RequestAddAttrPeople" caption="msg://com.softline.csrv.screen.request/RequestEditExt.tabPeople"
+                 spacing="true">
+                <vbox spacing="true"/>
+                <form id="peopleForm1" dataContainer="requestDc" childrenCaptionAlignment="RIGHT">
+                    <column width="300px">
+                        <entitySuggestionField id="curatorField" property="curator" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from User c where lower(CONCAT(CONCAT(CONCAT(c.username, c.firstName),
+                                c.lastName), c.email)) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                        <entitySuggestionField id="curatorRField" property="curatorR" editable="false">
+                            <query entityClass="com.softline.csrv.entity.User"
+                                   escapeValueForLike="true"
+                                   searchStringFormat="%${searchString}%">
+                                select c from User c where lower(CONCAT(CONCAT(CONCAT(c.username, c.firstName),
+                                c.lastName), c.email)) like lower(:searchString) escape '\'
+                            </query>
+                            <actions>
+                                <action id="lookup" type="entity_lookup"/>
+                                <action id="clear" type="entity_clear"/>
+                            </actions>
+                        </entitySuggestionField>
+                    </column>
+                </form>
+            </tab>
+        </tabSheet>
+    </layout>
+</fragment>

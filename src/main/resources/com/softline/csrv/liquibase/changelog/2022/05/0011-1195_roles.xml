@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="uuid_function" value="gen_random_uuid()" dbms="postgresql"/>
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="get_status_function" value="get_status_by_code()" dbms="postgresql"/>
+    <property name="get_statusmodel_function" value="get_statusmodel_by_code()" dbms="postgresql"/>
+    <property name="get_validation_function" value="get_validation_by_code()" dbms="postgresql"/>
+    <property name="get_role_function" value="get_role_by_code()" dbms="postgresql"/>
+
+
+    <changeSet id="0011-1195_roles-0" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_status_by_code(p_code character varying) RETURNS uuid LANGUAGE sql AS $function$ SELECT id from mdm18_status where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_statusmodel_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm29_status_model where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_validation_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm60_request_validation where code = p_code; $function$;</createProcedure>
+        <createProcedure>CREATE OR REPLACE FUNCTION get_role_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from sec_resource_role where code = p_code; $function$;</createProcedure>
+    </changeSet>
+
+    <changeSet id="0011-1195_roles_1" author="ELunin">
+            <addUniqueConstraint columnNames="code" constraintName="sec_resource_role_uk"
+                                 tableName="sec_resource_role"/>
+        <addUniqueConstraint columnNames="role_id, type_, resource_" constraintName="sec_resource_policy_uk"
+                             tableName="sec_resource_policy"/>
+    </changeSet>
+
+    <changeSet id="0011-1195_roles_2" author="ELunin" dbms="postgresql">
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="WF_REQUEST_FOR_ANALYSIS"/>
+            <column name="NAME" value="WF ПУЖЦ Заявка на анализ"/>
+            <column name="DESCRIPTION" value='Возможность работать с Заявкой типа "Заявка на анализ"'/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34) || chr(44) || chr(34) || chr(65) || chr(80) ||chr(73) || chr(34)"/>
+        </insert>
+    </changeSet>
+    <changeSet id="0011-1195_roles_3" author="ELunin" dbms="postgresql">
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__ANALYSIS_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_ANALYSIS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__REJECTED_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_ANALYSIS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__CLOSED_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_ANALYSIS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__REQUEST_INFO_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_ANALYSIS')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__REQUEST_INFO__ANALYSIS_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('WF_REQUEST_FOR_ANALYSIS')"/>
+        </insert>
+    </changeSet>
+
+
+
+
+
+    <changeSet id="0011-1195_roles_99" author="ELunin" dbms="postgresql">
+        <sql>DROP function get_status_by_code;</sql>
+        <sql>DROP function get_statusmodel_by_code;</sql>
+        <sql>DROP function get_validation_by_code;</sql>
+        <sql>DROP function get_role_by_code;</sql>
+    </changeSet>
+
+
+
+</databaseChangeLog>
+
+

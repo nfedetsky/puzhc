@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0099-dropCon_and_addCon_fklis004_request_watcher_1" author="IKretov">
+        <dropUniqueConstraint constraintName="fklis004_request_watcher_comp_uk1" tableName="fklis004_request_watcher"/>
+    </changeSet>
+    <changeSet id="0099-dropCon_and_addCon_fklis004_request_watcher_2" author="IKretov">
+        <addUniqueConstraint columnNames="request_id, user_id" constraintName="fklis004_request_watcher_comp_uk1"
+                             tableName="fklis004_request_watcher"/>
+    </changeSet>
+</databaseChangeLog>

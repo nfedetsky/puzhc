@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="012-init-role-assignment-0001" author="csrv">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6c9e420a-2b7a-4c42-8654-a9027ee14083"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="suvv-admin"/>
+            <column name="ROLE_CODE" value="system-full-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="6c9e420a2b7a4c428654a9027ee14083"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="suvv-admin"/>
+            <column name="ROLE_CODE" value="system-full-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0002" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c7-446b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="ivan"/>
+            <column name="ROLE_CODE" value="role-developer"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0003" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="ea8a7f2a-fbd9-44f5-9b77-a18fe2511adb"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="petr"/>
+            <column name="ROLE_CODE" value="role-curator-vis"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0004" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5bc1ab71-dd32-4eec-9eef-17b1926370fc"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vlad"/>
+            <column name="ROLE_CODE" value="role-curator-is"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="012-init-role-assignment-0005" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c7-556b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vald"/>
+            <column name="ROLE_CODE" value="csrv-bpm-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0005.1" author="elunin">
+        <delete tableName="SEC_ROLE_ASSIGNMENT">
+            <where>id='1edc8600-a6c7-556b-b903-869edfd44034'</where>
+        </delete>
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c7-556b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="petr"/>
+            <column name="ROLE_CODE" value="csrv-bpm-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="012-init-role-assignment-0006" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c8-656b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="petr"/>
+            <column name="ROLE_CODE" value="ui-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0007" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-756b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="petr"/>
+            <column name="ROLE_CODE" value="email-history"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0008" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-856b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="petr"/>
+            <column name="ROLE_CODE" value="ui-filter"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0009" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-966b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="petr"/>
+            <column name="ROLE_CODE" value="csrv-minimal-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="012-init-role-assignment-0010" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c7-106b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vlad"/>
+            <column name="ROLE_CODE" value="csrv-bpm-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0011" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c8-116b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vlad"/>
+            <column name="ROLE_CODE" value="ui-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0012" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-126b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vlad"/>
+            <column name="ROLE_CODE" value="email-history"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0013" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-136b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vlad"/>
+            <column name="ROLE_CODE" value="ui-filter"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0014" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-146b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="vlad"/>
+            <column name="ROLE_CODE" value="csrv-minimal-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="012-init-role-assignment-0015" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c8-556b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="ivan"/>
+            <column name="ROLE_CODE" value="csrv-bpm-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0016" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a6c9-656b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="ivan"/>
+            <column name="ROLE_CODE" value="ui-minimal"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0017" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a610-756b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="ivan"/>
+            <column name="ROLE_CODE" value="email-history"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0018" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a611-856b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="ivan"/>
+            <column name="ROLE_CODE" value="ui-filter"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+    <changeSet id="012-init-role-assignment-0019" author="elunin">
+        <insert tableName="SEC_ROLE_ASSIGNMENT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1edc8600-a612-966b-b903-869edfd44034"/>
+            <column name="VERSION" value="1"/>
+            <column name="USERNAME" value="ivan"/>
+            <column name="ROLE_CODE" value="csrv-minimal-access"/>
+            <column name="ROLE_TYPE" value="resource"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

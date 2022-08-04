@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0075-ins_mdm30_status_transition" author="EAlbinets">
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="11db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="12db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="13db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="14db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Оформление исправления по шаблону - Исправление - ТОЗ / Устранение замечаний" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="15db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Исправление отправляется на Согласование выпускающему редактору" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="160da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="16db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Запрос дополнительной информации" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="17db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Отклонение исправления" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="18db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Проведение проверок и согласование Исправления" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="160da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="1a90a87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="19db6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Проведение проверок и согласование Исправления" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="160da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="160da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Adb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Проведение проверок и согласование Исправления" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="160da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Bdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Проведение проверок и согласование Исправления" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="160da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Cdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Ожидание завершение процесса ЗСВИС" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="1a90a87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="400da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Ddb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Ожидание установки ВИС" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="400da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+    </insert>
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Edb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+        <insert tableName="mdm30_status_transition" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1Fdb6c84-8d7e-11ec-b909-0242ac120002"/>
+            <column name="description" value="Уточнение запрошенной информации" />
+            <column name="status_model_id" value="ece1f2f8-92e7-11ec-b909-0242ac120002"/>
+            <column name="START_STATUS" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="end_status" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+
+
+
+    </changeSet>
+
+</databaseChangeLog>

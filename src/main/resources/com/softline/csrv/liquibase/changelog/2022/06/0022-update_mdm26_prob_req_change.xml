@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0022-update_mdm26_prob_req_change_1" author="ASShepelev">
+        <update tableName="mdm26_prob_req_change">
+            <column name="ID_SRC" value="15206"/>
+            <where>code = 'ABSENT'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0022-update_mdm26_prob_req_change_2" author="ASShepelev">
+        <update tableName="mdm26_prob_req_change">
+            <column name="ID_SRC" value="15207"/>
+            <where>code = 'PRESENT'</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

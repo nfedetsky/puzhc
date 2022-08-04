@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+                   objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0089-ins_mdm05_inf_system" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340aec54-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ПОИ"/>
+            <column name="CODE" value="ЭБ-ПОИ | EB"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="04be70fe-a477-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10100"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_2" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340aeed4-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ПОИБ"/>
+            <column name="CODE" value="ЭБ-ПОИБ | SEC"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="04be70fe-a477-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10200"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="abc7680c-8d7e-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_3" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af230-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ПОЮЗД"/>
+            <column name="CODE" value="ЭБ-ПОЮЗД | LAW"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="04be70fe-a477-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10300"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="abc7680c-8d7e-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_4" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af35c-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="НСИ"/>
+            <column name="CODE" value="ЭБ-НСИ | REF"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10400"/>
+            <column name="AIS_UCHET_CODE" value="10.0001784"/>
+            <column name="FGIS_CODE" value="ФС-77150434"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_5" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af49c-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="НСИ_СВР"/>
+            <column name="CODE" value="ЭБ-НСИ_СВР | REF_SVR"/>
+            <column name="PATH" value="01.ЭБ/НСИ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10410"/>
+            <column name="AIS_UCHET_CODE" value="10.0001784"/>
+            <column name="FGIS_CODE" value="ФС-77150434"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_6" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af5be-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="НСИ_БПГУ"/>
+            <column name="CODE" value="ЭБ-НСИ_БВПГУ | REF_BPGU"/>
+            <column name="PATH" value="01.ЭБ/НСИ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10420"/>
+            <column name="AIS_UCHET_CODE" value="1"/>
+            <column name="FGIS_CODE" value="1"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="6105fa80-8d7f-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_7" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af6ea-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="НСИ_ВПГУ"/>
+            <column name="CODE" value="REF_VPGU"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10430"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="6105fa80-8d7f-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_8" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340af80c-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УДС"/>
+            <column name="CODE" value="ЭБ-УДС | UDS"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10500"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_9" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340afa00-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УДС_КП"/>
+            <column name="CODE" value="ЭБ-УДС_КП | UDS_KP"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10510"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_10" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340afbc2-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УНФА"/>
+            <column name="CODE" value="ЭБ-УНФА | UNFA"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10600"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_11" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УР"/>
+            <column name="CODE" value="ЭБ-УР | EXP"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10700"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_12" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b052c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_РС | EXP_RS"/>
+            <column name="NAME" value="УР_РС"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10710"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_13" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b064e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_РГЗ | EXP_RGZ"/>
+            <column name="NAME" value="УР_РГЗ"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10720"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_14" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0982-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_ДБД | EXP_DBD"/>
+            <column name="NAME" value="УР_ДБД"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10731"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_15" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0ad6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_БО | EXP_BO"/>
+            <column name="NAME" value="УР_БО"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10732"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_16" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0dec-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_ДО | EXP_DO"/>
+            <column name="NAME" value="УР_ДО"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10733"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_17" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b0f22-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_САНКЦ | EXP_SANC"/>
+            <column name="NAME" value="УР_САНКЦ"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10734"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_18" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b1044-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_ИДиРНО | EXP_IDIRNO"/>
+            <column name="NAME" value="УР_ИДиРНО"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10735"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_19" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b138c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_КС | EXP_KS"/>
+            <column name="NAME" value="УР_КС"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10740"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_20" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b149a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УР_ЛС | EXP_LS"/>
+            <column name="NAME" value="УР_ЛС"/>
+            <column name="PATH" value="01.ЭБ/УР"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10760"/>
+            <column name="AIS_UCHET_CODE" value="0"/>
+            <column name="FGIS_CODE" value="0"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_21" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b15a8-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УЗ"/>
+            <column name="CODE" value="PUR"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10800"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_22" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b16b6-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УК"/>
+            <column name="CODE" value="ЭБ-УК | UK"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="10900"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_23" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b17c4-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УД"/>
+            <column name="CODE" value="ЭБ-УД | UD"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_24" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="УиО"/>
+            <column name="CODE" value="ЭБ-УиО | ARP"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11300"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_25" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b19d6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УиО_ФО | UiO_FO"/>
+            <column name="NAME" value="УиО_ФО"/>
+            <column name="PATH" value="01.ЭБ/УиО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11311"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_26" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b1af8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УиО_УД | UiO_FAH"/>
+            <column name="NAME" value="УиО_УД"/>
+            <column name="PATH" value="01.ЭБ/УиО"/>
+            <column name="INFSYSTEM_KIND_ID" value="04be70fe-a477-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11319"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_27" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b1eea-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="UiO_MOU"/>
+            <column name="NAME" value="УиО_МОУ"/>
+            <column name="PATH" value="01.ЭБ/УиО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11321"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_28" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b20a2-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЭБ-УиО_УУ | UiO_UU"/>
+            <column name="NAME" value="УиО_УУ"/>
+            <column name="PATH" value="01.ЭБ/УиО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11331"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_29" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b22c8-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ИАО"/>
+            <column name="CODE" value="ЭБ-ИАО | BIR"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11500"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="6105fa80-8d7f-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_30" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b24bc-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ЕПБС"/>
+            <column name="CODE" value="ЭБ-ЕПБС | PEB"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11600"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="6105fa80-8d7f-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_31" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b267e-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="ФК_БМ"/>
+            <column name="CODE" value="FC_BM"/>
+            <column name="PATH" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="11700"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_32" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="01.ЭБ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="19910"/>
+            <column name="AIS_UCHET_CODE" value="10.0001784"/>
+            <column name="FGIS_CODE" value="ФС-77150434"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_33" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2930-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="01.ЭБ_1С"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="19920"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_34" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2b06-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ГМУ-С | GMU"/>
+            <column name="NAME" value="02.ГМУ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="20000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_35" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2e26-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ГАСУ-С | GASU"/>
+            <column name="NAME" value="03.ГАСУ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="30000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_36" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b2f70-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="EIS"/>
+            <column name="NAME" value="04.ЕИС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="40000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_37" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b30d8-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="EIS_RMIS"/>
+            <column name="NAME" value="04.ЕИС.РМИС"/>
+            <column name="PATH" value="04.ЕИС"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="40400"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_38" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3290-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ГИС_ГМП-С | GISGMP"/>
+            <column name="NAME" value="05.ГИС_ГМП"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="50000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_39" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3506-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="AKSIOK"/>
+            <column name="NAME" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="60000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_40" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b36be-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="АКСИОК-БП | AKS_BP"/>
+            <column name="NAME" value="06.АКСИОК.БП"/>
+            <column name="PATH" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="61000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_41" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3894-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="АКСИОК-ЗиК | AKS_ZIK"/>
+            <column name="NAME" value="06.АКСИОК.ЗиК"/>
+            <column name="PATH" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="62000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_42" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b3e84-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="АКСИОК-УНФА | AKS_UNFA"/>
+            <column name="NAME" value="06.АКСИОК.УНФА"/>
+            <column name="PATH" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="63000"/>
+            <column name="AIS_UCHET_CODE" value="27.0002908"/>
+            <column name="FGIS_CODE" value="ФС-77110104"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_43" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b40a0-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="АКСИОК-УиО | AKS_UiO"/>
+            <column name="NAME" value="06.АКСИОК.УиО"/>
+            <column name="PATH" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="64000"/>
+            <column name="AIS_UCHET_CODE" value="27.0002908"/>
+            <column name="FGIS_CODE" value="ФС-77110104"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_44" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b4294-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="AKS_RAS"/>
+            <column name="NAME" value="06.АКСИОК.РАСЧЕТ"/>
+            <column name="PATH" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="65000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_45" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b47c6-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="АКСИОК-Net | AKS_NET"/>
+            <column name="NAME" value="06.АКСИОК.Net"/>
+            <column name="PATH" value="06.АКСИОК"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="66000"/>
+            <column name="AIS_UCHET_CODE" value="27.0002908"/>
+            <column name="FGIS_CODE" value="ФС-77110104"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_46" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b4b68-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СУЭ-С | SUE"/>
+            <column name="NAME" value="07.СУЭ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="70000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_47" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b4e9c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="07.SUE.PUPE"/>
+            <column name="NAME" value="07.СУЭ.ПУПЭ"/>
+            <column name="PATH" value="07.СУЭ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="71000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_48" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5158-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СУЭ-ИБП | SUE_IBP"/>
+            <column name="NAME" value="07.СУЭ.ИБП"/>
+            <column name="PATH" value="07.СУЭ"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="78000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_49" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b54be-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="УФОС-Студия / УФОС-Ядро | UFOS"/>
+            <column name="NAME" value="08.УФОС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="80000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_50" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5928-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="SOBI"/>
+            <column name="NAME" value="09.СОБИ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="90000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_51" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5b3a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СОБИ-ПОИБ | SOBI_POIB"/>
+            <column name="NAME" value="09.СОБИ.ПОИБ"/>
+            <column name="PATH" value="09.СОБИ"/>
+            <column name="INFSYSTEM_KIND_ID" value="04be70fe-a477-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="90200"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="abc7680c-8d7e-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_52" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b5d7e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СОБИ-ПОЮЗД | SOBI_POYUZD"/>
+            <column name="NAME" value="09.СОБИ.ПОЮЗД"/>
+            <column name="PATH" value="09.СОБИ"/>
+            <column name="INFSYSTEM_KIND_ID" value="04be70fe-a477-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="90300"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="abc7680c-8d7e-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_53" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6044-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ASFK"/>
+            <column name="NAME" value="10.АСФК"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="100000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_54" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6300-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="KPI"/>
+            <column name="NAME" value="11.КПЭ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="110000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_55" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b645e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-ССДГГС | SCIAO_SSDGGS"/>
+            <column name="NAME" value="12.СКИАО.ССДГГС"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120101"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_56" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b65bc-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-СПД | SCIAO_SPD"/>
+            <column name="NAME" value="12.СКИАО.СПД"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120200"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_57" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6706-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-ССДТОФК | SCIAO_SSDTOFK"/>
+            <column name="NAME" value="12.СКИАО.ССДТОФК"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120301"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_58" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6a1c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-ССДЦАФК | SCIAO_SSDCAFK"/>
+            <column name="NAME" value="12.СКИАО.ССДЦАФК"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120302"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_59" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6b48-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-ССДРУФК | SCIAO_SSDRUFK"/>
+            <column name="NAME" value="12.СКИАО.ССДРУФК"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120303"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_60" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6c56-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-ПР | SCIAO_PP"/>
+            <column name="NAME" value="12.СКИАО.ПР"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120400"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_61" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6d6e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-МОД | SCIAO_MOD"/>
+            <column name="NAME" value="12.СКИАО.МОД"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120500"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_62" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6e7c-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-РН | SCIAO_RN"/>
+            <column name="NAME" value="12.СКИАО.РН"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120600"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_63" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b6f8a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-РУ | SCIAO_RU"/>
+            <column name="NAME" value="12.СКИАО.РУ"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120700"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_64" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7246-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СКИАО-ИАП | SCIAO_IAP"/>
+            <column name="NAME" value="12.СКИАО.ИАП"/>
+            <column name="PATH" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="120800"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_65" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7368-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="SCIAO"/>
+            <column name="NAME" value="12.СКИАО"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="129999"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_66" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7714-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="SPTO"/>
+            <column name="NAME" value="13.СПТО"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="130000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="EXECUTOR_ID" value="0d96770c-8d80-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_67" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b785e-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="SCFK"/>
+            <column name="NAME" value="14.СЦ ФК"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="140000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_68" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7976-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="АС_Планирование | ASP"/>
+            <column name="NAME" value="15.АС_Планирование"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="150000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_69" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7ac0-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CKS"/>
+            <column name="NAME" value="16.ЦКС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="160000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_70" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7bec-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЦКС-СЭД | CKS_SED"/>
+            <column name="NAME" value="16.ЦКС.СЭД"/>
+            <column name="PATH" value="16.ЦКС"/>
+            <column name="INFSYSTEM_KIND_ID" value="e672778a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="161000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_71" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7d36-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ИТС-С | ITS"/>
+            <column name="NAME" value="17.ИТС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="170000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_72" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7eb2-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="LANDOCS-С | LANDOCS"/>
+            <column name="NAME" value="18.LANDOCS"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="180000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_73" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b7fca-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ISOES"/>
+            <column name="NAME" value="19.ОЭС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="190000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_74" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8308-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="САЙТ_ФК-С | SITE_FK"/>
+            <column name="NAME" value="20.САЙТ_ФК"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="200000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_75" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8420-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ЛЕКС | LEKS"/>
+            <column name="NAME" value="21.ЛЕКС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="210000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_76" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8542-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="МОНИТОР | MONITOR"/>
+            <column name="NAME" value="22.МОНИТОРИНГ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="220000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_77" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b865a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="GISNR | ГИСНР"/>
+            <column name="NAME" value="23.ГИС_НР"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="230000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_78" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8772-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="YANTAR | ЯНТАРЬ"/>
+            <column name="NAME" value="24.ЯНТАРЬ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="240000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_79" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b888a-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СЗУ | DLP"/>
+            <column name="NAME" value="25.СЗУ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="250000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_80" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b89ac-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="САНУПО | SANUPO"/>
+            <column name="NAME" value="26.САНУПО"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="260000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_81" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8ad8-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="27.АИС_УБР"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="270000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_82" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8de4-93c7-11ec-b909-0242ac120002"/>
+            <column name="NAME" value="28.ГИС_ЭС"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="280000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_83" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b8f24-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="СУРФК | SURFK"/>
+            <column name="NAME" value="77.СУРФК"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="b807aef6-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="770000"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0089-ins_mdm05_inf_system_84" author="ZESONOV">
+        <insert tableName="mdm05_inf_system" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="340b90aa-93c7-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ВСЕ-С"/>
+            <column name="NAME" value="00.ВСЕ"/>
+            <column name="INFSYSTEM_KIND_ID" value="a8c4fc5a-a476-11ec-b909-0242ac120002"/>
+            <column name="INFSYSTEM_LEVEL_ID" value="9f8839fe-a5e8-11ec-b909-0242ac120002"/>
+            <column name="ID_SRC" value="999999"/>
+            <column name="AIS_UCHET_CODE" value="-"/>
+            <column name="FGIS_CODE" value="-"/>
+            <column name="OPERATOR_ID" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="executor_id" value="bf2c8622-8d81-11ec-b909-0242ac120002"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

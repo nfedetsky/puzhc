@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0130-alt-fklis001_request_card_1" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="ACTUAL_END_APROBE_TIME" type="DATETIME"/>
+            <column name="ACTUAL_START_APROBE_TIME" type="DATETIME"/>
+            <column name="APROBE_PIM" type="VARCHAR(512)"/>
+            <column name="CHANGER_MANAGER_ID" type="UUID"/>
+            <column name="CLOSING_CODE_ID" type="UUID"/>
+            <column name="CURATOR_FZ_ID" type="UUID"/>
+            <column name="CURATOR_OZB_ID" type="UUID"/>
+            <column name="END_TECH_PAUSE" type="DATETIME"/>
+            <column name="EQUIPMENT_ID" type="UUID"/>
+            <column name="ESTIM_UPD_RECORDS_COUNT" type="BIGINT"/>
+            <column name="INCIDENT" type="VARCHAR(512)"/>
+            <column name="INCIDENT_MANAGER_ID" type="UUID"/>
+            <column name="PREV_STATUS_ID" type="UUID"/>
+            <column name="RELEASE_DESCR" type="VARCHAR(512)"/>
+            <column name="RFC_TYPE_ID" type="UUID"/>
+            <column name="SCRIPT_ESITM_ROLLBACK_DURATION" type="BIGINT"/>
+            <column name="SERVICE_MANAGER_ID" type="UUID"/>
+            <column name="SOURCE_INCIDENT" type="VARCHAR(512)"/>
+            <column name="START_TECH_PAUSE" type="DATETIME"/>
+            <column name="TESTING_KIND_ID" type="UUID"/>
+            <column name="WORK_URGENCY_ID" type="UUID"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_2" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="CURATOR_BP_ID" type="UUID"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="CURATOR_BP_ID" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_3" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="END_APROBE_TIME" type="DATETIME"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="END_APROBE_TIME" defaultNullValue="now()" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_4" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="INITIATOR_INFO" type="VARCHAR(512)"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="INITIATOR_INFO" defaultNullValue="''" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_5" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="PLANNED_APROBE_DURATION" type="BIGINT"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="PLANNED_APROBE_DURATION" defaultNullValue="0"
+                              tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_6" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="START_APROBE_TIME" type="DATETIME"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="START_APROBE_TIME" defaultNullValue="now()"
+                              tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_7" author="EAlbinets">
+        <addColumn tableName="fklis001_request_card">
+            <column name="WORK_REASONS_DESCR" type="VARCHAR(512)"/>
+        </addColumn>
+
+        <addNotNullConstraint columnName="WORK_REASONS_DESCR" defaultNullValue="''" tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_8" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="RFC_TYPE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUESTC_ON_RFCTYPE" referencedColumnNames="ID"
+                                 referencedTableName="mdm01_rfc_type"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_9" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="CURATOR_BP_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUES_ON_CURATORBP" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_10" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="CURATOR_FZ_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUES_ON_CURATORFZ" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_11" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="EQUIPMENT_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUES_ON_EQUIPMENT" referencedColumnNames="ID"
+                                 referencedTableName="mdm37_equipment"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_12" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="CURATOR_OZB_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUE_ON_CURATOROZB" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+
+        <createIndex indexName="IDX_REQUEST_CURATOR_OZB_ID" tableName="fklis001_request_card">
+            <column name="CURATOR_OZB_ID"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="0130-alt-fklis001_request_card_14" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="CLOSING_CODE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_CLOSINGCODE" referencedColumnNames="ID"
+                                 referencedTableName="MDM28_CODE_CLOSE"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_15" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="TESTING_KIND_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_TESTINGKIND" referencedColumnNames="ID"
+                                 referencedTableName="mdm41_testing_kind"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_16" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="WORK_URGENCY_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_WORKURGENCY" referencedColumnNames="ID"
+                                 referencedTableName="mdm39_work_urgency"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_17" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="CHANGER_MANAGER_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_CHANGERMANA" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_18" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="INCIDENT_MANAGER_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_INCIDENTMAN" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_19" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="SERVICE_MANAGER_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_SERVICEMANA" referencedColumnNames="ID"
+                                 referencedTableName="USER_"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_20" author="EAlbinets">
+        <dropForeignKeyConstraint baseTableName="fklis001_request_card"
+                                  constraintName="FK_FKLIS001REQUESTC_ON_WORKWAY"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_21" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="WORK_WAY_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUESTC_ON_WORKWAY" referencedColumnNames="ID"
+                                 referencedTableName="mdm35_workway"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_22" author="EAlbinets">
+        <dropForeignKeyConstraint baseTableName="fklis001_request_card"
+                                  constraintName="FK_FKLIS001REQUES_ON_WORKPLACE"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_23" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="WORK_PLACE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUES_ON_WORKPLACE" referencedColumnNames="ID"
+                                 referencedTableName="mdm34_work_place"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_24" author="EAlbinets">
+        <dropForeignKeyConstraint baseTableName="fklis001_request_card"
+                                  constraintName="FK_FKLIS001REQU_ON_ENVIRONMENT"/>
+    </changeSet>
+    <changeSet id="0130-alt-fklis001_request_card_25" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="ENVIRONMENT_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_ENVIRONMENT" referencedColumnNames="ID"
+                                 referencedTableName="mdm36_environment"/>
+    </changeSet>
+</databaseChangeLog>

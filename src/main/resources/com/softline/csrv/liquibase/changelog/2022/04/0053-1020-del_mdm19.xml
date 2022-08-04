@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <changeSet id="0053-1020-del_mdm19_0" author="ELunin">
+        <delete tableName="mdm17_solution">
+            <where>request_type_id = (select id from mdm19_request_type where code = 'INTEGRATION_VERSION')</where>
+        </delete>
+        
+        <delete tableName="mdm19_request_type">
+            <where>code = 'INTEGRATION_VERSION'</where>
+        </delete>
+    </changeSet>
+</databaseChangeLog>

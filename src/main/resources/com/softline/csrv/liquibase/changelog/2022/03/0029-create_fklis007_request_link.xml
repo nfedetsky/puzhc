@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0029-create_fklis007_request_link" author="ZESONOV">
+        <createTable tableName="fklis007_request_link">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS007_REQUEST_LINK"/>
+            </column>
+            <column name="request_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="request_id_to" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="link_type_id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="0029-create_fklis007_request_link_2" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="request_id" baseTableName="fklis007_request_link"
+                                 constraintName="FK_FKLIS007REQUESTL_ON_REQUEST" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+
+    <changeSet id="create_fklis007_request_link_3" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="link_type_id" baseTableName="fklis007_request_link"
+                                 constraintName="FK_FKLIS007REQUEST_ON_LINKTYPE" referencedColumnNames="ID"
+                                 referencedTableName="mdm45_link_type"/>
+    </changeSet>
+
+    <changeSet id="create_fklis007_request_link_4" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="request_id_to" baseTableName="fklis007_request_link"
+                                 constraintName="FK_FKLIS007REQU_ON_REQUESTIDTO" referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+
+</databaseChangeLog>

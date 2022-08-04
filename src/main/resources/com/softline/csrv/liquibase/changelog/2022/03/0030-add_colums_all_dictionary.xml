@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0030-add_colum_all_dictionary_1" author="IKretov">
+        <addColumn tableName="MDM11_SIGN_COMPL_SAM">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_2" author="IKretov">
+        <addColumn tableName="MDM13_PROJECT">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_3" author="IKretov">
+        <addColumn tableName="MDM19_REQUEST_TYPE">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_4" author="IKretov">
+        <addColumn tableName="MDM22_DEPLOY_PHASE">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_5" author="IKretov">
+        <addColumn tableName="MDM22_IMPL_PHASE">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_6" author="IKretov">
+        <addColumn tableName="MDM24_LABEL">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_7" author="IKretov">
+        <addColumn tableName="MDM27_SOURCE_TYPE">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_8" author="IKretov">
+        <addColumn tableName="MDM28_CODE_CLOSE">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_9" author="IKretov">
+        <addColumn tableName="mdm00_ref_book">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_10" author="IKretov">
+        <addColumn tableName="mdm01_rfc_type">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_11" author="IKretov">
+        <addColumn tableName="mdm02_doc_kind">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_12" author="IKretov">
+        <addColumn tableName="mdm03_automation">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_13" author="IKretov">
+        <addColumn tableName="mdm05_inf_system">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_14" author="IKretov">
+        <addColumn tableName="mdm06_source">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_15" author="IKretov">
+        <addColumn tableName="mdm07_defect_source">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_16" author="IKretov">
+        <addColumn tableName="mdm08_work_reason">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_17" author="IKretov">
+        <addColumn tableName="mdm09_subdivision">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_18" author="IKretov">
+        <addColumn tableName="mdm12_priority">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_19" author="IKretov">
+        <addColumn tableName="mdm13_process">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_20" author="IKretov">
+        <addColumn tableName="mdm14_subdivision_project">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_21" author="IKretov">
+        <addColumn tableName="mdm15_organization">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_22" author="IKretov">
+        <addColumn tableName="mdm16_release">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_23" author="IKretov">
+        <addColumn tableName="mdm17_solution">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_24" author="IKretov">
+        <addColumn tableName="mdm18_status">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_25" author="IKretov">
+        <addColumn tableName="mdm20_release_form">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_26" author="IKretov">
+        <addColumn tableName="mdm21_function">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_27" author="IKretov">
+        <addColumn tableName="mdm26_prob_req_change">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_28" author="IKretov">
+        <addColumn tableName="mdm29_status_model">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_29" author="IKretov">
+        <addColumn tableName="mdm30_status_transition">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_30" author="IKretov">
+        <addColumn tableName="mdm31_doc_type">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_31" author="IKretov">
+        <addColumn tableName="mdm32_subdivision_kind">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_32" author="IKretov">
+        <addColumn tableName="MDM04_AUTOMIGRATION">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0030-add_colum_all_dictionary_33" author="ZESONOV">
+        <addColumn tableName="mdm45_link_type">
+            <column name="sort_order" type="bigint"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

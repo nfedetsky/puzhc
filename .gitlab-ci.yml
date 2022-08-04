@@ -1,0 +1,53 @@
+stages:
+  - build-app
+  - deploy-develop
+
+build-app:
+  variables:
+    GRADLE_USER_HOME: .gradle
+  cache:
+    paths:
+      - $GRADLE_USER_HOME/caches/
+      - $GRADLE_USER_HOME/wrapper/
+      - $GRADLE_USER_HOME/build-cache/
+  only:
+    refs:
+      - develop
+    changes:
+      - src/**/*
+  image: amazoncorretto:11-alpine-jdk
+  stage: build-app
+  before_script:
+    - mkdir -p "$GRADLE_USER_HOME"
+    - cp "$GRADLE_PROPERTIES" "$GRADLE_USER_HOME/gradle.properties"
+    - echo "$(cat $GRADLE_USER_HOME/gradle.properties)"
+  artifacts:
+    paths:
+      - ./build/libs/
+  script:
+    - ./gradlew clean bootJar
+
+deploy-develop:
+  variables:
+    DOCKER_HOST: "ssh://$SSH_USER@$SSH_HOST"
+  image:
+    name: docker/compose:latest
+  services:
+    - docker:dind
+  only:
+    refs:
+      - develop
+    changes:
+      - src/**/*
+  stage: deploy-develop
+  before_script:
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PRIVATE" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - eval "$(ssh-agent -s)"
+    - ssh-add ~/.ssh/id_rsa
+    - ssh-keyscan -H "$SSH_HOST" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - docker-compose up -d --build

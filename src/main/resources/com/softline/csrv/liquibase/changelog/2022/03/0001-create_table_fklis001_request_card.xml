@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0001-create_table_fklis001_request_card_1" author="Ikretov">
+        <createTable tableName="fklis001_request_card">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FKLIS001_REQUEST_CARD"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="VERSION" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+            <column name="KEY_NUM" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOLUTION_ID" type="UUID"/>
+            <column name="STATUS_ID" type="UUID"/>
+            <column name="REQUEST_TYPE_ID" type="UUID"/>
+            <column name="DESCRIPTION" type="VARCHAR(1000)"/>
+            <column name="INF_SYSTEM_ID" type="UUID"/>
+            <column name="AUTHOR_ID" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ASSIGNEE_ID" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DEFECT_SOURCE_ID" type="UUID"/>
+            <column name="PRIORITY_ID" type="UUID"/>
+            <column name="DECISION_DATE" type="DATE"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="0001-create_table_fklis001_request_card_3" author="Ikretov">
+        <addUniqueConstraint columnNames="KEY_NUM" constraintName="UC_FKLIS001REQUESTCARD_KEYNUM"
+                             tableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_4" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="AUTHOR_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUESTCA_ON_AUTHOR" referencedColumnNames="ID"
+                                 referencedTableName="mdm10_user"/>
+
+        <createIndex indexName="IDX_REQUEST_AUTHOR_ID" tableName="fklis001_request_card">
+            <column name="AUTHOR_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_5" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="STATUS_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUESTCA_ON_STATUS" referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+
+        <createIndex indexName="IDX_REQUEST_STATUS_ID" tableName="fklis001_request_card">
+            <column name="STATUS_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_6" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="ASSIGNEE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUEST_ON_ASSIGNEE" referencedColumnNames="ID"
+                                 referencedTableName="mdm10_user"/>
+
+        <createIndex indexName="IDX_REQUEST_ASSIGNEE_ID" tableName="fklis001_request_card">
+            <column name="ASSIGNEE_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_7" author="Ikretov">
+        <createIndex indexName="IDX_REQUEST_PRIORITY_ID" tableName="fklis001_request_card">
+            <column name="PRIORITY_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_8" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="SOLUTION_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUEST_ON_SOLUTION" referencedColumnNames="ID"
+                                 referencedTableName="mdm17_solution"/>
+
+        <createIndex indexName="IDX_REQUEST_SOLUTION_ID" tableName="fklis001_request_card">
+            <column name="SOLUTION_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_9" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="INF_SYSTEM_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQUES_ON_INFSYSTEM" referencedColumnNames="ID"
+                                 referencedTableName="mdm05_inf_system"/>
+
+        <createIndex indexName="IDX_REQUEST_INF_SYSTEM_ID" tableName="fklis001_request_card">
+            <column name="INF_SYSTEM_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_10" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="REQUEST_TYPE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQU_ON_REQUESTTYPE" referencedColumnNames="ID"
+                                 referencedTableName="MDM19_REQUEST_TYPE"/>
+
+        <createIndex indexName="IDX_REQUEST_REQUEST_TYPE_ID" tableName="fklis001_request_card">
+            <column name="REQUEST_TYPE_ID"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="0001-create_table_fklis001_request_card_11" author="Ikretov">
+        <addForeignKeyConstraint baseColumnNames="DEFECT_SOURCE_ID" baseTableName="fklis001_request_card"
+                                 constraintName="FK_FKLIS001REQ_ON_DEFECTSOURC" referencedColumnNames="ID"
+                                 referencedTableName="mdm07_defect_source"/>
+
+        <createIndex indexName="IDX_REQUEST_DEFECT_SOURCE_ID" tableName="fklis001_request_card">
+            <column name="DEFECT_SOURCE_ID"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

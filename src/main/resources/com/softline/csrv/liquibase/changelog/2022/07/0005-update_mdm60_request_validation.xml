@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0005-update_mdm60_request_validation-1" author="ASShepelev" dbms="postgresql">
+        <update tableName="mdm60_request_validation">
+            <column name="NAME" value='Значение поля "Планируемый результат" должно быть заполнено'/>
+            <where>code = '200'</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

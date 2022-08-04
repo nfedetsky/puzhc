@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0076-1103_del_mdm62_1" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_AGREEMENT_BY_REQUIREMENT')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_AGREEMENT_BY_REQUIREMENT'</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0076-1103_del_mdm62_2" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_ANALYSIS_BY_REQUIREMENT')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_ANALYSIS_BY_REQUIREMENT'</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0076-1103_del_mdm62_3" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_REMARK_BY_DOCUMENT')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_REMARK_BY_DOCUMENT'</where>
+        </delete>
+    </changeSet>
+
+
+    <changeSet id="0076-1103_del_mdm62_4" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_MODIFICATION_BY_ANALYSIS')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_MODIFICATION_BY_ANALYSIS'</where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="0076-1103_del_mdm62_5" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_RFC_BY_VIS')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_RFC_BY_VIS'</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0076-1103_del_mdm62_6" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_IMPACTASSESSMENT_BY_MODIFICATION')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_IMPACTASSESSMENT_BY_MODIFICATION'</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0076-1103_del_mdm62_7" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_CONTENTAGREEMENT_BY_MODIFICATION')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_CONTENTAGREEMENT_BY_MODIFICATION'</where>
+        </delete>
+    </changeSet>
+
+
+
+
+
+
+
+
+</databaseChangeLog>

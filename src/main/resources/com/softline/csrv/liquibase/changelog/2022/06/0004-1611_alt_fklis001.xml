@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd" objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0004-1611_alt_fklis001-1" author="Elunin">
+        <dropTable tableName="fklis003_request_tag"/>
+        <createTable tableName="fklis003_request_tag">
+            <column name="LABEL_TAG_ID"
+                    type="UUID">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="PK_REQUEST_LABEL_TAG_LINK"/>
+            </column>
+            <column name="REQUEST_ID"
+                    type="UUID">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="PK_REQUEST_LABEL_TAG_LINK"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="LABEL_TAG_ID"
+                                 baseTableName="fklis003_request_tag"
+                                 constraintName="FK_REQLABTAG_ON_LABEL_TAG"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="MDM24_LABEL"/>
+
+        <addForeignKeyConstraint baseColumnNames="REQUEST_ID"
+                                 baseTableName="fklis003_request_tag"
+                                 constraintName="FK_REQLABTAG_ON_REQUEST"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="fklis001_request_card"/>
+    </changeSet>
+    <changeSet id="0004-1611_alt_fklis001-2" author="Elunin">
+        <update tableName="mdm00_ref_book">
+            <column name="is_visible" valueBoolean="true"/>
+            <where>table_name = 'mdm24_label'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0004-1611_alt_fklis001-3" author="Elunin">
+
+    <dropUniqueConstraint constraintName="fklis004_request_watcher_comp_uk1"
+                          tableName="fklis004_request_watcher"/>
+    <dropColumn columnName="id"
+                tableName="fklis004_request_watcher"/>
+
+    <addPrimaryKey columnNames="REQUEST_ID, USER_ID"
+                   constraintName="PK_FKLIS004_REQUEST_WATCHER"
+                   tableName="fklis004_request_watcher"/>
+    </changeSet>
+
+</databaseChangeLog>

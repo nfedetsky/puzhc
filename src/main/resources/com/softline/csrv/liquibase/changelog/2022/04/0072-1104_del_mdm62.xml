@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0072-1104_del_mdm62_1" author="ELunin">
+        <delete tableName="mdm63_request_flow_action">
+            <where>action_id = (select id from mdm62_request_action where code = 'CREATE_AGREEMENT_BY_ISVERSION')</where>
+        </delete>
+        <delete tableName="mdm62_request_action">
+            <where>code = 'CREATE_AGREEMENT_BY_ISVERSION'</where>
+        </delete>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="012-upd_mdm30_status_transition_wf_requirement" author="ZESONOV">
+        <update tableName="mdm30_status_transition">
+            <column name="DESCRIPTION" value="Ожидается согласование всех подзадач"/>
+            <where>id='e1770810-9948-11ec-b909-0242ac120002'</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="012-upd_mdm30_status_transition_wf_requirement_2" author="ZESONOV">
+        <update tableName="mdm30_status_transition">
+            <column name="DESCRIPTION" value="Согласование"/>
+            <where>id='f8a73e24-9948-11ec-b909-0242ac120002'</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

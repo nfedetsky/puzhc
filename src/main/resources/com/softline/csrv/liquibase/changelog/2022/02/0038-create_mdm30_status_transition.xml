@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0038-create_mdm30_status_transition" author="ZESONOV">
+        <createTable tableName="mdm30_status_transition">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDM30_STATUS_TRANSITION"/>
+            </column>
+            <column name="START_STATUS" type="UUID"/>
+            <column name="END_STATUS" type="UUID"/>
+            <column name="STATUS_MODEL_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="CLOB">
+                <constraints nullable="false"/>
+            </column>
+            <column name="START_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="END_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="0038-create_mdm30_status_transition_2" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="END_STATUS" baseTableName="mdm30_status_transition"
+                                 constraintName="FK_MDM30STATUSTRA_ON_ENDSTATUS" referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+    </changeSet>
+    <changeSet id="0038-create_mdm30_status_transition_3" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="START_STATUS" baseTableName="mdm30_status_transition"
+                                 constraintName="FK_MDM30STATUST_ON_STARTSTATUS" referencedColumnNames="ID"
+                                 referencedTableName="mdm18_status"/>
+    </changeSet>
+    <changeSet id="0038-create_mdm30_status_transition_4" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="STATUS_MODEL_ID" baseTableName="mdm30_status_transition"
+                                 constraintName="FK_MDM30STATUST_ON_STATUSMODEL" referencedColumnNames="ID"
+                                 referencedTableName="mdm29_status_model"/>
+    </changeSet>
+
+</databaseChangeLog>

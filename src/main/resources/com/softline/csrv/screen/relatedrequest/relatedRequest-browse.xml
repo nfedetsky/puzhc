@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://com.softline.csrv.screen.request/RequestEditExt.linkedRequest"
+        focusComponent="requestsTable">
+    <data readOnly="true">
+        <collection id="requestsDc"
+                    class="com.softline.csrv.entity.Request">
+            <loader id="requestsDl"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <dialogMode height="650"
+                width="900"/>
+    <actions>
+        <action id="close" primary="true"/>
+    </actions>
+    <layout expand="requestsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="requestsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="requestsTable"
+                    width="100%"
+                    dataContainer="requestsDc" multiselect="false">
+            <actions>
+                <action id="createlink"/>
+                <action id="removelink" trackSelection="true"/>
+            </actions>
+            <columns>
+                <column id="keyNum"/>
+                <column id="requestType.name"/>
+                <column id="name"/>
+                <column id="status"/>
+            </columns>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="requestsTable.createlink" icon="PLUS" caption="msg:///actions.Add"/>
+                <button id="removeBtn" action="requestsTable.removelink" icon="MINUS" caption="msg:///actions.Exclude"/>
+            </buttonsPanel>
+        </groupTable>
+        <pagination id="pagination"
+                    itemsPerPageVisible="true"
+                    itemsPerPageOptions="10, 20, 30, 40, 50"
+                    itemsPerPageDefaultValue="10">
+            <loaderProvider loaderId="requestsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true">
+            <button id="closeBtn" action="close" caption="msg:///actions.Close"/>
+        </hbox>
+    </layout>
+</window>

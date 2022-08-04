@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
+  <process id="WF_MIGRATE_ATTACHS" name="Миграция файлов" isExecutable="true">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <jmix:formData type="no-form" />
+        <jmix:processVariables>
+          <jmix:processVariable name="jiraurltext" type="string" />
+        </jmix:processVariables>
+      </extensionElements>
+      <outgoing>Flow_112d3yq</outgoing>
+    </startEvent>
+    <endEvent id="Event_0kwubq2">
+      <incoming>Flow_0m0x6eb</incoming>
+    </endEvent>
+    <sequenceFlow id="Flow_112d3yq" sourceRef="startEvent1" targetRef="Activity_1v8xjcn">
+      <extensionElements>
+        <jmix:conditionDetails conditionSource="expression" />
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_0m0x6eb" sourceRef="Activity_1v8xjcn" targetRef="Event_0kwubq2" />
+    <serviceTask id="Activity_1v8xjcn" name="Миграция файлов" flowable:delegateExpression="${bpm_MigrateAttachments}" jmix:taskType="delegateExpression">
+      <extensionElements>
+        <flowable:field name="logintext">
+          <flowable:string>logintext</flowable:string>
+        </flowable:field>
+        <flowable:field name="proxyAddress">
+          <flowable:string>proxyAddress</flowable:string>
+        </flowable:field>
+        <flowable:field name="proxyPort">
+          <flowable:string>proxyPort</flowable:string>
+        </flowable:field>
+        <flowable:field name="pwdtext">
+          <flowable:string>pwdtext</flowable:string>
+        </flowable:field>
+        <flowable:field name="jiraUrl">
+          <flowable:string>jiraUrl</flowable:string>
+        </flowable:field>
+      </extensionElements>
+      <incoming>Flow_112d3yq</incoming>
+      <outgoing>Flow_0m0x6eb</outgoing>
+    </serviceTask>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="WF_MIGRATE_ATTACHS">
+      <bpmndi:BPMNEdge id="Flow_0m0x6eb_di" bpmnElement="Flow_0m0x6eb">
+        <omgdi:waypoint x="340" y="165" />
+        <omgdi:waypoint x="442" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_112d3yq_di" bpmnElement="Flow_112d3yq">
+        <omgdi:waypoint x="180" y="165" />
+        <omgdi:waypoint x="240" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
+        <omgdc:Bounds x="150" y="150" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0kwubq2_di" bpmnElement="Event_0kwubq2">
+        <omgdc:Bounds x="442" y="147" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1b9f4a9_di" bpmnElement="Activity_1v8xjcn">
+        <omgdc:Bounds x="240" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

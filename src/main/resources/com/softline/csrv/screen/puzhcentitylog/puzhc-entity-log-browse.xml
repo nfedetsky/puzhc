@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://puzhcEntityLogBrowse.caption"
+        focusComponent="puzhcEntityLogsTable">
+    <data readOnly="true">
+        <collection id="puzhcEntityLogsDc"
+                    class="com.softline.csrv.entity.PuzhcEntityLog">
+            <fetchPlan extends="_base"/>
+            <loader id="puzhcEntityLogsDl">
+                <query>
+                    <![CDATA[select e from PuzhcEntityLog e where e.entity = :entity order by e.create_ts asc ]]>
+                </query>
+            </loader>
+<!--            <collection id="puzhcEntityLogAttrDc" property="changes"/>-->
+        </collection>
+
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="false"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="split1" spacing="true">
+        <filter id="filter"
+                dataLoader="puzhcEntityLogsDl">
+            <properties include=".*"/>
+        </filter>
+        <split id="split1" orientation="horizontal" pos="70" width="100%">
+            <vbox id="entityLogTableBox"
+                  margin="false,true,false,false"
+                  spacing="true"
+                  height="100%"
+                  width="100%">
+                <dataGrid id="puzhcEntityLogsTable"
+                          width="100%"
+                          dataContainer="puzhcEntityLogsDc">
+                    <actions>
+                        <action id="refresh" type="refresh"/>
+                    </actions>
+                    <columns>
+                        <column property="create_ts" id="eventTs"/>
+                        <column property="created_by" id="username"/>
+                        <column property="change_type" id="change_type"/>
+                    </columns>
+                    <simplePagination/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true">
+                        <button id="refreshBtn" action="puzhcEntityLogsTable.refresh"/>
+                    </buttonsPanel>
+                </dataGrid>
+            </vbox>
+            <vbox id="entityLogAttrTableBox" width="100%" height="100%" margin="false,false,false,true"
+                  spacing="true">
+<!--                <table id="entityLogAttrTable" width="100%" height="100%" dataContainer="puzhcEntityLogAttrDc">
+                    <columns>
+                        <column id="name" caption="msg://attribute"/>
+                        <column id="value" caption="msg://newValue"/>
+                        <column id="valueId" caption="msg://newValueId"/>
+                        <column id="oldValue" caption="msg://oldValue"/>
+                        <column id="oldValueId" caption="msg://oldValueId"/>
+                    </columns>
+                </table>-->
+            </vbox>
+        </split>
+
+
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

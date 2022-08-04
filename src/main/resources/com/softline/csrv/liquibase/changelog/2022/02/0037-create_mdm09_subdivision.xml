@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="0037-create_mdm09_subdivision" author="ZESONOV">
+        <createTable tableName="mdm09_subdivision">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDM09_SUBDIVISION"/>
+            </column>
+            <column name="ID_SRC" type="VARCHAR(255)"/>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CODE" type="VARCHAR(100)"/>
+            <column name="NAME" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="START_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="END_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="VARCHAR(255)"/>
+            <column name="LAST_MODIFIED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="CLOB"/>
+            <column name="ORGANIZATION" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PARENT_ID" type="UUID"/>
+            <column name="SUBDIVISION_KIND_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="0037-create_mdm09_subdivision_2" author="ZESONOV">
+        <addUniqueConstraint columnNames="CODE, END_DATE" constraintName="mdm09_subdivision_comp_uk"
+                             tableName="mdm09_subdivision"/>
+    </changeSet>
+    <changeSet id="0037-create_mdm09_subdivision_3" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="ORGANIZATION" baseTableName="mdm09_subdivision"
+                                 constraintName="FK_MDM09SUBDIV_ON_ORGANIZATIO" referencedColumnNames="ID"
+                                 referencedTableName="mdm15_organization"/>
+    </changeSet>
+    <changeSet id="0037-create_mdm09_subdivision_4" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="SUBDIVISION_KIND_ID" baseTableName="mdm09_subdivision"
+                                 constraintName="FK_MDM09SUBDIV_ON_SUBDIVISION" referencedColumnNames="ID"
+                                 referencedTableName="mdm32_subdivision_kind"/>
+    </changeSet>
+    <changeSet id="0037-create_mdm09_subdivision_5" author="ZESONOV">
+        <addForeignKeyConstraint baseColumnNames="PARENT_ID" baseTableName="mdm09_subdivision"
+                                 constraintName="FK_MDM09_SUBDIVISION_ON_PARENT" referencedColumnNames="ID"
+                                 referencedTableName="mdm09_subdivision"/>
+    </changeSet>
+
+</databaseChangeLog>

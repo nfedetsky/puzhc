@@ -1,0 +1,379 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0018-ins_mdm61_request_flow_validation" author="EAlbinets">
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D00da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D01da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C01da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D02da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C02da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D03da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C03da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D04da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C04da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D05da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C05da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D06da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C06da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D07da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C07da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D08da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C08da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D09da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C09da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Ada87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C0Ada87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Bda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C0Bda87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Cda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C0Cda87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Dda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C0Dda87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Eda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C0Eda87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D0Fda87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C0Fda87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D10da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="a00da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C10da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D11da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C01da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D12da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C02da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D13da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C02da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D14da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C02da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D15da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C11da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D16da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="600da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C12da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D17da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C01da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D18da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="700da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C02da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="D19da87c-8f05-11ec-b909-0242ac120002"/>
+            <column name="REQUEST_TYPE_ID" value="ddd92d7e-9a2d-11ec-b909-0242ac120002" />
+            <column name="STATUS_FORM_ID" value="900da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="STATUS_TO_ID" value="100da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="VALIDATION_ID" value="C01da87c-8f05-11ec-b909-0242ac120002" />
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+        </insert>
+
+
+    </changeSet>
+
+</databaseChangeLog>

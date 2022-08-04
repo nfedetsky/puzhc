@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0031-ins_mdm07_defect_source" author="csrv">
+        <insert tableName="mdm07_defect_source" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1ce849b2-8b26-11ec-a8a3-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="EXPLOITATION"/>
+            <column name="NAME" value="Эксплуатация"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm07_defect_source" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="328b4af2-8b27-11ec-a8a3-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="TRIAL"/>
+            <column name="NAME" value="Испытания"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+        <insert tableName="mdm07_defect_source" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="3a646d08-8b27-11ec-a8a3-0242ac120002"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="TEST"/>
+            <column name="NAME" value="Тестирование"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://functionBrowse.caption"
+        focusComponent="functionsTable">
+    <data readOnly="true">
+        <collection id="functionsDc"
+                    class="com.softline.csrv.entity.Function">
+            <fetchPlan>
+                <property name="id"/>
+                <property name="code"/>
+                <property name="name"/>
+                <property name="idSrc"/>
+                <property name="parent" fetchPlan="_base"/>
+                <property name="system" fetchPlan="_base"/>
+                <property name="description"/>
+                <property name="startDate"/>
+                <property name="endDate"/>
+                <property name="createdBy"/>
+                <property name="createdDate"/>
+                <property name="lastModifiedBy"/>
+                <property name="lastModifiedDate"/>
+            </fetchPlan>
+            <loader id="functionsDl">
+                <query>
+                    <![CDATA[select e from Function e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="functionsTable" spacing="true">
+        <filter id="filter"  columnsCount="1"
+                dataLoader="functionsDl">
+            <properties include=".*"/>
+        </filter>
+        <treeDataGrid id="functionsTable"
+                      width="100%"
+                      dataContainer="functionsDc"
+                      hierarchyProperty="parent">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="view" type="view"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column property="name" id="name"/>
+                <column property="lastModifiedBy" id="lastModifiedBy"/>
+                <column property="lastModifiedDate" id="lastModifiedDate"/>
+                <column property="startDate" id="startDate"/>
+                <column property="endDate" id="endDate"/>
+            </columns>
+
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="functionsTable.create" icon="PLUS"/>
+                <button id="editBtn" action="functionsTable.edit" icon="PENCIL"/>
+                <button id="viewBtn" action="functionsTable.view" icon="VIEW_ACTION"/>
+                <button id="removeBtn" action="functionsTable.remove"/>
+            </buttonsPanel>
+        </treeDataGrid>
+        <pagination itemsPerPageVisible="true" >
+            <loaderProvider loaderId="functionsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

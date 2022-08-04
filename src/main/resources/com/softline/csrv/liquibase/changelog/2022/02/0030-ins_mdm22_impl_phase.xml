@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <changeSet id="0030-ins_mdm22_impl_phase" author="ELunin">
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c08358a-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="NONE"/>
+            <column name="NAME" value="Не заполнено"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c083a44-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="OPEN"/>
+            <column name="NAME" value="Открыто"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c083bd4-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="REQ_RP"/>
+            <column name="NAME" value="Анализ"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c083d46-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="DESIGN"/>
+            <column name="NAME" value="Проектирование"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c083ea4-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="EFFORT_ESTIMATION"/>
+            <column name="NAME" value="Оценка трудозатрат"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c084016-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="APPROVEMENT"/>
+            <column name="NAME" value="Согласование"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c08416a-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="ASSIGNED"/>
+            <column name="NAME" value="Назначена"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c0842b4-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="DONE"/>
+            <column name="NAME" value="Разработана"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c0843d6-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="IN_BUILD"/>
+            <column name="NAME" value="В сборке"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c08470a-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="TESTED"/>
+            <column name="NAME" value="Протестировано"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+        <insert tableName="mdm22_impl_phase" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5c084a66-9071-11ec-b909-0242ac120002"/>
+            <column name="CODE" value="CLOSED"/>
+            <column name="NAME" value="Закрыто"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

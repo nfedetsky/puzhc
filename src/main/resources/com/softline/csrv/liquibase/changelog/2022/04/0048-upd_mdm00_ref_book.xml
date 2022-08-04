@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="0048-upd_mdm00_ref_book" author="ZESONOV">
+        <update tableName="mdm00_ref_book">
+            <column name="IS_VISIBLE" value="false"/>
+            <where>id in
+                ('1083397c-9402-11ec-b909-0242ac120002',
+                '1f7605ca-9404-11ec-b909-0242ac120002',
+                '9295d80a-9404-11ec-b909-0242ac120002',
+                'b6c16a6e-9404-11ec-b909-0242ac120002',
+                '9479ac24-a5f6-11ec-b909-0242ac120002',
+                '66554542-93f4-11ec-b909-0242ac120002',
+                '353202a8-93fd-11ec-b909-0242ac120002',
+                'a8258b4e-93fe-11ec-b909-0242ac120002',
+                '4cd29448-a2e1-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="0022-1002_1" author="csrv">
+        <addColumn schemaName="suvv_migration" tableName="issue">
+            <column name="COMMENTS" type="BOOLEAN" defaultValue="false"/>
+            <column name="FILES" type="BOOLEAN" defaultValue="false"/>
+            <column name="LINKS" type="BOOLEAN" defaultValue="false"/>
+            <column name="PRIMARY_" type="BOOLEAN" defaultValue="false"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

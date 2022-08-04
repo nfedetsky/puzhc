@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0056-935_ins_mdm62_0" author="ELunin">
+        <createIndex indexName="IDX_REF_REQUEST_ACTION_UNQ"
+                     tableName="mdm62_request_action"
+                     unique="true">
+            <column name="CODE"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="0056-935_ins_mdm62_1" author="EAlbinets">
+        <insert tableName="mdm62_request_action" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="C00da87c-9f05-12ec-b909-0242ac120002"/>
+            <column name="CODE" value="CREATE_RFC_BY_VIS"/>
+            <column name="NAME" value="UC Создать заявку RFC автоматически"/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="10" />
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

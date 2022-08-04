@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0057-ins-mdm21_function_1" author="IKretov">
+        <addColumn tableName="mdm21_function">
+            <column name="SYSTEM_ID" type="UUID" value="NULL"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="0057-ins-mdm21_function_2" author="IKretov">
+        <addForeignKeyConstraint baseColumnNames="SYSTEM_ID"
+                                 baseTableName="mdm21_function"
+                                 constraintName="FK_MDM21_FUNCTION_ON_SYSTEM"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="mdm05_inf_system"/>
+    </changeSet>
+    <changeSet id="0057-ins-mdm21_function_3" author="IKretov">
+        <createIndex indexName="IDX_FUNCTION_SYSTEM_ID"
+                     tableName="mdm21_function">
+            <column name="SYSTEM_ID"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

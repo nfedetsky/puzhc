@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+
+    <changeSet id="0091-upd_mdm05_inf_system" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b27e6-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340aec54-93c7-11ec-b909-0242ac120002',
+                '340aeed4-93c7-11ec-b909-0242ac120002',
+                '340af230-93c7-11ec-b909-0242ac120002',
+                '340af35c-93c7-11ec-b909-0242ac120002',
+                '340af6ea-93c7-11ec-b909-0242ac120002',
+                '340af80c-93c7-11ec-b909-0242ac120002',
+                '340afa00-93c7-11ec-b909-0242ac120002',
+                '340afbc2-93c7-11ec-b909-0242ac120002',
+                '340b039c-93c7-11ec-b909-0242ac120002',
+                '340b15a8-93c7-11ec-b909-0242ac120002',
+                '340b16b6-93c7-11ec-b909-0242ac120002',
+                '340b17c4-93c7-11ec-b909-0242ac120002',
+                '340b18d2-93c7-11ec-b909-0242ac120002',
+                '340b22c8-93c7-11ec-b909-0242ac120002',
+                '340b24bc-93c7-11ec-b909-0242ac120002',
+                '340b267e-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_2" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b2f70-93c7-11ec-b909-0242ac120002"/>
+            <where>id in('340b30d8-93c7-11ec-b909-0242ac120002')</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_3" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b3506-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340b36be-93c7-11ec-b909-0242ac120002',
+                '340b3894-93c7-11ec-b909-0242ac120002',
+                '340b3e84-93c7-11ec-b909-0242ac120002',
+                '340b40a0-93c7-11ec-b909-0242ac120002',
+                '340b4294-93c7-11ec-b909-0242ac120002',
+                '340b47c6-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_4" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b4b68-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340b4e9c-93c7-11ec-b909-0242ac120002',
+                '340b5158-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_5" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b5928-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340b5b3a-93c7-11ec-b909-0242ac120002',
+                '340b5d7e-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_6" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b7368-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340b645e-93c7-11ec-b909-0242ac120002',
+                '340b65bc-93c7-11ec-b909-0242ac120002',
+                '340b6706-93c7-11ec-b909-0242ac120002',
+                '340b6a1c-93c7-11ec-b909-0242ac120002',
+                '340b6b48-93c7-11ec-b909-0242ac120002',
+                '340b6c56-93c7-11ec-b909-0242ac120002',
+                '340b6d6e-93c7-11ec-b909-0242ac120002',
+                '340b6e7c-93c7-11ec-b909-0242ac120002',
+                '340b6f8a-93c7-11ec-b909-0242ac120002',
+                '340b7246-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_7" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b7ac0-93c7-11ec-b909-0242ac120002"/>
+            <where>id in('340b7bec-93c7-11ec-b909-0242ac120002')</where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_8" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340af35c-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340af49c-93c7-11ec-b909-0242ac120002',
+                '340af5be-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_9" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b039c-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340b052c-93c7-11ec-b909-0242ac120002',
+                '340b064e-93c7-11ec-b909-0242ac120002',
+                '340b0982-93c7-11ec-b909-0242ac120002',
+                '340b0ad6-93c7-11ec-b909-0242ac120002',
+                '340b0dec-93c7-11ec-b909-0242ac120002',
+                '340b0f22-93c7-11ec-b909-0242ac120002',
+                '340b1044-93c7-11ec-b909-0242ac120002',
+                '340b138c-93c7-11ec-b909-0242ac120002',
+                '340b149a-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+    <changeSet id="0091-upd_mdm05_inf_system_10" author="ZESONOV">
+        <update tableName="mdm05_inf_system">
+            <column name="parent_id" value="340b18d2-93c7-11ec-b909-0242ac120002"/>
+            <where>id in
+                ('340b19d6-93c7-11ec-b909-0242ac120002',
+                '340b1af8-93c7-11ec-b909-0242ac120002',
+                '340b1eea-93c7-11ec-b909-0242ac120002',
+                '340b20a2-93c7-11ec-b909-0242ac120002')
+            </where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

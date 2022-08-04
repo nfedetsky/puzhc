@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="030-init-grants-screen-0002" author="elunin">
+        <!-- screen - RequestCard.browse - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="40f8eb01-f665-42d5-7d80-53db56219490"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestCard"/>
+            <column name="resource_" value="RequestCard.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0003" author="elunin">
+        <!-- screen - RequestCard.edit - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="3b4d6bc1-7da9-0a82-35c2-1abcf5a06d89"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestCard"/>
+            <column name="resource_" value="RequestCard.edit"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0004" author="elunin">
+        <!-- screen - RequestType.browse - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="0f701f91-942c-84dd-a1fa-fdbf8cc18d81"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestType"/>
+            <column name="resource_" value="RequestType.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0005" author="elunin">
+        <!-- screen - RequestType.browse - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="6960c165-1149-fa14-6b52-2c55b0a48c83"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="030-init-grants-screen-0007" author="elunin">
+        <!-- screen - RequestCard.browse - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="b6e127ff-8a78-7d28-48a1-e12838644c51"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestCard"/>
+            <column name="resource_" value="RequestCard.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0008" author="elunin">
+        <!-- screen - RequestCard.edit - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="4ae0ff8f-4949-b10b-44c7-61f9d1a0ef2a"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestCard"/>
+            <column name="resource_" value="RequestCard.edit"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0009" author="elunin">
+        <!-- screen - RequestType.browse - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="0f3d6020-e566-d03d-5576-3c1463afa1aa"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestType"/>
+            <column name="resource_" value="RequestType.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0010" author="elunin">
+        <!-- screen - RequestType.browse - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="cf821a7b-68e7-fa0d-7978-266b8c893e11"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="030-init-grants-screen-0012" author="elunin">
+        <!-- screen - RequestCard.browse - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="5c174275-1784-3750-4a22-f26414202ba6"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestCard"/>
+            <column name="resource_" value="RequestCard.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0013" author="elunin">
+        <!-- screen - RequestCard.edit - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="2a3601d6-9039-b78a-1934-6717d4ccf40a"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestCard"/>
+            <column name="resource_" value="RequestCard.edit"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0014" author="elunin">
+        <!-- screen - RequestType.browse - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="9b30f65d-2772-2d1b-ea93-7c2ff697a0d1"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="RequestType"/>
+            <column name="resource_" value="RequestType.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0015" author="elunin">
+        <!-- screen - RequestType.browse - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="31ae8203-cf9c-8001-70d1-cc8faaeb6773"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="User"/>
+            <column name="resource_" value="User.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0016" author="elunin">
+        <!-- screen - login - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="18097c14-9ff3-de1e-06da-ac19b1a5bc81"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="login"/>
+            <column name="resource_" value="LoginScreen"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0017" author="elunin">
+        <!-- screen - login - role-curator-Vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="18097c14-9ff3-de1e-06da-ac19b1a5bc82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="login"/>
+            <column name="resource_" value="LoginScreen"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0018" author="elunin">
+        <!-- screen - login - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="18097c14-9ff3-de1e-06da-ac19b1a5bc83"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="login"/>
+            <column name="resource_" value="LoginScreen"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0019" author="elunin">
+        <!-- screen - login - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="afcd0e62-13d0-e983-ab38-732b8d8b9edb"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="login"/>
+            <column name="resource_" value="login"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0020" author="elunin">
+        <!-- screen - login - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="afcd0e62-14d0-e983-ab38-732b8d8b9edb"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="login"/>
+            <column name="resource_" value="login"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0021" author="elunin">
+        <!-- screen - login - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="afcd0e62-15d0-e983-ab38-732b8d8b9edb"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="login"/>
+            <column name="resource_" value="login"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="030-init-grants-screen-0022" author="elunin">
+        <!-- screen - login - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="afcd0e62-13d0-e983-ab38-832b8d8b9edb"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="main"/>
+            <column name="resource_" value="main"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0023" author="elunin">
+        <!-- screen - login - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="afcd0e62-14d0-e983-ab38-932b8d8b9edb"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="main"/>
+            <column name="resource_" value="main"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0024" author="elunin">
+        <!-- screen - login - role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="afcd0e62-15d0-e983-ab38-632b8d8b9edb"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="main"/>
+            <column name="resource_" value="main"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="030-init-grants-screen-0028" author="elunin">
+        <!-- screen - bpm_TaskData - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f59df605-d5d9-de12-a632-744f01ebea82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="Priority"/>
+            <column name="resource_" value="Priority.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0029" author="elunin">
+        <!-- screen - bpm_TaskData - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f59df605-d5d9-de12-a633-744f01ebea82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="Priority"/>
+            <column name="resource_" value="Priority.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0030" author="elunin">
+        <!-- screen - bpm_TaskData -role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f59df605-d5d9-de12-a634-744f01ebea82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="Priority"/>
+            <column name="resource_" value="Priority.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="030-init-grants-screen-0031" author="elunin">
+        <!-- screen - bpm_TaskData - role-developer -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f59df605-d5d9-de15-a632-744f01ebea82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="State"/>
+            <column name="resource_" value="State.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="2c0b3426-0d8c-462e-b780-afeb15e66025"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0032" author="elunin">
+        <!-- screen - bpm_TaskData - role-curator-vis -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f59df605-d5d9-de16-a633-744f01ebea82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="State"/>
+            <column name="resource_" value="State.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="f8324f82-b284-42e2-8440-12506076384b"/>
+        </insert>
+    </changeSet>
+    <changeSet id="030-init-grants-screen-0033" author="elunin">
+        <!-- screen - bpm_TaskData -role-curator-is -->
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="id" value="f59df605-d5d9-de17-a634-744f01ebea82"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="screen"/>
+            <column name="policy_group" value="State"/>
+            <column name="resource_" value="State.browse"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" value="17ac812b-9ece-4766-860e-49e296a654e6"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

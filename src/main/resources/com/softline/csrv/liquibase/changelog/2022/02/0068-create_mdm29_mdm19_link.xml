@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+
+
+    <changeSet id="create_mdm29_mdm19_link" author="EAlbinets">
+        <createTable tableName="mdm29_mdm19_link">
+            <column name="request_type_id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_MDM29_MDM19_LINK"/>
+            </column>
+            <column name="STATUS_MODEL_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create_mdm29_mdm19_link_2" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="request_type_id" baseTableName="mdm29_mdm19_link"
+                                 constraintName="FK_MDM29_MDM19_LINK_ON_REQUEST" referencedColumnNames="ID"
+                                 referencedTableName="MDM19_REQUEST_TYPE"/>
+
+    </changeSet>
+
+    <changeSet id="create_mdm29_mdm19_link_3" author="EAlbinets">
+        <addForeignKeyConstraint baseColumnNames="STATUS_MODEL_ID" baseTableName="mdm29_mdm19_link"
+                                 constraintName="FK_MDM29MDM19LI_ON_STATUSMODEL" referencedColumnNames="ID"
+                                 referencedTableName="mdm29_status_model"/>
+    </changeSet>
+
+</databaseChangeLog>

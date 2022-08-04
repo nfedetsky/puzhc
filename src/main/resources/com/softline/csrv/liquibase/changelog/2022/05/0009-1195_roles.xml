@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <property name="uuid_function" value="gen_random_uuid()" dbms="postgresql"/>
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="get_status_function" value="get_status_by_code()" dbms="postgresql"/>
+    <property name="get_statusmodel_function" value="get_statusmodel_by_code()" dbms="postgresql"/>
+    <property name="get_validation_function" value="get_validation_by_code()" dbms="postgresql"/>
+    <property name="get_role_function" value="get_role_by_code()" dbms="postgresql"/>
+
+
+    <changeSet id="0009-1195_roles-0-1" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_status_by_code(p_code character varying) RETURNS uuid LANGUAGE sql AS $function$ SELECT id from mdm18_status where code = p_code; $function$;</createProcedure>
+    </changeSet>
+    <changeSet id="0009-1195_roles-0-2" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_statusmodel_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm29_status_model where code = p_code; $function$;</createProcedure>
+    </changeSet>
+    <changeSet id="0009-1195_roles-0-3" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_validation_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from mdm60_request_validation where code = p_code; $function$;</createProcedure>
+    </changeSet>
+    <changeSet id="0009-1195_roles-0-4" author="ELunin">
+        <createProcedure>CREATE OR REPLACE FUNCTION get_role_by_code(p_code character varying) RETURNS uuid  LANGUAGE sql AS $function$ SELECT id from sec_resource_role where code = p_code; $function$;</createProcedure>
+    </changeSet>
+
+
+   <changeSet id="0009-1195_roles_1-1" author="ELunin">
+        <delete tableName="sec_role_assignment">
+            <where>username != 'suvv-admin'</where>
+        </delete>
+    </changeSet>
+    <changeSet id="0009-1195_roles_1-2" author="ELunin">
+        <delete tableName="sec_resource_policy">
+            <where>role_id in (select id from sec_resource_role)</where>
+        </delete>
+    </changeSet>
+
+
+    <changeSet id="0009-1195_roles_1-3" author="ELunin">
+        <delete tableName="sec_resource_role">
+            <where>code = code</where>
+        </delete>
+    </changeSet>
+
+
+
+    <changeSet id="0009-1195_roles_2" author="ELunin">
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_TEKHNOLOGIST"/>
+            <column name="NAME" value="ФК.Технолог ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за распределение задач, поступающих на рассмотрение"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_CE_ADMINISTRATOR"/>
+            <column name="NAME" value="ФК..Админитратор ВР"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК,ответственный за распределение задач, поступающих на рассмотрение."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_SA_ADMINISTRATOR"/>
+            <column name="NAME" value="ФК..Админитратор СА"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК,ответственный за распределение задач, поступающих на рассмотрение."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_ADMINISTRATOR_RRI"/>
+            <column name="NAME" value="ФК.Администратор НСИ"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, ответственный за обслуживание НСИ"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_ADMINISTRATOR_KB"/>
+            <column name="NAME" value="ФК.Администратор БЗ"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, ответственный за состояние   Базы Знаний Xwiki."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_MAIN_TEKHNOLOGIST"/>
+            <column name="NAME" value="ФК.Главный технолог ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за рассмотрение предложений по автоматизации"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_СURATOR_MAINTENANCE"/>
+            <column name="NAME" value="ФК.Куратор эксплуатации ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Ответственного за эксплуатацию, архитектуру и инфраструктуру в разрезе ИС, обеспечивающий, в том числе, решение эскалаций при отрицательных результатах проверки сборок"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_CURATOR_VIS"/>
+            <column name="NAME" value="ФК.Куратор Версий ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за согласование состава версий ИС, поступающих на рассмотрение Технолога. При отсутствии данной роли функции выполняются ролью ФК.Главный технолог ИС"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_CURATOR_IS"/>
+            <column name="NAME" value="ФК.Куратор ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный, в частности, за согласование состава версий ИС, поступающих на рассмотрение Технолога"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_OPERATIONS_MANAGER"/>
+            <column name="NAME" value="ФК.Менеджер эксплуатации ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Ответственного за обеспечение эксплуатации в разрезе ИС, обеспечивающий, в том числе, согласование версий, содержащих Эксплуатационные исправления"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_CHANGE_MANAGER"/>
+            <column name="NAME" value="ФК.Менеджер изменений"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, ответственный за обработку изменений"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_INCEDENT_MANAGER"/>
+            <column name="NAME" value="ФК.Менеджер инцидентов"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, ответственный за обработку инцидентов"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_FIRST_TEKHNOLOGIST"/>
+            <column name="NAME" value="ФК.Первый технолог ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за предварительное рассмотрение предложений по автоматизации. Не обязательная роль. Может быть только у одного сотрудника в разрезе подсистемы и СП."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_IS_HEAD_DEVELOPMENT"/>
+            <column name="NAME" value="ФК.Руководитель развития ИС"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Технолога по соответствующей ИС, ответственный за взаимодействие в СУВВ сотрудников Технолога, как между собой, так и с Разработчиком"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="FK_SPECIALIST"/>
+            <column name="NAME" value="ФК.Специалист"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник ФК, выполняющий действия в СУВВ"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_ADMINISTRATOR"/>
+            <column name="NAME" value="Р.Администратор"/>
+            <column name="DESCRIPTION" value="Может быть только у одного сотрудника в разрезе ИС. Используется для автоматического назначения задач по умолчанию. Переназначение, при необходимости, назначенных задач на конкретных исполнителей. Обработка деловой переписки"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_ADMINISTRATOR_KB"/>
+            <column name="NAME" value="Р.Администратор БЗ"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник Разработчика, ответственный за изменения в  Базе Знаний Xwiki."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_ANALIST"/>
+            <column name="NAME" value="Р.Аналитик"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник разработчика, выполняющий анализ"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_TEST_ENGINEER"/>
+            <column name="NAME" value="Р.Инженер по тестированию"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник разработчика, о процесса тестирования."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_PROJECT_CURATOR"/>
+            <column name="NAME" value="Р.Куратор проекта"/>
+            <column name="DESCRIPTION" value='Может быть только у одного сотрудника в разрезе ИС. Общий мониторинг процессов. Решение эскалаций, не решаемых сотрудником с ролью "Р.Руководитель проекта"'/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_PATCH_MANAGER"/>
+            <column name="NAME" value="Р.Менеджер Исправлений"/>
+            <column name="DESCRIPTION" value="Может быть только у одного сотрудника в разрезе ИС. При наличии используется для автоматического назначения по активностям, связанных с Исправлениями. При отсутствии данной роли функции выполняются ролью Р.Администратор"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_TEST_MENEGER"/>
+            <column name="NAME" value="Р.Менеджер тестирования"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник разработчика, ответственный за проведение процесса тестирования."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_PRODUCTION_MANAGER"/>
+            <column name="NAME" value="Р.Менеджер производства"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник разработчика, ответственный за процесс производства."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_PROJECT_ADMIN"/>
+            <column name="NAME" value="Р.Менеджер проекта"/>
+            <column name="DESCRIPTION" value='Обеспечение деятельности сотрудника с ролью "Р.Руководитель проекта"'/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_RELEASE_MANAGER"/>
+            <column name="NAME" value="Р.Релиз-менеджер"/>
+            <column name="DESCRIPTION" value="Может быть только у одного сотрудника в разрезе ИС. При наличии используется для автоматического назначения по активностям, связанных с ВИС. При отсутствии данной роли функции выполняются ролью Р.Администратор"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_PROJECT_MANAGER"/>
+            <column name="NAME" value="Р.Руководитель проекта"/>
+            <column name="DESCRIPTION" value="Может быть только у одного сотрудника в разрезе ИС. Обеспечение актуального состояния Ролевой матрицы в разрезе ИС и организации. Организационное обеспечение и мониторинг процессов. Решение эскалаций"/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+        <insert tableName="SEC_RESOURCE_ROLE" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="VERSION" value="1"/>
+            <column name="CODE" value="R_SPECIALIST"/>
+            <column name="NAME" value="Р.Специалист по сопровождению"/>
+            <column name="DESCRIPTION" value="Уполномоченный сотрудник разработчика, выполняющий функции по сопровожлению."/>
+            <column name="SCOPES" valueComputed="chr(34) || CHR(85) || CHR(73) || chr(34)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="0009-1195_roles_3" author="ELunin">
+        <insert tableName="mdm60_request_validation" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="${uuid_function}"/>
+            <column name="CODE" value="5555"/>
+            <column name="NAME" value='У вас нет прав выполнить это действие'/>
+            <column name="START_DATE" value="2015-01-01"/>
+            <column name="END_DATE" value="9999-12-31"/>
+            <column name="version" value="1"/>
+            <column name="CREATED_DATE" valueDate="${now}"/>
+            <column name="CREATED_BY" value="suvv-admin"/>
+            <column name="LAST_MODIFIED_DATE" valueDate="${now}"/>
+            <column name="sort_order" value="30" />
+        </insert>
+        <insert tableName="mdm61_request_flow_validation" dbms="postgresql">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="status_model_id" computed="true" valueComputed="get_statusmodel_by_code('WF_REQUEST_FOR_ANALYSIS') "/>
+            <column name="status_from_id" computed="true" valueComputed="get_status_by_code('ANALYSIS')"/>
+            <column name="status_to_id" computed="true" valueComputed="get_status_by_code('REQUEST_INFO')"/>
+            <column name="validation_id" computed="true" valueComputed="get_validation_by_code('5555')"/>
+            <column name="sort_order" value="10"/>
+            <column name="created_by" value="suvv-admin"/>
+            <column name="version" value="1"/>
+            <column name="last_modified_by" value="suvv-admin"/>
+            <column name="last_modified_date" valueDate="now()"/>
+            <column name="created_date" valueDate="now()"/>
+            <column name="start_date" value="2015-01-01"/>
+            <column name="end_date" value="9999-12-31"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="0009-1195_roles_4" author="ELunin" dbms="postgresql">
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__ANALYSIS_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('R_ADMINISTRATOR')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__REJECTED_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('R_ADMINISTRATOR')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__CLOSED_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('R_ADMINISTRATOR')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__ANALYSIS__REQUEST_INFO_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('R_ADMINISTRATOR')"/>
+        </insert>
+        <insert tableName="sec_resource_policy" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" computed="true" valueComputed="gen_random_uuid()"/>
+            <column name="version" value="1"/>
+            <column name="type_" value="specific"/>
+            <column name="policy_group" value="bpmTransitions"/>
+            <column name="resource_" value="bpm_WF_REQUEST_FOR_ANALYSIS__REQUEST_INFO__ANALYSIS_"/>
+            <column name="action_" value="access"/>
+            <column name="effect" value="allow"/>
+            <column name="role_id" computed="true" valueComputed="get_role_by_code('R_ADMINISTRATOR')"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet id="0009-1195_roles_99" author="ELunin" dbms="postgresql">
+        <sql>DROP function get_status_by_code;</sql>
+        <sql>DROP function get_statusmodel_by_code;</sql>
+        <sql>DROP function get_validation_by_code;</sql>
+    </changeSet>
+    <changeSet id="0009-1195_roles_99-1" author="ELunin" dbms="postgresql">
+        <sql>DROP function get_role_by_code;</sql>
+    </changeSet>
+
+
+
+</databaseChangeLog>
+
+

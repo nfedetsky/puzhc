@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://RequestActionBrowse.caption"
+        focusComponent="RequestActionsTable">
+    <data readOnly="true">
+        <collection id="RequestActionsDc"
+                    class="com.softline.csrv.entity.RequestAction">
+            <fetchPlan extends="_base">
+                <property name="id"/>
+            </fetchPlan>
+            <loader id="RequestActionsDl">
+                <query>
+                    <![CDATA[select e from RequestAction e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="RequestActionsTable" spacing="true">
+        <filter id="filter"
+                dataLoader="RequestActionsDl" columnsCount="1">
+            <properties include=".*"/>
+        </filter>
+        <dataGrid id="RequestActionsTable"
+                  width="100%"
+                  dataContainer="RequestActionsDc">
+            <actions>
+<!--                <action id="create" type="create"/>-->
+                <action id="edit" type="edit"/>
+<!--                <action id="remove" type="remove"/>-->
+            </actions>
+            <columns>
+                <column property="code" id="code"/>
+                <column property="name" id="name"/>
+                <column property="startDate" id="startDate"/>
+                <column property="endDate" id="endDate"/>
+                <column property="sortOrder" id="sortOrder"/>
+            </columns>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+<!--                <button id="createBtn" action="RequestActionsTable.create"/>-->
+                <button id="editBtn" action="RequestActionsTable.edit"/>
+                <!--<button id="removeBtn" action="RequestActionsTable.remove"/>-->
+            </buttonsPanel>
+        </dataGrid>
+        <pagination itemsPerPageVisible="true" itemsPerPageUnlimitedOptionVisible="true" >
+            <loaderProvider loaderId="RequestActionsDl"/>
+        </pagination>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

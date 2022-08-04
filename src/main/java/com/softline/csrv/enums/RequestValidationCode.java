@@ -1,0 +1,188 @@
+package com.softline.csrv.enums;
+
+import java.util.Arrays;
+import java.util.Optional;
+
+/**
+ * Проверки
+ */
+public enum RequestValidationCode {
+
+
+    VALIDATION_9("9"),
+    VALIDATION_10("10"),
+    VALIDATION_21("21"),
+    VALIDATION_22("22"),
+    VALIDATION_30("30"),
+    VALIDATION_31("31"),
+    VALIDATION_32("32"),
+    VALIDATION_33("33"),
+    VALIDATION_34("34"),
+    VALIDATION_35("35"),
+    VALIDATION_36("36"),
+    VALIDATION_37("37"),
+    VALIDATION_38("38"),
+    VALIDATION_39("39"),
+    VALIDATION_40("40"),
+    VALIDATION_41("41"),
+    VALIDATION_50("50"),
+    VALIDATION_60("60"),
+    VALIDATION_61("61"),
+    VALIDATION_70("70"),
+    VALIDATION_71("71"),
+    VALIDATION_72("72"),
+    VALIDATION_73("73"),
+    VALIDATION_80("80"),
+    VALIDATION_81("81"),
+    VALIDATION_82("82"),
+    VALIDATION_90("90"),
+    VALIDATION_91("91"),
+    VALIDATION_100("100"),
+    VALIDATION_110("110"),
+    VALIDATION_120("120"),
+    VALIDATION_130("130"),
+    VALIDATION_140("140"),
+    VALIDATION_150("150"),
+    VALIDATION_151("151"),
+    VALIDATION_152("152"),
+    VALIDATION_153("153"),
+    VALIDATION_154("154"),
+    VALIDATION_160("160"),
+    VALIDATION_170("170"),
+    VALIDATION_180("180"),
+    VALIDATION_181("181"),
+    VALIDATION_190("190"),
+    VALIDATION_200("200"),
+    VALIDATION_210("210"),
+    VALIDATION_220("220"),
+    VALIDATION_221("221"),
+    VALIDATION_230("230"),
+    VALIDATION_240("240"),
+    VALIDATION_250("250"),
+    VALIDATION_260("260"),
+    VALIDATION_270("270"),
+    VALIDATION_271("271"),
+    VALIDATION_272("272"),
+    VALIDATION_280("280"),
+    VALIDATION_290("290"),
+    VALIDATION_300("300"),
+    VALIDATION_301("301"),
+    VALIDATION_310("310"),
+    VALIDATION_311("311"),
+    VALIDATION_317("317"),
+    VALIDATION_318("318"),
+    VALIDATION_319("319"),
+    VALIDATION_320("320"),
+    VALIDATION_321("321"),
+    VALIDATION_322("322"),
+    VALIDATION_330("330"),
+    VALIDATION_341("341"),
+    VALIDATION_342("342"),
+    VALIDATION_340("340"),
+    VALIDATION_347("347"),
+    VALIDATION_348("348"),
+    VALIDATION_349("349"),
+    VALIDATION_350("350"),
+    VALIDATION_351("351"),
+    VALIDATION_360("360"),
+    VALIDATION_370("370"),
+    VALIDATION_380("380"),
+    VALIDATION_390("390"),
+    VALIDATION_400("400"),
+    VALIDATION_410("410"),
+    VALIDATION_420("420"),
+    VALIDATION_430("430"),
+    VALIDATION_440("440"),
+    VALIDATION_441("441"),
+    VALIDATION_442("442"),
+    VALIDATION_443("443"),
+    VALIDATION_444("444"),
+    VALIDATION_445("445"),
+    VALIDATION_446("446"),
+    VALIDATION_447("447"),
+    VALIDATION_448("448"),
+    VALIDATION_451("451"),
+    VALIDATION_452("452"),
+    VALIDATION_453("453"),
+    VALIDATION_454("454"),
+    VALIDATION_459("459"),
+    VALIDATION_470("470"),
+    VALIDATION_480("480"),
+    VALIDATION_481("481"),
+    VALIDATION_490("490"),
+    VALIDATION_500("500"),
+    VALIDATION_501("501"),
+    VALIDATION_502("502"),
+    VALIDATION_503("503"),
+    VALIDATION_509("509"),
+    VALIDATION_510("510"),
+    VALIDATION_511("511"),
+    VALIDATION_512("512"),
+    VALIDATION_520("520"),
+    VALIDATION_521("521"),
+    VALIDATION_522("522"),
+    VALIDATION_523("523"),
+    VALIDATION_524("524"),
+    VALIDATION_540("540"),
+    VALIDATION_541("541"),
+    VALIDATION_542("542"),
+    VALIDATION_550("550"),
+    VALIDATION_551("551"),
+    VALIDATION_552("552"),
+    VALIDATION_553("553"),
+    VALIDATION_560("560"),
+    VALIDATION_561("561"),
+    VALIDATION_562("562"),
+    VALIDATION_570("570"),
+    VALIDATION_571("571"),
+    VALIDATION_572("572"),
+    VALIDATION_580("580"),
+    VALIDATION_581("581"),
+    VALIDATION_590("590"),
+    VALIDATION_600("600"),
+    VALIDATION_610("610"),
+    VALIDATION_620("620"),
+    VALIDATION_630("630"),
+    VALIDATION_641("641"),
+    VALIDATION_650("650"),
+    VALIDATION_651("651"),
+    VALIDATION_660("660"),
+    VALIDATION_661("661"),
+    VALIDATION_670("670"),
+    VALIDATION_671("671"),
+    VALIDATION_680("680"),
+    VALIDATION_681("681"),
+    VALIDATION_692("692"),
+    VALIDATION_693("693"),
+    VALIDATION_860("860"),
+    VALIDATION_2430("2430"),
+    VALIDATION_2360("2360"),
+    VALIDATION_2370("2370"),
+    VALIDATION_2480("2480"),
+    VALIDATION_5555("5555"),
+    VALIDATION_5556("5556"),
+    VALIDATION_7777("7777");
+
+
+    private final String code;
+
+    RequestValidationCode(String code) {
+        this.code = code;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+
+    public static RequestValidationCode findByCode(String code) {
+
+        return Optional.ofNullable(code).flatMap(c -> Arrays.stream(RequestValidationCode.values())
+                        .filter(v -> v.getCode().equals(code))
+                        .findFirst())
+                .orElse(null);
+
+
+    }
+
+}
